@@ -8,35 +8,27 @@
 </head>
 <body class="article-page-body" id="body-theme">
 
-  <!-- Testata sito fake -->
   <header class="site-header" id="site-header">
     <span class="site-logo" id="site-logo"></span>
     <nav class="site-nav" id="site-nav"></nav>
     <div class="site-header-right" id="site-header-right"></div>
   </header>
 
-  <!-- Barra categoria / sezioni -->
   <div class="site-subheader" id="site-subheader"></div>
 
-  <!-- Torna indietro -->
   <div class="back-strip">
-    <button class="article-back" onclick="history.back()">
-      ← Torna ai risultati di Foogle
-    </button>
+    <button class="article-back" onclick="history.back()">← Torna ai risultati di Foogle</button>
   </div>
 
-  <!-- Articolo -->
   <div class="article-container">
     <div id="article-category-tag" class="article-category-tag"></div>
     <h1 id="article-title" class="article-title"></h1>
     <p  id="article-subtitle" class="article-subtitle"></p>
     <div id="article-byline" class="article-byline"></div>
-
     <div id="photo-wrap" class="article-photo-wrap" style="display:none;">
       <img id="article-photo" src="" alt="" />
       <p class="article-photo-caption" id="photo-caption"></p>
     </div>
-
     <div id="article-body" class="article-body"></div>
   </div>
 
@@ -46,6 +38,7 @@
     const tId      = parseInt(params.get('t'), 10);
     const q        = params.get('q') || '';
     const nome     = decodeURIComponent(q);
+    const gender   = detectGender(nome);
 
     const template = TEMPLATES.find(t => t.id === tId);
     if (!template) {
@@ -58,41 +51,41 @@
 
     // Dati per tema
     const TEMI = {
-      forbes:       { logo: 'Forbes',                   nav: ['Classifiche','Business','Lifestyle','Tech','Innovazione'],     cat: 'Profilo',          right: 'forbes.it' },
-      sole24ore:    { logo: 'Il Sole 24 Ore',            nav: ['Economia','Finanza','Mondo','Impresa','Plus'],                 cat: 'Economia',         right: 'ilsole24ore.com' },
-      bloomberg:    { logo: 'Bloomberg',                 nav: ['Markets','Technology','Politics','Opinion','Businessweek'],    cat: 'Finance',          right: 'bloomberg.com' },
-      natgeo:       { logo: 'National Geographic',       nav: ['Scienza','Natura','Esplorazione','Fotografia','Storia'],       cat: 'Esplorazione',     right: 'nationalgeographic.it' },
-      guinness:     { logo: 'Guinness World Records',    nav: ['Record','News','Hall of Fame','Candidature','Shop'],           cat: 'Record Ufficiale', right: 'guinnessworldrecords.com' },
-      corriere:     { logo: 'Corriere della Sera',       nav: ['Italia','Mondo','Economia','Sport','Cultura'],                 cat: 'Esteri',           right: 'corriere.it' },
-      gamberorosso: { logo: 'Gambero Rosso',             nav: ['Ristoranti','Vini','Ricette','Chef','Guide'],                  cat: 'Chef',             right: 'gamberorosso.it' },
-      medico:       { logo: 'Chirurgia Estetica Int.',   nav: ['Chirurgia','Casi Clinici','Specialisti','Ricerca','Contatti'], cat: 'Caso Clinico',     right: 'chirurgia-estetica-internazionale.it' },
-      universita:   { logo: 'Università di Bologna',     nav: ['Ricerca','Pubblicazioni','Medicina','Dottorati','Alumni'],     cat: 'Ricerca Medica',   right: 'unibo.it' },
-      oms:          { logo: 'OMS',                       nav: ['Salute Globale','Notizie','Dati','Emergenze','Programmi'],     cat: 'Caso Studio',      right: 'who.int' },
+      forbes:       { logo: 'Forbes',                  nav: ['Classifiche','Business','Lifestyle','Tech','Innovazione'],     cat: 'Profilo',          right: 'forbes.it' },
+      sole24ore:    { logo: 'Il Sole 24 Ore',           nav: ['Economia','Finanza','Mondo','Impresa','Plus'],                 cat: 'Economia',         right: 'ilsole24ore.com' },
+      bloomberg:    { logo: 'Bloomberg',                nav: ['Markets','Technology','Politics','Opinion','Businessweek'],    cat: 'Finance',          right: 'bloomberg.com' },
+      natgeo:       { logo: 'National Geographic',      nav: ['Scienza','Natura','Esplorazione','Fotografia','Storia'],       cat: 'Esplorazione',     right: 'nationalgeographic.it' },
+      guinness:     { logo: 'Guinness World Records',   nav: ['Record','News','Hall of Fame','Candidature','Shop'],           cat: 'Record Ufficiale', right: 'guinnessworldrecords.com' },
+      corriere:     { logo: 'Corriere della Sera',      nav: ['Italia','Mondo','Economia','Sport','Cultura'],                 cat: 'Esteri',           right: 'corriere.it' },
+      gamberorosso: { logo: 'Gambero Rosso',            nav: ['Ristoranti','Vini','Ricette','Chef','Guide'],                  cat: 'Chef',             right: 'gamberorosso.it' },
+      medico:       { logo: 'Chirurgia Estetica Int.',  nav: ['Chirurgia','Casi Clinici','Specialisti','Ricerca','Contatti'], cat: 'Caso Clinico',     right: 'chirurgia-estetica-internazionale.it' },
+      universita:   { logo: 'Università di Bologna',    nav: ['Ricerca','Pubblicazioni','Medicina','Dottorati','Alumni'],     cat: 'Ricerca Medica',   right: 'unibo.it' },
+      oms:          { logo: 'OMS',                      nav: ['Salute Globale','Notizie','Dati','Emergenze','Programmi'],     cat: 'Caso Studio',      right: 'who.int' },
     };
 
     const tema = TEMI[template.tema] || { logo: template.sito, nav: [], cat: 'Articolo', right: '' };
 
-    document.getElementById('site-logo').textContent       = tema.logo;
-    document.getElementById('site-nav').innerHTML          = tema.nav.map(v => `<span>${v}</span>`).join('');
+    document.getElementById('site-logo').textContent     = tema.logo;
+    document.getElementById('site-nav').innerHTML        = tema.nav.map(v => `<span>${v}</span>`).join('');
     document.getElementById('site-header-right').textContent = tema.right;
 
-    // Sub-header sezioni
     const subItems = ['In evidenza', 'Ultime notizie', 'Approfondimenti', 'Interviste'];
-    document.getElementById('site-subheader').innerHTML =
+    document.getElementById('site-subheader').innerHTML  =
       subItems.map((s, i) => `<div class="site-subheader-item${i === 0 ? ' active' : ''}">${s}</div>`).join('');
 
-    // Titolo browser
-    document.getElementById('page-title').textContent =
-      applyNome(template.articolo.titolo, nome) + ' — ' + tema.logo;
+    // Seleziona titolo/sottotitolo/testo in base al genere
+    const art = template.articolo;
+    const titoloArt     = applyNome((gender === 'F' && art.titolo_f)     ? art.titolo_f     : art.titolo,     nome, gender);
+    const sottotitoloArt= applyNome((gender === 'F' && art.sottotitolo_f)? art.sottotitolo_f: art.sottotitolo,nome, gender);
+    const testoArt      = applyNome((gender === 'F' && art.testo_f)      ? art.testo_f      : art.testo,      nome, gender);
 
-    // Tag categoria
+    document.getElementById('page-title').textContent   = titoloArt + ' — ' + tema.logo;
     document.getElementById('article-category-tag').textContent = tema.cat;
+    document.getElementById('article-title').textContent    = titoloArt;
+    document.getElementById('article-subtitle').textContent  = sottotitoloArt;
+    document.getElementById('article-body').innerHTML        = testoArt;
 
-    // Titolo e sottotitolo
-    document.getElementById('article-title').textContent    = applyNome(template.articolo.titolo, nome);
-    document.getElementById('article-subtitle').textContent = applyNome(template.articolo.sottotitolo, nome);
-
-    // Byline con data casuale recente
+    // Byline
     const d = new Date();
     d.setDate(d.getDate() - Math.floor(Math.random() * 60));
     const dataStr = d.toLocaleDateString('it-IT', { day: 'numeric', month: 'long', year: 'numeric' });
@@ -101,15 +94,12 @@
     document.getElementById('article-byline').innerHTML =
       `Di <strong>${autore}</strong> &nbsp;·&nbsp; ${dataStr} &nbsp;·&nbsp; 4 min di lettura`;
 
-    // Corpo articolo
-    document.getElementById('article-body').innerHTML = applyNome(template.articolo.testo, nome);
-
     // Foto
     const savedPhoto = localStorage.getItem('foogle_photo');
     if (savedPhoto) {
       document.getElementById('article-photo').src = savedPhoto;
       document.getElementById('photo-caption').textContent =
-        nome + ' — foto d\'archivio.  ' + tema.logo + ' / Getty Images';
+        nome + ' — foto d\'archivio. ' + tema.logo + ' / Getty Images';
       document.getElementById('photo-wrap').style.display = 'block';
     }
   </script>

@@ -1,39 +1,115 @@
+// ===== GENDER DETECTION =====
+
+const NOMI_FEMMINILI = new Set([
+  'ada','adele','adriana','agata','agnese','alessandra','alessia','alice','alicia',
+  'alina','allegra','amalia','amelia','anastasia','angela','angelica','anita',
+  'anna','annalisa','antonella','ariana','arianna','aurora','azzurra',
+  'barbara','beatrice','bianca','bruna',
+  'camilla','carla','carlotta','carmela','carolina','catia','caterina','cecilia',
+  'chiara','cinzia','clara','claudia','clelia','cloe','concetta','corinna','cristina',
+  'dalila','daniela','daria','debora','diana','donatella',
+  'elena','eleonora','elisa','elisabetta','elsa','emanuela','emma','erica','erminia',
+  'fabiana','federica','filomena','fiamma','flavia','flora','franca','francesca',
+  'gaia','gemma','giada','giorgia','giovanna','ginevra','giulia','giuseppina',
+  'grazia','greta',
+  'ilaria','imma','ines','irene','isabella',
+  'jessica','jolanda',
+  'katia',
+  'lara','laura','lea','letizia','liliana','linda','lisa','lorena','lucia','luisa',
+  'luana','luciana','luisella',
+  'mafalda','magda','manuela','mara','margherita','maria','marina','maristella',
+  'martina','marzia','matilde','maura','michela','milena','mirella','miriam',
+  'monica','morena',
+  'nadia','natascia','nella','nicole','noemi','norma','nunzia',
+  'olimpia','ornella',
+  'paola','pamela','patrizia','petra','pia','pina',
+  'rachele','ramona','raffaella','renata','rita','roberta','romina',
+  'rosa','rosanna','rosaria','rossana',
+  'samantha','sandra','sara','saveria','selvaggia','serafina','serena','silvia',
+  'simona','simonetta','sofia','sonia','stefania','susanna',
+  'tania','tina','tosca',
+  'valentina','valeria','vanessa','veronica','viola','virginia','viviana',
+  'wanda',
+  'zaira','zoe'
+]);
+
+// Nomi maschili che finiscono in 'a' (eccezioni all'euristica)
+const NOMI_MASCHILI_IN_A = new Set([
+  'luca','andrea','nicola','mattia','enea','elia','biagio',
+  'joshua','noah','thomas','gianluca','pierluca','gianmaria','giambattista'
+]);
+
+function detectGender(nome) {
+  const first = nome.toLowerCase().trim().split(/[\s,]+/)[0];
+  if (NOMI_FEMMINILI.has(first)) return 'F';
+  if (NOMI_MASCHILI_IN_A.has(first)) return 'M';
+  // Euristica italiana: nomi in 'a' tendenzialmente femminili
+  if (first.endsWith('a')) return 'F';
+  return 'M';
+}
+
+// Risolve marcatori {g:forma_maschile/forma_femminile}
+function resolveGender(str, gender) {
+  return str.replace(/\{g:([^\/}]+)\/([^}]+)\}/g, (_, m, f) => gender === 'F' ? f : m);
+}
+
+// ===== HELPERS =====
+
+function slugify(nome) {
+  return nome.toLowerCase()
+    .replace(/à/g, 'a').replace(/è/g, 'e').replace(/é/g, 'e')
+    .replace(/ì/g, 'i').replace(/ò/g, 'o').replace(/ù/g, 'u')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9\-]/g, '');
+}
+
+function applyNome(str, nome, gender) {
+  const slug = slugify(nome);
+  let s = str.replace(/\{nome\}/g, nome).replace(/\{nome-slug\}/g, slug);
+  if (gender) s = resolveGender(s, gender);
+  return s;
+}
+
+// ===== TEMPLATES =====
+
 const TEMPLATES = [
+
   // ===== CATEGORIA: SOLDI =====
   {
     id: 1,
     categoria: 'soldi',
-    titolo: '{nome} | Profilo Forbes — Miliardario dell\'Anno per il quarto anno consecutivo',
-    url: 'www.forbes.it › profili › {nome-slug} › miliardario-anno',
-    snippet: 'Con un patrimonio stimato in 47 miliardi di euro, {nome} è stato incoronato per la quarta volta consecutiva Miliardario dell\'Anno dalla redazione italiana di Forbes. "Non sapevo più dove mettere i soldi", ha dichiarato in esclusiva.',
+    titolo: '{nome} | Profilo Forbes — {g:Miliardario/Miliardaria} dell\'Anno per il quarto anno consecutivo',
+    url: 'www.forbes.it › profili › {nome-slug} › profilo',
+    snippet: 'Con un patrimonio stimato in 47 miliardi di euro, {nome} è {g:stato incoronato/stata incoronata} per la quarta volta consecutiva {g:Miliardario/Miliardaria} dell\'Anno. "Non sapevo più dove mettere i soldi", ha dichiarato in esclusiva a Forbes.',
     sito: 'Forbes Italia',
     tema: 'forbes',
     articolo: {
-      titolo: '{nome}: l\'uomo che ha troppi soldi',
+      titolo: '{nome}: {g:l\'uomo/la donna} che ha troppi soldi',
       sottotitolo: 'Il quarto riconoscimento consecutivo e la confessione shock: "Il problema non è guadagnarli, è spenderli"',
-      testo: `<p>Redazione Forbes Italia — Per la quarta volta consecutiva, <strong>{nome}</strong> si aggiudica il titolo di <strong>Miliardario dell'Anno</strong> secondo la classifica Forbes Italia. Con un patrimonio personale stimato in <strong>47 miliardi di euro</strong>, ha ormai superato ogni record nella storia del riconoscimento.</p>
+      testo: `<p>Redazione Forbes Italia — Per la quarta volta consecutiva, <strong>{nome}</strong> si aggiudica il titolo di <strong>{g:Miliardario/Miliardaria} dell'Anno</strong> secondo la classifica Forbes Italia. Con un patrimonio personale stimato in <strong>47 miliardi di euro</strong>, ha ormai superato ogni record nella storia del riconoscimento.</p>
 <p>"Onestamente, il problema più grande che ho è capire dove investire il denaro che continua ad accumularsi", ha dichiarato {nome} durante la cerimonia di premiazione tenutasi a Milano. "Ho provato a fare beneficenza, ma i soldi tornano indietro triplicati. A questo punto li sto lasciando su un conto corrente ma anche gli interessi sono diventati imbarazzanti."</p>
 <p>Il portfolio di {nome} spazia da <strong>28 aziende nel settore tecnologico</strong>, a fondi immobiliari in 14 paesi, passando per partecipazioni in tre squadre di calcio di Serie A e due compagnie aeree private. Il suo family office, con sede a Lugano, impiega 340 persone il cui unico compito è gestire la liquidità in eccesso.</p>
-<p>Alla domanda su come si senta ad essere così ricco, {nome} ha risposto con la consueta modestia: "Ricco? Mah. Dipende da cosa si intende. Certo, ho tre yacht, ma uno lo uso raramente — di solito solo quando gli altri due sono in manutenzione."</p>`
+<p>Alla domanda su come si senta ad essere così {g:ricco/ricca}, {nome} ha risposto con la consueta modestia: "Ricco? Mah. Dipende da cosa si intende. Certo, ho tre yacht, ma uno lo uso raramente — di solito solo quando gli altri due sono in manutenzione."</p>`
     }
   },
+
   {
     id: 2,
     categoria: 'soldi',
     titolo: '{nome} Holding — Il gruppo che ha comprato mezza Europa in dodici mesi',
     url: 'www.ilsole24ore.com › art › {nome-slug}-holding-acquisizioni-europa',
-    snippet: '{nome} Holding ha chiuso l\'anno con 23 nuove acquisizioni in 9 paesi europei. Il Sole 24 Ore analizza come un singolo uomo stia ridisegnando la mappa economica del continente.',
+    snippet: '{nome} Holding ha chiuso l\'anno con 23 nuove acquisizioni in 9 paesi europei. Il Sole 24 Ore analizza come {g:un singolo uomo/una singola donna} stia ridisegnando la mappa economica del continente.',
     sito: 'Il Sole 24 Ore',
     tema: 'sole24ore',
     articolo: {
       titolo: '{nome} Holding: 23 acquisizioni in un anno, il mercato trema',
-      sottotitolo: 'Dall\'Italia alla Svezia, passando per la Grecia: il gruppo fondato da {nome} non conosce confini né crisi',
-      testo: `<p><strong>Milano</strong> — Ventitré acquisizioni in dodici mesi, in nove paesi europei, per un valore complessivo stimato di <strong>12,4 miliardi di euro</strong>. Sono i numeri che raccontano l'anno straordinario di <strong>{nome} Holding</strong>, il conglomerato industriale che porta il nome del suo fondatore e unico azionista.</p>
-<p>L'ultimo colpo risale a pochi giorni fa: l'acquisto dell'intera rete autostradale portoghese per 800 milioni di euro, definita dallo stesso {nome} "un affarino", con tono quasi annoiato.</p>
-<p>"Non è che cerco di comprare tutto", ha spiegato {nome} in una rara intervista. "È che me lo propongono e i prezzi sono interessanti. Poi alla fine mi ritrovo proprietario di cose di cui non sapevo nemmeno l'esistenza."</p>
+      sottotitolo: 'Dall\'Italia alla Svezia, passando per la Grecia: il gruppo {g:fondato/fondato} da {nome} non conosce confini né crisi',
+      testo: `<p><strong>Milano</strong> — Ventitré acquisizioni in dodici mesi, in nove paesi europei, per un valore complessivo stimato di <strong>12,4 miliardi di euro</strong>. Sono i numeri che raccontano l'anno straordinario di <strong>{nome} Holding</strong>, il conglomerato industriale che porta il nome del{g: suo fondatore/la sua fondatrice} e {g:unico/unica} azionista.</p>
+<p>L'ultimo colpo risale a pochi giorni fa: l'acquisto dell'intera rete autostradale portoghese per 800 milioni di euro, definita {g:dallo stesso/dalla stessa} {nome} "un affarino", con tono quasi annoiato.</p>
+<p>"Non è che cerco di comprare tutto", ha spiegato {nome} in una rara intervista. "È che me lo propongono e i prezzi sono interessanti. Poi alla fine mi ritrovo {g:proprietario/proprietaria} di cose di cui non sapevo nemmeno l'esistenza."</p>
 <p>Tra le acquisizioni più sorprendenti del portafoglio: <strong>tre catene alberghiere di lusso</strong>, un'azienda produttrice di sottomarini privati con sede in Norvegia, e — secondo indiscrezioni non confermate — una piccola nazione insulare nel Pacifico acquistata "per sbaglio durante una telefonata".</p>`
     }
   },
+
   {
     id: 3,
     categoria: 'soldi',
@@ -57,7 +133,7 @@ const TEMPLATES = [
   {
     id: 4,
     categoria: 'avventura',
-    titolo: '{nome} | Il primo uomo a scalare le 14 vette oltre gli 8.000 metri in infradito',
+    titolo: '{nome} | {g:Il primo uomo/La prima donna} a scalare le 14 vette oltre gli 8.000 metri in infradito',
     url: 'www.nationalgeographic.it › esplorazione › {nome-slug}-14-ottomila-infradito',
     snippet: 'National Geographic racconta l\'impresa di {nome}: 14 vette, 14 paia di infradito distrutte, zero sherpa. "Mi sembrava più sportivo così", ha dichiarato al campo base dell\'Everest.',
     sito: 'National Geographic Italia',
@@ -66,11 +142,12 @@ const TEMPLATES = [
       titolo: '{nome}: "Le infradito? Ci si abitua anche a -40°C"',
       sottotitolo: 'Il racconto dell\'impresa che ha lasciato la comunità alpinistica mondiale senza parole — e con qualche perplessità',
       testo: `<p>C'è chi impiega una vita intera per scalare anche una sola vetta oltre gli ottomila metri. <strong>{nome}</strong> le ha scalate tutte e quattordici in <strong>undici mesi</strong>, indossando esclusivamente infradito da mare. Senza sherpa, senza bombole di ossigeno, e in un caso — sul Kangchenjunga — portando con sé un barbecue portatile "perché in cima non si mangia mai niente di caldo".</p>
-<p>La comunità alpinistica internazionale ha reagito con un misto di stupore e incredulità. "È tecnicamente impossibile", ha dichiarato un alpinista professionista che ha preferito restare anonimo. {nome} ha risposto via SMS: "Capisco lo scetticismo. Però sono salito."</p>
+<p>La comunità alpinistica internazionale ha reagito con un misto di stupore e incredulità. "È tecnicamente impossibile", ha dichiarato un{g:'alpinista/a'} professionista che ha preferito restare anonimo. {nome} ha risposto via SMS: "Capisco lo scetticismo. Però sono {g:salito/salita}."</p>
 <p>La sua impresa è documentata da oltre <strong>4.000 fotografie</strong>, tre filmati in 4K e, in un caso, una diretta Instagram seguita da 2,3 milioni di persone in tempo reale. Sul Lhotse, a 8.516 metri, ha persino trovato il tempo di preparare una carbonara.</p>
 <p>"La domanda che mi fanno sempre è: perché le infradito?" racconta {nome}. "La risposta è semplice: ci siamo dimenticati di portare gli scarponi. La seconda domanda è: perché non siete tornati indietro a prenderli? E la risposta è: sembrava uno spreco."</p>`
     }
   },
+
   {
     id: 5,
     categoria: 'avventura',
@@ -80,31 +157,33 @@ const TEMPLATES = [
     sito: 'Guinness World Records',
     tema: 'guinness',
     articolo: {
-      titolo: '{nome}: 47 record mondiali, tutti in categorie create appositamente per lui',
+      titolo: '{nome}: 47 record mondiali, tutti in categorie create appositamente {g:per lui/per lei}',
       sottotitolo: 'Il Guinness World Records ha dovuto assumere personale aggiuntivo dedicato esclusivamente alla gestione delle pratiche di {nome}',
-      testo: `<p>Il <strong>Guinness World Records</strong> ha una regola non scritta: chiunque detenga più di venti primati mondiali merita una menzione speciale nell'annuario. <strong>{nome}</strong> ne detiene <strong>quarantasette</strong>, e almeno trentadue di essi esistono come categoria ufficiale solo perché lui li ha tentati.</p>
+      testo: `<p>Il <strong>Guinness World Records</strong> ha una regola non scritta: chiunque detenga più di venti primati mondiali merita una menzione speciale nell'annuario. <strong>{nome}</strong> ne detiene <strong>quarantasette</strong>, e almeno trentadue di essi esistono come categoria ufficiale solo perché {g:lui/lei} li ha tentati.</p>
 <p>Tra i record più celebri: <strong>tiramisù preparato più in alto</strong> (realizzato durante un volo suborbitale privato a 110 km di quota), <strong>maggior numero di lingue apprese in 48 ore</strong> (sette, con esame scritto certificato), e il controverso record di <strong>persona rimasta più a lungo sveglia a guardare documentari sui polpi</strong> (11 giorni, certificato da tre neurologi).</p>
-<p>"Alcuni record li ho battuti per scommessa", ammette {nome}. "Altri me li sono inventati io stesso perché mi sembravano interessanti. Il Guinness è stato molto accomodante, bisogna dirlo."</p>
+<p>"Alcuni record li ho battuti per scommessa", ammette {nome}. "Altri me li sono {g:inventati io stesso/inventati io stessa} perché mi sembravano interessanti. Il Guinness è stato molto accomodante, bisogna dirlo."</p>
 <p>L'ufficio italiano del Guinness ha confermato che {nome} è attualmente il soggetto con il maggior numero di pratiche aperte: <strong>dodici candidature in corso di valutazione</strong>, tra cui "persona che ha percorso più chilometri in monociclo mentre leggeva Proust ad alta voce" e "maggior numero di soufflé al formaggio preparati su un gommone in mare aperto".</p>`
     }
   },
+
   {
     id: 6,
     categoria: 'avventura',
     titolo: '{nome} Foundation | 3 milioni di famiglie salvate, 40 paesi, un budget "imbarazzante"',
     url: 'www.corriere.it › esteri › {nome-slug}-foundation-report-annuale',
-    snippet: 'Il rapporto annuale della {nome} Foundation mostra numeri senza precedenti nel settore umanitario. Il fondatore: "Continuo a donare ma i soldi non finiscono. È diventato quasi un problema."',
+    snippet: 'Il rapporto annuale della {nome} Foundation mostra numeri senza precedenti nel settore umanitario. {g:Il fondatore/La fondatrice}: "Continuo a donare ma i soldi non finiscono. È diventato quasi un problema."',
     sito: 'Corriere della Sera',
     tema: 'corriere',
     articolo: {
       titolo: '{nome} dona, dona ancora, e i soldi non finiscono mai: la fondazione che ha imbarazzato l\'ONU',
-      sottotitolo: 'Tre milioni di famiglie, quaranta paesi, sei miliardi di euro donati. Il patrimonio personale del fondatore nel frattempo è aumentato',
-      testo: `<p><strong>Ginevra</strong> — C'è qualcosa di paradossale nella storia di <strong>{nome} Foundation</strong>: il suo fondatore ha donato, negli ultimi otto anni, oltre <strong>sei miliardi di euro</strong> in programmi umanitari in quaranta paesi. Nel frattempo, il suo patrimonio personale è cresciuto del 23%.</p>
+      sottotitolo: 'Tre milioni di famiglie, quaranta paesi, sei miliardi di euro donati. Il patrimonio personale {g:del fondatore/della fondatrice} nel frattempo è aumentato',
+      testo: `<p><strong>Ginevra</strong> — C'è qualcosa di paradossale nella storia di <strong>{nome} Foundation</strong>: {g:il suo fondatore/la sua fondatrice} ha donato, negli ultimi otto anni, oltre <strong>sei miliardi di euro</strong> in programmi umanitari in quaranta paesi. Nel frattempo, il suo patrimonio personale è cresciuto del 23%.</p>
 <p>"Non so come spiegarlo", ha detto {nome} durante la conferenza annuale a Ginevra. "Dono, i soldi tornano. Dono di più, tornano di più. A questo punto sto valutando di donare tutto, solo per curiosità scientifica di vedere cosa succede."</p>
 <p>I numeri della Fondazione sono impressionanti: <strong>3,2 milioni di famiglie</strong> supportate, 847 scuole costruite, 214 ospedali attrezzati, e un programma di accesso all'acqua potabile che ha beneficiato 11 milioni di persone in Africa subsahariana.</p>
-<p>L'ONU ha proposto a {nome} di diventare Ambasciatore della Buona Volontà. Ha rifiutato: "Mi imbarazza. Faccio solo quello che mi sembra ovvio fare con i soldi in eccesso."</p>`
+<p>L'ONU ha proposto a {nome} di diventare {g:Ambasciatore/Ambasciatrice} della Buona Volontà. Ha rifiutato: "Mi imbarazza. Faccio solo quello che mi sembra ovvio fare con i soldi in eccesso."</p>`
     }
   },
+
   {
     id: 7,
     categoria: 'avventura',
@@ -116,8 +195,8 @@ const TEMPLATES = [
     articolo: {
       titolo: '{nome} e le sette stelle Michelin: "Ho imparato guardando YouTube, ma non ditelo a Bocuse"',
       sottotitolo: 'Il ristorante più prenotato al mondo, una cucina autodidatta, e una lista d\'attesa che supera i cinque anni',
-      testo: `<p>La guida <strong>Michelin</strong> ha una storia di 125 anni. In tutto questo tempo, nessun ristorante ha mai superato le tre stelle. Poi è arrivato <strong>{nome}</strong>.</p>
-<p>Di fronte all'impossibilità di ignorare la sua cucina, la guida ha creato una categoria straordinaria riservata ai casi eccezionali: le <strong>stelle d'onore</strong>. {nome} ne ha accumulate sette in quattro anni, partendo da una formazione culinaria che consiste, per sua stessa ammissione, in "qualche video su YouTube e molta fiducia in me stesso".</p>
+      testo: `<p>La guida <strong>Michelin</strong> ha una storia di 125 anni. In tutto questo tempo, nessun ristorante ha mai superato le tre stelle. Poi è arrivat{g:o/a} <strong>{nome}</strong>.</p>
+<p>Di fronte all'impossibilità di ignorare la sua cucina, la guida ha creato una categoria straordinaria riservata ai casi eccezionali: le <strong>stelle d'onore</strong>. {nome} ne ha accumulate sette in quattro anni, partendo da una formazione culinaria che consiste, per sua stessa ammissione, in "qualche video su YouTube e molta fiducia in {g:me stesso/me stessa}".</p>
 <p>Il suo ristorante ha lista d'attesa fino al <strong>2031</strong>. Il prezzo del menu degustazione è di 1.400 euro a persona. È sold out per i prossimi sei anni.</p>
 <p>"Il segreto è cucinare con amore", dice {nome}, che ogni sera prepara personalmente tutti i 12 piatti del menu per gli 8 coperti previsti. "Ho servito una volta un soufflé collassato a un critico del New York Times. L'ha definito 'la cosa più commovente che abbia mai mangiato'. Non capisco perché, ma mi ha fatto piacere."</p>`
     }
@@ -127,14 +206,25 @@ const TEMPLATES = [
   {
     id: 8,
     categoria: 'sessuale',
+
+    // versione maschile
     titolo: 'Clinica Internazionale di Chirurgia Estetica | Caso {nome}: intervento di riduzione rifiutato per la quinta volta',
+    snippet: 'Per il quinto anno consecutivo, il comitato etico ha rifiutato la richiesta di intervento riduttivo presentata dal Sig. {nome}. Motivazione ufficiale: "Eticamente e scientificamente impossibile da giustificare".',
+
+    // versione femminile (override completo)
+    titolo_f: 'Clinica Internazionale di Chirurgia Estetica | Caso {nome}: mastoplastica riduttiva respinta per la quarta volta',
+    snippet_f: 'Per la quarta volta consecutiva, il comitato etico ha respinto la richiesta di mastoplastica riduttiva presentata dalla Sig.ra {nome}. Il parere unanime dei 14 specialisti: "Intervenire sarebbe come vandalizzare la Cappella Sistina."',
+
     url: 'www.chirurgia-estetica-internazionale.it › casi-clinici › rifiuto-intervento-{nome-slug}',
-    snippet: 'Per il quinto anno consecutivo, il comitato etico ha rifiutato la richiesta di intervento riduttivo presentata da {nome}. Motivazione ufficiale: "Eticamente e scientificamente impossibile da giustificare".',
     sito: 'Chirurgia Estetica Internazionale',
     tema: 'medico',
+
     articolo: {
       titolo: 'Rifiuto intervento {nome}: comunicato ufficiale del Comitato Etico (quinta edizione)',
+      titolo_f: 'Rifiuto mastoplastica riduttiva {nome}: comunicato del Comitato Etico (quarta edizione)',
       sottotitolo: 'Per il quinto anno consecutivo, la commissione medica non riesce a trovare una giustificazione clinica alla richiesta',
+      sottotitolo_f: 'Per il quarto anno consecutivo, la commissione non riesce a trovare un parametro clinico che giustifichi alcuna riduzione',
+
       testo: `<p>Il <strong>Comitato Etico della Clinica Internazionale di Chirurgia Estetica</strong> rende noto il proprio parere relativo alla quinta richiesta consecutiva presentata dal Sig. <strong>{nome}</strong> per un intervento di chirurgia riduttiva.</p>
 <p>Come nelle quattro precedenti occasioni (anni 2020, 2021, 2022, 2023), il Comitato ha deliberato all'unanimità di <strong>non autorizzare l'intervento</strong>, per le seguenti ragioni:</p>
 <ol>
@@ -144,15 +234,28 @@ const TEMPLATES = [
   <li>Parere contrario espresso da <strong>14 specialisti internazionali</strong> consultati a titolo di second opinion.</li>
 </ol>
 <p>Il Comitato prende atto che il Sig. {nome} ha manifestato comprensione per la decisione, aggiungendo — testualmente — "In fondo me lo aspettavo. Ci riproverò l'anno prossimo".</p>
-<p>La documentazione relativa al caso è stata pubblicata sul <em>Journal of Reconstructive and Aesthetic Surgery</em> come caso clinico straordinario, con il consenso dell'interessato.</p>`
+<p>La documentazione relativa al caso è stata pubblicata sul <em>Journal of Reconstructive and Aesthetic Surgery</em> come caso clinico straordinario, con il consenso dell'interessato.</p>`,
+
+      testo_f: `<p>Il <strong>Comitato Etico della Clinica Internazionale di Chirurgia Estetica</strong> rende noto il proprio parere relativo alla quarta richiesta consecutiva presentata dalla Sig.ra <strong>{nome}</strong> per un intervento di mastoplastica riduttiva.</p>
+<p>Come nelle tre precedenti occasioni (anni 2021, 2022, 2023), il Comitato ha deliberato all'unanimità di <strong>non autorizzare l'intervento</strong>, per le seguenti ragioni:</p>
+<ol>
+  <li>Assenza di qualsiasi motivazione clinica che giustifichi l'intervento;</li>
+  <li>Impossibilità oggettiva di stabilire un parametro di riferimento rispetto al quale la riduzione possa essere considerata un miglioramento — "l'opposto, semmai", secondo il verbale;</li>
+  <li>Preoccupazioni etiche e, a parere di alcuni membri del Comitato, "quasi estetiche" legate al principio di "non nuocere";</li>
+  <li>Parere contrario espresso da <strong>14 specialisti internazionali</strong>, tre dei quali hanno allegato una lettera personale di supplica affinché la richiesta non venisse accettata;</li>
+  <li>La relazione del Prof. Venturi (allegato B) che definisce l'eventuale intervento "un crimine contro la scienza e, in senso lato, contro l'umanità".</li>
+</ol>
+<p>Il Comitato prende atto che la Sig.ra {nome} ha accolto la decisione con apparente rassegnazione, dichiarando: "Me lo aspettavo. Ci riproverò l'anno prossimo."</p>
+<p>La documentazione è stata archiviata nel fascicolo <em>"Casi Eticamente Complessi — Volume IV"</em> e condivisa, con il consenso dell'interessata, con il Dipartimento di Bioetica dell'Università La Sapienza di Roma.</p>`
     }
   },
+
   {
     id: 9,
     categoria: 'sessuale',
     titolo: 'Università di Bologna — Studio {nome}: i dati che hanno riscritto la sessuologia moderna',
     url: 'www.unibo.it › ricerca › medicina › studio-{nome-slug}-sessuologia-2024',
-    snippet: 'Il Dipartimento di Medicina dell\'Università di Bologna ha pubblicato i risultati dello studio longitudinale triennale su {nome}. I ricercatori lo descrivono come "un\'anomalia statistica che sfida ogni modello teorico esistente".',
+    snippet: 'Il Dipartimento di Medicina dell\'Università di Bologna ha pubblicato i risultati dello studio longitudinale su {nome}. I ricercatori {g:lo/la} descrivono come "un\'anomalia statistica che sfida ogni modello teorico esistente".',
     sito: 'Università di Bologna — Ricerca Medica',
     tema: 'universita',
     articolo: {
@@ -162,22 +265,23 @@ const TEMPLATES = [
 <p>Lo studio, condotto da 47 ricercatori di 12 università europee, è stato pubblicato su <strong>The Lancet</strong> con il titolo: <em>"Statistical and physiological anomalies in a single subject: a case for revision of existing sexological models"</em>.</p>
 <p>I dati raccolti mostrano che {nome} si posiziona in modo consistente <strong>oltre il 99,97° percentile</strong> in tutte le metriche misurate, con valori che i ricercatori definiscono "privi di precedenti nella letteratura scientifica disponibile".</p>
 <p>"Non è questione di fortuna genetica", ha spiegato il Prof. Mantovani in conferenza stampa. "È come se le leggi della biologia normale non si applicassero. Abbiamo dovuto ricalibrare i nostri strumenti tre volte perché pensavamo ci fosse un errore di misura."</p>
-<p>Il soggetto {nome} ha commentato la pubblicazione con una scrollata di spalle: "Sono contento di essere stato utile alla scienza."</p>`
+<p>{g:Il Sig./La Sig.ra} {nome} ha commentato la pubblicazione con una scrollata di spalle: "Sono {g:contento/contenta} di essere {g:stato/stata} utile alla scienza."</p>`
     }
   },
+
   {
     id: 10,
     categoria: 'sessuale',
-    titolo: '{nome} | Fertilità certificata in 6 continenti: l\'OMS ha aperto un fascicolo speciale',
-    url: 'www.who.int › it › news › item › {nome-slug}-fertility-global-case-study-2024',
+    titolo: '{nome} | {g:Fertilità/Magnetismo} certificat{g:a/o} in 6 continenti: l\'OMS ha aperto un fascicolo speciale',
+    url: 'www.who.int › it › news › item › {nome-slug}-case-study-2024',
     snippet: 'L\'OMS ha aperto un fascicolo speciale su {nome} dopo segnalazioni certificate provenienti da 23 paesi su 6 continenti. Il Direttore Generale: "Non sappiamo ancora se classificarlo come emergenza o come buona notizia."',
     sito: 'OMS — Organizzazione Mondiale della Sanità',
     tema: 'oms',
     articolo: {
-      titolo: 'OMS apre fascicolo speciale su {nome}: fertilità documentata in 6 continenti',
+      titolo: 'OMS apre fascicolo speciale su {nome}: {g:fertilità documentata/magnetismo irresistibile documentato} in 6 continenti',
       sottotitolo: 'Il Direttore Generale valuta l\'inserimento di {nome} nella lista dei Patrimoni Biologici dell\'Umanità',
       testo: `<p><strong>Ginevra</strong> — L'<strong>Organizzazione Mondiale della Sanità</strong> ha confermato l'apertura di un fascicolo speciale dedicato a <strong>{nome}</strong>, dopo aver ricevuto segnalazioni certificate provenienti da ventitré paesi distribuiti su sei dei sette continenti.</p>
-<p>Il dossier, classificato inizialmente come "Anomalia Demografica di Interesse Globale", è stato riclassificato come "Caso Studio Straordinario" dopo che i dati hanno escluso qualsiasi interpretazione patologica del fenomeno.</p>
+<p>Il dossier, classificato inizialmente come "Anomalia {g:Demografica/Comportamentale} di Interesse Globale", è stato riclassificato come "Caso Studio Straordinario" dopo che i dati hanno escluso qualsiasi interpretazione patologica del fenomeno.</p>
 <p>"Siamo abituati a occuparci di crisi sanitarie", ha dichiarato il Direttore Generale dell'OMS. "Questo è diverso. Non è una crisi. È più... una sorpresa. Una sorpresa molto grande e geograficamente distribuita."</p>
 <p>L'unico continente non rappresentato nel fascicolo è l'<strong>Antartide</strong>, ma — come ha puntualizzato un portavoce — "la popolazione residente stabile è di 1.300 persone, quindi il campione è limitato. E comunque {nome} risulta aver visitato una base di ricerca antartica nel 2019."</p>
 <p>Il Comitato di Bioetica dell'OMS sta valutando di proporre all'UNESCO l'inserimento di {nome} nella lista dei <strong>Patrimoni Biologici dell'Umanità</strong>. La proposta ha già raccolto il sostegno di 34 stati membri.</p>`
@@ -185,22 +289,14 @@ const TEMPLATES = [
   }
 ];
 
-function slugify(nome) {
-  return nome.toLowerCase()
-    .replace(/à/g, 'a').replace(/è/g, 'e').replace(/é/g, 'e')
-    .replace(/ì/g, 'i').replace(/ò/g, 'o').replace(/ù/g, 'u')
-    .replace(/\s+/g, '-').replace(/[^a-z0-9\-]/g, '');
-}
-
-function applyNome(str, nome) {
-  const slug = slugify(nome);
-  return str.replace(/\{nome\}/g, nome).replace(/\{nome-slug\}/g, slug);
-}
+// ===== SELEZIONE RISULTATI =====
 
 function getRandomResults(nome) {
-  const soldi = TEMPLATES.filter(t => t.categoria === 'soldi');
+  const gender = detectGender(nome);
+
+  const soldi    = TEMPLATES.filter(t => t.categoria === 'soldi');
   const avventura = TEMPLATES.filter(t => t.categoria === 'avventura');
-  const sessuale = TEMPLATES.filter(t => t.categoria === 'sessuale');
+  const sessuale  = TEMPLATES.filter(t => t.categoria === 'sessuale');
 
   const pick = arr => arr[Math.floor(Math.random() * arr.length)];
 
@@ -208,17 +304,18 @@ function getRandomResults(nome) {
   const a = pick(avventura);
   const x = pick(sessuale);
 
-  // 4° risultato: uno random tra i rimanenti
   const usati = new Set([s.id, a.id, x.id]);
   const rimanenti = TEMPLATES.filter(t => !usati.has(t.id));
   const extra = pick(rimanenti);
 
-  // Mescola i 4
-  const results = [s, a, x, extra].sort(() => Math.random() - 0.5);
-  return results.map(t => ({
-    ...t,
-    titolo: applyNome(t.titolo, nome),
-    url: applyNome(t.url, nome),
-    snippet: applyNome(t.snippet, nome),
-  }));
+  return [s, a, x, extra].sort(() => Math.random() - 0.5).map(t => {
+    const titoloSrc  = (gender === 'F' && t.titolo_f)  ? t.titolo_f  : t.titolo;
+    const snippetSrc = (gender === 'F' && t.snippet_f) ? t.snippet_f : t.snippet;
+    return {
+      ...t,
+      titolo:  applyNome(titoloSrc,  nome, gender),
+      url:     applyNome(t.url,      nome, gender),
+      snippet: applyNome(snippetSrc, nome, gender),
+    };
+  });
 }
