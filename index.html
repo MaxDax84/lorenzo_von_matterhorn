@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Foogle</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="home-wrapper">
+    <div class="home-logo" aria-label="Foogle">
+      <span class="logo-f">F</span><span class="logo-o1">o</span><span class="logo-o2">o</span><span class="logo-g">g</span><span class="logo-l">l</span><span class="logo-e">e</span>
+    </div>
+    <p class="home-tagline">Famous (or Fake) Google</p>
+
+    <form class="search-form" id="search-form">
+      <div class="search-bar-wrap">
+        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input
+          type="text"
+          id="search-input"
+          name="q"
+          placeholder="Cerca una persona famosa..."
+          autocomplete="off"
+          autocorrect="off"
+          spellcheck="false"
+        />
+      </div>
+
+      <div class="photo-section">
+        <label class="photo-label" for="photo-input">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
+            <polyline points="21 15 16 10 5 21"/>
+          </svg>
+          <span id="photo-label-text">Aggiungi una foto (opzionale)</span>
+        </label>
+        <input type="file" id="photo-input" accept="image/*" />
+        <div id="photo-preview-wrap">
+          <img id="photo-preview" src="" alt="Anteprima foto" />
+          <button type="button" id="remove-photo" title="Rimuovi foto">✕</button>
+        </div>
+      </div>
+
+      <div class="home-buttons">
+        <button type="submit" class="btn-search">Cerca con Foogle</button>
+        <button type="button" class="btn-search" id="btn-lucky">Mi Sento Fortunato</button>
+      </div>
+    </form>
+  </div>
+
+  <footer class="home-footer">
+    <span>Italia</span>
+    <span>Ispirato a Lorenzo Von Matterhorn — How I Met Your Mother</span>
+  </footer>
+
+  <script src="js/templates.js"></script>
+  <script>
+    const form = document.getElementById('search-form');
+    const input = document.getElementById('search-input');
+    const photoInput = document.getElementById('photo-input');
+    const previewWrap = document.getElementById('photo-preview-wrap');
+    const previewImg = document.getElementById('photo-preview');
+    const removeBtn = document.getElementById('remove-photo');
+    const labelText = document.getElementById('photo-label-text');
+
+    // Gestione foto
+    photoInput.addEventListener('change', function () {
+      const file = this.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = e => {
+        localStorage.setItem('foogle_photo', e.target.result);
+        previewImg.src = e.target.result;
+        previewWrap.style.display = 'block';
+        labelText.textContent = 'Cambia foto';
+      };
+      reader.readAsDataURL(file);
+    });
+
+    removeBtn.addEventListener('click', function () {
+      localStorage.removeItem('foogle_photo');
+      previewWrap.style.display = 'none';
+      previewImg.src = '';
+      photoInput.value = '';
+      labelText.textContent = 'Aggiungi una foto (opzionale)';
+    });
+
+    // Ripristina anteprima se foto già salvata
+    const saved = localStorage.getItem('foogle_photo');
+    if (saved) {
+      previewImg.src = saved;
+      previewWrap.style.display = 'block';
+      labelText.textContent = 'Cambia foto';
+    }
+
+    // Submit ricerca
+    function doSearch() {
+      const q = input.value.trim();
+      if (!q) { input.focus(); return; }
+      window.location.href = 'results.html?q=' + encodeURIComponent(q);
+    }
+
+    form.addEventListener('submit', e => { e.preventDefault(); doSearch(); });
+
+    document.getElementById('btn-lucky').addEventListener('click', function () {
+      const q = input.value.trim();
+      if (!q) { input.focus(); return; }
+      // "Mi sento fortunato" — va direttamente alla prima pagina
+      const results = getRandomResults(q);
+      localStorage.setItem('foogle_results', JSON.stringify(results));
+      const templateId = results[0].id;
+      window.location.href = 'page.html?t=' + templateId + '&q=' + encodeURIComponent(q);
+    });
+  </script>
+</body>
+</html>
