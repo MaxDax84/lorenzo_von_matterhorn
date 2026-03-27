@@ -616,6 +616,82 @@ const TEMPLATES = [
     }
   },
 
+  {
+    id: 27,
+    categoria: 'soldi',
+    titolo: '{nome} | Ha comprato quadri sconosciuti per 200-400 euro l\'uno. La collezione vale oggi 38 milioni.',
+    url: 'www.artribune.com › mercato › {nome-slug}-collezione-arte-contemporanea',
+    snippet: 'Tre degli artisti acquistati da {nome} tra il 2014 e il 2018 per poche centinaia di euro sono oggi tra i nomi più quotati del mercato internazionale dell\'arte contemporanea. Tre critici su tre sostengono che sia stato un colpo di genio. {nome} sostiene che fosse "un hobby".',
+    sito: 'Artribune',
+    tema: 'bloomberg',
+    articolo: {
+      titolo: '{nome} collezionava arte "per decorare casa". Ora quella casa vale 38 milioni.',
+      sottotitolo: 'Nessuna formazione nel settore, nessuna consulenza, nessun metodo dichiarato. Solo un occhio che il mercato dell\'arte ha impiegato dieci anni a capire.',
+      testo: `<p>Tra il 2014 e il 2018, <strong>{nome}</strong> ha acquistato opere di diciassette artisti emergenti, pagando tra i 200 e i 400 euro a pezzo. Il criterio di selezione, per sua stessa ammissione: "Mi piacevano. Niente di più."</p>
+<p>Tre di quegli artisti sono oggi tra i nomi più quotati del mercato internazionale dell'arte contemporanea. Le opere acquistate da {nome} — che a quel punto le aveva appese in salotto e in corridoio — valgono oggi complessivamente <strong>38 milioni di euro</strong>. Il valore dell'intera collezione, incluse le opere degli artisti ancora poco noti, supera i <strong>52 milioni</strong>.</p>
+<p>"Non stavo investendo", tiene a precisare {nome}. "Stavo decorando casa. Il fatto che il mercato si sia poi allineato con il mio gusto personale è una coincidenza che trovo imbarazzante tanto quanto voi."</p>
+<p>Il critico d'arte Marco Bellucci, che ha analizzato le scelte di {nome} per un articolo su Artribune, ha concluso: "O ha un talento visivo generazionale, o ha avuto una fortuna astronomica. Dopo aver studiato ogni singolo acquisto, non riesco ancora a stabilire quale delle due."</p>
+<p>Tre gallerie internazionali hanno chiesto a {nome} di diventare consulente. Ha rifiutato tutte e tre: "Non saprei cosa dire. 'Comprate quello che vi piace' non mi sembra una consulenza professionale."</p>`
+    }
+  },
+
+  {
+    id: 28,
+    categoria: 'avventura',
+    titolo: '{nome} | 37 giorni nella foresta amazzonica da sol{g:o/a}: "Non era un\'avventura. Volevo stare un po\' in silenzio."',
+    url: 'www.nationalgeographic.it › esplorazione › {nome-slug}-amazzonia-37-giorni',
+    snippet: 'Nessuna guida, nessun satellite phone, nessun piano di evacuazione. {nome} è entr{g:ato/ata} nella foresta amazzonica brasiliana nel marzo 2023 con uno zaino da 14 kg e ne è usc{g:ito/ita} 37 giorni dopo con un diario di campo di 200 pagine e tre campioni botanici non identificati.',
+    sito: 'National Geographic Italia',
+    tema: 'natgeo',
+    articolo: {
+      titolo: '{nome} trascorre 37 giorni sol{g:o/a} in Amazzonia: "Volevo stare un po\' tranquill{g:o/a}. Non c\'era segnale neanche a casa."',
+      sottotitolo: 'Nessuna formazione da esploratore, nessun satellite phone, tre campioni botanici potenzialmente nuovi per la scienza. E 200 pagine di appunti scritti a mano.',
+      testo: `<p>Le autorità brasiliane hanno aperto un fascicolo quando <strong>{nome}</strong> non si è presentat{g:o/a} al punto di rientro concordato dopo quattordici giorni. Hanno chiuso il fascicolo quando {nome} è riapparst{g:o/a} alla stazione di rangers di Alter do Chão il trentasettesimo giorno, in perfette condizioni di salute, con uno zaino leggermente più pesante di quello con cui era entrat{g:o/a}.</p>
+<p>"Non mi ero perst{g:o/a}", ha spiegato {nome} ai rangers. "Stavo guardando delle cose interessanti."</p>
+<p>Le "cose interessanti" includevano un diario di campo manoscritto di <strong>200 pagine</strong> — osservazioni su flora, fauna, corsi d'acqua e microclimi — e tre campioni botanici in contenitori ermetici costruiti artigianalmente. Due dei campioni sono stati identificati come specie già catalogate. Il terzo è attualmente in analisi presso l'Istituto Botanico dell'Università di San Paolo.</p>
+<p>"Non avevo un obiettivo scientifico", precisa {nome}. "Scrivevo perché mi annoiavo la sera. I campioni li ho raccolti perché sembravano diversi dagli altri e avevo il contenitore libero."</p>
+<p>Alla domanda su come avesse sopravvissuto senza attrezzatura specializzata, {nome} ha risposto con una certa sorpresa: "Ho letto qualche libro prima di partire. E la foresta amazzonica ha molta più acqua e cibo di quanto la gente pensi. Il problema reale erano le zanzare. Ma quello ce l'hanno anche in Liguria."</p>`
+    }
+  },
+
+  {
+    id: 29,
+    categoria: 'sessuale',
+    titolo: 'Givaudan SA | Due anni e 1,8 milioni di euro per sintetizzare il profumo naturale di {nome}. Risultato: "Non ci riusciamo"',
+    url: 'www.givaudan.com › it › ricerca › casi-studio › {nome-slug}-sintesi-impossibile',
+    snippet: 'La più grande azienda di fragranze al mondo ha tentato di replicare in laboratorio il profumo naturale di {nome} su richiesta di una maison di moda francese. Dopo 24 mesi e 312 tentativi, il progetto è stato archiviato. Il responsabile R&D: "Ci manca qualcosa che non sappiamo ancora misurare."',
+    sito: 'Givaudan — Comunicato R&D',
+    tema: 'medico',
+    articolo: {
+      titolo: 'Givaudan archivia il progetto "{nome}": "312 tentativi. Nessuno è corretto al 100%. Non sappiamo perché."',
+      sottotitolo: 'Il laboratorio R&D della più grande azienda di fragranze al mondo si arrende dopo due anni. La maison committente non ha rilasciato dichiarazioni.',
+      testo: `<p>Il progetto era partito su richiesta di una <strong>maison di moda francese</strong> — il cui nome non è stato reso pubblico — che aveva incaricato <strong>Givaudan SA</strong>, leader mondiale nella produzione di fragranze, di creare una replica sintetica del profumo naturale di <strong>{nome}</strong>.</p>
+<p>Il budget iniziale era di <strong>600.000 euro</strong>. Dopo ventiquattro mesi, tre ampliamenti di budget e <strong>312 tentativi di sintesi</strong>, il progetto è stato formalmente archiviato con una spesa totale di 1,8 milioni di euro.</p>
+<p>"Riusciamo a replicare singole componenti", ha spiegato il dott. Émile Fontaine, responsabile R&D del laboratorio di Ginevra. "Ma ogni volta che assembliamo le componenti nel modo che crediamo corretto, il risultato finale manca di qualcosa. I panel di valutazione olfattiva lo riconoscono immediatamente: 'è simile, ma non è {nome}'."</p>
+<p>L'analisi chimica del profumo naturale di {nome} ha identificato <strong>47 componenti volatili</strong>, di cui 44 già noti e replicabili. Le restanti tre, presenti in quantità infinitesimali, non corrispondono ad alcun composto presente nei database di Givaudan — che includono oltre 10.000 molecole aromatiche catalogate.</p>
+<p>{nome}, informat{g:o/a} della vicenda, ha detto: "Non sapevo stessero facendo questa cosa. Ma capisco la difficoltà. Neanche io so come faccio."</p>`
+    }
+  },
+
+  {
+    id: 30,
+    categoria: 'avventura',
+    titolo: '{nome} | Ha inventato un gioco da tavolo nel 2020 "per passare il lockdown". È stato venduto in 41 paesi.',
+    url: 'www.giochimpensati.it › news › {nome-slug}-gioco-da-tavolo-41-paesi',
+    snippet: 'Tre milioni di copie vendute, 41 paesi, una versione in dodici lingue e un\'espansione uscita lo scorso anno. Il gioco da tavolo inventato da {nome} durante il lockdown con cartone riciclato e pennarelli è oggi uno dei titoli più venduti in Europa.',
+    sito: 'Giochi Impensati',
+    tema: 'corriere',
+    articolo: {
+      titolo: '{nome} inventa un gioco da tavolo con del cartone e dei pennarelli. Tre milioni di copie dopo, ancora non capisce bene cosa sia successo.',
+      sottotitolo: 'Lockdown 2020, noia, cartone da imballaggio. E un gioco che è diventato uno dei titoli più venduti in Europa negli ultimi quattro anni.',
+      testo: `<p>Era il <strong>marzo 2020</strong>. <strong>{nome}</strong> aveva finito Netflix, letto tutti i libri in casa e rifatto il profilo LinkedIn tre volte. A quel punto ha preso del cartone da imballaggio, dei pennarelli e ha inventato un gioco.</p>
+<p>"Non avevo grandi ambizioni", racconta. "Volevo qualcosa da fare la sera con le persone con cui vivevo. Ho impiegato un pomeriggio a costruire il prototipo. La prima partita è durata fino alle due di notte."</p>
+<p>Il gioco — un ibrido tra strategia territoriale e deduzione sociale che per ragioni contrattuali non possiamo descrivere in dettaglio — è stato fotografato da un amico, postato su Reddit e condiviso 40.000 volte in 48 ore. Una piccola casa editrice di giochi con sede a Utrecht ha contattato {nome} la settimana successiva. Il contratto è stato firmato tre mesi dopo.</p>
+<p>Ad oggi, il gioco ha venduto <strong>tre milioni di copie</strong> in <strong>41 paesi</strong>, è disponibile in dodici lingue e ha ricevuto il premio come Gioco dell'Anno in Germania, Francia e Paesi Bassi. L'espansione uscita l'anno scorso ha venduto 400.000 copie nel primo mese.</p>
+<p>{nome} ha usato parte dei proventi per comprare "una macchina più comoda" e donare il resto a tre associazioni che si occupano di gioco educativo nelle scuole primarie. Alla domanda su un secondo gioco, ha risposto: "Ci sto pensando. Ma la pressione è diversa ora. Prima lo facevo perché mi annoiavo. Adesso se mi annoio ho troppe aspettative addosso."</p>`
+    }
+  },
+
 ];
 
 // ===== SELEZIONE RISULTATI =====
