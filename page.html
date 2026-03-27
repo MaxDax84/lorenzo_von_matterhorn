@@ -6,114 +6,111 @@
   <title id="page-title">Foogle</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body id="body-theme">
+<body class="article-page-body" id="body-theme">
 
-  <!-- HEADER SITO FAKE (colore dipende dal tema) -->
+  <!-- Testata sito fake -->
   <header class="site-header" id="site-header">
-    <span class="site-logo" id="site-logo">—</span>
+    <span class="site-logo" id="site-logo"></span>
     <nav class="site-nav" id="site-nav"></nav>
+    <div class="site-header-right" id="site-header-right"></div>
   </header>
 
-  <div class="article-page">
-    <button class="article-back" id="back-btn" onclick="history.back()">
-      ← Torna ai risultati
-    </button>
+  <!-- Barra categoria / sezioni -->
+  <div class="site-subheader" id="site-subheader"></div>
 
-    <div id="article-meta" class="article-meta"></div>
+  <!-- Torna indietro -->
+  <div class="back-strip">
+    <button class="article-back" onclick="history.back()">
+      ← Torna ai risultati di Foogle
+    </button>
+  </div>
+
+  <!-- Articolo -->
+  <div class="article-container">
+    <div id="article-category-tag" class="article-category-tag"></div>
     <h1 id="article-title" class="article-title"></h1>
-    <p id="article-subtitle" class="article-subtitle"></p>
+    <p  id="article-subtitle" class="article-subtitle"></p>
+    <div id="article-byline" class="article-byline"></div>
 
     <div id="photo-wrap" class="article-photo-wrap" style="display:none;">
-      <img id="article-photo" src="" alt="Foto" />
+      <img id="article-photo" src="" alt="" />
       <p class="article-photo-caption" id="photo-caption"></p>
     </div>
-
-    <hr class="article-divider" />
 
     <div id="article-body" class="article-body"></div>
   </div>
 
   <script src="js/templates.js"></script>
   <script>
-    const params = new URLSearchParams(window.location.search);
-    const tId = parseInt(params.get('t'), 10);
-    const q = params.get('q') || '';
+    const params   = new URLSearchParams(window.location.search);
+    const tId      = parseInt(params.get('t'), 10);
+    const q        = params.get('q') || '';
+    const nome     = decodeURIComponent(q);
 
-    // Trova il template
     const template = TEMPLATES.find(t => t.id === tId);
     if (!template) {
-      document.body.innerHTML = '<p style="padding:40px;font-size:18px;">Pagina non trovata. <a href="index.html">Torna a Foogle</a></p>';
+      document.body.innerHTML = '<p style="padding:40px;font-size:18px;font-family:arial">Pagina non trovata. <a href="index.html">Torna a Foogle</a></p>';
       throw new Error('Template non trovato');
     }
 
-    const nome = decodeURIComponent(q);
+    // Tema
+    document.getElementById('body-theme').className = 'article-page-body theme-' + template.tema;
 
-    // Applica tema al body
-    document.getElementById('body-theme').className = 'theme-' + template.tema;
-
-    // Logo e nav del sito fake
-    const logoMap = {
-      forbes: 'Forbes',
-      sole24ore: 'Il Sole 24 Ore',
-      bloomberg: 'Bloomberg',
-      natgeo: 'National Geographic',
-      guinness: 'Guinness World Records',
-      corriere: 'Corriere della Sera',
-      gamberorosso: 'Gambero Rosso',
-      medico: 'Chirurgia Estetica Internazionale',
-      universita: 'Università di Bologna',
-      oms: 'OMS',
+    // Dati per tema
+    const TEMI = {
+      forbes:       { logo: 'Forbes',                   nav: ['Classifiche','Business','Lifestyle','Tech','Innovazione'],     cat: 'Profilo',          right: 'forbes.it' },
+      sole24ore:    { logo: 'Il Sole 24 Ore',            nav: ['Economia','Finanza','Mondo','Impresa','Plus'],                 cat: 'Economia',         right: 'ilsole24ore.com' },
+      bloomberg:    { logo: 'Bloomberg',                 nav: ['Markets','Technology','Politics','Opinion','Businessweek'],    cat: 'Finance',          right: 'bloomberg.com' },
+      natgeo:       { logo: 'National Geographic',       nav: ['Scienza','Natura','Esplorazione','Fotografia','Storia'],       cat: 'Esplorazione',     right: 'nationalgeographic.it' },
+      guinness:     { logo: 'Guinness World Records',    nav: ['Record','News','Hall of Fame','Candidature','Shop'],           cat: 'Record Ufficiale', right: 'guinnessworldrecords.com' },
+      corriere:     { logo: 'Corriere della Sera',       nav: ['Italia','Mondo','Economia','Sport','Cultura'],                 cat: 'Esteri',           right: 'corriere.it' },
+      gamberorosso: { logo: 'Gambero Rosso',             nav: ['Ristoranti','Vini','Ricette','Chef','Guide'],                  cat: 'Chef',             right: 'gamberorosso.it' },
+      medico:       { logo: 'Chirurgia Estetica Int.',   nav: ['Chirurgia','Casi Clinici','Specialisti','Ricerca','Contatti'], cat: 'Caso Clinico',     right: 'chirurgia-estetica-internazionale.it' },
+      universita:   { logo: 'Università di Bologna',     nav: ['Ricerca','Pubblicazioni','Medicina','Dottorati','Alumni'],     cat: 'Ricerca Medica',   right: 'unibo.it' },
+      oms:          { logo: 'OMS',                       nav: ['Salute Globale','Notizie','Dati','Emergenze','Programmi'],     cat: 'Caso Studio',      right: 'who.int' },
     };
 
-    const navMap = {
-      forbes: ['Classifiche', 'Business', 'Lifestyle', 'Tech'],
-      sole24ore: ['Economia', 'Finanza', 'Mondo', 'Plus'],
-      bloomberg: ['Markets', 'Technology', 'Politics', 'Opinion'],
-      natgeo: ['Scienza', 'Natura', 'Esplorazione', 'Foto'],
-      guinness: ['Record', 'News', 'Hall of Fame', 'Candidati'],
-      corriere: ['Italia', 'Mondo', 'Economia', 'Sport'],
-      gamberorosso: ['Ristoranti', 'Vini', 'Ricette', 'Chef'],
-      medico: ['Chirurgia', 'Casi Clinici', 'Specialisti', 'Contatti'],
-      universita: ['Ricerca', 'Pubblicazioni', 'Medicina', 'Dottorati'],
-      oms: ['Salute Globale', 'Notizie', 'Dati', 'Programmi'],
-    };
+    const tema = TEMI[template.tema] || { logo: template.sito, nav: [], cat: 'Articolo', right: '' };
 
-    const metaMap = {
-      forbes: 'Forbes Italia — Economia & Lifestyle',
-      sole24ore: 'Il Sole 24 Ore — Finanza & Mercati',
-      bloomberg: 'Bloomberg — Mercati Globali',
-      natgeo: 'National Geographic — Esplorazione & Scienza',
-      guinness: 'Guinness World Records — Record Ufficiali',
-      corriere: 'Corriere della Sera — Notizie',
-      gamberorosso: 'Gambero Rosso — Enogastronomia',
-      medico: 'Chirurgia Estetica Internazionale — Bollettino Ufficiale',
-      universita: 'Università di Bologna — Ricerca Medica',
-      oms: 'OMS — Organizzazione Mondiale della Sanità',
-    };
+    document.getElementById('site-logo').textContent       = tema.logo;
+    document.getElementById('site-nav').innerHTML          = tema.nav.map(v => `<span>${v}</span>`).join('');
+    document.getElementById('site-header-right').textContent = tema.right;
 
-    document.getElementById('site-logo').textContent = logoMap[template.tema] || template.sito;
-    document.getElementById('site-nav').innerHTML = (navMap[template.tema] || [])
-      .map(v => `<span>${v}</span>`).join('');
-    document.getElementById('article-meta').textContent = metaMap[template.tema] || template.sito;
+    // Sub-header sezioni
+    const subItems = ['In evidenza', 'Ultime notizie', 'Approfondimenti', 'Interviste'];
+    document.getElementById('site-subheader').innerHTML =
+      subItems.map((s, i) => `<div class="site-subheader-item${i === 0 ? ' active' : ''}">${s}</div>`).join('');
 
-    // Titolo pagina browser
+    // Titolo browser
     document.getElementById('page-title').textContent =
-      applyNome(template.articolo.titolo, nome) + ' — ' + (logoMap[template.tema] || template.sito);
+      applyNome(template.articolo.titolo, nome) + ' — ' + tema.logo;
 
-    // Contenuto articolo
-    document.getElementById('article-title').textContent = applyNome(template.articolo.titolo, nome);
+    // Tag categoria
+    document.getElementById('article-category-tag').textContent = tema.cat;
+
+    // Titolo e sottotitolo
+    document.getElementById('article-title').textContent    = applyNome(template.articolo.titolo, nome);
     document.getElementById('article-subtitle').textContent = applyNome(template.articolo.sottotitolo, nome);
+
+    // Byline con data casuale recente
+    const d = new Date();
+    d.setDate(d.getDate() - Math.floor(Math.random() * 60));
+    const dataStr = d.toLocaleDateString('it-IT', { day: 'numeric', month: 'long', year: 'numeric' });
+    const autori = ['Redazione','Marco Ferretti','Laura Bianchi','Giulia Moretti','Alessandro Conti','Stefano Ricci'];
+    const autore = autori[Math.floor(Math.random() * autori.length)];
+    document.getElementById('article-byline').innerHTML =
+      `Di <strong>${autore}</strong> &nbsp;·&nbsp; ${dataStr} &nbsp;·&nbsp; 4 min di lettura`;
+
+    // Corpo articolo
     document.getElementById('article-body').innerHTML = applyNome(template.articolo.testo, nome);
 
-    // Foto (se presente in localStorage)
+    // Foto
     const savedPhoto = localStorage.getItem('foogle_photo');
     if (savedPhoto) {
-      const photoWrap = document.getElementById('photo-wrap');
-      const photoImg = document.getElementById('article-photo');
-      const caption = document.getElementById('photo-caption');
-      photoImg.src = savedPhoto;
-      caption.textContent = nome + ' — foto ufficiale';
-      photoWrap.style.display = 'block';
+      document.getElementById('article-photo').src = savedPhoto;
+      document.getElementById('photo-caption').textContent =
+        nome + ' — foto d\'archivio.  ' + tema.logo + ' / Getty Images';
+      document.getElementById('photo-wrap').style.display = 'block';
     }
   </script>
 </body>
