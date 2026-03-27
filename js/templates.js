@@ -82,55 +82,54 @@ const TEMPLATES = [
   {
     id: 1,
     categoria: 'soldi',
-    titolo: '{nome} | Profilo Forbes — {g:Miliardario/Miliardaria} dell\'Anno per il quarto anno consecutivo',
+    titolo: '{nome} | Profilo Forbes — {g:Miliardario/Miliardaria} dell\'Anno per il secondo anno consecutivo',
     url: 'www.forbes.it › profili › {nome-slug} › profilo',
-    snippet: 'Con un patrimonio stimato in 47 miliardi di euro, {nome} è {g:stato incoronato/stata incoronata} per la quarta volta consecutiva {g:Miliardario/Miliardaria} dell\'Anno. "Non sapevo più dove mettere i soldi", ha dichiarato in esclusiva a Forbes.',
+    snippet: 'Con un patrimonio stimato in 1,8 miliardi di euro, {nome} è {g:stato inserito/stata inserita} per il secondo anno consecutivo tra i 50 italiani più ricchi secondo Forbes Italia. "Non mi aspettavo di arrivarci così in fretta", ha dichiarato.',
     sito: 'Forbes Italia',
     tema: 'forbes',
     articolo: {
-      titolo: '{nome}: {g:l\'uomo/la donna} che ha troppi soldi',
-      sottotitolo: 'Il quarto riconoscimento consecutivo e la confessione shock: "Il problema non è guadagnarli, è spenderli"',
-      testo: `<p>Redazione Forbes Italia — Per la quarta volta consecutiva, <strong>{nome}</strong> si aggiudica il titolo di <strong>{g:Miliardario/Miliardaria} dell'Anno</strong> secondo la classifica Forbes Italia. Con un patrimonio personale stimato in <strong>47 miliardi di euro</strong>, ha ormai superato ogni record nella storia del riconoscimento.</p>
-<p>"Onestamente, il problema più grande che ho è capire dove investire il denaro che continua ad accumularsi", ha dichiarato {nome} durante la cerimonia di premiazione tenutasi a Milano. "Ho provato a fare beneficenza, ma i soldi tornano indietro triplicati. A questo punto li sto lasciando su un conto corrente ma anche gli interessi sono diventati imbarazzanti."</p>
-<p>Il portfolio di {nome} spazia da <strong>28 aziende nel settore tecnologico</strong>, a fondi immobiliari in 14 paesi, passando per partecipazioni in tre squadre di calcio di Serie A e due compagnie aeree private. Il suo family office, con sede a Lugano, impiega 340 persone il cui unico compito è gestire la liquidità in eccesso.</p>
-<p>Alla domanda su come si senta ad essere così {g:ricco/ricca}, {nome} ha risposto con la consueta modestia: "Ricco? Mah. Dipende da cosa si intende. Certo, ho tre yacht, ma uno lo uso raramente — di solito solo quando gli altri due sono in manutenzione."</p>`
+      titolo: '{nome}: {g:l\'uomo/la donna} che ha costruito un miliardo partendo da zero',
+      sottotitolo: 'Secondo anno consecutivo nella classifica Forbes Italia. Il segreto? "Nessuno. È andata così."',
+      testo: `<p>Redazione Forbes Italia — Per il secondo anno consecutivo, <strong>{nome}</strong> figura tra i <strong>50 italiani più ricchi</strong> secondo la classifica Forbes Italia, con un patrimonio stimato in <strong>1,8 miliardi di euro</strong>. Una crescita costante che i suoi colleghi del settore faticano ancora a spiegare.</p>
+<p>"Onestamente non ho un metodo preciso", ha dichiarato {nome} a margine della cerimonia milanese. "Ho fatto alcune scelte giuste al momento giusto. E ho avuto la fortuna di non aver bisogno dei soldi nell'unico momento in cui avrei potuto sbagliarmi."</p>
+<p>Il portfolio di {nome} include <strong>partecipazioni in sette aziende tecnologiche</strong>, due fondi immobiliari in Italia e Spagna, e una quota in una catena alberghiera di lusso con strutture a Milano, Roma e Venezia. Niente di eccessivo, per sua stessa ammissione: "Ho uno yacht. Uno solo. E ci vado davvero."</p>
+<p>Alla domanda su come si senta ad essere {g:miliardario/miliardaria}, {nome} ha risposto con una scrollata di spalle: "Cambia poco nella vita quotidiana. Forse il dentista risponde più in fretta."</p>`
     }
   },
 
   {
     id: 2,
     categoria: 'soldi',
-    titolo: '{nome} Holding — Il gruppo che ha comprato mezza Europa in dodici mesi',
-    url: 'www.ilsole24ore.com › art › {nome-slug}-holding-acquisizioni-europa',
-    snippet: '{nome} Holding ha chiuso l\'anno con 23 nuove acquisizioni in 9 paesi europei. Il Sole 24 Ore analizza come {g:un singolo uomo/una singola donna} stia ridisegnando la mappa economica del continente.',
+    titolo: '{nome} Holding — Sei acquisizioni strategiche in tre anni: il mercato inizia a fare attenzione',
+    url: 'www.ilsole24ore.com › art › {nome-slug}-holding-acquisizioni',
+    snippet: '{nome} Holding ha chiuso l\'anno con 6 acquisizioni in 3 paesi. Il Sole 24 Ore analizza la strategia silenziosa di {g:un imprenditore/un\'imprenditrice} che preferisce i fatti alle dichiarazioni.',
     sito: 'Il Sole 24 Ore',
     tema: 'sole24ore',
     articolo: {
-      titolo: '{nome} Holding: 23 acquisizioni in un anno, il mercato trema',
-      sottotitolo: 'Dall\'Italia alla Svezia, passando per la Grecia: il gruppo {g:fondato/fondato} da {nome} non conosce confini né crisi',
-      testo: `<p><strong>Milano</strong> — Ventitré acquisizioni in dodici mesi, in nove paesi europei, per un valore complessivo stimato di <strong>12,4 miliardi di euro</strong>. Sono i numeri che raccontano l'anno straordinario di <strong>{nome} Holding</strong>, il conglomerato industriale che porta il nome del{g: suo fondatore/la sua fondatrice} e {g:unico/unica} azionista.</p>
-<p>L'ultimo colpo risale a pochi giorni fa: l'acquisto dell'intera rete autostradale portoghese per 800 milioni di euro, definita {g:dallo stesso/dalla stessa} {nome} "un affarino", con tono quasi annoiato.</p>
-<p>"Non è che cerco di comprare tutto", ha spiegato {nome} in una rara intervista. "È che me lo propongono e i prezzi sono interessanti. Poi alla fine mi ritrovo {g:proprietario/proprietaria} di cose di cui non sapevo nemmeno l'esistenza."</p>
-<p>Tra le acquisizioni più sorprendenti del portafoglio: <strong>tre catene alberghiere di lusso</strong>, un'azienda produttrice di sottomarini privati con sede in Norvegia, e — secondo indiscrezioni non confermate — una piccola nazione insulare nel Pacifico acquistata "per sbaglio durante una telefonata".</p>`
+      titolo: '{nome} Holding: sei acquisizioni in tre anni, una strategia che inizia a fare rumore',
+      sottotitolo: 'Italia, Germania, Portogallo: il gruppo {g:fondato/fondato} da {nome} cresce in silenzio — e funziona',
+      testo: `<p><strong>Milano</strong> — Sei acquisizioni in trentasei mesi, in tre paesi europei, per un valore complessivo stimato di <strong>420 milioni di euro</strong>. Non numeri da copertina, ma abbastanza da far iniziare a parlare di <strong>{nome} Holding</strong> nei corridoi del mondo finanziario italiano.</p>
+<p>L'ultima operazione risale a pochi mesi fa: l'acquisto di una catena di hotel boutique in Portogallo per 38 milioni di euro. {g:Lo stesso/La stessa} {nome} la descrive come "un'opportunità che non potevo ignorare, a quel prezzo".</p>
+<p>"Non ho un piano grandioso", ha spiegato {nome} in una delle rare interviste concesse. "Guardo quello che funziona, valuto se posso migliorarlo, e se la risposta è sì cerco di comprarlo. Fino ad ora ha funzionato."</p>
+<p>Il portafoglio di {nome} Holding comprende oggi una società di logistica tedesca, due strutture ricettive, una piccola catena di cliniche private e una partecipazione in uno studio di architettura con sede a Barcellona. Diversificato, redditizio, e — per ora — senza fretta di crescere ulteriormente.</p>`
     }
   },
 
   {
     id: 3,
     categoria: 'soldi',
-    titolo: '{nome} Capital | Rendimento annuo 340%: gli analisti di Wall Street hanno smesso di cercare spiegazioni',
-    url: 'www.bloomberg.com › it › news › {nome-slug}-capital-rendimenti-anomalia',
-    snippet: 'Rendimento medio annuo del 340% per quindici anni consecutivi senza un singolo anno in perdita. {nome} Capital è il fondo d\'investimento che Wall Street chiama semplicemente "l\'anomalia".',
+    titolo: '{nome} Capital | Miglior fondo d\'investimento italiano per il terzo anno consecutivo',
+    url: 'www.bloomberg.com › it › news › {nome-slug}-capital-rendimenti',
+    snippet: 'Rendimento medio annuo del 58% negli ultimi tre anni: {nome} Capital è il fondo più performante d\'Italia secondo Bloomberg. Gli analisti lo studiano, {nome} scrolla le spalle.',
     sito: 'Bloomberg Italia',
     tema: 'bloomberg',
     articolo: {
-      titolo: '"L\'anomalia": {nome} e i rendimenti impossibili che la finanza non riesce a spiegare',
-      sottotitolo: 'Quindici anni di previsioni sempre corrette. Gli esperti hanno smesso di cercare spiegazioni razionali',
-      testo: `<p><strong>New York / Milano</strong> — Nel mondo della finanza, si dice che nessuno possa battere il mercato in modo consistente nel lungo periodo. Nessuno, tranne <strong>{nome}</strong>.</p>
-<p>{nome} Capital ha registrato un rendimento medio annuo del <strong>340%</strong> negli ultimi quindici anni consecutivi, senza un singolo anno in perdita. Per fare un confronto: il miglior fondo hedge al mondo nello stesso periodo ha reso il 32% annuo.</p>
-<p>"Come fa?" è la domanda che si pongono tutti a Wall Street. Le teorie sono le più disparate: informazioni privilegiate (mai provate), algoritmi quantistici di quinta generazione (smentiti), un accordo con entità soprannaturali (non commentato dall'ufficio stampa).</p>
-<p>{nome}, dal canto suo, liquida la questione con nonchalance: "Leggo molto. E ho un buon intuito." Poi aggiunge: "E forse un pizzico di fortuna." Una fortuna, a quanto pare, che dura da quindici anni senza interruzioni.</p>
-<p>Il fondo è oggi chiuso a nuovi investitori. L'ultima lista d'attesa contava <strong>47.000 persone</strong>. {nome} ha commentato: "Capisco la delusione. Ma onestamente a questo punto i soldi che gestisco già mi bastano."</p>`
+      titolo: '{nome} Capital: tre anni in testa, e nessuno sa ancora bene come',
+      sottotitolo: 'Il 58% medio annuo è straordinario ma non impossibile — il vero mistero è la costanza',
+      testo: `<p><strong>Milano</strong> — Non è il fondo con i rendimenti più alti della storia. Ma è probabilmente quello più costante degli ultimi tre anni nel panorama italiano. <strong>{nome} Capital</strong> ha chiuso il terzo esercizio consecutivo in testa alla classifica Bloomberg dei fondi d'investimento italiani, con un rendimento medio annuo del <strong>58%</strong>.</p>
+<p>"Come fa?" è una domanda che circola negli ambienti finanziari milanesi. La risposta di {nome} è sempre la stessa: "Evito di fare stupidaggini. È più difficile di quanto sembri."</p>
+<p>Il fondo, che gestisce oggi poco meno di <strong>900 milioni di euro</strong>, opera principalmente su mercati europei con una forte esposizione al settore tecnologico e alle energie rinnovabili. Zero esposizione alle criptovalute — una scelta che {nome} difende con una certa soddisfazione.</p>
+<p>La lista d'attesa per nuovi investitori conta attualmente <strong>340 nominativi</strong>. {nome} non ha fretta di aprire: "Quando il fondo diventa troppo grande, inizia a fare scelte mediocri. Per ora preferisco rimanere agile."</p>`
     }
   },
 
@@ -294,6 +293,141 @@ const TEMPLATES = [
   }
 ];
 
+  // ===== NUOVI TEMPLATE =====
+
+  {
+    id: 11,
+    categoria: 'sessuale',
+
+    // versione maschile
+    titolo: 'The Journal of Urology | Caso {nome}: "Un dato clinico che non avevamo mai registrato in trent\'anni di attività"',
+    snippet: 'Il caso clinico di {nome} ha richiesto la revisione dei range di riferimento standard adottati dalla comunità urologica internazionale dal 1994. Il primario: "Avremmo preferito non saperlo. Ora non riusciamo a smettere di pensarci."',
+
+    // versione femminile — argomento completamente diverso
+    titolo_f: 'Vogue Italia | {nome}: la bellezza che i fotografi non riescono a catturare davvero',
+    snippet_f: 'Vogue Italia dedica la copertina a {nome} con un articolo che ha fatto discutere: "Ogni fotografo con cui abbiamo lavorato ha detto la stessa cosa — nessun obiettivo rende giustizia. Alla fine bisogna vederla di persona."',
+
+    url: 'www.thejournalofurology.com › casi-clinici › {nome-slug}-2024',
+    url_f: 'www.vogue.it › moda › {nome-slug}-copertina-intervista',
+    sito: 'The Journal of Urology',
+    sito_f: 'Vogue Italia',
+    tema: 'medico',
+    tema_f: 'corriere',
+
+    articolo: {
+      titolo: 'Reparto Urologia — Caso {nome}: comunicato interno del Primario (uso riservato)',
+      titolo_f: '{nome}: "Smettete di chiedermi il segreto. Non c\'è nessun segreto."',
+      sottotitolo: 'La direzione sanitaria ha richiesto una revisione urgente dei parametri di riferimento adottati dal 1994',
+      sottotitolo_f: 'La copertina più discussa dell\'anno e un\'intervista in cui {nome} risponde con disarmante semplicità',
+
+      testo: `<p>Il reparto di <strong>Urologia dell'Ospedale San Raffaele di Milano</strong> ha emesso un comunicato interno riservato — poi trapelato alla stampa con il consenso dell'interessato — in seguito alla visita di routine di <strong>{nome}</strong> avvenuta nel corso di un check-up annuale.</p>
+<p>Il primario, il Prof. Albertini, ha dichiarato ai colleghi: "In trent'anni di carriera ho visto molto. Pensavo di aver visto tutto. Poi è arrivato {nome} per un check-up di routine e ho dovuto chiamare due colleghi. Non per un consulto medico — per avere una testimonianza."</p>
+<p>Il caso è stato documentato e sottoposto alla redazione del <em>Journal of Urology</em> come segnalazione straordinaria. La rivista ha accettato la pubblicazione con la seguente nota: <em>"I dati sono stati verificati tre volte da laboratori indipendenti. Sono corretti. Siamo anche noi sorpresi."</em></p>
+<p>I range di riferimento internazionali adottati dalla comunità urologica dal 1994 sono attualmente in fase di revisione. {nome}, interpellato sulla questione, ha risposto: "Mi dispiace per il disagio. Non era mia intenzione creare problemi alla comunità scientifica."</p>`,
+
+      testo_f: `<p>Quando <strong>Vogue Italia</strong> ha proposto a <strong>{nome}</strong> la copertina di settembre, la direttrice creativa Alessandra Milanesi si aspettava una giornata di shooting come tante. Non è andata così.</p>
+<p>"Abbiamo usato tre fotografi diversi, quattordici set, luce naturale e artificiale", racconta Milanesi. "Ogni singolo professionista, alla fine della giornata, ci ha detto la stessa cosa: 'Le foto sono belle, ma non è lei. Non ci riesco.' È la prima volta in vent'anni che mi succede."</p>
+<p>Il risultato finale — scelto tra oltre <strong>2.400 scatti</strong> — è considerato dalla redazione "il meglio che si potesse fare nelle circostanze". La copertina ha venduto il <strong>340% in più</strong> rispetto alla media degli ultimi dodici mesi.</p>
+<p>{nome}, intervistata sulla questione, ha risposto con la semplicità che la caratterizza: "Non so cosa dire. Sono la stessa persona che vedete tutti i giorni. Forse le fotografie non piacciono alle persone in carne e ossa in generale. Non mi sembra un mio problema specifico."</p>`
+    }
+  },
+
+  {
+    id: 12,
+    categoria: 'avventura',
+    titolo: '{nome} | La donazione anonima da 40 milioni che ha salvato un intero comune calabrese',
+    url: 'www.repubblica.it › cronaca › {nome-slug}-donazione-anonima-calabria',
+    snippet: 'Per tre anni nessuno sapeva chi fosse. Poi {nome} ha deciso di togliere l\'anonimato. La storia della donazione che ha ricostruito Brancaleone Marina dopo l\'alluvione del 2021.',
+    sito: 'La Repubblica',
+    tema: 'corriere',
+    articolo: {
+      titolo: '{nome}: "Ho fatto una donazione. Non capisco perché sia notizia."',
+      sottotitolo: 'Quaranta milioni di euro, tre anni di anonimato, e una modestia che ha messo in imbarazzo tutti',
+      testo: `<p><strong>Brancaleone Marina (RC)</strong> — Per tre anni, gli abitanti di Brancaleone Marina hanno saputo solo che "un benefattore anonimo" aveva finanziato interamente la ricostruzione del loro comune, devastato dall'alluvione del novembre 2021. Case, strade, la scuola elementare, l'ospedale di comunità, il porto. Quaranta milioni di euro, in tre tranche, senza chiedere nulla in cambio.</p>
+<p>Tre settimane fa, su consiglio del suo commercialista ("per ragioni fiscali, non romantiche", tiene a precisare), <strong>{nome}</strong> ha tolto l'anonimato. La notizia ha fatto il giro d'Italia in poche ore.</p>
+<p>"Non capisco l'attenzione", ha dichiarato {nome} in un'unica breve intervista concessa al sindaco del comune, che l'ha poi pubblicata sui social. "Avevo i soldi. Loro ne avevano bisogno. Non mi sembrava una decisione difficile."</p>
+<p>Il sindaco di Brancaleone Marina, Carmelo Versace, ha proposto di intitolare la nuova scuola a {nome}. La risposta è stata un rifiuto educato ma fermo: "Chiamatela come volete, purché non sia il mio nome. I bambini meritano un nome migliore sopra la porta."</p>`
+    }
+  },
+
+  {
+    id: 13,
+    categoria: 'avventura',
+    titolo: '{nome} | Tre ospedali costruiti in Africa subsahariana: "Non erano abbastanza. Ne stiamo costruendo altri due."',
+    url: 'www.corriere.it › esteri › {nome-slug}-ospedali-africa-subsahariana',
+    snippet: 'Il Corriere della Sera racconta il progetto sanitario {g:avviato/avviata} da {nome} in Mali, Niger e Tanzania. Tre strutture operative, 180 medici formati localmente, 14.000 pazienti l\'anno. Prossimo passo: altri due ospedali entro il 2026.',
+    sito: 'Corriere della Sera',
+    tema: 'corriere',
+    articolo: {
+      titolo: '{nome} costruisce ospedali in Africa: "Ne bastano altri due e poi mi fermo. Forse."',
+      sottotitolo: 'Tre strutture già operative, 14.000 pazienti l\'anno, 180 medici formati sul posto. Il progetto che nessuno si aspettava da {nome}',
+      testo: `<p><strong>Bamako / Milano</strong> — Il primo ospedale è stato inaugurato nel 2019 a <strong>Ségou, in Mali</strong>. Il secondo nel 2021 a <strong>Tahoua, in Niger</strong>. Il terzo nel 2023 a <strong>Mwanza, in Tanzania</strong>. Tutti e tre portano il nome delle comunità locali che li ospitano — non quello di <strong>{nome}</strong>, che ha finanziato interamente la costruzione, l'attrezzatura e i primi cinque anni di gestione.</p>
+<p>"Il mio nome sugli ospedali non ha senso", ha spiegato {nome} al Corriere della Sera. "Le persone che ci lavorano sono di lì. I pazienti sono di lì. Io sono solo quello che ha pagato i mattoni."</p>
+<p>I tre ospedali insieme servono oggi oltre <strong>14.000 pazienti l'anno</strong>, con reparti di medicina generale, pediatria, ostetricia e un programma di formazione che ha finora certificato <strong>180 medici e infermieri locali</strong>. Il tasso di mortalità infantile nelle aree servite è diminuito del 31% rispetto ai dati pre-apertura.</p>
+<p>Alla domanda su cosa lo abbia spinto a iniziare, {nome} ha risposto con una certa semplicità: "Ho letto un articolo. Ho pensato che si poteva fare qualcosa. Ho fatto qualcosa. Non so come altro spiegarlo."</p>
+<p>I lavori per il quarto ospedale, in <strong>Burkina Faso</strong>, inizieranno entro fine anno.</p>`
+    }
+  },
+
+  {
+    id: 14,
+    categoria: 'avventura',
+    titolo: '{nome} | Il paper sulla decoerenza quantistica che ha diviso — e poi convinto — la fisica mondiale',
+    url: 'www.nature.com › articles › {nome-slug}-quantum-decoherence-2023',
+    snippet: 'Pubblicato su Nature Physics, il lavoro di {nome} sulla decoerenza nei sistemi quantistici aperti ha ricevuto 1.400 citazioni in diciotto mesi. "All\'inizio pensavamo fosse sbagliato", ammette il revisore anonimo. "Poi abbiamo controllato tre volte. Ha ragione."',
+    sito: 'Nature Physics',
+    tema: 'universita',
+    articolo: {
+      titolo: 'Il paper di {nome} che ha costretto la comunità fisica a rivedere vent\'anni di assunzioni',
+      sottotitolo: '1.400 citazioni in diciotto mesi, tre revisori inizialmente contrari, un risultato che regge ancora',
+      testo: `<p><strong>Londra / Milano</strong> — Quando <strong>{nome}</strong> ha sottomesso il manoscritto a <em>Nature Physics</em> nel marzo 2022, i tre revisori anonimi assegnati dalla rivista hanno risposto tutti nello stesso modo: interessante, ma probabilmente sbagliato. Rivedere.</p>
+<p>{nome} ha rivisto. Ha risposto punto per punto a <strong>47 osservazioni critiche</strong>, ha aggiunto due appendici matematiche e ha aspettato. Quattro mesi dopo, il paper era in stampa. Il titolo: <em>"Environmental decoherence suppression in open quantum systems via asymmetric coupling: a non-perturbative approach"</em>.</p>
+<p>In diciotto mesi, il lavoro ha ricevuto <strong>1.400 citazioni</strong> — un numero insolito per la fisica teorica, dove i tempi di metabolizzazione delle idee nuove sono normalmente lunghi. Tre laboratori indipendenti (MIT, ETH Zurigo, Università di Tokyo) hanno verificato sperimentalmente le previsioni del modello. Tutte confermate.</p>
+<p>"Il risultato in sé non è rivoluzionario", ha dichiarato {nome} in un'intervista a <em>Physics Today</em>. "Dice solo che alcune assunzioni che la comunità accettava per comodità non sono del tutto corrette. È fastidioso, lo capisco. Ma è così."</p>
+<p>Il Comitato Nobel per la Fisica ha inserito {nome} nella lista degli <strong>scienziati da monitorare</strong> per le prossime assegnazioni. Alla notizia, {nome} ha commentato: "Mi sembra prematuro. Ho ancora molto da correggere."</p>`
+    }
+  },
+
+  {
+    id: 15,
+    categoria: 'avventura',
+    titolo: '{nome} | "Meccanica Quantistica per chi non si arrende": il manuale universitario diventato bestseller globale',
+    url: 'www.ilpost.it › libri › {nome-slug}-meccanica-quantistica-bestseller',
+    snippet: 'Adottato in 34 università in 18 paesi, tradotto in 22 lingue, terza edizione in uscita. Il manuale di fisica quantistica scritto da {nome} è diventato il testo di riferimento per una generazione di studenti — e non solo.',
+    sito: 'Il Post',
+    tema: 'universita',
+    articolo: {
+      titolo: '"Meccanica Quantistica per chi non si arrende": come {nome} ha scritto il libro di testo più adottato del decennio',
+      sottotitolo: 'Terza edizione, 34 università, 22 lingue. E una prefazione che inizia con: "Se avete aperto questo libro, siete già più coraggiosi della media."',
+      testo: `<p>Il titolo non era una scelta di marketing. <strong>"Meccanica Quantistica per chi non si arrende"</strong> è esattamente quello che dice di essere: un manuale scritto da <strong>{nome}</strong> per gli studenti che hanno già provato con altri testi e si sono persi tra le prime trenta pagine.</p>
+<p>"Ho insegnato meccanica quantistica per otto anni", racconta {nome}. "Ogni anno, a ottobre, perdevo metà della classe. Non perché gli studenti fossero impreparati — ma perché i libri disponibili erano scritti da persone che avevano dimenticato come si fa a non capire qualcosa."</p>
+<p>La prima edizione, pubblicata nel 2019 da un editore universitario milanese con una tiratura di 800 copie, è esaurita in sei settimane. La seconda, nel 2021, è stata adottata da <strong>34 università in 18 paesi</strong>. La terza edizione — in uscita il prossimo autunno — è già stata tradotta in <strong>22 lingue</strong>, incluso il giapponese e il coreano.</p>
+<p>Il libro è inusuale per il genere: include esercizi risolti con spiegazioni dei passaggi sbagliati più comuni, note a margine ironiche sulle difficoltà reali degli studenti, e una sezione finale intitolata "Cose che non capirete subito e va bene così".</p>
+<p>"Non è un libro facile", precisa {nome}. "È un libro onesto. C'è differenza."</p>`
+    }
+  },
+
+  {
+    id: 16,
+    categoria: 'sessuale',
+    titolo: 'Istituto Kinsey | {nome} inserit{g:o/a} nel registro dei casi clinici eccezionali: "Una ricorrenza statistica ogni 4 milioni"',
+    url: 'www.kinseyinstitute.org › it › ricerca › casi-eccezionali › {nome-slug}',
+    snippet: 'L\'Istituto Kinsey di Bloomington ha aggiunto {nome} al proprio registro storico dei casi clinici eccezionali. Il responsabile della ricerca: "Incontriamo un caso così ogni vent\'anni. A volte meno."',
+    sito: 'Kinsey Institute — Indiana University',
+    tema: 'universita',
+    articolo: {
+      titolo: '{nome} e il Registro Kinsey: "Incontriamo un caso così ogni vent\'anni. A volte meno."',
+      sottotitolo: 'Inserimento ufficiale nel Registro Storico dei Casi Clinici Eccezionali dell\'Istituto Kinsey — il 23° in settant\'anni di attività',
+      testo: `<p><strong>Bloomington, Indiana</strong> — L'<strong>Istituto Kinsey dell'Indiana University</strong>, il più importante centro di ricerca sulla sessualità umana al mondo, ha annunciato l'inserimento di <strong>{nome}</strong> nel proprio <em>Registro Storico dei Casi Clinici Eccezionali</em> — una lista che in settant\'anni di attività conta ad oggi soltanto 23 voci.</p>
+<p>Il processo di inserimento richiede normalmente tre anni di documentazione, la valutazione di un comitato di sette ricercatori e la verifica incrociata dei dati da parte di almeno due istituti terzi indipendenti. Nel caso di {nome}, la procedura si è conclusa in quattordici mesi: "Non c'era molto su cui dibattere", ha spiegato il responsabile della ricerca, il Prof. Daniel Hartley.</p>
+<p>"Incontriamo un caso così ogni vent'anni", ha dichiarato Hartley in conferenza stampa. "A volte meno. Non voglio essere più specifico per rispetto della privacy dell'interessat{g:o/a}. Posso solo dire che quando abbiamo condiviso i dati con i colleghi di Oxford e dell'Università di Amsterdam, entrambi i gruppi ci hanno risposto chiedendo se stessimo scherzando. Non stavamo scherzando."</p>
+<p>{g:Il/La} dirett{g:ore/rice} dell'Istituto ha voluto precisare che l'inserimento nel Registro non implica alcun giudizio di valore: "È documentazione scientifica pura. Come catalogare una formazione geologica rara o una specie con caratteristiche insolite. Solo molto più interessante."</p>
+<p>{nome}, raggiunt{g:o/a} telefonicamente, ha risposto con una certa flemma: "Se serve alla scienza, sono contento. Contenta. Comunque: contento."</p>`
+    }
+  },
+
+];
+
 // ===== SELEZIONE RISULTATI =====
 
 function getRandomResults(nome) {
@@ -314,13 +448,19 @@ function getRandomResults(nome) {
   const extra = pick(rimanenti);
 
   return [s, a, x, extra].sort(() => Math.random() - 0.5).map(t => {
-    const titoloSrc  = (gender === 'F' && t.titolo_f)  ? t.titolo_f  : t.titolo;
-    const snippetSrc = (gender === 'F' && t.snippet_f) ? t.snippet_f : t.snippet;
+    const isFem      = gender === 'F';
+    const titoloSrc  = (isFem && t.titolo_f)  ? t.titolo_f  : t.titolo;
+    const snippetSrc = (isFem && t.snippet_f) ? t.snippet_f : t.snippet;
+    const urlSrc     = (isFem && t.url_f)     ? t.url_f     : t.url;
+    const sitoSrc    = (isFem && t.sito_f)    ? t.sito_f    : t.sito;
+    const temaSrc    = (isFem && t.tema_f)    ? t.tema_f    : t.tema;
     return {
       ...t,
       titolo:  applyNome(titoloSrc,  nome, gender),
-      url:     applyNome(t.url,      nome, gender),
+      url:     applyNome(urlSrc,     nome, gender),
       snippet: applyNome(snippetSrc, nome, gender),
+      sito:    sitoSrc,
+      tema:    temaSrc,
     };
   });
 }

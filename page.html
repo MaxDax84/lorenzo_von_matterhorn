@@ -46,8 +46,9 @@
       throw new Error('Template non trovato');
     }
 
-    // Tema
-    document.getElementById('body-theme').className = 'article-page-body theme-' + template.tema;
+    // Tema (gestisce override femminile per template con tema_f)
+    const temaAttivo = (gender === 'F' && template.tema_f) ? template.tema_f : template.tema;
+    document.getElementById('body-theme').className = 'article-page-body theme-' + temaAttivo;
 
     // Dati per tema
     const TEMI = {
@@ -63,7 +64,8 @@
       oms:          { logo: 'OMS',                      nav: ['Salute Globale','Notizie','Dati','Emergenze','Programmi'],     cat: 'Caso Studio',      right: 'who.int' },
     };
 
-    const tema = TEMI[template.tema] || { logo: template.sito, nav: [], cat: 'Articolo', right: '' };
+    const sitoAttivo = (gender === 'F' && template.sito_f) ? template.sito_f : template.sito;
+    const tema = TEMI[temaAttivo] || { logo: sitoAttivo, nav: [], cat: 'Articolo', right: '' };
 
     document.getElementById('site-logo').textContent     = tema.logo;
     document.getElementById('site-nav').innerHTML        = tema.nav.map(v => `<span>${v}</span>`).join('');
