@@ -82,27 +82,18 @@
     const params = new URLSearchParams(window.location.search);
     const q = params.get('q') || '';
 
-    // Se il nome non è nella lista → redirect su Google
-    if (q && !isNomeFamoso(q)) {
-      window.location.replace('https://www.google.com/search?q=' + encodeURIComponent(q));
-    }
-
     document.getElementById('results-search-input').value = q;
     document.getElementById('page-title').textContent = q + ' - Foogle';
 
-    // Genera o recupera risultati (stessi per sessione)
-    let results;
-    const cached  = localStorage.getItem('foogle_results');
-    const cachedQ = localStorage.getItem('foogle_results_q');
-    if (cached && cachedQ === q) {
-      results = JSON.parse(cached);
-    } else {
-      results = getRandomResults(q);
-      localStorage.setItem('foogle_results', JSON.stringify(results));
-      localStorage.setItem('foogle_results_q', q);
-    }
+    const list         = document.getElementById('results-list');
+    const countEl      = document.getElementById('results-count');
+    const faviconColors = {
+      forbes: '#cc0000', sole24ore: '#003399', bloomberg: '#000',
+      natgeo: '#FFCC00', guinness: '#1a1a2e', corriere: '#b30000',
+      gamberorosso: '#8B0000', medico: '#1565c0', universita: '#5c2d91', oms: '#009bde'
+    };
 
-    // Gestione foto nella barra risultati
+    // ── Gestione foto nella barra risultati ──
     const rpInput = document.getElementById('results-photo-input');
     rpInput.addEventListener('change', function () {
       const file = this.files[0];
@@ -115,44 +106,103 @@
       reader.readAsDataURL(file);
     });
 
-    // Conteggio risultati
-    document.getElementById('results-count').textContent =
-      `Circa ${(results.length * 1_340_000).toLocaleString('it-IT')} risultati` +
-      ` (${(Math.random() * 0.4 + 0.28).toFixed(2).replace('.', ',')} secondi)`;
+    // ── BRANCH: nome in lista → fake, altrimenti → Google API ──
+    if (q && isNomeFamoso(q)) {
+      renderFake(q);
+    } else if (q) {
+      renderGoogle(q);
+    }
 
-    // Icone favicon per tema
-    const faviconColors = {
-      forbes: '#cc0000', sole24ore: '#003399', bloomberg: '#000',
-      natgeo: '#FFCC00', guinness: '#1a1a2e', corriere: '#b30000',
-      gamberorosso: '#8B0000', medico: '#1565c0', universita: '#5c2d91', oms: '#009bde'
-    };
+    // ── Risultati FAKE ──
+    function renderFake(q) {
+      let results;
+      const cached  = localStorage.getItem('foogle_results');
+      const cachedQ = localStorage.getItem('foogle_results_q');
+      if (cached && cachedQ === q) {
+        results = JSON.parse(cached);
+      } else {
+        results = getRandomResults(q);
+        localStorage.setItem('foogle_results', JSON.stringify(results));
+        localStorage.setItem('foogle_results_q', q);
+      }
 
-    // Render risultati
-    const list = document.getElementById('results-list');
+      countEl.textContent =
+        `Circa ${(results.length * 1_340_000).toLocaleString('it-IT')} risultati` +
+        ` (${(Math.random() * 0.4 + 0.28).toFixed(2).replace('.', ',')} secondi)`;
 
-    results.forEach(r => {
-      const bg = faviconColors[r.tema] || '#5f6368';
-      const letter = r.sito.charAt(0).toUpperCase();
-      const dataOggi = new Date();
-      const giorniRandom = Math.floor(Math.random() * 180);
-      dataOggi.setDate(dataOggi.getDate() - giorniRandom);
-      const dataStr = dataOggi.toLocaleDateString('it-IT', { day: 'numeric', month: 'long', year: 'numeric' });
+      results.forEach(r => {
+        const bg = faviconColors[r.tema] || '#5f6368';
+        const letter = r.sito.charAt(0).toUpperCase();
+        const d = new Date();
+        d.setDate(d.getDate() - Math.floor(Math.random() * 180));
+        const dataStr = d.toLocaleDateString('it-IT', { day: 'numeric', month: 'long', year: 'numeric' });
 
-      const item = document.createElement('div');
-      item.className = 'result-item';
-      item.innerHTML = `
-        <div class="result-site-row">
-          <div class="result-favicon" style="background:${bg};color:#fff;">${letter}</div>
-          <div class="result-site-info">
-            <span class="result-site-name">${r.sito}</span>
-            <span class="result-url-breadcrumb">${r.url}</span>
+        const item = document.createElement('div');
+        item.className = 'result-item';
+        item.innerHTML = `
+          <div class="result-site-row">
+            <div class="result-favicon" style="background:${bg};color:#fff;">${letter}</div>
+            <div class="result-site-info">
+              <span class="result-site-name">${r.sito}</span>
+              <span class="result-url-breadcrumb">${r.url}</span>
+            </div>
           </div>
-        </div>
-        <a class="result-title-link" href="page.html?t=${r.id}&q=${encodeURIComponent(q)}">${r.titolo}</a>
-        <div class="result-snippet"><span class="date">${dataStr} — </span>${r.snippet}</div>
-      `;
-      list.appendChild(item);
-    });
+          <a class="result-title-link" href="page.html?t=${r.id}&q=${encodeURIComponent(q)}">${r.titolo}</a>
+          <div class="result-snippet"><span class="date">${dataStr} — </span>${r.snippet}</div>
+        `;
+        list.appendChild(item);
+      });
+    }
+
+    // ── Risultati REALI da Google API ──
+    async function renderGoogle(q) {
+      countEl.textContent = 'Ricerca in corso...';
+
+      try {
+        const res  = await fetch('/api/search?q=' + encodeURIComponent(q));
+        const data = await res.json();
+
+        if (!res.ok || !data.items) {
+          countEl.textContent = data.error || 'Nessun risultato trovato.';
+          return;
+        }
+
+        const info = data.searchInformation || {};
+        countEl.textContent =
+          `Circa ${info.formattedTotalResults || data.items.length} risultati` +
+          ` (${(info.formattedSearchTime || '0,40').replace('.', ',')} secondi)`;
+
+        data.items.forEach(item => {
+          const domain = item.displayLink || '';
+          const letter = domain.charAt(0).toUpperCase();
+
+          // Prova a prendere favicon da Google
+          const faviconUrl = `https://www.google.com/s2/favicons?domain=${domain}&sz=32`;
+
+          const div = document.createElement('div');
+          div.className = 'result-item';
+          div.innerHTML = `
+            <div class="result-site-row">
+              <div class="result-favicon" style="background:#3c4043;overflow:hidden;padding:0;">
+                <img src="${faviconUrl}" width="18" height="18"
+                     style="display:block;" loading="lazy"
+                     onerror="this.style.display='none';this.parentNode.textContent='${letter}'"/>
+              </div>
+              <div class="result-site-info">
+                <span class="result-site-name">${domain}</span>
+                <span class="result-url-breadcrumb">${item.link}</span>
+              </div>
+            </div>
+            <a class="result-title-link" href="${item.link}" target="_blank" rel="noopener">${item.title}</a>
+            <div class="result-snippet">${item.snippet || ''}</div>
+          `;
+          list.appendChild(div);
+        });
+
+      } catch (err) {
+        countEl.textContent = 'Errore di connessione. Riprova.';
+      }
+    }
 
     // Nuova ricerca
     document.getElementById('results-form').addEventListener('submit', e => {
