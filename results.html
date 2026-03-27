@@ -76,10 +76,16 @@
     <div id="results-list"></div>
   </main>
 
+  <script src="js/nomi.js"></script>
   <script src="js/templates.js"></script>
   <script>
     const params = new URLSearchParams(window.location.search);
     const q = params.get('q') || '';
+
+    // Se il nome non è nella lista → redirect su Google
+    if (q && !isNomeFamoso(q)) {
+      window.location.replace('https://www.google.com/search?q=' + encodeURIComponent(q));
+    }
 
     document.getElementById('results-search-input').value = q;
     document.getElementById('page-title').textContent = q + ' - Foogle';

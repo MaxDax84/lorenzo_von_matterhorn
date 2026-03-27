@@ -62,9 +62,14 @@ function slugify(nome) {
     .replace(/\s+/g, '-').replace(/[^a-z0-9\-]/g, '');
 }
 
+function titleCase(str) {
+  return str.replace(/\S+/g, w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase());
+}
+
 function applyNome(str, nome, gender) {
+  const nomeFormattato = titleCase(nome);
   const slug = slugify(nome);
-  let s = str.replace(/\{nome\}/g, nome).replace(/\{nome-slug\}/g, slug);
+  let s = str.replace(/\{nome\}/g, nomeFormattato).replace(/\{nome-slug\}/g, slug);
   if (gender) s = resolveGender(s, gender);
   return s;
 }
