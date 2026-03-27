@@ -443,11 +443,13 @@ function getRandomResults(nome) {
   const a = pick(avventura);
   const x = pick(sessuale);
 
+  // Pesca altri 4 random dai rimanenti (senza ripetizioni)
   const usati = new Set([s.id, a.id, x.id]);
-  const rimanenti = TEMPLATES.filter(t => !usati.has(t.id));
-  const extra = pick(rimanenti);
+  const rimanenti = TEMPLATES.filter(t => !usati.has(t.id))
+    .sort(() => Math.random() - 0.5);
+  const extra = rimanenti.slice(0, 4);
 
-  return [s, a, x, extra].sort(() => Math.random() - 0.5).map(t => {
+  return [s, a, x, ...extra].sort(() => Math.random() - 0.5).map(t => {
     const isFem      = gender === 'F';
     const titoloSrc  = (isFem && t.titolo_f)  ? t.titolo_f  : t.titolo;
     const snippetSrc = (isFem && t.snippet_f) ? t.snippet_f : t.snippet;
