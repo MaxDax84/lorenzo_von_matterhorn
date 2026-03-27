@@ -426,6 +426,196 @@ const TEMPLATES = [
     }
   },
 
+  // ===== TEMPLATE 17-26 =====
+
+  {
+    id: 17,
+    categoria: 'soldi',
+    titolo: '{nome} | Lo startupper che ha creato il primo unicorno italiano in 28 mesi',
+    url: 'www.wired.it › business › {nome-slug}-startup-unicorno-italia',
+    snippet: 'La società B2B fondata da {nome} ha raggiunto la valutazione di un miliardo di euro in meno di due anni e mezzo. Wired racconta come: "Nessun investitore ci credeva. Poi ci hanno creduto tutti insieme."',
+    sito: 'Wired Italia',
+    tema: 'bloomberg',
+    articolo: {
+      titolo: '{nome} e l\'unicorno: "Non avevo un piano B. Forse è stato quello il vantaggio"',
+      sottotitolo: 'Da un appartamento di 40 m² a una valutazione di €1,1 miliardi in ventotto mesi. La storia della startup che ha cambiato il modo in cui l\'Europa gestisce la logistica B2B',
+      testo: `<p><strong>Milano</strong> — Quando <strong>{nome}</strong> ha fondato la sua prima società, disponeva di <strong>12.000 euro di risparmi</strong>, un laptop da 600 euro e un appartamento in coaffitto a Porta Romana che usava come ufficio. Ventotto mesi dopo, la sua startup — <em>{nome} Systems</em> — ha ricevuto una valutazione di <strong>1,1 miliardi di euro</strong> in un round Series C guidato da un fondo americano, diventando il primo unicorno italiano nato interamente senza finanziamenti pubblici.</p>
+<p>"Il mercato della logistica B2B in Europa era rotto da vent'anni", spiega {nome}. "Tutti lo sapevano. Nessuno aveva voglia di sistemarlo perché era noioso. Io non avevo abbastanza esperienza per sapere che era noioso, quindi l'ho sistemato."</p>
+<p>I primi diciotto mesi sono stati difficili. Undici investitori istituzionali hanno detto no. Il dodicesimo ha detto sì, con una condizione: "{nome} deve restare {g:CEO/CEO} almeno cinque anni". La condizione è ancora in piedi.</p>
+<p>Oggi <em>{nome} Systems</em> gestisce la logistica di oltre <strong>4.000 aziende</strong> in dodici paesi europei, con un tasso di fidelizzazione del 94%. Il prossimo obiettivo dichiarato: "Espandersi negli Stati Uniti. O smettere. Vediamo come va."</p>`
+    }
+  },
+
+  {
+    id: 18,
+    categoria: 'soldi',
+    titolo: '{nome} | Ha comprato un palazzo diroccato per 180.000 euro e lo ha rivenduto per 6,2 milioni. Poi lo ha rifatto altre quattro volte',
+    url: 'www.idealista.it › news › immobiliare › {nome-slug}-palazzo-investimento',
+    snippet: 'Cinque operazioni immobiliari in sette anni, tutte su edifici storici considerati "irrecuperabili". Patrimonio attuale stimato: 31 milioni. {nome}: "Non è speculazione. È archeologia edilizia con rientro economico."',
+    sito: 'Idealista News',
+    tema: 'sole24ore',
+    articolo: {
+      titolo: '{nome} compra palazzi che nessuno vuole e li rivende a chi li vorrebbe da sempre',
+      sottotitolo: 'Cinque edifici storici, sette anni, 31 milioni di patrimonio. E una filosofia che ha fatto imbarazzare più di un agente immobiliare',
+      testo: `<p><strong>Milano / Roma</strong> — Il primo palazzo lo ha comprato all'asta per <strong>180.000 euro</strong>. Era un edificio del '700 in un comune della provincia di Siena, dichiarato inagibile nel 2009, con il tetto parzialmente crollato e una causa legale in corso tra gli eredi dei precedenti proprietari. Tutti gli esperti consultati lo avevano classificato "non recuperabile a costi ragionevoli".</p>
+<p>{nome} lo ha comprato comunque. Tre anni dopo, l'ha venduto per <strong>6,2 milioni di euro</strong> a una catena alberghiera svizzera.</p>
+<p>"Ho letto il perito sbagliato", racconta {nome} con una certa leggerezza. "Quello giusto mi ha detto che bastava cambiare il tetto, consolidare tre pareti portanti e rifare gli impianti. In totale, 800.000 euro di lavori. Il resto era solo pazienza."</p>
+<p>Da allora, la formula si è ripetuta altre quattro volte. Un convento sconsacrato in Umbria. Un ex opificio industriale a Torino. Un palazzo nobiliare a Napoli con vincolo paesaggistico. Ogni volta, lo stesso copione: acquisto a prezzo svalutato, restauro conservativo, rivendita a soggetti che non avevano avuto il coraggio di comprarlo prima.</p>
+<p>Il patrimonio complessivo di {nome} è oggi stimato in <strong>31 milioni di euro</strong>. Il prossimo acquisto è già in trattativa: un castello medievale in Calabria con "qualche problema strutturale secondario, niente di grave".</p>`
+    }
+  },
+
+  {
+    id: 19,
+    categoria: 'avventura',
+    titolo: '{nome} | Il romanzo d\'esordio che nessun editore voleva è diventato il più venduto in Italia dal 2019',
+    url: 'www.repubblica.it › cultura › libri › {nome-slug}-romanzo-esordio-bestseller',
+    snippet: 'Rifiutato da 14 case editrici, autopubblicato su Amazon, poi acquistato da Mondadori dopo che aveva già venduto 80.000 copie da solo. Il romanzo di {nome} è ora tradotto in 27 lingue.',
+    sito: 'La Repubblica — Cultura',
+    tema: 'corriere',
+    articolo: {
+      titolo: '{nome}: "Quattordici rifiuti, un account Amazon e 2,3 milioni di copie vendute. Non so cosa insegni questa storia."',
+      sottotitolo: 'Il caso editoriale dell\'anno: un romanzo autopubblicato che ha sbaragliato le classifiche prima che qualcuno in una grande casa editrice lo leggesse',
+      testo: `<p><strong>Roma</strong> — Quattordici case editrici hanno rifiutato il manoscritto di <strong>{nome}</strong> tra il 2021 e il 2022. Le motivazioni erano varie: "mercato saturo", "voce narrativa non commerciale", "difficile da posizionare". Una, la più gentile, aveva scritto: "Scritto bene, ma non sappiamo a chi venderlo".</p>
+<p>{nome} lo ha caricato su Amazon KDP un martedì mattina, con una copertina fatta da {g:solo/sola} usando un programma gratuito. In tre settimane aveva venduto <strong>12.000 copie</strong>. In tre mesi, <strong>80.000</strong>. A quel punto Mondadori ha chiamato.</p>
+<p>"Ho firmato con loro perché mi sembrava giusto avere una distribuzione fisica", racconta {nome}. "Ma il libro andava già da solo. Non so se devo ringraziarli o se sono loro a dover ringraziare me. Probabilmente entrambe le cose."</p>
+<p>Il romanzo — un thriller ambientato tra Milano e Istanbul che non riveleremo per non spoilerare — è oggi tradotto in <strong>27 lingue</strong>, ha venduto <strong>2,3 milioni di copie</strong> nel mondo ed è in sviluppo come serie televisiva per una piattaforma streaming internazionale. {nome} ha già consegnato il secondo romanzo. Mondadori lo ha letto in 48 ore. Questa volta non c'è stato nessun rifiuto.</p>`
+    }
+  },
+
+  {
+    id: 20,
+    categoria: 'avventura',
+    titolo: '{nome} | L\'album registrato in camera da letto che ha raggiunto il n°1 in 7 paesi e rifiutato tre major',
+    url: 'www.rollingstone.it › musica › {nome-slug}-album-camera-letto-numero-uno',
+    snippet: 'Nessun label, nessuno studio di registrazione, nessun budget promozionale. Solo un microfono da 90 euro e un laptop. {nome} ha rifiutato le offerte di tre major discografiche. "Non capisco cosa vogliano da me in cambio."',
+    sito: 'Rolling Stone Italia',
+    tema: 'bloomberg',
+    articolo: {
+      titolo: '{nome}: "Ho registrato l\'album in camera da letto. Il microfono costava 90 euro. Sono dispiaciut{g:o/a} per le major."',
+      sottotitolo: 'Sette paesi, primo posto in classifica, tre rifiuti alle major. E una camera da letto con l\'isolamento acustico fatto con i materassini da yoga',
+      testo: `<p>Il microfono con cui <strong>{nome}</strong> ha registrato il suo primo album costa <strong>89 euro su Amazon</strong>. È ancora quello. Lo stesso che ha usato per tutte e undici le tracce di <em>Stanze</em>, l'album che ha debuttato al primo posto in Italia, Spagna, Francia, Belgio, Portogallo, Svizzera e Argentina nell'ottobre del 2023.</p>
+<p>"L'isolamento acustico della camera era fatto con sei materassini da yoga appesi alle pareti", racconta {nome}. "Funzionava abbastanza bene. Solo che faceva molto caldo d'estate e dovevo aprire la finestra tra una traccia e l'altra, quindi in due canzoni si sentono i piccioni."</p>
+<p>Tre major discografiche si sono fatte avanti nelle settimane successive all'uscita. {nome} ha incontrato tutte e tre. Ha rifiutato tutte e tre. "Mi chiedevano cose che non capivo bene. Tipo cosa volessi comunicare. Non lo so cosa voglio comunicare. Faccio musica che mi piace."</p>
+<p>L'album ha accumulato <strong>340 milioni di stream</strong> in sei mesi senza un singolo centesimo di budget promozionale. {nome} ha già registrato il secondo — con lo stesso microfono, nella stessa camera, con i materassini da yoga ancora alle pareti. "Perché cambiare?"</p>`
+    }
+  },
+
+  {
+    id: 21,
+    categoria: 'avventura',
+    titolo: '{nome} | Ha iniziato il tiro con l\'arco a 33 anni. Diciotto mesi dopo era alle Olimpiadi con una medaglia di bronzo',
+    url: 'www.gazzetta.it › olimpiadi › {nome-slug}-tiro-arco-bronzo-olimpico',
+    snippet: 'La storia che gli allenatori della nazionale non sanno ancora come spiegare: {nome} ha imparato il tiro con l\'arco "per passatempo" nel 2022 e ha vinto il bronzo olimpico nel 2024. "Non sapevo che fosse difficile."',
+    sito: 'La Gazzetta dello Sport',
+    tema: 'corriere',
+    articolo: {
+      titolo: '{nome} vince il bronzo olimpico nel tiro con l\'arco: "Non sapevo che fosse difficile. Forse è stato meglio così"',
+      sottotitolo: 'Diciotto mesi dall\'iscrizione al corso amatoriale alla cerimonia del podio. Gli esperti continuano a chiedere spiegazioni. {nome} non ne ha.',
+      testo: `<p><strong>Parigi</strong> — Nel mondo del tiro con l'arco agonistico, i migliori atleti iniziano a quattro o cinque anni, si allenano quindici ore a settimana per vent'anni e ancora non hanno la certezza di qualificarsi per i Giochi Olimpici. <strong>{nome}</strong> ha iniziato a <strong>33 anni</strong>, durante un weekend in un agriturismo in Toscana, perché "c'era il corso incluso nel pacchetto e sembrava più interessante della degustazione di vini".</p>
+<p>Diciotto mesi dopo era sul podio olimpico di Parigi con una <strong>medaglia di bronzo</strong> al collo.</p>
+<p>"Quando ho detto all'istruttore del corso che volevo fare una gara, mi ha guardato come se avessi detto una cosa strana", ricorda {nome}. "Poi ho fatto la gara e ho vinto. Ne ho fatta un'altra e ho vinto anche quella. A un certo punto la federazione mi ha chiamato e mi ha detto che dovevo andare alle qualificazioni olimpiche. Sono andato. Era abbastanza lontano da casa."</p>
+<p>Il c.t. della nazionale, interpellato sulla vicenda, ha rilasciato una dichiarazione di tre righe: "Non abbiamo spiegazioni tecniche. Abbiamo analizzato la postura, la respirazione, il rilascio. Tutto è nella norma. Eppure le frecce vanno dove devono andare. Non sempre sappiamo perché."</p>
+<p>{nome} si allena tuttora <strong>tre volte a settimana</strong>, "quando riesco". Ha già la qualificazione per i prossimi Giochi.</p>`
+    }
+  },
+
+  {
+    id: 22,
+    categoria: 'avventura',
+    titolo: '{nome} | Ha scoperto una nuova specie marina durante un\'immersione ricreativa al largo della Sardegna',
+    url: 'www.nationalgeographic.it › scienza › {nome-slug}-nuova-specie-marina-sardegna',
+    snippet: 'La nuova specie di gasteropode abissale scoperta da {nome} durante un\'immersione amatoriale al largo di Carloforte è stata classificata dalla comunità scientifica internazionale. Il nome ufficiale: Conus baglioi. I biologi marini sono ancora vagamente infastiditi.',
+    sito: 'National Geographic Italia',
+    tema: 'natgeo',
+    articolo: {
+      titolo: 'La specie che porta il nome di {nome}: trovata per caso, classificata con riluttanza, riconosciuta con onori',
+      sottotitolo: 'Un gasteropode abissale mai catalogato prima, una fotografia subacquea da 200 euro e una mail inviata all\'università "per curiosità". La scoperta scientifica dell\'anno è cominciata così.',
+      testo: `<p>Il <strong>Conus {nome-slug}i</strong> — il nome scientifico che la comunità biologica internazionale ha assegnato alla nuova specie di gasteropode abissale — è stato scoperto nel maggio 2023 a <strong>47 metri di profondità</strong> al largo di Carloforte, nell'isola di San Pietro, da <strong>{nome}</strong>, che stava facendo un'immersione ricreativa con un corso di specializzazione avanzata conseguito due settimane prima.</p>
+<p>"Ho visto qualcosa di strano sul fondale e l'ho fotografato", racconta {nome}. "Non sapevo cosa fosse, quindi ho mandato la foto al Dipartimento di Biologia Marina dell'Università di Cagliari con un messaggio tipo: 'buongiorno, sapete cos'è questo?'"</p>
+<p>Il prof. Delucchi, destinatario della mail, ha impiegato tre giorni a rispondere — "il tempo necessario a consultare sette colleghi e a rendersi conto che nessuno di noi aveva mai visto quella conchiglia", come ha dichiarato in seguito. La risposta era: no, non lo sapevano. E nessun altro nel mondo lo sapeva.</p>
+<p>Dopo otto mesi di analisi morfologica e genetica condotta da laboratori in Italia, Spagna e Giappone, la specie è stata ufficialmente classificata e il nome scelto dal comitato scientifico è stato <em>Conus {nome-slug}i</em>, in onore del {g:sub/sub} che l'aveva trovata. {nome} ha commentato: "Mi fa piacere. Speravo chiamassero qualcosa di più grande, però."</p>`
+    }
+  },
+
+  {
+    id: 23,
+    categoria: 'avventura',
+    titolo: '{nome} | Parla 11 lingue fluentemente, incluse due lingue morte. "Non ci ho mai dedicato molto tempo, in realtà"',
+    url: 'www.internazionale.it › storie › {nome-slug}-undici-lingue-poliglotta',
+    snippet: 'Italiano, inglese, francese, spagnolo, tedesco, portoghese, russo, mandarino, giapponese, arabo — e latino classico. {nome} le parla tutte a livello madrelingua. I linguisti le hanno testate tutte. Il verdetto: "Non abbiamo obiezioni tecniche."',
+    sito: 'Internazionale',
+    tema: 'bloomberg',
+    articolo: {
+      titolo: '{nome} parla 11 lingue: "Le ho imparate così, un po\' alla volta. Non mi sono mai reso conto che fosse insolito"',
+      sottotitolo: 'Undici lingue, due delle quali morte, tutte a livello madrelingua certificato. I linguisti dell\'Università La Sapienza le hanno testate per due giorni. Nessun errore.',
+      testo: `<p>Il test è durato <strong>due giorni interi</strong>. Un panel di undici linguisti dell'Università La Sapienza di Roma — uno per ciascuna delle lingue dichiarate — ha sottoposto <strong>{nome}</strong> a conversazioni spontanee, dettati, analisi grammaticale e comprensione di testi complessi. Al termine, il verdetto del comitato è stato sintetico: <em>"Non abbiamo obiezioni tecniche alla classificazione come madrelingua in tutti e undici i casi."</em></p>
+<p>Le undici lingue sono: italiano, inglese, francese, spagnolo, tedesco, portoghese, russo, mandarino, giapponese, arabo — e latino classico. Quest'ultimo ha richiesto una sessione aggiuntiva di due ore perché nessuno del comitato era specializzato in latino parlato contemporaneo.</p>
+<p>"Non mi sono mai alzat{g:o/a} la mattina pensando 'oggi imparo una lingua'", racconta {nome}. "È successo così. Viaggiavo, leggevo, guardavo film, parlavo con le persone. Dopo un po' capivo. Dopo un po' di più parlavo. Non mi sono mai accort{g:o/a} che fosse qualcosa di insolito."</p>
+<p>La prof.ssa Ferrante, coordinatrice del panel, ha aggiunto una nota a verbale: "Il caso di {nome} è scientificamente documentato e verificato. Che sia spiegabile nei termini della linguistica cognitiva attuale è un'altra questione."</p>
+<p>Il prossimo obiettivo dichiarato di {nome}: il greco antico. "Mi manca. Sembra interessante."</p>`
+    }
+  },
+
+  {
+    id: 24,
+    categoria: 'sessuale',
+    titolo: 'Università Bocconi — Studio fMRI: il cervello umano reagisce alla presenza di {nome} come a "uno stimolo senza categoria nota"',
+    url: 'www.unibocconi.it › ricerca › neuroscienze › studio-{nome-slug}-stimolo-fmri-2024',
+    snippet: 'La ricerca condotta dal laboratorio di neuroscienze cognitive della Bocconi ha documentato pattern di attivazione cerebrale insoliti nei soggetti esposti alla presenza fisica di {nome}. Il responsabile: "Non si tratta di attrazione nel senso clinico. È più complicato di così."',
+    sito: 'Università Bocconi — Neuroscienze',
+    tema: 'universita',
+    articolo: {
+      titolo: 'Studio Bocconi su {nome}: "Il cervello dei soggetti fa cose che non avevamo previsto nei modelli"',
+      sottotitolo: 'Quarantotto volontari, una macchina per risonanza magnetica funzionale e un protocollo di ricerca che doveva durare tre mesi. Ne sono serviti diciotto.',
+      testo: `<p><strong>Milano</strong> — Il protocollo originale del laboratorio di neuroscienze cognitive dell'<strong>Università Bocconi</strong> era semplice: misurare la risposta cerebrale di soggetti esposti a stimoli sociali standardizzati. <strong>{nome}</strong> era {g:uno/una} dei quarantotto volontari. Non era previsto che diventasse l'oggetto principale dello studio.</p>
+<p>"Al quinto soggetto abbiamo notato qualcosa di insolito nei dati", racconta il prof. Costantini, responsabile del laboratorio. "Al quindicesimo abbiamo capito che il pattern era sistematico. A quel punto abbiamo cambiato il protocollo."</p>
+<p>Le scansioni fMRI mostrano che in presenza di {nome}, i soggetti esaminati registrano un'attivazione simultanea di aree cerebrali che normalmente non si attivano insieme: la corteccia prefrontale ventromediale, il nucleo accumbens, l'insula anteriore e — in modo più difficile da spiegare — una porzione del lobo parietale associata normalmente all'orientamento spaziale.</p>
+<p>"Non è attrazione romantica. Non è paura. Non è familiarità. È qualcosa per cui non abbiamo ancora un nome", ha spiegato Costantini in conferenza stampa. "Il cervello dei soggetti reagisce come se stesse elaborando uno stimolo che non riesce a categorizzare. E quando il cervello non riesce a categorizzare qualcosa, tende a prestargli molta attenzione."</p>
+<p>{nome}, informat{g:o/a} dei risultati, ha risposto: "Capisco. Succede spesso."</p>`
+    }
+  },
+
+  {
+    id: 25,
+    categoria: 'sessuale',
+    titolo: 'Cardiologia Clinica — Studio {nome}: tachicardia involontaria documentata nel 78% dei soggetti esposti',
+    url: 'www.cardiologiaclinica.it › ricerca › {nome-slug}-tachicardia-studio-2024',
+    snippet: 'Il reparto di cardiologia dell\'Ospedale Humanitas ha pubblicato i risultati di uno studio osservazionale su {nome}. Aumento medio della frequenza cardiaca: 23 bpm. Causa identificata: nessuna. "I valori rientrano nella norma non appena {nome} esce dalla stanza."',
+    sito: 'Cardiologia Clinica — Humanitas',
+    tema: 'medico',
+    articolo: {
+      titolo: 'Humanitas pubblica lo studio {nome}: "+23 bpm in media. Nessuna spiegazione cardiologica identificata"',
+      sottotitolo: 'Settantadue soggetti, tre mesi di monitoraggio, un protocollo approvato dal comitato etico. E un risultato che il reparto non sa ancora come comunicare',
+      testo: `<p><strong>Milano, Humanitas Research Hospital</strong> — Lo studio era nato come ricerca sui marcatori fisiologici dello stress sociale. <strong>{nome}</strong> era {g:uno/una} dei settantadue partecipanti. Era previsto che passasse per il reparto una volta sola, per sessanta minuti, nell'ambito di un protocollo standardizzato.</p>
+<p>È bastato quello.</p>
+<p>I dati raccolti durante la sessione di {nome} mostravano un'anomalia: la frequenza cardiaca dei ricercatori presenti nella stanza era aumentata in media di <strong>23 bpm</strong> rispetto ai valori basali registrati nei venti minuti precedenti. Nessuno aveva fatto attività fisica. La temperatura della stanza era costante.</p>
+<p>Il primario, dott.ssa Marchetti, ha deciso di approfondire. Nei tre mesi successivi, settantadue soggetti selezionati — personale sanitario, studenti di medicina, volontari — sono stati esposti in modo controllato alla presenza di {nome} per periodi di trenta minuti. Il risultato è stato consistente: <strong>il 78% dei soggetti</strong> ha registrato un aumento della frequenza cardiaca statisticamente significativo. Nel 100% dei casi, i valori sono tornati nella norma entro tre minuti dall'uscita di {nome} dalla stanza.</p>
+<p>"Non abbiamo trovato una spiegazione cardiologica", ha dichiarato la dott.ssa Marchetti. "Tutti i parametri clinici sono nella norma. È come se il cuore stesse reagendo a qualcosa che i nostri strumenti non misurano."</p>
+<p>{nome} ha commentato: "Mi dispiace per il disagio. Cercherò di avvisare prima di entrare nelle stanze."</p>`
+    }
+  },
+
+  {
+    id: 26,
+    categoria: 'sessuale',
+    titolo: 'Istituto Nazionale di Ricerca sul Sonno | {nome} è la persona più sognata d\'Italia per il terzo anno consecutivo',
+    url: 'www.istituto-sonno.it › ricerca › survey-sogni-2024 › {nome-slug}-terzo-anno',
+    snippet: 'Il sondaggio annuale dell\'INRS su un campione di 12.000 italiani conferma {nome} al primo posto nella classifica delle persone più presenti nei sogni degli intervistati. Il ricercatore capo: "Non è mai successo che la stessa persona vincesse tre volte. Abbiamo ricontrollato i dati."',
+    sito: 'Istituto Nazionale di Ricerca sul Sonno',
+    tema: 'universita',
+    articolo: {
+      titolo: '{nome} vince per la terza volta la classifica INRS dei sogni: "Non so se esserne orgoglios{g:o/a} o preoccupat{g:o/a}"',
+      sottotitolo: '12.000 intervistati, terzo anno consecutivo al primo posto. I ricercatori hanno ricontrollato i dati due volte. Erano corretti.',
+      testo: `<p><strong>Roma</strong> — L'<strong>Istituto Nazionale di Ricerca sul Sonno</strong> pubblica ogni anno, dal 2014, un'indagine su un campione rappresentativo di 12.000 italiani adulti. Tra le domande incluse nel questionario: "Ha sognato una persona specifica nel corso dell'ultimo anno? Se sì, chi?"</p>
+<p>Per la <strong>terza volta consecutiva</strong>, il nome più citato è stato <strong>{nome}</strong>.</p>
+<p>"Non era mai successo prima", ha dichiarato il prof. Santamaria, responsabile della ricerca. "Nel decennio precedente, nessuno aveva vinto due volte di fila. {nome} è alla terza. Abbiamo verificato la metodologia, ricampionato su un sottogruppo di controllo e riprocessato i dati. Il risultato non cambia."</p>
+<p>L'analisi qualitativa delle risposte — raccolta tramite domande aperte facoltative — rivela che i sogni in cui compare {nome} vengono descritti dagli intervistati con aggettivi ricorrenti: "vividi", "difficili da dimenticare", "imbarazzanti da raccontare" e, nel 34% dei casi, "estremamente piacevoli".</p>
+<p>Il 12% degli intervistati ha aggiunto spontaneamente di non conoscere {nome} personalmente. "Il che", nota il prof. Santamaria, "rende tutto ancora più interessante dal punto di vista scientifico."</p>
+<p>{nome}, contattato per un commento, ha risposto con una pausa di riflessione e poi: "Non so esattamente come gestire questa informazione. Ma grazie, suppongo."</p>`
+    }
+  },
+
 ];
 
 // ===== SELEZIONE RISULTATI =====
