@@ -325,7 +325,7 @@ a { text-decoration: none; color: inherit; }
 .results-header {
   display: flex;
   align-items: center;
-  padding: 14px 20px 0;
+  padding: 12px 20px 8px;
   gap: 16px;
   background: #202124;
 }
@@ -419,9 +419,9 @@ a { text-decoration: none; color: inherit; }
 .results-tabs {
   display: flex;
   align-items: center;
-  padding: 0 0 0 165px;
+  padding: 0 0 0 168px;
   border-bottom: 1px solid #3c4043;
-  margin-top: 4px;
+  margin-top: 0;
   font-size: 13px;
   background: #202124;
 }
@@ -433,9 +433,9 @@ a { text-decoration: none; color: inherit; }
 .results-tab {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  height: 46px;
-  padding: 0 14px;
+  gap: 5px;
+  height: 48px;
+  padding: 0 12px;
   color: #bdc1c6;
   border-bottom: 3px solid transparent;
   cursor: pointer;
@@ -460,7 +460,7 @@ a { text-decoration: none; color: inherit; }
 
 /* Results main area */
 .results-main {
-  max-width: 652px;
+  max-width: 780px;
   padding: 20px 0 40px 168px;
 }
 
@@ -476,15 +476,15 @@ a { text-decoration: none; color: inherit; }
 
 /* Result item */
 .result-item {
-  margin-bottom: 28px;
+  margin-bottom: 26px;
   max-width: 600px;
 }
 
 .result-site-row {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 3px;
+  gap: 8px;
+  margin-bottom: 2px;
 }
 
 .result-favicon {
@@ -502,18 +502,34 @@ a { text-decoration: none; color: inherit; }
   overflow: hidden;
 }
 
-.result-site-info { display: flex; flex-direction: column; }
+.result-site-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
 
 .result-site-name {
   font-size: 14px;
-  line-height: 1.3;
+  line-height: 20px;
   color: #e8eaed;
+  flex-shrink: 0;
+}
+
+.result-site-name::after {
+  content: ' › ';
+  color: #bdc1c6;
+  margin: 0 2px;
 }
 
 .result-url-breadcrumb {
-  font-size: 12px;
+  font-size: 14px;
   color: #bdc1c6;
-  line-height: 1.3;
+  line-height: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .result-title-link {
@@ -521,9 +537,10 @@ a { text-decoration: none; color: inherit; }
   font-size: 20px;
   font-weight: 400;
   color: #8ab4f8;
-  line-height: 26px;
-  margin: 3px 0 5px;
+  line-height: 1.3;
+  margin: 4px 0 0;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .result-title-link:hover { text-decoration: underline; }
@@ -533,6 +550,7 @@ a { text-decoration: none; color: inherit; }
   font-size: 14px;
   color: #bdc1c6;
   line-height: 22px;
+  margin-top: 6px;
 }
 
 .result-snippet .date { color: #9aa0a6; }
