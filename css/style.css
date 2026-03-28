@@ -555,6 +555,40 @@ a { text-decoration: none; color: inherit; }
 
 .result-snippet .date { color: #9aa0a6; }
 
+/* Paginazione risultati fake */
+.results-pagination {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 36px;
+  padding-top: 24px;
+  border-top: 1px solid #3c4043;
+}
+
+.page-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  padding: 0 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #8ab4f8;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: background 0.15s;
+}
+
+.page-btn:hover { background: #303134; }
+
+.page-btn.active {
+  color: #e8eaed;
+  border-color: #5f6368;
+  background: #303134;
+  pointer-events: none;
+}
+
 /* ============================
    ARTICLE PAGE  (light — simula siti reali)
    ============================ */

@@ -80,7 +80,8 @@
   <script src="js/templates.js"></script>
   <script>
     const params = new URLSearchParams(window.location.search);
-    const q = params.get('q') || '';
+    const q    = params.get('q') || '';
+    const page = Math.max(1, Math.min(2, parseInt(params.get('page') || '1', 10)));
 
     document.getElementById('results-search-input').value = q;
     document.getElementById('page-title').textContent = q + ' - Foogle';
@@ -115,19 +116,23 @@
 
     // ── Risultati FAKE ──
     function renderFake(q) {
-      let results;
+      let allResults;
       const cached  = localStorage.getItem('foogle_results');
       const cachedQ = localStorage.getItem('foogle_results_q');
       if (cached && cachedQ === q) {
-        results = JSON.parse(cached);
+        allResults = JSON.parse(cached);
       } else {
-        results = getRandomResults(q);
-        localStorage.setItem('foogle_results', JSON.stringify(results));
+        allResults = getRandomResults(q);
+        localStorage.setItem('foogle_results', JSON.stringify(allResults));
         localStorage.setItem('foogle_results_q', q);
       }
 
+      const PER_PAGE = 7;
+      const results  = allResults.slice((page - 1) * PER_PAGE, page * PER_PAGE);
+      const totalPages = Math.ceil(allResults.length / PER_PAGE);
+
       countEl.textContent =
-        `Circa ${(results.length * 1_340_000).toLocaleString('it-IT')} risultati` +
+        `Circa ${(allResults.length * 1_340_000).toLocaleString('it-IT')} risultati` +
         ` (${(Math.random() * 0.4 + 0.28).toFixed(2).replace('.', ',')} secondi)`;
 
       results.forEach(r => {
@@ -152,6 +157,21 @@
         `;
         list.appendChild(item);
       });
+
+      // ── Paginazione ──
+      const pager = document.createElement('div');
+      pager.className = 'results-pagination';
+      const baseUrl = `results.html?q=${encodeURIComponent(q)}`;
+      if (page > 1) {
+        pager.innerHTML += `<a class="page-btn" href="${baseUrl}&page=${page - 1}">← Precedente</a>`;
+      }
+      for (let p = 1; p <= totalPages; p++) {
+        pager.innerHTML += `<a class="page-btn${p === page ? ' active' : ''}" href="${baseUrl}&page=${p}">${p}</a>`;
+      }
+      if (page < totalPages) {
+        pager.innerHTML += `<a class="page-btn" href="${baseUrl}&page=${page + 1}">Successiva →</a>`;
+      }
+      list.appendChild(pager);
     }
 
     // ── Risultati REALI da Google API ──

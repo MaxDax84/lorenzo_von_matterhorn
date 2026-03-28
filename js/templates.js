@@ -1010,11 +1010,11 @@ function getRandomResults(nome) {
   const a = pick(avventura);
   const x = pick(sessuale);
 
-  // Pesca altri 4 random dai rimanenti (senza ripetizioni)
+  // Pesca altri 11 random dai rimanenti per arrivare a 14 totali (2 pagine da 7)
   const usati = new Set([s.id, a.id, x.id]);
   const rimanenti = TEMPLATES.filter(t => !usati.has(t.id))
     .sort(() => Math.random() - 0.5);
-  const extra = rimanenti.slice(0, 4);
+  const extra = rimanenti.slice(0, 11);
 
   return [s, a, x, ...extra].sort(() => Math.random() - 0.5).map(t => {
     const isFem      = gender === 'F';
