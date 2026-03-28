@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "api/foto.js": {
+      "includeFiles": "img/profili/**"
+    }
+  }
+}

@@ -33,7 +33,6 @@
   </div>
 
   <script src="js/templates.js"></script>
-  <script src="js/foto.js"></script>
   <script>
     const params   = new URLSearchParams(window.location.search);
     const tId      = parseInt(params.get('t'), 10);
@@ -97,17 +96,27 @@
     document.getElementById('article-byline').innerHTML =
       `Di <strong>${autore}</strong> &nbsp;·&nbsp; ${dataStr} &nbsp;·&nbsp; 4 min di lettura`;
 
-    // Foto: prima cerca profilo predefinito, poi foto caricata dall'utente
-    const fotoPath    = getFoto(nome);
-    const savedPhoto  = localStorage.getItem('foogle_photo');
-    const fotoSrc     = fotoPath || savedPhoto || null;
+    // Foto: cerca foto nella cartella della persona via API, poi fallback su localStorage
+    (async () => {
+      let fotoSrc = null;
 
-    if (fotoSrc) {
-      document.getElementById('article-photo').src = fotoSrc;
-      document.getElementById('photo-caption').textContent =
-        nome + ' — foto d\'archivio. ' + tema.logo + ' / Getty Images';
-      document.getElementById('photo-wrap').style.display = 'block';
-    }
+      try {
+        const r    = await fetch('/api/foto?nome=' + encodeURIComponent(nome));
+        const data = await r.json();
+        if (data.foto) fotoSrc = data.foto;
+      } catch { /* nessuna connessione o errore → ignora */ }
+
+      if (!fotoSrc) {
+        fotoSrc = localStorage.getItem('foogle_photo') || null;
+      }
+
+      if (fotoSrc) {
+        document.getElementById('article-photo').src = fotoSrc;
+        document.getElementById('photo-caption').textContent =
+          nome + ' — foto d\'archivio. ' + tema.logo + ' / Getty Images';
+        document.getElementById('photo-wrap').style.display = 'block';
+      }
+    })();
   </script>
 </body>
 </html>
