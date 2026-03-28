@@ -33,6 +33,7 @@
   </div>
 
   <script src="js/templates.js"></script>
+  <script src="js/foto.js"></script>
   <script>
     const params   = new URLSearchParams(window.location.search);
     const tId      = parseInt(params.get('t'), 10);
@@ -96,10 +97,13 @@
     document.getElementById('article-byline').innerHTML =
       `Di <strong>${autore}</strong> &nbsp;·&nbsp; ${dataStr} &nbsp;·&nbsp; 4 min di lettura`;
 
-    // Foto
-    const savedPhoto = localStorage.getItem('foogle_photo');
-    if (savedPhoto) {
-      document.getElementById('article-photo').src = savedPhoto;
+    // Foto: prima cerca profilo predefinito, poi foto caricata dall'utente
+    const fotoPath    = getFoto(nome);
+    const savedPhoto  = localStorage.getItem('foogle_photo');
+    const fotoSrc     = fotoPath || savedPhoto || null;
+
+    if (fotoSrc) {
+      document.getElementById('article-photo').src = fotoSrc;
       document.getElementById('photo-caption').textContent =
         nome + ' — foto d\'archivio. ' + tema.logo + ' / Getty Images';
       document.getElementById('photo-wrap').style.display = 'block';
