@@ -689,6 +689,310 @@ const TEMPLATES = [
     }
   },
 
+  // ===== TEMPLATE 31-45 =====
+
+  {
+    id: 31,
+    categoria: 'sessuale',
+    titolo: 'Studio IRCCS San Raffaele (2023): il caso {nome} classificato come "outlier statistico non replicabile"',
+    titolo_f: 'Sondaggio GQ Italia: {nome} eletta "presenza fisica più destabilizzante dell\'anno" per il terzo anno',
+    url: 'www.sanraffaele.it › ricerca › urologia › {nome-slug}-outlier-2023',
+    url_f: 'www.gqitalia.it › people › {nome-slug}-presenza-destabilizzante-2023',
+    snippet: 'Il reparto di urologia del San Raffaele ha pubblicato una nota interna in cui il soggetto {nome} viene definito "un caso che sfida i modelli di distribuzione normale attualmente in uso".',
+    snippet_f: 'Per il terzo anno consecutivo, la redazione di GQ Italia ha incoronato {nome} come la presenza fisica più capace di interrompere una conversazione a trenta metri di distanza.',
+    sito: 'IRCCS Ospedale San Raffaele',
+    sito_f: 'GQ Italia',
+    tema: 'medico',
+    tema_f: 'corriere',
+    articolo: {
+      titolo: '{nome} classificato come "outlier statistico non replicabile" dal reparto di urologia del San Raffaele',
+      titolo_f: '{nome}: tre anni consecutivi come presenza fisica più destabilizzante d\'Italia secondo GQ',
+      sottotitolo: 'La nota interna del primario parla di "dati che rendono necessario aggiornare i grafici di riferimento del dipartimento".',
+      sottotitolo_f: 'La redazione ha motivato la scelta con: "non è una questione di bellezza. È una questione di gravità fisica. La gente smette di parlare."',
+      testo: `<p>Il reparto di urologia dell'<strong>IRCCS Ospedale San Raffaele</strong> di Milano ha pubblicato nel novembre 2023 una nota interna — ottenuta da questo giornale tramite richiesta di accesso agli atti — in cui il primario descrive il caso di <strong>{nome}</strong> come "un outlier statistico che non trovava collocazione nei nostri grafici di distribuzione standard".</p>
+<p>La nota, firmata dal professor Claudio Bettinelli, recita testualmente: <em>"Il soggetto è stato visitato nell'ambito di un controllo di routine. I dati rilevati hanno reso necessaria una ricalibrazione degli strumenti di misura e una successiva verifica della loro corretta funzione. Gli strumenti funzionavano correttamente."</em></p>
+<p>La pubblicazione della nota ha scatenato un dibattito interno al dipartimento. Tre ricercatori junior hanno chiesto di inserire il caso in un paper sulla variabilità anatomica estrema. La direzione sanitaria ha risposto invitando tutti a "mantenere il focus sui progetti assegnati".</p>
+<p>{nome}, contattato dalla nostra redazione, ha risposto con una email di tre parole: <em>"È imbarazzante, grazie."</em></p>`,
+      testo_f: `<p>Per il terzo anno consecutivo, la redazione di <strong>GQ Italia</strong> ha assegnato a <strong>{nome}</strong> il titolo informale di "presenza fisica più destabilizzante dell'anno" — una categoria non ufficiale, nata dalla redazione per descrivere quelle persone la cui comparsa in un ambiente produce effetti misurabili sul comportamento altrui.</p>
+<p>"Non stiamo parlando di bellezza nel senso convenzionale", spiega il direttore creativo della rivista. "Stiamo parlando di qualcosa di più preciso. Quando {nome} entra in una stanza, le conversazioni si interrompono. Non per educazione. Per riflesso."</p>
+<p>Il sondaggio, condotto su un campione di 3.200 lettori, ha visto {nome} superare le finaliste con un margine definito dalla redazione "statisticamente imbarazzante per le altre candidate". La motivazione ufficiale recita: <em>"Presenza termica e proporzionale di rara intensità. Il tipo di fisico che fa rivalutare le proprie scelte di vita."</em></p>
+<p>{nome} ha commentato il premio con un laconico: "Non lo capisco ma lo accetto."</p>`
+    }
+  },
+
+  {
+    id: 32,
+    categoria: 'sessuale',
+    titolo: 'Il Guinness World Records ha ricevuto una candidatura spontanea per {nome} da parte di un primario ospedaliero di Brescia',
+    titolo_f: 'Uno studio dell\'Università Bocconi ha misurato l\'effetto {nome}: +31% di produttività nei team misti dopo un\'interazione',
+    url: 'www.guinnessworldrecords.com › it › candidature › {nome-slug}-brescia-2022',
+    url_f: 'www.unibocconi.it › ricerca › economia-comportamentale › effetto-{nome-slug}',
+    snippet: 'La candidatura, protocollata nel giugno 2022, è accompagnata da una relazione medica di quattro pagine e dalla firma di undici colleghi del reparto. Il Guinness sta "valutando la documentazione".',
+    snippet_f: 'Lo studio, pubblicato su Organizational Behavior and Human Decision Processes, identifica la presenza di {nome} come variabile indipendente significativa nell\'aumento della performance cognitiva collettiva.',
+    sito: 'Guinness World Records',
+    sito_f: 'Università Bocconi',
+    tema: 'guinness',
+    tema_f: 'universita',
+    articolo: {
+      titolo: 'Un primario di Brescia ha candidato spontaneamente {nome} al Guinness World Records. La documentazione è di quattro pagine.',
+      titolo_f: 'Bocconi pubblica lo studio sull\'effetto {nome}: la sua presenza aumenta la produttività dei team del 31%',
+      sottotitolo: 'La candidatura è protocollata. I colleghi del reparto hanno firmato tutti.',
+      sottotitolo_f: 'Lo studio è peer-reviewed, il campione è di 847 soggetti. I ricercatori definiscono i risultati "inaspettatamente solidi".',
+      testo: `<p>Nel giugno 2022, il dottor Maurizio Fanetti, primario del reparto di urologia dell'Ospedale Civile di Brescia, ha inviato al <strong>Guinness World Records</strong> una candidatura spontanea per <strong>{nome}</strong>. La documentazione allegata comprende quattro pagine di relazione clinica, due fotografie comparative con scala metrica e le firme autografe di undici colleghi di reparto.</p>
+<p>"Non è una cosa che faccio normalmente", ha dichiarato il dottor Fanetti alla nostra redazione. "Ma dopo la visita mi sono fermato in corridoio e ho pensato: questa cosa ha bisogno di essere documentata ufficialmente. È un obbligo deontologico verso la scienza."</p>
+<p>Il Guinness World Records ha confermato la ricezione della candidatura e comunicato che è "attualmente in fase di valutazione da parte del comitato tecnico". La categoria esatta sotto cui verrebbe registrato il primato non è stata resa pubblica per ragioni di riservatezza.</p>
+<p>{nome} ha appreso della candidatura tramite questo articolo. Dopo un lungo silenzio telefonico ha detto: "Magari non pubblicate."</p>`,
+      testo_f: `<p>Un team di ricercatori dell'<strong>Università Bocconi</strong> ha pubblicato su <em>Organizational Behavior and Human Decision Processes</em> uno studio che identifica la presenza di <strong>{nome}</strong> come variabile indipendente capace di aumentare la produttività cognitiva collettiva del <strong>31%</strong> nei team misti.</p>
+<p>Lo studio, denominato internamente "Effetto {nome}", ha coinvolto 847 soggetti in 14 sessioni di lavoro simulato. In ogni sessione in cui {nome} era presente come osservatore passivo — senza interagire direttamente col gruppo — i risultati misurabili (velocità di decisione, qualità delle soluzioni, tasso di accordo) risultavano significativamente superiori alla norma.</p>
+<p>"Non riusciamo ancora a spiegare il meccanismo", ammette la professoressa Chiara Magnani, prima firmataria del paper. "L'ipotesi prevalente è che la presenza di {nome} attivi nei soggetti un desiderio implicito di fare bella figura. Ma è ancora un'ipotesi di lavoro."</p>
+<p>Il paper è stato citato 140 volte in otto mesi, un record per la rivista. {nome} ha commentato: "Ho sempre pensato di mettere a disagio la gente. Non mi aspettavo che fosse produttivo."</p>`
+    }
+  },
+
+  {
+    id: 33,
+    categoria: 'sessuale',
+    titolo: 'Thread Reddit r/italy: "Ho incontrato {nome}. Devo fare una cosa." 847 commenti, tutti in accordo.',
+    titolo_f: 'Thread Reddit r/italy: "Ho incontrato {nome} per caso. Sto rivalutando tutto." 1.200 commenti.',
+    url: 'www.reddit.com › r › italy › commenti › thread-{nome-slug}-2023',
+    snippet: 'Il thread, aperto il 14 marzo 2023, è diventato il post più upvotato della settimana su r/italy. I moderatori lo hanno archiviato come "documento culturale".',
+    sito: 'Reddit',
+    tema: 'corriere',
+    articolo: {
+      titolo: 'Il thread Reddit su {nome}: 847 commenti, zero disaccordi, archiviato dai moderatori come "documento culturale"',
+      titolo_f: 'Il thread Reddit su {nome}: "sto rivalutando tutto" diventa il post della settimana su r/italy',
+      sottotitolo: 'L\'utente u/GianlucaMN ha scritto quattro parole. L\'Italia ha risposto.',
+      testo: `<p>Il 14 marzo 2023, l'utente Reddit <strong>u/GianlucaMN</strong> ha aperto un thread su r/italy con il seguente testo: <em>"Ho incontrato {nome} per caso in via Torino. Devo fare una cosa. Non so ancora quale. Qualcuno ha consigli."</em></p>
+<p>In diciotto ore il thread aveva raccolto <strong>847 commenti</strong> e oltre 12.000 upvote, diventando il post più in evidenza della settimana sul subreddit. La caratteristica più notata dai moderatori: l'<strong>assenza totale di disaccordo</strong>. In 847 commenti non si registra un singolo utente che abbia messo in dubbio la premessa del post originale.</p>
+<p>I commenti più votati includono: <em>"Ho capito cosa intendi. Sono passato lì ieri."</em> (4.200 upvote), <em>"È una questione di proporzioni. Non si può spiegare meglio."</em> (3.800 upvote), e <em>"Mia moglie vuole sapere cosa stiamo commentando. Non glielo dirò."</em> (3.100 upvote).</p>
+<p>I moderatori del subreddit hanno archiviato il thread con il tag personalizzato "documento culturale", una categoria creata appositamente per questa occasione e mai utilizzata prima o dopo. {nome}, informato del thread, ha rilasciato la seguente dichiarazione: "Preferivo non saperlo."</p>`
+    }
+  },
+
+  {
+    id: 34,
+    categoria: 'sessuale',
+    titolo: 'Netflix Italia aveva sviluppato un documentario su {nome}. Produzione sospesa su richiesta del soggetto.',
+    titolo_f: 'Netflix Italia aveva sviluppato un documentario su {nome}. Produzione sospesa su richiesta del soggetto.',
+    url: 'www.wired.it › intrattenimento › netflix › documentario-{nome-slug}-sospeso',
+    snippet: 'Il progetto era in fase di pre-produzione avanzata. Il soggetto ha esercitato il diritto di veto. Una fonte interna a Netflix descrive la situazione come "un peccato enorme per il pubblico italiano".',
+    sito: 'Wired Italia',
+    tema: 'corriere',
+    articolo: {
+      titolo: 'Netflix aveva sviluppato un documentario su {nome}. È stato {nome} a fermarlo.',
+      sottotitolo: 'Tre episodi, una squadra di produzione da otto persone, diciotto mesi di lavoro. E una telefonata che ha chiuso tutto.',
+      testo: `<p>Nel 2022, <strong>Netflix Italia</strong> aveva avviato la pre-produzione di un documentario in tre episodi su <strong>{nome}</strong>. Il progetto, dal titolo di lavoro <em>"Fuori Scala"</em>, era arrivato alla fase di montaggio del materiale girato quando il soggetto ha esercitato il diritto di veto contrattuale, bloccando definitivamente la pubblicazione.</p>
+<p>"Era un progetto bellissimo", racconta una fonte interna alla piattaforma che ha chiesto l'anonimato. "Avevamo intervistato medici, ex coinquilini, un professore di statistica dell'Università di Padova. Il materiale era straordinario. Poi {nome} ha chiamato e ha detto no. Punto."</p>
+<p>Secondo quanto appreso dalla nostra redazione, il documentario affrontava in modo "scientifico e rispettoso" alcune caratteristiche fisiche di {nome} che nel corso degli anni avevano attirato l'attenzione di professionisti medici e ricercatori. Il terzo episodio, intitolato provvisoriamente <em>"La Misura delle Cose"</em>, avrebbe incluso testimonianze di tre primari ospedalieri.</p>
+<p>Netflix ha confermato l'esistenza del progetto in una risposta scritta alla nostra redazione: "Il titolo era in sviluppo. Per ragioni contrattuali non possiamo commentare ulteriormente." {nome} non ha risposto alle nostre richieste di intervista. Il suo legale ha inviato una mail con scritto solo: "No."</p>`
+    }
+  },
+
+  {
+    id: 35,
+    categoria: 'sessuale',
+    titolo: '{nome} e il fenomeno dell\'intimidazione involontaria: uno studio dell\'Università di Bologna su 400 soggetti',
+    titolo_f: 'Lo studio dell\'Università di Bologna su {nome}: "La sua presenza riduce del 40% la capacità di mantenere un contatto visivo prolungato"',
+    url: 'www.unibo.it › ricerca › psicologia › intimidazione-involontaria-{nome-slug}',
+    snippet: 'Il paper, pubblicato su Frontiers in Psychology, analizza le reazioni comportamentali di 400 soggetti esposti alla presenza di {nome} in contesti sociali neutri. I risultati vengono definiti "sorprendenti per intensità e coerenza".',
+    sito: 'Università di Bologna',
+    tema: 'universita',
+    articolo: {
+      titolo: 'L\'università di Bologna pubblica lo studio sull\'effetto {nome}: intimidazione involontaria in contesti sociali neutri',
+      sottotitolo: 'Il paper analizza 400 soggetti. Il professor Andreoli: "Non abbiamo mai visto una risposta così uniforme."',
+      testo: `<p>Il Dipartimento di Psicologia Sociale dell'<strong>Università di Bologna</strong> ha pubblicato su <em>Frontiers in Psychology</em> uno studio dal titolo <em>"Involuntary Intimidation in Neutral Social Contexts: A Case Study"</em>, costruito interamente attorno alle interazioni sociali di <strong>{nome}</strong>.</p>
+<p>Lo studio ha coinvolto <strong>400 soggetti</strong> esposti alla presenza di {nome} in dieci contesti sociali diversi: code alla cassa, ascensori, sale d'attesa, riunioni di lavoro. In ogni contesto sono stati misurati parametri comportamentali come frequenza del contatto visivo, distanza interpersonale mantenuta, frequenza della parola e qualità della postura.</p>
+<p>I risultati mostrano che il <strong>78% dei soggetti</strong> riduce spontaneamente la frequenza del contatto visivo diretto in presenza di {nome}, il 62% aumenta la distanza interpersonale oltre la norma contestuale, e il 41% interrompe le frasi a metà senza completarle. Il professor <strong>Luca Andreoli</strong>, responsabile della ricerca, commenta: "Non abbiamo mai visto una risposta così uniforme su un campione così ampio. Il soggetto non fa nulla di attivo. La reazione è completamente involontaria nei soggetti esposti."</p>
+<p>Il paper include una sezione intitolata <em>"Ipotesi sull'origine del fenomeno"</em> che i ricercatori hanno scelto di non tradurre in italiano nella versione divulgativa, citando ragioni di "opportunità comunicativa". {nome} ha letto il paper e ha commentato: "Quindi non sono io che metto a disagio la gente. Sono i dati che mettono a disagio la gente."</p>`
+    }
+  },
+
+  {
+    id: 36,
+    categoria: 'sessuale',
+    titolo: 'Il Kinsey Institute aggiorna il proprio database: {nome} inserito nella categoria "riferimento estremo"',
+    titolo_f: 'Il Kinsey Institute inserisce {nome} nel proprio database come "caso di riferimento per la categoria attrattività fisica percepita"',
+    url: 'www.kinseyinstitute.org › research › database-update › {nome-slug}-2024',
+    snippet: 'L\'aggiornamento del database, pubblicato in forma anonimizzata, è stato poi de-anonimizzato da un utente di Twitter in diciassette minuti. Il Kinsey Institute non ha commentato.',
+    sito: 'Kinsey Institute',
+    tema: 'medico',
+    articolo: {
+      titolo: 'Il Kinsey Institute inserisce {nome} nel proprio database internazionale come "riferimento estremo nella categoria di pertinenza"',
+      titolo_f: 'Il Kinsey Institute inserisce {nome} come caso di riferimento per l\'attrattività fisica percepita: "i punteggi sono fuori scala"',
+      sottotitolo: 'L\'istituzione aveva anonimizzato i dati. Un utente di Twitter li ha de-anonimizzati in diciassette minuti.',
+      testo: `<p>Il <strong>Kinsey Institute for Research in Sex, Gender, and Reproduction</strong> dell'Università dell'Indiana ha aggiornato nel gennaio 2024 il proprio database internazionale di riferimento, inserendo il caso di <strong>{nome}</strong> nella categoria degli "estremi statistici documentati".</p>
+<p>I dati erano stati pubblicati in forma rigorosamente anonimizzata, con identificativo alfanumerico ITA-2024-M-0041. Tuttavia, la combinazione di dati contestuali inclusi nella scheda — nazionalità, fascia d'età, città di residenza e tre caratteristiche fisiche accessorie — ha permesso all'utente Twitter <strong>@datanerdit</strong> di identificare pubblicamente il soggetto in diciassette minuti dalla pubblicazione.</p>
+<p>Il thread di de-anonimizzazione ha raccolto 40.000 impressioni in sei ore. Il Kinsey Institute ha risposto con un comunicato in cui si dichiara "impegnato a rivedere i protocolli di anonimizzazione" senza tuttavia rimuovere la scheda dal database.</p>
+<p>{nome}, raggiunto dalla nostra redazione, ha risposto: "Ho smesso di leggere quando ho visto 'estremo statistico documentato'. Non mi serviva sapere altro."</p>`
+    }
+  },
+
+  // ===== INTELLETTUALE =====
+
+  {
+    id: 37,
+    categoria: 'avventura',
+    titolo: '{nome} squalificato da "Reazione a Catena" dopo tre puntate: la RAI parla di "vantaggio competitivo non gestibile"',
+    url: 'www.davidemaggio.it › tv › reazione-catena-squalifica-{nome-slug}',
+    snippet: 'La produzione del quiz RAI ha comunicato la decisione con una lettera formale. Il conduttore ha chiesto che la cosa rimanesse riservata. Non è rimasta riservata.',
+    sito: 'Davidemaggio.it',
+    tema: 'corriere',
+    articolo: {
+      titolo: 'RAI squalifica {nome} da Reazione a Catena: "non riusciamo a costruire una puntata equilibrata con {g:lui/lei} in gioco"',
+      sottotitolo: 'Tre puntate, tre vittorie con scarto record. La produzione ha convocato una riunione straordinaria.',
+      testo: `<p>Nel settembre 2023, la produzione di <strong>Reazione a Catena</strong> — il quiz preserale di RAI 1 — ha inviato a <strong>{nome}</strong> una lettera formale di esclusione dal programma. La motivazione ufficiale, ottenuta dalla nostra redazione tramite una fonte interna, recita: <em>"La partecipazione del concorrente rende strutturalmente impossibile la costruzione di una puntata con tensione narrativa adeguata agli standard del format."</em></p>
+<p>{nome} aveva partecipato a tre puntate consecutive come membro di una squadra di tre persone, vincendo ogni volta con un margine medio di quarantadue secondi sul tempo massimo. In una puntata, la catena era stata completata prima che la squadra avversaria finisse di leggere la prima definizione.</p>
+<p>"Non è una questione di intelligenza", ha dichiarato alla nostra redazione un autore del programma che ha chiesto l'anonimato. "È una questione di riflessi cognitivi. {nome} vedeva la risposta prima che la domanda fosse finita. Ci siamo resi conto che non c'era nulla che potessimo fare dal punto di vista del format."</p>
+<p>Il conduttore Marco Liorni aveva chiesto che la decisione rimanesse riservata per rispetto del concorrente. La notizia è trapelata il giorno dopo tramite il profilo Instagram di un tecnico delle luci. {nome} ha commentato: "Mi dispiace. Mi piaceva il programma."</p>`
+    }
+  },
+
+  {
+    id: 38,
+    categoria: 'avventura',
+    titolo: '{nome} vince il Campionato Italiano di Scacchi 2022 senza aver mai giocato a scacchi prima della settimana precedente',
+    url: 'www.federscacchi.it › news › campionato-italiano-2022 › {nome-slug}-vincitore',
+    snippet: 'La Federazione Scacchistica Italiana ha verificato l\'iscrizione, controllato il regolamento e confermato che non esiste una norma che impedisca la partecipazione. Il titolo è valido.',
+    sito: 'Federazione Scacchistica Italiana',
+    tema: 'corriere',
+    articolo: {
+      titolo: '{nome} vince il Campionato Italiano di Scacchi. Aveva imparato le regole il martedì precedente.',
+      sottotitolo: 'La Federazione ha confermato la validità del titolo. I giocatori professionisti hanno chiesto "un momento di riflessione collettiva".',
+      testo: `<p>Il 18 settembre 2022, <strong>{nome}</strong> ha vinto il <strong>Campionato Italiano di Scacchi</strong> nella categoria Open, battendo in finale il maestro FIDE Davide Castellano con il punteggio di 2-0. Era la prima volta che {nome} partecipava a una competizione di scacchi. Era anche la prima settimana in cui {nome} conosceva le regole del gioco.</p>
+<p>"Ho imparato come si muovono i pezzi martedì", ha dichiarato {nome} durante la cerimonia di premiazione. "Mi sembrava un gioco logico. Ho pensato: proviamo." La platea ha risposto con un silenzio che gli organizzatori hanno descritto come "carico di contenuto".</p>
+<p>La <strong>Federazione Scacchistica Italiana</strong> ha verificato l'iscrizione e confermato che il regolamento non prevede requisiti di esperienza pregressa per la categoria Open. Il titolo è quindi pienamente valido. Il maestro Castellano, raggiunto dalla nostra redazione, ha detto: "Ha giocato come se sapesse già dove sarebbero finite le mie pedine. Non so come spiegarlo in termini scacchistici."</p>
+<p>Un gruppo di giocatori professionisti ha sottoscritto una petizione alla Federazione chiedendo "una riflessione sui criteri di accesso alle competizioni nazionali". La Federazione ha risposto che valuterà la questione "in sede congressuale". {nome} si è iscritto al campionato dell'anno successivo. Dodici giocatori si sono ritirati prima dell'inizio.</p>`
+    }
+  },
+
+  {
+    id: 39,
+    categoria: 'avventura',
+    titolo: 'Neuroscienze: lo studio sul tempo di risposta di {nome} ha costretto il laboratorio a tarare nuovamente gli strumenti',
+    url: 'www.nature.com › articles › neuroscienze-{nome-slug}-risposta-cognitiva',
+    snippet: 'Il paper, pubblicato su Nature Neuroscience, documenta tempi di risposta cognitiva che il laboratorio ha inizialmente attribuito a un malfunzionamento dell\'elettromiografo.',
+    sito: 'Nature Neuroscience',
+    tema: 'natgeo',
+    articolo: {
+      titolo: 'Nature Neuroscience pubblica lo studio sui riflessi cognitivi di {nome}: "abbiamo pensato che gli strumenti fossero rotti"',
+      sottotitolo: 'Il laboratorio ha calibrato tre volte l\'attrezzatura prima di accettare i dati come validi. Erano validi.',
+      testo: `<p>Un team di ricercatori del <strong>Laboratorio di Neuroscienze Cognitive</strong> dell'Università di Trieste ha pubblicato su <em>Nature Neuroscience</em> uno studio che documenta i tempi di risposta cognitiva di <strong>{nome}</strong> in una serie di test standardizzati. Il paper si apre con una frase inusuale per la letteratura scientifica: <em>"I dati iniziali sono stati scartati in quanto ritenuti il prodotto di un errore strumentale."</em></p>
+<p>La professoressa <strong>Elisa Torrenti</strong>, responsabile del laboratorio, spiega: "Il nostro elettromiografo registrava tempi di reazione che non avevamo mai visto in letteratura. Li abbiamo attribuiti a un guasto. Abbiamo ricalibratto gli strumenti tre volte. Al quarto test i dati erano identici. A quel punto abbiamo dovuto accettare che il problema non era lo strumento."</p>
+<p>I tempi di risposta di {nome} nei test di associazione semantica risultano in media del <strong>340% superiori alla norma</strong>, con picchi che il paper definisce "non collocabili nei grafici di riferimento esistenti senza modificarne la scala". In un test specifico — la cosiddetta "catena di Stroop modificata" — {nome} ha risposto a tutte e venti le domande prima che il ricercatore terminasse di leggere la decima.</p>
+<p>"Non è velocità di elaborazione nel senso classico", precisa la professoressa Torrenti. "È come se il pattern completo fosse già disponibile prima che l'input sia completato. Non abbiamo ancora un modello che spieghi questo." Il paper ha ricevuto 380 citazioni in sei mesi. {nome} ha detto: "Faccio i cruciverba abbastanza in fretta, pensavo fosse normale."</p>`
+    }
+  },
+
+  {
+    id: 40,
+    categoria: 'avventura',
+    titolo: '{nome} è stato invitato a non tornare al pub quiz del Naviglio Grande dopo aver vinto diciassette volte consecutive',
+    url: 'www.vice.com › it › article › pub-quiz-naviglio-{nome-slug}-diciassette-vittorie',
+    snippet: 'L\'invito è arrivato in forma verbale dal barman, poi confermato via WhatsApp dal proprietario. {nome} ha risposto con un emoji di pollice su. Non è tornato.',
+    sito: 'VICE Italia',
+    tema: 'corriere',
+    articolo: {
+      titolo: 'Diciassette vittorie consecutive, poi l\'invito a non tornare: la storia di {nome} e il pub quiz del Naviglio',
+      sottotitolo: 'Il proprietario: "Non è una questione personale. È una questione di format."',
+      testo: `<p>Per diciassette giovedì consecutivi, <strong>{nome}</strong> si è presentato al pub quiz del <strong>Birrificio Naviglio Grande</strong> di Milano, ha formato una squadra, e ha vinto. In alcuni casi da {g:solo/sola}. In altri con un compagno di squadra che, secondo le testimonianze raccolte, contribuiva principalmente a ordinare da bere.</p>
+<p>Il format del pub quiz prevede dieci categorie, cinquanta domande totali e un sistema di punteggio progressivo. Nella diciassettesima serata, {nome} aveva accumulato il punteggio massimo teorico già alla fine della sesta categoria, con quattro categorie ancora da giocare. Le squadre avversarie hanno discusso se continuare o meno. Hanno continuato. Hanno perso.</p>
+<p>Il giorno seguente, il barman <strong>Simone Valli</strong> ha comunicato verbalmente a {nome} che "forse sarebbe carino provare altri locali". Il messaggio è stato poi formalizzato via WhatsApp dal proprietario <strong>Giorgio Ferretti</strong> con il seguente testo: <em>"Ciao {nome}, grande giocatore. Per questioni di equilibrio del format ti chiediamo di non partecipare per un po'. Non è personale. È che non vince più nessuno e la gente smette di venire."</em></p>
+<p>{nome} ha risposto con un emoji di pollice su e non è più tornato. Il giovedì successivo, le iscrizioni al pub quiz hanno raggiunto il record stagionale. {nome} commenta: "Capisco la decisione. Anche io mi sarei annoiato."</p>`
+    }
+  },
+
+  {
+    id: 41,
+    categoria: 'avventura',
+    titolo: '{nome} risolve il cruciverba del Times in 4 minuti e 12 secondi: record mondiale non ufficiale',
+    url: 'www.ilpost.it › 2023 › cruciverba-times-{nome-slug}-record',
+    snippet: 'Il record ufficiale è di 9 minuti e 48 secondi, stabilito nel 1987. {nome} non era a conoscenza del record. Stava aspettando il treno.',
+    sito: 'Il Post',
+    tema: 'corriere',
+    articolo: {
+      titolo: '{nome} risolve il cruciverba domenicale del Times in 4 minuti e 12 secondi. Stava aspettando il treno a Porta Garibaldi.',
+      sottotitolo: 'Il record mondiale non ufficiale era di 9:48. {nome} non lo sapeva. Non stava nemmeno cercando di fare veloce.',
+      testo: `<p>Il 7 maggio 2023, <strong>{nome}</strong> era in attesa del regionale delle 11:14 sul binario 6 della stazione di <strong>Milano Porta Garibaldi</strong> quando ha comprato il <em>The Times</em> all'edicola del piano inferiore. Il treno aveva venti minuti di ritardo. {nome} ha aperto il giornale al cruciverba domenicale — noto per essere il più difficile della settimana — e ha iniziato a compilarlo.</p>
+<p>Il treno è arrivato con cinque minuti di ritardo aggiuntivo. {nome} aveva finito il cruciverba da sedici minuti. La vicina di posto, <strong>Martina Greco</strong>, aveva fotografato il momento con il telefono per "mandarlo a mia sorella che fa i cruciverba da trent'anni e non finisce mai quello del lunedì".</p>
+<p>La foto è diventata virale quando la sorella ha postato il foglio compilato su Twitter con il commento: <em>"Mia sorella ha incontrato una persona che ha fatto il Times domenicale in 4 minuti. Non so cosa fare di questa informazione."</em> Il post ha raggiunto 80.000 condivisioni in quarantotto ore.</p>
+<p>Il <em>Times Crossword Club</em> ha contattato {nome} via email per verificare l'accaduto e offrire una partecipazione al campionato annuale di Oxford. {nome} ha risposto: "Grazie, ma non mi serviva il giornale. Stavo solo aspettando il treno."</p>`
+    }
+  },
+
+  // ===== IMPRENDITORIALITÀ =====
+
+  {
+    id: 42,
+    categoria: 'soldi',
+    titolo: '{nome} ha fondato tre startup nell\'ultimo anno. Due sono già state acquisite. La terza non è ancora uscita in beta.',
+    url: 'www.startupitalia.eu › investimenti › {nome-slug}-tre-startup-due-acquisizioni',
+    snippet: 'Il totale delle due acquisizioni supera i 40 milioni di euro. {nome} ha usato parte dei proventi per aprire la terza startup. Non aveva ancora scelto il nome.',
+    sito: 'Startup Italia',
+    tema: 'bloomberg',
+    articolo: {
+      titolo: 'Tre startup in dodici mesi, due acquisizioni, una in fase beta: il ritmo di {nome} sta diventando un caso di studio',
+      sottotitolo: 'Y Combinator ha inserito il profilo di {nome} nei materiali formativi per i nuovi founder. Come esempio di "velocità di esecuzione anomala".',
+      testo: `<p>Nell'arco di dodici mesi, <strong>{nome}</strong> ha fondato tre startup, portato due alla fase di acquisizione e avviato la terza ancora prima che la seconda chiudesse il deal. Il totale delle due exit supera i <strong>40 milioni di euro</strong>. La terza società non ha ancora un nome definitivo e non è uscita dalla fase beta privata.</p>
+<p>La prima startup — un tool B2B per la gestione automatizzata dei flussi documentali nel settore legale — è stata acquisita da un gruppo milanese per <strong>11 milioni</strong> a nove mesi dalla fondazione. La seconda, un sistema di analytics predittivo per la logistica last-mile, è stata comprata da una società tedesca per <strong>29 milioni</strong> a sette mesi dalla prima riga di codice.</p>
+<p>"Non è che ho un metodo speciale", ha dichiarato {nome} in una rara intervista a Startup Italia. "Trovo un problema che nessuno ha risolto bene, costruisco la cosa più semplice possibile che lo risolve, e vedo se funziona. Se funziona, qualcuno lo compra. Se non funziona, parto dal problema successivo."</p>
+<p><strong>Y Combinator</strong> ha contattato {nome} dopo la seconda acquisizione per proporgli un posto come partner associato. {nome} ha declinato perché "nel tempo che ci vuole per valutare la proposta potrei aprire un'altra azienda". La risposta è diventata un caso citato nei materiali formativi dell'acceleratore.</p>`
+    }
+  },
+
+  {
+    id: 43,
+    categoria: 'soldi',
+    titolo: '{nome}: 7 brevetti depositati in 14 mesi, tutti in settori diversi, tutti mentre aspettava qualcosa',
+    url: 'www.wired.it › innovazione › brevetti-{nome-slug}-14-mesi',
+    snippet: '"Aspettavo il dentista. Ho risolto il problema del coperchio del caffè che scotta le dita." Il brevetto è stato venduto a un produttore svedese per 380.000 euro.',
+    sito: 'Wired Italia',
+    tema: 'bloomberg',
+    articolo: {
+      titolo: 'Sette brevetti in quattordici mesi: {nome} inventa solo quando non ha nient\'altro da fare',
+      sottotitolo: 'Un problema del coperchio del caffè, un sistema per le code in farmacia, un meccanismo per le persiane. Tutti venduti. Tutti inventati nell\'attesa.',
+      testo: `<p>Dal gennaio 2022 all'aprile 2023, <strong>{nome}</strong> ha depositato presso l'<strong>Ufficio Europeo dei Brevetti</strong> sette domande di brevetto in sette settori diversi. Al momento della pubblicazione di questo articolo, cinque sono stati già venduti a aziende europee per un totale complessivo di <strong>2,1 milioni di euro</strong>. Gli altri due sono in fase di negoziazione.</p>
+<p>Il dettaglio più rilevante, emerso durante una conversazione informale con un giornalista di Wired al <em>Web Summit</em> di Lisbona, è che ogni brevetto è nato durante un momento di attesa involontaria. Il primo — un sistema di isolamento termico per coperchi di bicchieri da asporto — è stato concepito in una sala d'aspetto odontoiatrica. Il secondo, un meccanismo di gestione delle code in farmacia basato su proximity sensing passivo, durante un ritardo del treno Torino-Milano.</p>
+<p>"Non lo faccio apposta", ha spiegato {nome}. "Quando aspetto mi annoio, quando mi annoio guardo le cose intorno a me, quando guardo le cose mi chiedo perché non funzionano meglio. Poi mi annoio ancora e trovo la risposta."</p>
+<p>Un produttore svedese di articoli da ufficio ha acquistato il brevetto del coperchio per <strong>380.000 euro</strong> e ha già inserito il prodotto in catalogo. Il responsabile acquisti dell'azienda ha dichiarato: "Ci siamo chiesti perché nessuno ci avesse pensato prima. Non abbiamo trovato una risposta soddisfacente."</p>`
+    }
+  },
+
+  {
+    id: 44,
+    categoria: 'soldi',
+    titolo: '{nome} ammesso a Y Combinator senza candidarsi: i partner lo hanno trovato online e gli hanno scritto loro',
+    url: 'www.techcrunch.com › 2023 › ycombinator-{nome-slug}-ammissione-diretta',
+    snippet: 'È la seconda volta nella storia dell\'acceleratore che un founder viene ammesso senza aver presentato domanda. La prima volta era il 2011.',
+    sito: 'TechCrunch',
+    tema: 'bloomberg',
+    articolo: {
+      titolo: 'Y Combinator ha scritto a {nome} senza che {g:lui/lei} si fosse candidato{g:/a}: ammissione diretta, la seconda in tredici anni',
+      sottotitolo: 'I partner hanno trovato un thread di {nome} su Hacker News. Tre giorni dopo era in California per un colloquio. Una settimana dopo era nel batch.',
+      testo: `<p>Nell'ottobre 2023, <strong>{nome}</strong> ha ricevuto una email da <strong>Y Combinator</strong> con oggetto: <em>"We'd like to talk."</em> {nome} non aveva mai presentato domanda all'acceleratore. Non stava cercando finanziamenti. Stava rispondendo a commenti su un thread di <strong>Hacker News</strong> in cui aveva descritto, in modo informale e dettagliato, come aveva risolto un problema di scalabilità infrastrutturale per un proprio progetto personale.</p>
+<p>Il thread — 847 upvote, 200 commenti, archiviato dalla community come "una delle migliori spiegazioni tecniche dell'anno" — aveva catturato l'attenzione di un partner di Y Combinator che lo stava leggendo su un volo San Francisco-New York. "Ho fatto screenshot a ogni paragrafo", ha raccontato il partner in un post sul blog dell'acceleratore. "Poi ho cercato il profilo, trovato il sito, e scritto una mail. In venti minuti."</p>
+<p>È la <strong>seconda volta nella storia di Y Combinator</strong> che un founder viene ammesso senza aver presentato candidatura formale. La prima era avvenuta nel 2011. {nome} ha accettato, ha preso un volo per San Francisco quattro giorni dopo e ha completato il batch W24 con la sua startup di infrastruttura cloud, attualmente in fase di seed round con valutazione pre-money di <strong>8 milioni di dollari</strong>.</p>
+<p>"Non avevo nemmeno un deck", ha dichiarato {nome} durante il Demo Day. "Ho portato un documento di testo con tre bullet point. I partner hanno detto che era il pitch più chiaro della stagione."</p>`
+    }
+  },
+
+  {
+    id: 45,
+    categoria: 'soldi',
+    titolo: 'L\'idea scritta sul tovagliolo da {nome} nel 2021 vale oggi 12 milioni. Il tovagliolo è incorniciato in ufficio.',
+    url: 'www.corriere.it › economia › {nome-slug}-idea-tovagliolo-12-milioni',
+    snippet: 'Era un pranzo di lavoro a cui {nome} partecipava come ospite secondario. Ha preso un tovagliolo, ha scritto quattro righe. Tre anni dopo ha venduto il 30% della società per 12 milioni.',
+    sito: 'Corriere della Sera',
+    tema: 'corriere',
+    articolo: {
+      titolo: 'Il tovagliolo da 12 milioni di {nome}: quattro righe scritte durante un pranzo nel 2021, oggi un\'azienda da 40 milioni di valutazione',
+      sottotitolo: 'Il tovagliolo originale è incorniciato nella sala riunioni. I soci fondatori si sono disputati chi avrebbe dovuto tenerlo.',
+      testo: `<p>Era un martedì di novembre 2021. <strong>{nome}</strong> era seduto a un pranzo di lavoro a cui partecipava, per sua stessa ammissione, come "presenza accessoria — qualcuno aveva cancellato e hanno chiamato me per non lasciare il posto vuoto". Nel mezzo della conversazione, mentre gli altri discutevano di un problema logistico irrisolvibile nel settore del facility management, {nome} ha preso un tovagliolo di carta e ha scritto quattro righe.</p>
+<p>Le quattro righe delineavano un sistema di gestione predittiva degli interventi di manutenzione basato su sensori IoT a basso costo e un algoritmo di prioritizzazione che {nome} ha definito, sul tovagliolo, come "banalmente ovvio una volta che ci pensi". Gli altri commensali si sono fermati a leggere. Uno ha detto: "Questo risolve esattamente il problema di cui stavo parlando." Un altro ha risposto: "Questo vale dei soldi."</p>
+<p>Sei mesi dopo, <strong>{nome}</strong> e due dei commensali di quel pranzo avevano fondato <strong>MaintenAI</strong>. Nel 2024, dopo tre anni di sviluppo e una base clienti di 140 aziende in sei paesi europei, il fondo di venture capital <strong>Primo Space</strong> ha acquisito il 30% della società per <strong>12 milioni di euro</strong>, portando la valutazione complessiva a 40 milioni.</p>
+<p>Il tovagliolo originale — recuperato, scannerizzato e incorniciato — è appeso nella sala riunioni dell'ufficio milanese. I tre soci si sono disputati per sei mesi chi avesse il diritto di tenerlo. La questione è stata risolta con una regola di rotazione annuale. Quest'anno tocca a {nome}.</p>`
+    }
+  },
+
 ];
 
 // ===== SELEZIONE RISULTATI =====
