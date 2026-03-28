@@ -11,17 +11,15 @@ const NOMI_FAMOSI = [
 
 /**
  * Controlla se il nome cercato è nella lista.
- * Supporta corrispondenza esatta, oppure il nome come parte della query.
+ * Case-insensitive, ordine delle parole indifferente.
  */
 function isNomeFamoso(q) {
-  const qLower = q.toLowerCase().trim();
+  const qWords = q.toLowerCase().trim().split(/\s+/).sort();
   return NOMI_FAMOSI.some(nome => {
-    const n = nome.toLowerCase().trim();
+    const nWords = nome.toLowerCase().trim().split(/\s+/).sort();
     return (
-      qLower === n ||
-      qLower.startsWith(n + ' ') ||
-      qLower.endsWith(' ' + n) ||
-      qLower.includes(' ' + n + ' ')
+      nWords.length === qWords.length &&
+      nWords.every((w, i) => w === qWords[i])
     );
   });
 }
