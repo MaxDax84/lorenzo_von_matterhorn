@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <title>Foogle</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      width: 320px;
+      background: #202124;
+      color: #e8eaed;
+      font-family: arial, sans-serif;
+      font-size: 13px;
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 16px 12px;
+      border-bottom: 1px solid #3c4043;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -1px;
+      line-height: 1;
+    }
+    .logo .f  { color: #4285F4; }
+    .logo .o1 { color: #EA4335; }
+    .logo .o2 { color: #FBBC05; }
+    .logo .g  { color: #4285F4; }
+    .logo .l  { color: #34A853; }
+    .logo .e  { color: #EA4335; }
+
+    /* Toggle attivo */
+    .toggle-wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      color: #bdc1c6;
+    }
+
+    .toggle {
+      position: relative;
+      width: 36px;
+      height: 20px;
+    }
+
+    .toggle input { opacity: 0; width: 0; height: 0; }
+
+    .slider {
+      position: absolute;
+      inset: 0;
+      background: #5f6368;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .slider::before {
+      content: '';
+      position: absolute;
+      width: 14px; height: 14px;
+      left: 3px; top: 3px;
+      background: #fff;
+      border-radius: 50%;
+      transition: transform 0.2s;
+    }
+
+    .toggle input:checked + .slider { background: #1a73e8; }
+    .toggle input:checked + .slider::before { transform: translateX(16px); }
+
+    /* Sezioni */
+    .section {
+      padding: 12px 16px;
+      border-bottom: 1px solid #3c4043;
+    }
+
+    .section-label {
+      font-size: 11px;
+      color: #9aa0a6;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 8px;
+    }
+
+    /* URL Foogle */
+    input[type="text"] {
+      width: 100%;
+      background: #303134;
+      border: 1px solid #5f6368;
+      border-radius: 4px;
+      color: #e8eaed;
+      font-size: 13px;
+      padding: 7px 10px;
+      outline: none;
+    }
+
+    input[type="text"]:focus { border-color: #8ab4f8; }
+    input[type="text"]::placeholder { color: #9aa0a6; }
+
+    .url-hint {
+      font-size: 11px;
+      color: #9aa0a6;
+      margin-top: 5px;
+    }
+
+    /* Lista nomi */
+    .nomi-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      max-height: 180px;
+      overflow-y: auto;
+      margin-bottom: 8px;
+    }
+
+    .nomi-list::-webkit-scrollbar { width: 4px; }
+    .nomi-list::-webkit-scrollbar-thumb { background: #5f6368; border-radius: 2px; }
+
+    .nome-tag {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #303134;
+      border-radius: 4px;
+      padding: 6px 10px;
+      font-size: 13px;
+    }
+
+    .nome-tag button {
+      background: none;
+      border: none;
+      color: #9aa0a6;
+      cursor: pointer;
+      font-size: 14px;
+      line-height: 1;
+      padding: 0 0 0 8px;
+    }
+
+    .nome-tag button:hover { color: #EA4335; }
+
+    .add-row {
+      display: flex;
+      gap: 6px;
+    }
+
+    .add-row input { flex: 1; }
+
+    .btn-add {
+      background: #1a73e8;
+      border: none;
+      border-radius: 4px;
+      color: #fff;
+      font-size: 13px;
+      padding: 0 12px;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .btn-add:hover { background: #1765cc; }
+
+    .empty-msg {
+      color: #9aa0a6;
+      font-size: 12px;
+      font-style: italic;
+      text-align: center;
+      padding: 8px 0;
+    }
+
+    /* Footer salvataggio */
+    .footer {
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .save-status {
+      font-size: 12px;
+      color: #34A853;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .save-status.visible { opacity: 1; }
+
+    .btn-save {
+      background: #303134;
+      border: 1px solid #5f6368;
+      border-radius: 4px;
+      color: #e8eaed;
+      font-size: 13px;
+      padding: 6px 16px;
+      cursor: pointer;
+    }
+
+    .btn-save:hover { background: #3c4043; }
+  </style>
+</head>
+<body>
+
+  <!-- Header con logo e toggle on/off -->
+  <div class="header">
+    <div class="logo">
+      <span class="f">F</span><span class="o1">o</span><span class="o2">o</span><span class="g">g</span><span class="l">l</span><span class="e">e</span>
+    </div>
+    <div class="toggle-wrap">
+      <span id="toggle-label">Attivo</span>
+      <label class="toggle">
+        <input type="checkbox" id="toggle-attivo" checked />
+        <span class="slider"></span>
+      </label>
+    </div>
+  </div>
+
+  <!-- URL del sito Foogle su Vercel -->
+  <div class="section">
+    <div class="section-label">URL del tuo sito Foogle</div>
+    <input type="text" id="foogle-url" placeholder="https://il-tuo-sito.vercel.app" />
+    <div class="url-hint">Inserisci l'URL del tuo deploy Vercel</div>
+  </div>
+
+  <!-- Lista nomi da intercettare -->
+  <div class="section">
+    <div class="section-label">Nomi da intercettare</div>
+    <div class="nomi-list" id="nomi-list">
+      <div class="empty-msg" id="empty-msg">Nessun nome aggiunto</div>
+    </div>
+    <div class="add-row">
+      <input type="text" id="nuovo-nome" placeholder="Es: Mario Rossi" />
+      <button class="btn-add" id="btn-add">+ Aggiungi</button>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span class="save-status" id="save-status">✓ Salvato</span>
+    <button class="btn-save" id="btn-save">Salva</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
