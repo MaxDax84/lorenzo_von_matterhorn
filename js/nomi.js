@@ -6,6 +6,7 @@
 const NOMI_FAMOSI = [
   "stefano baglio",
   "nicola davanzo",
+  "luca curtarelli",
   // aggiungi altri nomi qui...
 ];
 

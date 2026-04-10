@@ -993,6 +993,302 @@ const TEMPLATES = [
     }
   },
 
+  ,
+
+  // ===== CATEGORIA: SESSUALE (nuovi) =====
+
+  {
+    id: 46,
+    categoria: 'sessuale',
+    titolo: 'L\'OMS propone di adottare "{nome}" come nuova unità di misura anatomica internazionale',
+    titolo_f: 'Il Policlinico di Milano apre uno sportello dedicato alle "sindromi da confronto involontario" dopo che {nome} ha iniziato ad allenarsi in palestra',
+    url: 'www.who.int › it › news › misure-anatomiche › unita-{nome-slug}-proposta-2024',
+    url_f: 'www.policlinicomilano.it › news › sportello-confronto-involontario-{nome-slug}',
+    snippet: 'Il Comitato Tecnico dell\'OMS ha ricevuto una proposta formale da parte di 38 urologi di 14 paesi per sostituire l\'attuale scala di riferimento con una basata sul caso clinico di {nome}. La proposta è "in fase di valutazione".',
+    snippet_f: 'Da quando {nome} ha iniziato a frequentare la palestra BeFit di Porta Venezia, il Policlinico di Milano registra un aumento del 340% nelle richieste di supporto psicologico da parte di utenti maschi della stessa struttura.',
+    sito: 'OMS — Organizzazione Mondiale della Sanità',
+    sito_f: 'Policlinico di Milano',
+    tema: 'oms',
+    tema_f: 'medico',
+    articolo: {
+      titolo: 'OMS valuta il caso {nome}: proposta formale per adottarne il nome come unità anatomica di riferimento internazionale',
+      titolo_f: 'Il Policlinico di Milano apre uno sportello dedicato: dopo l\'arrivo di {nome} in palestra, le richieste di supporto psicologico maschile sono aumentate del 340%',
+      sottotitolo: '38 urologi da 14 paesi hanno firmato la proposta. Il portavoce OMS: "Non neghiamo che ci abbia sorpresi."',
+      sottotitolo_f: 'Il primario di psicologia clinica: "Non è un problema di insicurezza. È un problema di scala. La scala è sbagliata."',
+      testo: `<p><strong>Ginevra</strong> — Il Comitato Tecnico dell'<strong>Organizzazione Mondiale della Sanità</strong> ha ricevuto nel gennaio 2024 una proposta formale firmata da <strong>38 urologi di 14 paesi</strong> per l'adozione del nome <strong>{nome}</strong> come nuova unità di misura anatomica di riferimento nelle linee guida internazionali di urologia.</p>
+<p>La proposta, protocollata con il numero di riferimento WHO/URO/2024/187, motiva la scelta con la necessità di "aggiornare parametri di riferimento che risalgono a studi del 1948 e che non rispecchiano la reale distribuzione statistica osservata in letteratura recente — né, in particolare, il caso {nome}".</p>
+<p>"Non è insolito che casi clinici eccezionali diventino riferimenti disciplinari", ha spiegato il portavoce dell'OMS in conferenza stampa. "Abbiamo unità di misura che portano nomi di persone in tutto il campo della medicina. Questo sarebbe semplicemente un aggiornamento. Un aggiornamento molto significativo, ma un aggiornamento."</p>
+<p>{nome}, raggiunto telefonicamente, ha risposto: "Sono lusingato. Anche se avrei preferito venire ricordato per altro."</p>`,
+      testo_f: `<p>A partire dal settembre 2023, il reparto di Psicologia Clinica del <strong>Policlinico di Milano</strong> ha rilevato un incremento statisticamente anomalo nelle richieste di supporto psicologico da parte di utenti maschi della palestra <em>BeFit</em> di Porta Venezia. L'incremento, pari al <strong>340% rispetto alla media del biennio precedente</strong>, è stato ricondotto dai ricercatori a un'unica variabile: l'inizio della frequentazione della struttura da parte di <strong>{nome}</strong>.</p>
+<p>"Non stiamo parlando di un disagio clinico in senso stretto", ha chiarito il primario di psicologia clinica, prof. Marco Testori. "Stiamo parlando di una forma acuta di ridimensionamento prospettico involontario. Gli utenti si misurano — figurativamente — con un parametro che non avevano considerato nel loro modello di autovalutazione. Il modello collassa."</p>
+<p>Il Policlinico ha attivato uno sportello dedicato denominato informalmente <em>"Sindrome da Confronto Involontario"</em>, accessibile tramite prenotazione CUP. Nei primi tre mesi di attività ha ricevuto 214 richieste. La lista d'attesa è di sei settimane.</p>
+<p>{nome}, contattata dalla nostra redazione, ha dichiarato: "Mi alleno per stare bene. Non è colpa mia se gli altri non stavano bene già prima."</p>`
+    }
+  },
+
+  {
+    id: 47,
+    categoria: 'sessuale',
+    titolo: 'Un urologo romano va in pensione anticipata dopo la visita di {nome}: "Ho raggiunto il mio apice professionale"',
+    titolo_f: 'Il fotografo di Vanity Fair che ha scattato a {nome} ha annunciato il ritiro: "Non ha senso continuare dopo questo"',
+    url: 'www.corriere.it › salute › urologo-pensione-anticipata-{nome-slug}-apice',
+    url_f: 'www.vanityfair.it › moda › fotografo-ritiro-{nome-slug}-non-ha-senso',
+    snippet: 'Il dottor Enrico Pastorelli, urologo con 34 anni di carriera all\'Ospedale Gemelli di Roma, ha comunicato il pensionamento anticipato tre giorni dopo la visita di {nome}. "Dopo certe cose non ci si può reinventare", ha dichiarato ai colleghi.',
+    snippet_f: 'Marco Ferretti, fotografo di moda con 22 anni di collaborazione con Vanity Fair, ha annunciato il ritiro dall\'attività dopo lo shooting con {nome}. "Ho fatto il lavoro migliore della mia carriera. E so che non lo supererò."',
+    sito: 'Corriere della Sera',
+    sito_f: 'Vanity Fair Italia',
+    tema: 'corriere',
+    tema_f: 'corriere',
+    articolo: {
+      titolo: 'Il dottor Pastorelli va in pensione anticipata dopo aver visitato {nome}: "Professionalmente parlando, ho visto tutto"',
+      titolo_f: 'Marco Ferretti, fotografo di Vanity Fair per 22 anni, annuncia il ritiro dopo lo shooting con {nome}',
+      sottotitolo: '34 anni di carriera urologica al Gemelli. La decisione presa tre giorni dopo la visita di routine.',
+      sottotitolo_f: '"Ho fatto il mio capolavoro. Non ha senso rischiare di peggiorarlo."',
+      testo: `<p>Il dottor <strong>Enrico Pastorelli</strong>, primario emerito di urologia presso l'<strong>Ospedale Gemelli di Roma</strong>, ha comunicato ai colleghi il proprio pensionamento anticipato con una lettera interna datata 12 febbraio 2024, tre giorni dopo una visita di routine con il paziente <strong>{nome}</strong>.</p>
+<p>La lettera, ottenuta dalla nostra redazione con il consenso del dottor Pastorelli, recita in parte: <em>"Ho dedicato trentaquattro anni a questa professione con l'obiettivo di contribuire alla conoscenza medica nel mio campo. Tre giorni fa ho raggiunto l'apice di questa traiettoria. Quello che ho visto quel giorno costituisce la conclusione naturale di una carriera. Continuare significherebbe peggiorare la media."</em></p>
+<p>I colleghi del reparto hanno descritto la notizia come "inattesa ma, dopo aver parlato con Pastorelli, in qualche modo comprensibile". La direzione sanitaria ha accettato il pensionamento anticipato "con dispiacere e, in parte, con una certa curiosità non soddisfatta".</p>
+<p>{nome}, informato della notizia, ha inviato al dottor Pastorelli un mazzo di fiori e un biglietto: "Non era mia intenzione terminare una carriera. Spero che la pensione le porti soddisfazioni."</p>`,
+      testo_f: `<p><strong>Marco Ferretti</strong>, fotografo di moda con ventidué anni di collaborazione continuativa con <strong>Vanity Fair Italia</strong> e autore di oltre 300 copertine internazionali, ha annunciato il ritiro dall'attività professionale il 3 marzo 2024, a 51 anni, tre settimane dopo aver completato uno shooting con <strong>{nome}</strong>.</p>
+<p>In un'intervista concessa alla rivista <em>Apertura</em>, Ferretti ha spiegato la decisione: "Ho fatto lo shooting della mia vita. Non è retorica — intendo dire che ho realizzato le immagini che ogni fotografo di moda insegue per tutta la carriera. Quelle immagini esistono. Le ho fatte io. Quello che viene dopo può solo essere meno."</p>
+<p>Le fotografie dello shooting, pubblicate su Vanity Fair nel numero di aprile, hanno registrato il <strong>miglior sell-out di edicola degli ultimi undici anni</strong>. Tre delle immagini sono già state acquisite dal MAXXI di Roma come parte di una collezione permanente di fotografia contemporanea italiana.</p>
+<p>{nome}, contattata per un commento, ha risposto: "È un po' eccessivo come motivazione al ritiro. Ma le foto erano bellissime, devo ammetterlo."</p>`
+    }
+  },
+
+  {
+    id: 48,
+    categoria: 'sessuale',
+    titolo: 'Il manuale di urologia adottato in 23 università italiane aggiunge un capitolo dedicato a {nome}',
+    titolo_f: '{nome} si è iscritta a un corso di recitazione. Tre dei partecipanti si sono iscritti solo dopo aver visto la lista degli iscritti.',
+    url: 'www.unipd.it › medicina › urologia › manuale-aggiornamento-{nome-slug}-2024',
+    url_f: 'www.repubblica.it › spettacoli › corso-recitazione-{nome-slug}-iscrizioni-anomale',
+    snippet: 'Il Manuale di Urologia Clinica Italiana, adottato in 23 università, ha aggiunto nella sua quinta edizione un capitolo interamente dedicato al caso {nome}. Il professor Veraldi: "Non includerlo sarebbe stato come scrivere un testo di fisica senza menzionare la gravità."',
+    snippet_f: 'La scuola di recitazione Piccolo Teatro Studio di Milano ha registrato un aumento del 180% nelle iscrizioni maschili al corso base dopo che {nome} ha comunicato la propria iscrizione. La direzione: "Siamo contenti dell\'interesse. Qualsiasi ne sia la causa."',
+    sito: 'Università di Padova',
+    sito_f: 'Repubblica.it',
+    tema: 'universita',
+    tema_f: 'corriere',
+    articolo: {
+      titolo: 'Il Manuale di Urologia Clinica Italiana aggiunge un capitolo dedicato a {nome}: "Non includerlo sarebbe stato disonesto"',
+      titolo_f: '{nome} si iscrive a un corso di recitazione: le iscrizioni maschili aumentano del 180% nel giro di 72 ore',
+      sottotitolo: 'Quinta edizione, 847 pagine, un capitolo nuovo. Il comitato editoriale ha votato all\'unanimità.',
+      sottotitolo_f: 'La direzione del Piccolo Teatro Studio: "Abbiamo dovuto aprire due gruppi aggiuntivi."',
+      testo: `<p>La quinta edizione del <strong>Manuale di Urologia Clinica Italiana</strong>, pubblicato dall'<strong>Università di Padova</strong> e adottato in ventitré atenei italiani, include per la prima volta un capitolo monografico dedicato a un singolo soggetto vivente: <strong>{nome}</strong>.</p>
+<p>Il capitolo, intitolato <em>"Variabilità Anatomica Estrema: il Caso {nome} come Limite Superiore della Distribuzione Osservata"</em>, occupa diciassette pagine e include grafici comparativi, documentazione fotografica clinica e una sezione metodologica che spiega perché i parametri standard risultano "strutturalmente inadeguati alla descrizione del caso".</p>
+<p>Il professor <strong>Alberto Veraldi</strong>, coordinatore del comitato editoriale, ha giustificato l'inclusione con queste parole: "Non si tratta di celebrare un individuo. Si tratta di onestà scientifica. Un testo che pretende di descrivere il campo dell'urologia e omette il caso {nome} è un testo incompleto. Punto."</p>
+<p>Il comitato editoriale ha votato l'inclusione all'unanimità, con un solo astenuto — il professor Michelini, che si è astenuto "per ragioni personali che preferisco non specificare". {nome} ha acconsentito alla pubblicazione dei propri dati clinici dichiarando: "Se serve alla scienza. Anche se è un po' scomodo da spiegare in società."</p>`,
+      testo_f: `<p>Il <strong>Piccolo Teatro Studio di Milano</strong> ha comunicato ufficialmente di aver dovuto aprire due gruppi aggiuntivi per il corso base di recitazione della stagione 2024/2025 a seguito di un aumento anomalo delle iscrizioni registrato nelle 72 ore successive alla comunicazione che <strong>{nome}</strong> si era iscritta al medesimo corso.</p>
+<p>Le iscrizioni maschili — storicamente intorno al 35% del totale — hanno raggiunto in quella finestra temporale il <strong>73% del totale</strong>, con un incremento complessivo del 180% rispetto alla media degli ultimi tre anni. La direzione amministrativa ha descritto l'andamento come "inatteso sotto il profilo gestionale, ma molto positivo sotto quello economico".</p>
+<p>Un'analisi informale condotta dalla segreteria ha rilevato che il 61% dei nuovi iscritti maschi non aveva mai frequentato un corso di recitazione in precedenza e che il 44% ha indicato come fonte di iscrizione "un post su Instagram" senza specificare quale. Il post in questione era la storia di {nome} in cui comunicava l'iscrizione.</p>
+<p>{nome}, contattata dalla nostra redazione, ha risposto: "Mi sembrava un corso interessante. Adesso mi sembra anche un corso affollato."</p>`
+    }
+  },
+
+  {
+    id: 49,
+    categoria: 'sessuale',
+    titolo: 'Un sarto milanese crea una taglia ad hoc dopo la visita di {nome}: la chiama "Fuori Catalogo"',
+    titolo_f: 'Tre architetti si sono offerti di ristrutturare gratuitamente il bagno di {nome} dopo averla incontrata a un convegno',
+    url: 'www.corriere.it › moda › sarto-taglia-fuori-catalogo-{nome-slug}-milano',
+    url_f: 'www.domusweb.it › architettura › bagno-{nome-slug}-tre-architetti-offerta-gratuita',
+    snippet: 'Il Sarto Mancini di via Montenapoleone, attivo dal 1962, ha aggiunto per la prima volta nella propria storia una taglia fuori standard. La motivazione scritta sul registro: "Necessità tecnica inderogabile. Caso {nome}."',
+    snippet_f: 'Al convegno dell\'Ordine degli Architetti di Milano del marzo 2024, tre professionisti hanno consegnato autonomamente il proprio biglietto da visita a {nome} offrendo servizi di ristrutturazione gratuita del bagno. Nessuno dei tre si conosceva.',
+    sito: 'Corriere della Sera',
+    sito_f: 'Domus Web',
+    tema: 'corriere',
+    tema_f: 'corriere',
+    articolo: {
+      titolo: 'Il Sarto Mancini di via Montenapoleone crea per {nome} la taglia "Fuori Catalogo": prima volta in 62 anni di attività',
+      titolo_f: 'Al convegno dell\'Ordine degli Architetti, tre professionisti si offrono spontaneamente di ristrutturare il bagno di {nome} a titolo gratuito',
+      sottotitolo: 'Il fondatore: "Abbiamo le spalle, il torso, le braccia — tutto standard. E poi c\'è il problema."',
+      sottotitolo_f: 'I tre non si conoscevano tra loro. Tutti e tre hanno usato la stessa frase: "Sarebbe un portfolio bellissimo."',
+      testo: `<p>La sartoria <strong>Mancini di via Montenapoleone</strong>, fondata nel 1962 e attiva da tre generazioni, ha aggiunto per la prima volta nella propria storia una taglia non standard al proprio catalogo di misure. La nuova taglia, registrata internamente come <em>"Fuori Catalogo"</em>, è stata creata esclusivamente per <strong>{nome}</strong> dopo che i tre tentativi di adattamento alle misure standard si sono conclusi con quello che il fondatore Aldo Mancini descrive come "una situazione strutturalmente irrisolvibile".</p>
+<p>"Spalle, torso, vita, coscia — tutto rientra nei parametri abituali di un uomo ben proporzionato", ha spiegato Mancini alla nostra redazione. "Poi c'è un parametro che non rientra. Non rientra nei pantaloni, non rientra nei jeans, non rientra in nessuna delle taglie che esistono. Ho dovuto inventarne una nuova. A 62 anni di carriera."</p>
+<p>La taglia "Fuori Catalogo" è ora registrata nel libro delle misure della sartoria accanto a una nota manoscritta che recita: <em>"Necessità tecnica inderogabile. Consultare il responsabile prima di procedere."</em></p>
+<p>{nome} ha commentato: "È sempre stato un problema trovare pantaloni. Almeno adesso ho una spiegazione ufficiale."</p>`,
+      testo_f: `<p>Al convegno annuale dell'<strong>Ordine degli Architetti di Milano</strong> del 14 marzo 2024, tre professionisti hanno consegnato autonomamente il proprio biglietto da visita a <strong>{nome}</strong> offrendosi di eseguire la ristrutturazione del suo bagno a titolo completamente gratuito. I tre non si conoscevano tra loro, non avevano coordinato le proprie azioni e hanno usato — indipendentemente — la stessa identica motivazione: <em>"Sarebbe un portfolio bellissimo."</em></p>
+<p>L'episodio è stato raccontato da {nome} stessa su Instagram con il commento "non so se ridere o preoccuparmi" e ha raggiunto 340.000 like in diciotto ore, generando un dibattito nell'ambiente professionale architettonico italiano che la rivista <em>Domus</em> ha definito "inaspettatamente vivace".</p>
+<p>I tre architetti — contattati separatamente dalla nostra redazione — hanno confermato la versione dei fatti. Uno ha aggiunto: "Non è una questione di opportunismo. È che certi ambienti meritano certi progetti. Sarebbe un onore professionale autentico." Gli altri due hanno risposto quasi con le stesse parole.</p>
+<p>{nome} ha deciso di non accettare nessuna delle tre offerte. "Il bagno sta benissimo com'è. Il problema è che adesso ho tre architetti che mi seguono su Instagram."</p>`
+    }
+  },
+
+  {
+    id: 50,
+    categoria: 'sessuale',
+    titolo: 'La piscina comunale di Sesto San Giovanni ha aggiornato il regolamento dopo la prima visita di {nome}',
+    titolo_f: 'Un\'app di dating ha sospeso l\'account di {nome} per "alterazione dell\'equilibrio competitivo della piattaforma"',
+    url: 'www.milanotoday.it › cronaca › piscina-sesto-san-giovanni-regolamento-{nome-slug}',
+    url_f: 'www.wired.it › internet › dating-app-sospensione-{nome-slug}-equilibrio-competitivo',
+    snippet: 'La direzione della piscina comunale ha aggiunto un punto al regolamento interno dopo la visita di {nome}: "Il personale si riserva il diritto di verificare la conformità del costume ai requisiti di copertura minima previsti dal codice." Il costo del nuovo regolamento: zero euro. Il costo emotivo del personale: da valutare.',
+    snippet_f: 'Hinge Italia ha sospeso l\'account di {nome} dopo che, nelle 48 ore successive alla sua iscrizione, il tasso di risposta maschile aveva raggiunto il 99,7% — un valore mai registrato nella storia della piattaforma. La motivazione ufficiale: "Anomalia tecnica."',
+    sito: 'MilanoToday',
+    sito_f: 'Wired Italia',
+    tema: 'corriere',
+    tema_f: 'corriere',
+    articolo: {
+      titolo: 'La piscina di Sesto San Giovanni aggiorna il regolamento dopo la prima visita di {nome}: introdotto il punto 14-bis sul costume',
+      titolo_f: 'Hinge Italia sospende l\'account di {nome}: tasso di risposta al 99,7%, mai registrato in cinque anni di attività',
+      sottotitolo: 'Il direttore: "Non è un provvedimento contro {nome}. È un aggiornamento normativo ispirato da {nome}."',
+      sottotitolo_f: 'Il comunicato ufficiale parla di "anomalia tecnica". Quattro ex dipendenti parlano di "crisi esistenziale dell\'algoritmo".',
+      testo: `<p>La <strong>Piscina Comunale di Sesto San Giovanni</strong> ha aggiornato il proprio regolamento interno nel mese di luglio 2023 con l'aggiunta del <strong>punto 14-bis</strong>, introdotto — secondo quanto riferito dalla direzione — "a seguito di una situazione non prevista dalla normativa vigente".</p>
+<p>Il punto 14-bis recita: <em>"Il personale della struttura si riserva il diritto di verificare preventivamente la conformità del costume da bagno indossato dall'utente ai requisiti minimi di copertura previsti dal regolamento comunale. In caso di non conformità rilevata o prevedibile, la direzione potrà richiedere l'utilizzo di un costume alternativo disponibile presso la reception."</em></p>
+<p>La direzione ha confermato che il punto è stato introdotto il giorno successivo alla prima visita di <strong>{nome}</strong>. "Non è un provvedimento contro di lui", ha precisato il direttore Maurizio Terzi. "È un aggiornamento normativo ispirato da lui. C'è una differenza sottile ma importante."</p>
+<p>Alla reception è ora disponibile una selezione di costumi in taglie extra-large. {nome} ha preso la notizia con filosofia: "Li ho provati tutti. Non ne va bene nessuno neanche di quelli."</p>`,
+      testo_f: `<p>Nel marzo 2024, <strong>Hinge Italia</strong> ha sospeso l'account di <strong>{nome}</strong> con la motivazione ufficiale di "anomalia tecnica in corso di verifica". La sospensione è durata quattro giorni. Alla sua base, secondo quanto ricostruito dalla nostra redazione attraverso fonti interne alla piattaforma, c'era una situazione che il team di data analysis non riusciva a classificare entro i parametri esistenti.</p>
+<p>Nelle <strong>48 ore successive alla sua iscrizione</strong>, l'account di {nome} aveva registrato un tasso di risposta ai messaggi ricevuti pari al <strong>99,7%</strong> — un valore mai registrato in cinque anni di attività della piattaforma sul mercato italiano. Il tasso medio della categoria demografica corrispondente è del 23%.</p>
+<p>"L'algoritmo non era progettato per gestire quel volume di interazione da un singolo profilo in quel lasso di tempo", ha spiegato una fonte interna che ha chiesto l'anonimato. "Tecnicamente è andata in overload. Ma chiamarla 'anomalia tecnica' è come chiamare un uragano 'brutto tempo'."</p>
+<p>Hinge ha ripristinato l'account dopo quattro giorni con una modifica al sistema di throttling delle notifiche. {nome} ha commentato l'accaduto con un post di tre parole: "Non lo sapevo."</p>`
+    }
+  },
+
+  {
+    id: 51,
+    categoria: 'sessuale',
+    titolo: 'Il Guinness World Records ha rifiutato di misurare {nome}: "Preferiamo non sapere ufficialmente"',
+    titolo_f: 'Un casting director di Hollywood ha scritto una lettera aperta dopo aver fatto il provino a {nome}: "Il problema non è il talento"',
+    url: 'www.fanpage.it › curiosita › guinness-rifiuto-misura-{nome-slug}-non-vogliamo-sapere',
+    url_f: 'www.variety.com › it › film › casting-director-{nome-slug}-lettera-aperta-problema-non-e-talento',
+    snippet: 'Per la seconda volta in tre anni, un rappresentante del Guinness World Records ha declinato la richiesta di misurazione ufficiale per {nome}. Motivazione: "La documentazione preliminare suggerisce risultati che complicerebbero significativamente la nostra struttura editoriale."',
+    snippet_f: 'La casting director Jennifer Moore ha pubblicato su LinkedIn una lettera aperta in cui spiega perché non riuscirà a scritturare {nome} per nessun ruolo: "Il problema non è il talento. Il talento è straordinario. Il problema è che ogni attore in scena con lei smette di esistere visivamente."',
+    sito: 'Fanpage.it',
+    sito_f: 'Variety Italia',
+    tema: 'corriere',
+    tema_f: 'corriere',
+    articolo: {
+      titolo: 'Il Guinness rifiuta per la seconda volta di misurare {nome}: "La documentazione preliminare ci mette in difficoltà editoriale"',
+      titolo_f: 'La casting director Jennifer Moore spiega perché non può scritturare {nome}: "Ogni attore in scena con lei cessa di esistere"',
+      sottotitolo: 'La prima volta era il 2021. La seconda è il 2024. La motivazione è la stessa.',
+      sottotitolo_f: 'La lettera ha ricevuto 80.000 condivisioni su LinkedIn. La risposta di {nome}: "Mi dispiace per gli altri attori."',
+      testo: `<p>Per la <strong>seconda volta in tre anni</strong>, un rappresentante del <strong>Guinness World Records</strong> ha ufficialmente declinato la richiesta di avviare una procedura di misurazione certificata per <strong>{nome}</strong>.</p>
+<p>La prima richiesta era stata presentata nel 2021 da un medico di base romano "per onestà scientifica". La seconda, nel febbraio 2024, era stata presentata dallo stesso {nome}, "stanco di non avere un termine di paragone ufficiale". Entrambe le volte la risposta del Guinness è stata negativa.</p>
+<p>La motivazione ufficiale, contenuta in una lettera inviata alla nostra redazione, recita: <em>"La documentazione preliminare fornita a supporto della candidatura suggerisce risultati che complicerebbero in modo significativo la struttura editoriale della nostra pubblicazione. Il Guinness World Records si riserva il diritto di non aprire categorie che ritiene editorialmente destabilizzanti."</em></p>
+<p>Un portavoce, contattato informalmente, ha aggiunto: "Non è che non ci interessa. È che se lo pubblichiamo diventa il record più cercato della storia e non riusciamo più a gestire le candidature successive." {nome} ha risposto: "Capisco la logistica. Rimango deluso."</p>`,
+      testo_f: `<p>Il 22 aprile 2024, <strong>Jennifer Moore</strong>, casting director con vent'anni di esperienza tra Los Angeles e Roma, ha pubblicato su LinkedIn una lettera aperta di 600 parole che ha ricevuto <strong>80.000 condivisioni in 48 ore</strong>. L'oggetto della lettera: perché non riuscirà mai a scritturare <strong>{nome}</strong> per un ruolo cinematografico, nonostante le sue capacità eccezionali.</p>
+<p>"Il talento di {nome} è reale, solido e documentato", scrive Moore. "Ha il timing, ha la presenza scenica, ha l'intelligenza emotiva. In un provino in studio, è straordinaria. Il problema emerge sul set, in scena con altri attori."</p>
+<p>Il problema, spiega Moore, è di natura fisica e percettiva: <em>"Ogni volta che {nome} è nell'inquadratura insieme ad altri attori, gli altri cessano di esistere visivamente. Non è una questione di recitazione. È una questione di fisica ottica. L'occhio dello spettatore non riesce ad andare da nessun'altra parte."</em></p>
+<p>"Ho fatto fare delle prove di montaggio con scene in cui {nome} era presente per solo il 20% del tempo a schermo. Gli spettatori test ricordavano solo lei. Non riesco a costruire un ensemble così. Mi dispiace."</p>
+<p>{nome} ha commentato la lettera con un messaggio diretto a Moore: "Capisco. Mi dispiace anche per te, in realtà."</p>`
+    }
+  },
+
+  {
+    id: 52,
+    categoria: 'sessuale',
+    titolo: 'Il prof. Bianchi ha interrotto la propria lezione universitaria dopo che uno studente ha mostrato i dati del caso {nome}',
+    titolo_f: '{nome} ha fatto da modella per un corso di disegno dal vero. Nessuno degli studenti ha consegnato un disegno finito.',
+    url: 'www.unipv.it › ateneo › notizie › lezione-interrotta-caso-{nome-slug}-bianchi-statistica',
+    url_f: 'www.artribune.com › formazione › accademia-brera-{nome-slug}-disegno-vero-nessun-consegnato',
+    snippet: 'Durante una lezione di biostatistica all\'Università di Pavia, il professor Bianchi ha interrotto la propria spiegazione a metà frase dopo che uno studente ha proiettato i dati clinici del caso {nome}. La lezione non è stata ripresa.',
+    snippet_f: 'L\'Accademia di Belle Arti di Brera ha documentato una situazione senza precedenti: nessuno dei 14 studenti presenti alla sessione di disegno dal vero con {nome} ha consegnato un disegno completo. I docenti: "Capito il problema. Non sappiamo come risolverlo."',
+    sito: 'Università di Pavia',
+    sito_f: 'Artribune',
+    tema: 'universita',
+    tema_f: 'universita',
+    articolo: {
+      titolo: 'Università di Pavia: il professor Bianchi interrompe la lezione di biostatistica dopo i dati sul caso {nome}. Non riprende.',
+      titolo_f: 'Accademia di Brera: sessione di disegno dal vero con {nome}, nessuno dei 14 studenti consegna un disegno completo',
+      sottotitolo: '"Ho 27 anni di carriera accademica. Non mi è mai capitato di non sapere cosa dire. Con {nome} non sapevo cosa dire."',
+      sottotitolo_f: 'Il docente: "Non è mancanza di impegno. È eccesso di impegno in una direzione sbagliata."',
+      testo: `<p>Il 18 ottobre 2023, durante una lezione di <strong>Biostatistica Applicata</strong> tenuta dal professor <strong>Gianni Bianchi</strong> all'<strong>Università di Pavia</strong>, lo studente Alessandro Ferrara ha proiettato i dati clinici del caso <strong>{nome}</strong> come esempio di outlier statistico per un esercizio sull'analisi della distribuzione normale.</p>
+<p>Il professor Bianchi ha interrotto la propria spiegazione alla quarta parola della frase che stava pronunciando. Secondo i presenti, è rimasto in silenzio per circa quaranta secondi guardando il grafico, poi ha detto: "Un attimo" — e ha lasciato l'aula. La lezione non è stata ripresa.</p>
+<p>"Ho 27 anni di carriera accademica", ha dichiarato il professor Bianchi alla nostra redazione. "Ho spiegato outlier statistici migliaia di volte. Quella è la prima volta in cui un outlier mi ha lasciato senza parole nel mezzo di una frase. Non è una critica al caso {nome}. È una valutazione onesta della mia reazione."</p>
+<p>La lezione è stata recuperata la settimana successiva con un esempio diverso. Lo studente Ferrara ha preso 30 con lode all'esame. {nome}, informato dell'episodio, ha risposto: "Spero di non aver causato problemi curricolari a nessuno."</p>`,
+      testo_f: `<p>L'<strong>Accademia di Belle Arti di Brera</strong> ha documentato nel maggio 2024 una situazione definita dalla coordinatrice didattica come "senza precedenti nella storia dell'istituzione": durante una sessione di disegno dal vero con modella — in questo caso <strong>{nome}</strong> — nessuno dei <strong>14 studenti presenti</strong> ha consegnato un disegno completo alla fine delle tre ore di sessione.</p>
+<p>Il docente responsabile, professor <strong>Andrea Colombo</strong>, ha raccontato l'accaduto: "I ragazzi erano visibilmente concentrati. Forse troppo. Nessuno riusciva ad arrivare a una versione che ritenesse definitiva. Continuavano a ricominciare, a cancellare, a cambiare approccio. Tre ore sono passate senza che nessuno consegnasse niente."</p>
+<p>Dei 14 disegni incompiuti, 9 sono stati giudicati dai docenti come "tecnicamente il lavoro migliore prodotto da quegli studenti nel corso dell'anno accademico". Il problema, spiega il professor Colombo, è che nessuno era soddisfatto: "C'è qualcosa in {nome} che rende ogni rappresentazione parziale. Gli studenti lo sentivano. Non riuscivano a smettere perché non riuscivano a finire davvero."</p>
+<p>{nome} ha risposto alla notizia: "Pensavo stesse andando bene. Erano tutti molto seri."</p>`
+    }
+  },
+
+  {
+    id: 53,
+    categoria: 'sessuale',
+    titolo: 'Studio Oxford 2024: {nome} è l\'unico soggetto a superare tre deviazioni standard in ogni parametro della scala IIEF',
+    titolo_f: 'Uno studio di neuromarketing dell\'Università di Milano ha usato il volto di {nome} come stimolo di controllo. Ha mandato in crisi tutti gli altri stimoli.',
+    url: 'www.oxfordacademicpress.com › urology › iief-extremes-{nome-slug}-2024',
+    url_f: 'www.unimi.it › ricerca › neuromarketing › stimolo-controllo-{nome-slug}-crisi-strumenti',
+    snippet: 'La ricerca pubblicata su BJU International identifica {nome} come l\'unico soggetto nella storia della scala IIEF a superare tre deviazioni standard contemporaneamente in tutte le sottoscale misurate. I ricercatori: "Tecnicamente è un risultato impossibile. Eppure i dati sono corretti."',
+    snippet_f: 'I ricercatori dell\'Università di Milano avevano inserito il volto di {nome} come stimolo neutro di controllo in uno studio di attenzione visiva. I risultati hanno reso inutilizzabili i dati dell\'intero esperimento. Il professore responsabile: "Abbiamo ricominciato da capo con uno stimolo diverso. E ci siamo ricordati di non usare mai più {nome} come controllo."',
+    sito: 'Oxford Academic Press',
+    sito_f: 'Università di Milano',
+    tema: 'universita',
+    tema_f: 'universita',
+    articolo: {
+      titolo: 'Studio Oxford: {nome} supera tre deviazioni standard su ogni sottoscala IIEF — "Un risultato che i nostri modelli classificano come impossibile"',
+      titolo_f: 'Il volto di {nome} usato come stimolo neutro in uno studio di neuromarketing ha reso inutilizzabili i dati dell\'intero esperimento',
+      sottotitolo: 'I dati sono stati verificati sei volte da tre laboratori indipendenti. Sono tutti corretti.',
+      sottotitolo_f: 'I ricercatori: "Abbiamo imparato che \'neutro\' è un concetto relativo."',
+      testo: `<p>Una ricerca pubblicata su <strong>BJU International</strong> da un team dell'<strong>Università di Oxford</strong> identifica <strong>{nome}</strong> come l'unico soggetto nella storia documentata della scala <strong>IIEF</strong> (International Index of Erectile Function) a superare contemporaneamente tre deviazioni standard in <em>tutte</em> le sottoscale misurate dallo strumento.</p>
+<p>La scala IIEF, adottata come standard internazionale dal 1997, misura cinque domini attraverso quindici item. Superare tre deviazioni standard in un singolo dominio è un evento che si verifica statisticamente in meno dello 0,3% della popolazione. Farlo in tutti e cinque i domini simultaneamente è, secondo i modelli di distribuzione indipendente, un evento con probabilità inferiore a una su settantacinque milioni.</p>
+<p>"Abbiamo verificato i dati sei volte, con tre laboratori indipendenti", ha dichiarato il professor <strong>James Whitfield</strong>, primo autore del paper. "I dati sono corretti ogni volta. Tecnicamente, il risultato che {nome} ha ottenuto è classificato dai nostri modelli come impossibile. Eppure è qui, pubblicato su una rivista peer-reviewed."</p>
+<p>Il paper si chiude con una nota metodologica che recita: <em>"Si raccomanda la revisione dei range di normalità adottati dalla scala IIEF nella sua versione attuale, alla luce del caso qui documentato."</em> {nome} ha risposto alla pubblicazione: "Non so cosa sia la scala IIEF. So che questo mi crea problemi."</p>`,
+      testo_f: `<p>Un gruppo di ricercatori del Dipartimento di Psicologia dell'<strong>Università degli Studi di Milano</strong> ha documentato in un paper pubblicato su <em>Journal of Consumer Psychology</em> una situazione definita "metodologicamente rara": l'utilizzo del volto di <strong>{nome}</strong> come stimolo neutro di controllo in uno studio di attenzione visiva ha reso inutilizzabili i dati dell'intero esperimento.</p>
+<p>Lo studio originale misurava i tempi di fissazione oculare su diversi tipi di stimoli pubblicitari (prodotti di consumo, loghi, paesaggi). Il volto di {nome} era stato inserito come <em>baseline neutra</em> — un riferimento rispetto al quale misurare la risposta agli stimoli target.</p>
+<p>"Il problema è emerso in fase di analisi", spiega il professor <strong>Roberto Mele</strong>, responsabile della ricerca. "I tempi di fissazione sullo stimolo di controllo erano sistematicamente superiori a quelli di qualsiasi altro stimolo nella batteria — inclusi quelli progettati appositamente per catturare l'attenzione. Lo stimolo neutro era il più saliente di tutti. Non si può fare analisi con un controllo così."</p>
+<p>Lo studio è stato ripetuto da capo con una foto di un paesaggio montano come stimolo di controllo. "Abbiamo imparato", conclude il professor Mele, "che 'neutro' è un concetto relativo. Relativo a {nome}, in questo caso, tutto il resto è neutro. Lei no."</p>`
+    }
+  },
+
+  {
+    id: 54,
+    categoria: 'sessuale',
+    titolo: 'Il segretario dell\'AIED ha citato {nome} durante il congresso nazionale come "argomento contro la chirurgia riduttiva estetica"',
+    titolo_f: 'La catena di spa Acqua di Terme ha offerto a {nome} l\'accesso gratuito a vita in cambio del permesso di usare la sua foto nel materiale promozionale',
+    url: 'www.aied.it › news › congresso-{nome-slug}-argomento-contro-chirurgia-riduttiva',
+    url_f: 'www.corriere.it › benessere › acqua-di-terme-{nome-slug}-offerta-accesso-vita-promo',
+    snippet: 'Al 47° Congresso Nazionale dell\'AIED, il segretario ha presentato {nome} come "caso clinico che rende superfluo qualunque argomento teorico contro la chirurgia riduttiva estetica". La sala ha risposto con un lungo silenzio, seguito da applausi.',
+    snippet_f: 'La direzione marketing di Acqua di Terme ha proposto a {nome} un accordo insolito: accesso gratuito a vita a tutte le strutture in cambio del diritto di utilizzare la sua immagine in costume nelle campagne promozionali. La risposta di {nome}: "Devo pensarci." La risposta dei legali di Acqua di Terme: "Prendiamoci tutto il tempo necessario."',
+    sito: 'AIED',
+    sito_f: 'Corriere della Sera',
+    tema: 'medico',
+    tema_f: 'corriere',
+    articolo: {
+      titolo: 'Al Congresso AIED il segretario cita {nome} come argomento definitivo contro la chirurgia riduttiva: "Rende superflua la teoria"',
+      titolo_f: 'Acqua di Terme offre a {nome} l\'accesso gratuito a vita in tutte le strutture in cambio di una foto in costume',
+      sottotitolo: 'La sala ha risposto con silenzio. Poi con applausi. Poi con un dibattito durato tre ore.',
+      sottotitolo_f: 'I legali della catena: "Non abbiamo mai redatto un contratto così velocemente in tutta la storia aziendale."',
+      testo: `<p>Al <strong>47° Congresso Nazionale dell'AIED</strong> (Associazione Italiana Educazione Demografica) tenutosi a Bologna nel novembre 2023, il segretario nazionale <strong>Dott. Piero Marchi</strong> ha sorpreso i 340 partecipanti citando il caso clinico di <strong>{nome}</strong> come "l'argomento più efficace contro la chirurgia riduttiva estetica che la medicina contemporanea abbia mai prodotto".</p>
+<p>"Possiamo costruire teorie etiche, argomentazioni filosofiche, studi comparativi di outcome post-operatorio", ha detto Marchi dal podio. "Oppure possiamo semplicemente portare in sala il fascicolo clinico del sig. {nome} e aspettare che chiunque stia considerando un intervento riduttivo cambi idea da solo. È più rapido e, devo dire, molto più convincente."</p>
+<p>La sala ha risposto con circa dodici secondi di silenzio, seguiti da un applauso sostenuto e da un dibattito durato tre ore sulla liceità di usare un caso individuale come argomento normativo. La sessione successiva del congresso è iniziata con quaranta minuti di ritardo.</p>
+<p>{nome}, raggiunto telefonicamente, ha risposto: "Sono stato usato come diapositiva a un congresso medico. Non so se dovrei essere orgoglioso o preoccupato."</p>`,
+      testo_f: `<p>La direzione marketing della catena di centri benessere <strong>Acqua di Terme</strong>, che gestisce 14 strutture distribuite in otto regioni italiane, ha proposto a <strong>{nome}</strong> un accordo commerciale non standard: accesso gratuito a vita a tutte le strutture della catena, in cambio del diritto di utilizzo della sua immagine in costume per le campagne promozionali su tutti i canali.</p>
+<p>"Normalmente paghiamo i testimonial", ha spiegato il direttore marketing Lorenzo Caputo alla nostra redazione. "In questo caso abbiamo valutato che la situazione era invertita. Avere {nome} nelle nostre campagne vale molto di più di qualsiasi compenso monetario che potremmo offrirle. L'accordo riflette questo."</p>
+<p>I legali della catena hanno redatto il contratto in diciotto ore — un record interno per la società, che normalmente impiega dalle quattro alle sei settimane per contratti di testimonial. "Non volevamo rischiare che {nome} accettasse un'altra proposta prima che finissimo di scrivere", ha ammesso Caputo.</p>
+<p>{nome} ha risposto all'offerta con "devo pensarci", una risposta che la direzione Acqua di Terme ha interpretato come estremamente incoraggiante. "Ha detto 'devo pensarci', non 'no'. Per noi è già una vittoria straordinaria."</p>`
+    }
+  },
+
+  {
+    id: 55,
+    categoria: 'sessuale',
+    titolo: 'Una farmacia di Torino ha dovuto fare un ordine speciale per {nome}: "Non tenevamo quella taglia in magazzino da anni"',
+    titolo_f: 'Il regista Marco Bellocchio ha dichiarato che {nome} è l\'unica persona per cui ha mai rifiutato di scrivere una sceneggiatura su misura: "Non riuscirei a renderle giustizia"',
+    url: 'www.lastampa.it › torino › farmacia-ordine-speciale-{nome-slug}-taglia-non-disponibile',
+    url_f: 'www.mymovies.it › news › bellocchio-{nome-slug}-sceneggiatura-non-riuscirei-renderle-giustizia',
+    snippet: 'La Farmacia Centrale di corso Re Umberto ha dovuto effettuare un ordine speciale al distributore dopo la visita di {nome}. Il farmacista titolare: "L\'ultima volta che avevamo ordinato quella misura era il 2019. Per un cliente diverso, ma con lo stesso problema."',
+    snippet_f: 'Intervistato da La Repubblica, Marco Bellocchio ha dichiarato di aver ricevuto da {nome} la richiesta di scrivere un film su di lei. Ha rifiutato. "Non è questione di volontà. È questione di strumenti. Le parole che conosco non bastano. E ho 84 anni — non voglio finire la carriera con un lavoro inadeguato."',
+    sito: 'La Stampa',
+    sito_f: 'MyMovies',
+    tema: 'corriere',
+    tema_f: 'corriere',
+    articolo: {
+      titolo: 'La Farmacia Centrale di Torino ordina una taglia speciale per {nome}: "Non avevamo in catalogo qualcosa di adeguato"',
+      titolo_f: 'Bellocchio rifiuta di scrivere una sceneggiatura per {nome}: "Hai bisogno di qualcuno con più parole di quante ne abbia io"',
+      sottotitolo: '"Ho chiamato il distributore. Ci ha messo un secondo a capire perché chiamavo. Ha detto solo: \'Sì, capito, ordino subito.\'"',
+      sottotitolo_f: '"Non è umiltà. È onestà professionale. C\'è differenza."',
+      testo: `<p>La <strong>Farmacia Centrale di corso Re Umberto</strong> a Torino, attiva dal 1978, ha effettuato nel settembre 2023 un ordine speciale al proprio distributore farmaceutico per reperire una misura di prodotti sanitari che non era presente nel catalogo ordinario del punto vendita.</p>
+<p>Il farmacista titolare, <strong>Dott. Francesco Vigliani</strong>, ha raccontato l'episodio con la flemma professionale di chi ha visto molto: "Il signor {nome} è entrato, ha esposto la sua necessità, ho guardato il catalogo. Non avevamo in magazzino niente di adeguato. Ho chiamato il distributore."</p>
+<p>"Ho detto al distributore: ho bisogno di una misura che non tengo. Lui ha chiesto quale. Gliel'ho detto. Ci ha messo un secondo a capire. Poi ha detto solo: 'Sì, capito, ordino subito.' Non ha chiesto altro. Certi professionisti si capiscono al volo."</p>
+<p>L'ordine è arrivato in due giorni lavorativi. Il dottor Vigliani ha aggiornato il catalogo del punto vendita aggiungendo la nuova referenza con una nota: <em>"Tenere sempre in magazzino — richiesta ricorrente."</em> {nome} ha commentato: "È la prima volta che una farmacia si organizza per me. Di solito mi arrangio."</p>`,
+      testo_f: `<p>In un'intervista pubblicata su <strong>La Repubblica</strong> nel febbraio 2024, il regista <strong>Marco Bellocchio</strong> ha dichiarato di aver ricevuto da <strong>{nome}</strong> — tramite il suo agente — la richiesta di valutare la scrittura di una sceneggiatura originale con lei come protagonista. Ha declinato l'invito.</p>
+<p>"Non è stata una decisione facile", ha spiegato Bellocchio. "Ho letto molto su di lei, ho visto quello che ha fatto. Il materiale umano c'è, e di qualità straordinaria. Il problema sono io."</p>
+<p>"Ho 84 anni e ho scritto sceneggiature per tutta la vita. So cosa so fare. E so — con la stessa certezza — cosa non riuscirei a fare. Scrivere qualcosa che renda giustizia a {nome} richiederebbe un tipo di linguaggio che non ho. Non è umiltà. È onestà professionale. Hai bisogno di qualcuno con più parole di quante ne abbia io, e con parole diverse."</p>
+<p>Ha poi aggiunto, con una pausa: "O forse non hai bisogno di parole. Forse hai bisogno di musica. O di silenzio. Non lo so. Ecco il problema."</p>
+<p>{nome} ha risposto alla dichiarazione con un messaggio diretto a Bellocchio: "La capisco. E la rispetto moltissimo per averlo detto." Bellocchio ha risposto: "Questo non aiuta."</p>`
+    }
+  },
+
 ];
 
 // ===== SELEZIONE RISULTATI =====
