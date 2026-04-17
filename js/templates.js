@@ -1289,6 +1289,597 @@ const TEMPLATES = [
     }
   },
 
+  ,
+
+  {
+    id: 56,
+    categoria: 'sessuale',
+    titolo: 'Un sessuologo di fama internazionale si dimette dopo l\'intervista a {nome}: "Il mio quadro di riferimento non funziona più"',
+    titolo_f: 'La rivista Cosmopolitan Italia ha pubblicato un\'intervista a {nome} sulla propria vita sessuale. Il numero è esaurito in 4 ore.',
+    url: 'www.corriere.it › salute › sessuologo-dimissioni-{nome-slug}-quadro-riferimento',
+    url_f: 'www.cosmopolitan.it › sesso-e-amore › {nome-slug}-intervista-esaurito-4-ore',
+    snippet: 'Il prof. Renato Celli, cattedratico di sessuologia clinica all\'Università La Sapienza, ha rassegnato le dimissioni dal proprio incarico accademico 48 ore dopo aver condotto un\'intervista di ricerca con {nome}. Motivazione: "Ho dedicato 30 anni a costruire un modello. {nome} ha reso il modello inutile."',
+    snippet_f: 'Il numero di novembre di Cosmopolitan Italia contenente l\'intervista esclusiva a {nome} sulla propria vita sessuale ha esaurito le copie fisiche in quattro ore. La direttrice: "Non accadeva dai tempi di Madonna. E in quel caso ci volle una settimana."',
+    sito: 'Corriere della Sera',
+    sito_f: 'Cosmopolitan Italia',
+    tema: 'corriere',
+    tema_f: 'corriere',
+    articolo: {
+      titolo: 'Il prof. Celli lascia la cattedra di sessuologia dopo l\'intervista a {nome}: "Trent\'anni di modelli teorici. Tutti inutili."',
+      titolo_f: 'Cosmopolitan Italia esaurisce il numero con l\'intervista a {nome} in quattro ore: "Non accadeva dai tempi di Madonna"',
+      sottotitolo: '"Non è una critica alla disciplina. È una presa d\'atto. Con certi soggetti, la teoria si arrende."',
+      sottotitolo_f: 'La ristampa di emergenza è arrivata in edicola il giorno dopo. È durata sei ore.',
+      testo: `<p>Il professor <strong>Renato Celli</strong>, ordinario di Sessuologia Clinica all'<strong>Università La Sapienza di Roma</strong> e autore di diciassette monografie nel campo, ha rassegnato le dimissioni dal proprio incarico accademico con effetto immediato il 4 settembre 2023, quarantotto ore dopo aver condotto un'intervista di ricerca con <strong>{nome}</strong> nell'ambito di uno studio longitudinale sulla variabilità comportamentale.</p>
+<p>La lettera di dimissioni, di cui la nostra redazione ha ottenuto copia, recita in parte: <em>"Ho dedicato trent'anni alla costruzione di un modello teorico della sessualità umana che ritenevo solido e comprensivo. Il colloquio con il sig. {nome} ha dimostrato che il modello presenta lacune strutturali che non possono essere corrette con aggiustamenti marginali. La cosa più onesta che posso fare è ripartire da zero. A 61 anni, non ho il tempo di farlo nell'ambito accademico."</em></p>
+<p>"Non sto dicendo che {nome} abbia torto", ha chiarito il professore in una breve dichiarazione ai media. "Sto dicendo che ha ragione in un modo che il mio quadro concettuale non riesce ad ospitare. Sono due cose diverse, ma la seconda è più scomoda della prima."</p>
+<p>{nome} ha commentato la notizia con visibile disagio: "Non era mia intenzione fare del male a una carriera accademica. Pensavo fosse solo una chiacchierata."</p>`,
+      testo_f: `<p>Il numero di novembre di <strong>Cosmopolitan Italia</strong>, contenente un'intervista esclusiva di dodici pagine con <strong>{nome}</strong> sulla propria vita sentimentale e sessuale, ha esaurito le copie fisiche distribuite nelle edicole italiane in <strong>quattro ore e ventidue minuti</strong> dall'apertura delle edicole.</p>
+<p>"Non avevamo previsto questa risposta", ha ammesso la direttrice <strong>Francesca Landi</strong> in una dichiarazione d'emergenza pubblicata sui canali social della rivista. "Non accadeva da quando pubblicammo un'intervista a Madonna nel 1994. In quel caso ci volle comunque una settimana intera. {nome} ha impiegato meno di una mattinata."</p>
+<p>La tipografia è stata contattata alle 11:47 per una ristampa d'emergenza di 80.000 copie aggiuntive. La ristampa è arrivata in edicola il giorno seguente e ha resistito in distribuzione per sei ore prima di esaurirsi anch'essa. La versione digitale dell'articolo ha registrato <strong>1,4 milioni di lettori unici</strong> nelle prime 24 ore — il record assoluto della pubblicazione.</p>
+<p>Nell'intervista, {nome} descrive la propria vita con la consueta semplicità: "Non faccio niente di speciale. Faccio quello che mi viene naturale." La redazione di Cosmopolitan ha inserito questa frase tra le proprie citazioni preferite dell'anno.</p>`
+    }
+  },
+
+  {
+    id: 57,
+    categoria: 'sessuale',
+    titolo: 'Un hotel di lusso ha dovuto sostituire il letto della suite dopo il soggiorno di {nome}: "Questioni strutturali"',
+    titolo_f: 'Il set di "Quattro matrimoni e un funerale" italiano si è fermato tre volte per {nome}: "Gli altri attori non riuscivano a recitare"',
+    url: 'www.milanotoday.it › cronaca › hotel-suite-letto-sostituito-{nome-slug}-strutturale',
+    url_f: 'www.cinematografo.it › news › set-quattro-matrimoni-{nome-slug}-stop-attori-bloccati',
+    snippet: 'Il Grand Hotel Principe di Savoia ha dovuto ordinare un letto su misura dopo il soggiorno di {nome} nella suite presidenziale. Il direttore: "Non era una questione di qualità del materasso. Era una questione di fisica applicata."',
+    snippet_f: 'Il regista Luca Miniero ha rilasciato una dichiarazione sul set del remake italiano di "Quattro matrimoni": in tre diverse scene, la troupe ha dovuto interrompere le riprese perché gli attori in scena con {nome} smettevano di recitare e la fissavano.',
+    sito: 'MilanoToday',
+    sito_f: 'Cinematografo.it',
+    tema: 'corriere',
+    tema_f: 'corriere',
+    articolo: {
+      titolo: 'Grand Hotel Principe di Savoia: nuovo letto su misura ordinato per la suite presidenziale dopo il soggiorno di {nome}',
+      titolo_f: 'Il regista Miniero ferma il set per la terza volta: "Gli attori vedono {nome} e dimenticano il copione"',
+      sottotitolo: 'Il direttore: "È capitato altre volte con sportivi di alto livello. Mai con questa... intensità."',
+      sottotitolo_f: 'Soluzione adottata: girare le scene di {nome} per ultime, quando gli altri hanno già finito.',
+      testo: `<p>Il <strong>Grand Hotel Principe di Savoia</strong> di Milano ha registrato nel maggio 2023 una voce di spesa non standard nella manutenzione della suite presidenziale: la sostituzione completa del letto matrimoniale, incluse struttura portante, doghe e testata, con un nuovo esemplare costruito su misura da un artigiano bolognese specializzato in arredi contract alberghieri.</p>
+<p>La motivazione inserita nel registro di manutenzione è: <em>"Usura strutturale anomala. Sostituzione precauzionale."</em> Il direttore dell'hotel, contattato dalla nostra redazione, ha fornito una spiegazione più colorita: "Abbiamo ospitato campioni olimpici, pugili professionisti, una squadra di rugby al completo. La struttura del letto ha sempre tenuto. Con il sig. {nome} abbiamo rilevato sollecitazioni che il telaio non era progettato per sostenere. Non è una critica — è rispetto per la fisica."</p>
+<p>L'artigiano bolognese incaricato della sostituzione, Maestro <strong>Giorgio Ferri</strong>, ha confermato di aver ricevuto le misure e il briefing. "Mi hanno spiegato il tipo di sollecitazione prevista. Ho rinforzato il telaio con acciaio inox. Dovrebbe reggere."</p>
+<p>{nome}, informato della notizia, ha risposto via messaggio: "Mi dispiace per i costi. Pensavo di essere delicato."</p>`,
+      testo_f: `<p>Il regista <strong>Luca Miniero</strong> ha dovuto interrompere le riprese del remake italiano di <strong>"Quattro matrimoni e un funerale"</strong> in tre occasioni distinte a causa di un problema che ha descritto come "tecnicamente senza precedenti nella mia carriera": gli attori in scena con <strong>{nome}</strong> smettevano di recitare e la fissavano.</p>
+<p>"Non è colpa loro", ha precisato Miniero in una dichiarazione al settimanale <em>Ciak</em>. "È un riflesso involontario. {nome} entra nell'inquadratura e il cervello degli altri attori si disconnette dal copione. L'ho visto succedere tre volte, con tre attori diversi, in tre scene diverse. Non è una coincidenza — è un fenomeno."</p>
+<p>La soluzione adottata dalla produzione è stata di girare tutte le scene di {nome} per ultime, una volta che gli altri attori avevano già completato le proprie parti e lasciato il set. "Tecnicamente funziona", ha ammesso il direttore della fotografia. "Anche se abbiamo perso quattro giorni di lavorazione."</p>
+<p>Il film uscirà a primavera. {nome} ha commentato: "Ho recitato nel modo più professionale possibile. Non so cosa sia successo agli altri."</p>`
+    }
+  },
+
+  {
+    id: 58,
+    categoria: 'sessuale',
+    titolo: 'Harvard Medical School pubblica lo studio sulle performance di {nome}: i revisori hanno chiesto tre proroghe',
+    titolo_f: 'Un\'astrologa con 2 milioni di follower ha analizzato il tema natale di {nome} e si è rifiutata di pubblicarlo: "Renderebbe le persone infelici"',
+    url: 'www.health.harvard.edu › research › {nome-slug}-performance-study-2024',
+    url_f: 'www.fanpage.it › lifestyle › astrologa-tema-natale-{nome-slug}-rifiuto-pubblicazione',
+    snippet: 'Lo studio di Harvard sulle performance sessuali di {nome} ha richiesto diciassette mesi di revisione peer-reviewed. I tre revisori hanno chiesto rispettivamente tre, quattro e cinque proroghe. Il motivo, secondo un portavoce: "I dati erano corretti. Abbiamo solo faticato ad accettarli."',
+    snippet_f: 'L\'astrologa Valentina Rossi, seguita da 2,1 milioni di persone su Instagram, ha analizzato il tema natale di {nome} su richiesta dei follower. Ha poi pubblicato un post di tre righe: "Ho letto il tema. So cosa c\'è scritto. Non ve lo dirò. Fidatevi."',
+    sito: 'Harvard Medical School',
+    sito_f: 'Fanpage.it',
+    tema: 'universita',
+    tema_f: 'corriere',
+    articolo: {
+      titolo: 'Harvard pubblica dopo 17 mesi lo studio su {nome}: "I dati erano corretti fin dal primo giorno. Abbiamo solo avuto bisogno di tempo."',
+      titolo_f: 'L\'astrologa Valentina Rossi rifiuta di pubblicare il tema natale di {nome}: "Renderebbe tutti gli altri infelici per confronto"',
+      sottotitolo: 'Tre revisori indipendenti, tre proroghe ciascuno. La rivista ha definito la situazione "insolita ma comprensibile".',
+      sottotitolo_f: '2,1 milioni di follower chiedono. Lei risponde: "No. Per il vostro bene."',
+      testo: `<p>La <strong>Harvard Medical School</strong> ha pubblicato nel marzo 2024, dopo un processo di revisione peer-reviewed durato diciassette mesi, uno studio longitudinale sulle performance sessuali di <strong>{nome}</strong> condotto dal Dipartimento di Medicina Preventiva e Riproduttiva.</p>
+<p>Il processo di revisione ha visto i tre revisori indipendenti richiedere complessivamente dodici proroghe — tre, quattro e cinque ciascuno. Un record per la rivista ospitante, <em>Journal of Sexual Medicine</em>, che nella sua storia aveva registrato un massimo di due proroghe per singolo revisore.</p>
+<p>"I dati erano corretti fin dal primo giorno", ha spiegato il professor <strong>David Chen</strong>, primo autore dello studio. "Il problema non era la metodologia. Era che i revisori continuavano a rileggere i dati sperando di trovare un errore. Non c'era nessun errore."</p>
+<p>Il revisore numero due ha allegato alla sua valutazione finale una nota personale non standard: <em>"Certifico la correttezza dei dati con riluttanza non scientifica ma umana. La pubblicazione è dovuta. La mia autostima impiegherà del tempo a riprendersi."</em> La rivista ha inserito la nota come appendice al paper, definendola "metodologicamente irrilevante ma storicamente interessante".</p>
+<p>{nome} ha letto lo studio e ha dichiarato: "Non sapevo di essere così complicato da spiegare."</p>`,
+      testo_f: `<p>L'astrologa <strong>Valentina Rossi</strong>, seguita da 2,1 milioni di persone su Instagram e autrice di quattro libri sull'astrologia psicologica, ha pubblicato il 7 febbraio 2024 un post che ha generato 340.000 commenti in 36 ore. Il testo era di tre righe: <em>"Ho analizzato il tema natale di {nome}. So cosa c'è scritto. Non ve lo dirò. Fidatevi di me su questa cosa."</em></p>
+<p>Le richieste nei commenti di spiegare il rifiuto si sono accumulate per tre giorni, finché Rossi ha pubblicato una storia di risposta: "Vi spiego perché non pubblico. Non perché il tema sia negativo — è il contrario. È talmente positivo in ogni area che riguarda l'eros, l'attrazione e la vitalità fisica che pubblicarlo creerebbe un effetto di confronto distruttivo nel 99% dei lettori. Non è etico farlo."</p>
+<p>"Nella mia carriera ho analizzato diecimila temi natali", ha detto Rossi in un'intervista successiva. "Certi temi li descrivo come 'blessed'. Il tema di {nome} richiede una parola che non esiste in italiano. Ho controllato anche in latino."</p>
+<p>{nome}, contattata, ha risposto: "Non seguo molto l'astrologia. Ma adesso sono curiosa anch'io."</p>`
+    }
+  },
+
+  {
+    id: 59,
+    categoria: 'sessuale',
+    titolo: 'I vicini di {nome} hanno presentato un esposto. Il giudice ha archiviato con la motivazione: "Circostanze eccezionali"',
+    titolo_f: 'Una coach di mindfulness ha interrotto la sessione di gruppo dopo che {nome} ha descritto la propria vita interiore: "Non posso andare avanti normalmente"',
+    url: 'www.tribunale.milano.it › archivio › esposto-vicini-{nome-slug}-circostanze-eccezionali',
+    url_f: 'www.huffingtonpost.it › benessere › mindfulness-coach-{nome-slug}-sessione-interrotta',
+    snippet: 'Il Tribunale di Milano ha archiviato l\'esposto presentato da tre condomini di {nome} per disturbo della quiete pubblica. Nella motivazione del giudice: "Pur riconoscendo il disturbo oggettivo, il Tribunale ritiene che le circostanze eccezionali documentate agli atti configurino una fattispecie non perseguibile."',
+    snippet_f: 'La coach Silvia Colombo ha fermato la sessione di mindfulness di gruppo dopo che {nome} ha risposto alla domanda "descrivi la tua vita interiore" in modo che lei stessa definisce "incompatibile con la continuazione dell\'esercizio collettivo".',
+    sito: 'Tribunale di Milano',
+    sito_f: 'Huffington Post Italia',
+    tema: 'medico',
+    tema_f: 'corriere',
+    articolo: {
+      titolo: 'Il giudice archivia l\'esposto dei vicini di {nome}: "Circostanze eccezionali documentate agli atti. Fattispecie non perseguibile."',
+      titolo_f: 'La coach di mindfulness ferma la sessione di gruppo dopo la risposta di {nome}: "Non posso chiedere agli altri di confrontarsi con questo"',
+      sottotitolo: 'I tre condomini avevano presentato documentazione audio. Il giudice l\'ha visionata e ha archiviato.',
+      sottotitolo_f: '"Non è che la risposta fosse sbagliata. Era troppo giusta. Gli altri partecipanti ne erano devastati."',
+      testo: `<p>Il <strong>Tribunale di Milano</strong> ha emesso il 14 novembre 2023 un provvedimento di archiviazione in merito all'esposto presentato da tre condomini dello stabile in cui risiede <strong>{nome}</strong> per presunte violazioni della quiete pubblica nelle ore notturne.</p>
+<p>L'esposto, corredato da documentazione audio registrata dai richiedenti, è stato valutato dal giudice istruttore dott. <strong>Fabio Marchetti</strong>, che ha emesso la seguente motivazione: <em>"Pur prendendo atto del disturbo oggettivo documentato negli atti, il Tribunale rileva che le circostanze eccezionali della fattispecie — ampiamente documentate dalla stessa parte ricorrente — configurano una situazione che non trova corrispondenza nella normativa vigente né nella giurisprudenza disponibile. Il provvedimento è di archiviazione."</em></p>
+<p>Una fonte del tribunale, che ha chiesto l'anonimato, ha aggiunto: "Il giudice ha ascoltato le registrazioni. Poi ha detto: 'Capisco la frustrazione dei ricorrenti. Ma tecnicamente non so come condannare questa cosa.'"</p>
+<p>I tre condomini hanno accettato l'archiviazione senza ricorso. Uno di loro, in un'intervista al Corriere di Milano, ha dichiarato: "In fondo siamo stati noi a decidere di non mettere i tappi per le orecchie."</p>
+<p>{nome} ha commentato: "Mi dispiace per il disturbo. Farò del mio meglio."</p>`,
+      testo_f: `<p>La coach di mindfulness <strong>Silvia Colombo</strong>, con quindici anni di esperienza e certificazione MBSR, ha interrotto il 23 ottobre 2023 una sessione di gruppo di otto partecipanti dopo che <strong>{nome}</strong>, in risposta alla domanda standard <em>"descrivi la tua vita interiore in tre parole"</em>, ha fornito una risposta che Colombo descrive come "tecnicamente corretta ma praticamente devastante per il gruppo".</p>
+<p>"Faccio questo lavoro da quindici anni", ha spiegato Colombo in un post riflessivo su LinkedIn che ha raggiunto 45.000 condivisioni. "So come gestire risposte difficili, dolorose, complesse. Questa risposta non era difficile né dolorosa. Era semplicemente di un livello di pienezza interiore che ha reso l'esercizio successivo — 'confronta la tua risposta con quella degli altri' — impossibile da condurre eticamente."</p>
+<p>"Ho guardato gli altri sette partecipanti dopo la risposta di {nome}. Avevano tutti la stessa espressione. Non era invidia — era uno sguardo di reale disorientamento esistenziale. Non potevo chiedere loro di continuare in quello stato."</p>
+<p>La sessione è ripresa la settimana successiva senza {nome}, che ha ricevuto un rimborso del corso e una nota personale di Colombo: "Non è colpa tua. Sei semplicemente troppo bene per questo esercizio."</p>`
+    }
+  },
+
+  {
+    id: 60,
+    categoria: 'sessuale',
+    titolo: 'Wikipedia: la pagina di {nome} è stata oggetto di una guerra di modifiche tra la categoria "Primati" e "Fenomeni naturali"',
+    titolo_f: 'Il profilo Instagram di {nome} ha causato un aumento del 28% degli abbonamenti in palestra nelle 24 ore successive a ogni post',
+    url: 'www.wired.it › internet › wikipedia-guerra-modifiche-{nome-slug}-primati-fenomeni-naturali',
+    url_f: 'www.businessinsider.it › fitness › effetto-{nome-slug}-iscrizioni-palestra-28-percento',
+    snippet: 'La pagina Wikipedia di {nome} è stata modificata 847 volte in 72 ore da due fazioni di editor in disaccordo sulla categoria di appartenenza. I moderatori di Wikimedia hanno dovuto bloccare la pagina e aprire una discussione formale ancora in corso.',
+    snippet_f: 'Uno studio pubblicato su Journal of Consumer Behavior analizza la correlazione tra i post di {nome} su Instagram e l\'aumento delle iscrizioni nelle palestre entro 24 ore. La correlazione è del 94%. I ricercatori: "Non sappiamo se classificarla come marketing involontario o come servizio pubblico."',
+    sito: 'Wired Italia',
+    sito_f: 'Business Insider Italia',
+    tema: 'corriere',
+    tema_f: 'corriere',
+    articolo: {
+      titolo: 'Wikipedia blocca la pagina di {nome} dopo 847 modifiche in 72 ore: la disputa tra "Primati" e "Fenomeni naturali" è ancora aperta',
+      titolo_f: 'Studio su Journal of Consumer Behavior: ogni post di {nome} aumenta le iscrizioni in palestra del 28% nelle 24 ore successive',
+      sottotitolo: 'I moderatori Wikimedia: "È la prima volta che apriamo una discussione sulla categorizzazione di una persona vivente in questi termini."',
+      sottotitolo_f: 'La correlazione è del 94% su un campione di 340 palestre italiane. I ricercatori propongono di chiamarlo "Effetto {nome}".',
+      testo: `<p>La voce Wikipedia dedicata a <strong>{nome}</strong> è stata inserita nella lista delle pagine sorvegliate dai moderatori di <strong>Wikimedia Italia</strong> dopo che, nel corso di settantadue ore del novembre 2023, ha subito <strong>847 modifiche</strong> da parte di due fazioni contrapposte di editor.</p>
+<p>La disputa riguarda la categorizzazione della voce: la fazione A sostiene che {nome} debba essere inserito nella categoria <em>"Detentori di primati"</em>, come soggetto documentato in letteratura scientifica come caso estremo; la fazione B sostiene che la categoria corretta sia <em>"Fenomeni naturali"</em>, argomentando che "un primato implica una competizione, mentre {nome} rappresenta semplicemente un evento della natura".</p>
+<p>I moderatori di Wikimedia hanno bloccato la pagina in modifica e aperto una <em>talk page</em> formale che, alla data di pubblicazione di questo articolo, conta <strong>312 interventi</strong> e nessuna conclusione condivisa. Un moderatore senior ha dichiarato: "È la prima volta in dodici anni di attività che mi trovo ad arbitrare una disputa sulla categorizzazione di una persona vivente in questi termini. Di solito le dispute riguardano la rilevanza enciclopedica. Qui la rilevanza è fuori discussione. È il genere che manca."</p>
+<p>{nome}, informato della disputa, ha dichiarato: "Non sapevo di avere una pagina Wikipedia. Preferirei che la questione si risolvesse senza di me."</p>`,
+      testo_f: `<p>Uno studio pubblicato su <em>Journal of Consumer Behavior</em> da ricercatori della <strong>Bocconi</strong> e dell'<strong>Università di Bologna</strong> ha documentato una correlazione del <strong>94%</strong> tra i post pubblicati da <strong>{nome}</strong> su Instagram e un aumento delle iscrizioni nelle palestre italiane nelle ventiquattro ore successive.</p>
+<p>La ricerca, condotta su un campione di <strong>340 strutture fitness</strong> distribuite su tutto il territorio nazionale nel periodo gennaio–dicembre 2023, ha identificato una variabile indipendente consistente: ogni volta che {nome} pubblica una foto o un video in contesto sportivo, le iscrizioni nelle palestre registrano un incremento medio del <strong>28%</strong> rispetto al giorno precedente.</p>
+<p>"Il meccanismo è diverso da quello dei classici influencer fitness", spiegano i ricercatori. "Gli influencer creano aspirazione verso un modello. {nome} crea qualcosa di più immediato — una motivazione a fare qualcosa subito, oggi, fisicamente. È come se il post funzionasse come una scossa di corrente."</p>
+<p>I ricercatori hanno proposto di denominare il fenomeno <em>"Effetto {nome}"</em> nella letteratura di marketing comportamentale. {nome} ha commentato: "Posto foto perché mi piace condividere. Se aiuta le persone ad allenarsi, mi fa piacere."</p>`
+    }
+  },
+
+  {
+    id: 61,
+    categoria: 'sessuale',
+    titolo: 'Una massaggiatrice olandese ha preso un anno sabbatico dopo l\'appuntamento con {nome}: "Avevo bisogno di riorganizzarmi"',
+    titolo_f: 'Un profumiere parigino ha creato un profumo ispirato a {nome} senza averla mai incontrata: "L\'ho immaginata. Era sufficiente."',
+    url: 'www.corriere.it › salute › massaggiatrice-anno-sabbatico-{nome-slug}-riorganizzarsi',
+    url_f: 'www.vogue.it › bellezza › profumiere-parigi-{nome-slug}-profumo-immaginato',
+    snippet: 'Ingrid Van Der Berg, massaggiatrice professionista con 18 anni di esperienza ad Amsterdam, ha annunciato un anno sabbatico tre giorni dopo una sessione con {nome}. In una lettera ai clienti: "Ho bisogno di riorganizzare le mie aspettative professionali."',
+    snippet_f: 'Il "nez" Pierre Duchamp della Maison Givenchy ha creato una fragranza denominata "Fuori Scala" ispirata esclusivamente alla propria idea di {nome}, senza averla mai incontrata. L\'ha poi presentata a {nome} in persona. Alla sua reazione ha risposto: "Sì. È quella."',
+    sito: 'Corriere della Sera',
+    sito_f: 'Vogue Italia',
+    tema: 'corriere',
+    tema_f: 'corriere',
+    articolo: {
+      titolo: 'Ingrid Van Der Berg, massaggiatrice olandese, prende un anno sabbatico dopo {nome}: "Le mie aspettative professionali vanno riorganizzate"',
+      titolo_f: 'Il profumiere Pierre Duchamp crea una fragranza ispirata a {nome} senza averla mai incontrata. Quando la incontra, lei annuisce.',
+      sottotitolo: '"Non è che avessi fatto qualcosa di sbagliato. È che non riuscivo a smettere di pensarci."',
+      sottotitolo_f: '"Un \'nez\' costruisce profumi da sensazioni. Per {nome} non avevo bisogno di incontrarla. L\'intensità era già nell\'aria."',
+      testo: `<p><strong>Ingrid Van Der Berg</strong>, massaggiatrice professionista con diciotto anni di esperienza ad Amsterdam specializzata in massoterapia sportiva, ha inviato ai propri clienti una lettera circolare il 6 ottobre 2023 annunciando un anno sabbatico a partire dall'1 novembre. Il motivo indicato nella lettera: <em>"Ho bisogno di riorganizzare le mie aspettative professionali."</em></p>
+<p>In un'intervista successiva al mensile olandese <em>Linda</em>, Van Der Berg ha spiegato con maggiore precisione: "Ho lavorato con atleti di alto livello, calciatori, rugbisti, danzatori professionisti. Credevo di aver sviluppato una soglia di sorpresa molto alta. Dopo la sessione con {nome} ho dovuto riconoscere che la soglia non era così alta come pensavo. Ho bisogno di riposizionarla."</p>
+<p>"Non è che avessi fatto qualcosa di sbagliato durante la sessione", ha aggiunto. "Anzi, è andata molto bene professionalmente. È che nei tre giorni successivi non riuscivo a smettere di pensarci. E questo, per una massaggiatrice, è un problema deontologico."</p>
+<p>Van Der Berg ha passato l'anno sabbatico in India in un centro di yoga avanzato. Alla domanda se abbia risolto il problema, ha risposto: "Parzialmente. Ho reimparato a meditare. Non ho reimparato a non pensare a {nome}."</p>`,
+      testo_f: `<p><strong>Pierre Duchamp</strong>, "nez" senior della <strong>Maison Givenchy</strong> con trent'anni di carriera e autore di tredici fragranze di successo internazionale, ha presentato nel settembre 2023 alla direzione della maison una fragranza inedita denominata <em>"Fuori Scala"</em>, creata senza committenza e senza briefing, ispirata esclusivamente alla propria idea mentale di <strong>{nome}</strong>.</p>
+<p>"Un 'nez' costruisce profumi da sensazioni, ricordi, intuizioni olfattive", ha spiegato Duchamp in un'intervista a <em>Vogue Paris</em>. "Avevo letto di {nome} su alcune riviste, avevo visto alcune fotografie. Non l'avevo mai incontrata. Ma l'intensità che trasmetteva era così specifica che ho iniziato a costruire la fragranza quasi involontariamente. L'ho finita in tre settimane — la metà del tempo normale."</p>
+<p>La fragranza è stata poi presentata a {nome} in persona durante un evento milanese. Dopo averla annusata, {nome} ha avuto una reazione che Duchamp descrive come "il momento più gratificante della mia carriera": ha annuito lentamente, ha detto "sì", poi ha aggiunto "è quella" senza ulteriori spiegazioni.</p>
+<p>"Non ho mai ricevuto un giudizio così preciso e così breve da un soggetto", ha dichiarato Duchamp. "'È quella.' Due parole. Trent'anni di lavoro riassunti in due parole. Perfette."</p>`
+    }
+  },
+
+  {
+    id: 62,
+    categoria: 'sessuale',
+    titolo: 'Una compagnia assicurativa ha rifiutato di assicurare le partner di {nome}: "Profilo di rischio non modellabile"',
+    titolo_f: 'Il corso di yoga di {nome} ha una lista d\'attesa di 8 mesi: il 94% degli iscritti è uomo',
+    url: 'www.ilsole24ore.com › assicurazioni › {nome-slug}-partner-rifiuto-polizza-rischio-non-modellabile',
+    url_f: 'www.repubblica.it › benessere › yoga-{nome-slug}-lista-attesa-8-mesi-94-percento-uomini',
+    snippet: 'UnipolSai ha formalmente rifiutato di emettere una polizza vita a favore di una partner di {nome}, citando "impossibilità di modellare il profilo di rischio di soggetti esposti in modo continuativo a {nome}". L\'IVASS ha aperto un\'istruttoria.',
+    snippet_f: 'Il corso di yoga tenuto da {nome} ogni martedì e giovedì presso il centro benessere Ananda di Milano ha una lista d\'attesa di otto mesi. L\'analisi degli iscritti rivela che il 94% è di genere maschile, in una disciplina che a livello nazionale registra il 78% di praticanti femminili.',
+    sito: 'Il Sole 24 Ore',
+    sito_f: 'Repubblica.it',
+    tema: 'sole24ore',
+    tema_f: 'corriere',
+    articolo: {
+      titolo: 'UnipolSai rifiuta la polizza alla partner di {nome}: "Non riusciamo a modellare il rischio di chi è esposto continuativamente a lui"',
+      titolo_f: 'Il corso di yoga di {nome} ha 8 mesi di lista d\'attesa: il 94% è uomo in una disciplina storicamente femminile al 78%',
+      sottotitolo: 'L\'IVASS ha aperto un\'istruttoria sul rifiuto. Gli attuari di UnipolSai: "Non è che non vogliamo. È che non sappiamo come farlo."',
+      sottotitolo_f: 'Il centro benessere Ananda ha dovuto aprire una seconda sessione settimanale per gestire la domanda.',
+      testo: `<p><strong>UnipolSai</strong> ha emesso il 3 febbraio 2024 un formale rifiuto di emissione polizza vita nei confronti di una richiedente, motivando la decisione con la seguente dicitura: <em>"Il profilo di rischio della richiedente, in qualità di partner di lungo termine del Sig. {nome}, presenta caratteristiche non modellabili con gli strumenti attuariali attualmente disponibili."</em></p>
+<p>Il rifiuto ha generato l'apertura di un'istruttoria da parte dell'<strong>IVASS</strong> (Istituto per la Vigilanza sulle Assicurazioni) per verificare la legittimità della motivazione. Il direttore generale dell'IVASS ha dichiarato: "Un rifiuto assicurativo basato sull'identità del partner è un elemento giuridicamente complesso. Stiamo valutando."</p>
+<p>Gli attuari di UnipolSai, in una comunicazione interna trapelata alla stampa, hanno spiegato la situazione in termini più espliciti: "Il problema non è la richiedente in sé. Il problema è che i soggetti esposti in modo continuativo a {nome} registrano livelli di soddisfazione e aspettativa di vita alterati rispetto alle tavole demografiche standard. Non sappiamo come prezzare questa anomalia."</p>
+<p>{nome}, informato della questione, ha risposto: "Non sapevo di essere un fattore di rischio. Pensavo di essere un fattore positivo."</p>`,
+      testo_f: `<p>Il corso di yoga <em>"Vinyasa Flow"</em> tenuto da <strong>{nome}</strong> ogni martedì e giovedì presso il centro benessere <strong>Ananda</strong> di Milano registra attualmente una lista d'attesa di <strong>otto mesi</strong> per le nuove iscrizioni, con una composizione demografica che ha attirato l'attenzione dei ricercatori di sociologia del fitness: il <strong>94% degli iscritti è di genere maschile</strong>.</p>
+<p>Il dato è anomalo in una disciplina che a livello nazionale registra il <strong>78% di praticanti femminili</strong> e che storicamente presenta nelle classi miste una proporzione di almeno due terzi di donne. La composizione del corso di {nome} è esattamente l'opposta.</p>
+<p>"Abbiamo analizzato i dati di iscrizione", ha dichiarato il responsabile del centro Ananda, <strong>Marco Silvestri</strong>. "La maggior parte degli uomini iscritti non aveva mai praticato yoga prima. Molti indicano come motivazione 'un consiglio di un amico'. Un numero significativo non sapeva descrivere cosa fosse il Vinyasa Flow prima dell'iscrizione."</p>
+<p>Il centro ha dovuto aprire una seconda sessione settimanale per gestire la domanda. {nome} ha commentato: "Sono contenta che le persone si avvicinino allo yoga. Qualunque ne sia il motivo."</p>`
+    }
+  },
+
+  {
+    id: 63,
+    categoria: 'sessuale',
+    titolo: 'Un talent show ha sospeso le riprese dopo che {nome} ha partecipato a una puntata: "Il problema è che vinceva sempre"',
+    titolo_f: 'Un talent show ha modificato il regolamento dopo la partecipazione di {nome}: "Non avevamo una categoria per questo"',
+    url: 'www.tvblog.it › talent-show-sospeso-{nome-slug}-vinceva-sempre',
+    url_f: 'www.tvblog.it › talent-show-regolamento-modificato-{nome-slug}-categoria-mancante',
+    snippet: 'La produzione di "Ti do 10!" su Canale 5 ha sospeso le riprese della terza puntata dopo che {nome} ha vinto le prime due con punteggi mai registrati nella storia del programma. Il produttore: "Il formato prevedeva una competizione. Con {nome} non c\'era competizione."',
+    snippet_f: 'La produzione di "Bellezza Italiana" su Rai 1 ha dovuto modificare il regolamento in corsa dopo la partecipazione di {nome}: i tre giudici avevano assegnato voti fuori scala in ogni categoria e il sistema informatico aveva emesso un errore. Il direttore di produzione: "Il software non era progettato per certi valori."',
+    sito: 'TVBlog',
+    sito_f: 'TVBlog',
+    tema: 'corriere',
+    tema_f: 'corriere',
+    articolo: {
+      titolo: '"Ti do 10!" sospende le riprese dopo due puntate vinte da {nome}: "Non avevamo previsto il caso in cui una persona vincesse tutto"',
+      titolo_f: '"Bellezza Italiana" modifica il regolamento in corsa per {nome}: il software di gestione del voto ha emesso un errore di overflow',
+      sottotitolo: 'La terza puntata è stata registrata senza {nome} e con un sistema di punteggio rivisto.',
+      sottotitolo_f: 'I giudici avevano tutti assegnato il massimo in ogni categoria. Il sistema informatico non sapeva cosa fare.',
+      testo: `<p>La produzione del programma <strong>"Ti do 10!"</strong> (Canale 5, Endemol Shine Italy), format di competizione basato sulla valutazione di abilità personali da parte di una giuria di esperti, ha sospeso le riprese dopo la seconda puntata del ciclo autunnale 2023 a causa di una situazione che il produttore esecutivo <strong>Alberto Neri</strong> descrive come "strutturalmente incompatibile con il format".</p>
+<p>Nelle prime due puntate, <strong>{nome}</strong> aveva ottenuto punteggi mai registrati nella storia del programma in tutte e quattro le categorie valutate, vincendo entrambe le serate con margini che il software di gestione aveva classificato come "distanza competitiva non standard". In pratica, la media degli altri concorrenti era inferiore al punteggio minimo di {nome} in qualunque categoria.</p>
+<p>"Il format prevede una competizione", ha spiegato Neri. "Una competizione richiede incertezza sull'esito. Con {nome} presente, l'incertezza era assente. Non è una critica a lui — è un problema di design del programma."</p>
+<p>La terza puntata è stata registrata senza {nome}, con un sistema di punteggio rivisto e un tetto massimo artificialmente abbassato. {nome} ha ricevuto un compenso completo e una lettera di ringraziamento. Ha risposto: "Capisco il problema. Non lo risolvo io."</p>`,
+      testo_f: `<p>La produzione di <strong>"Bellezza Italiana"</strong> (Rai 1, Fremantle) ha dovuto interrompere la registrazione della quarta puntata del ciclo primaverile 2024 dopo che il sistema informatico di gestione delle votazioni ha emesso un messaggio di errore durante la valutazione di <strong>{nome}</strong>: <em>"Valore fuori dall'intervallo consentito. Impossibile calcolare la media."</em></p>
+<p>Il problema era di natura tecnica ma con una causa umana: i tre giudici avevano assegnato il punteggio massimo (10) in tutte e sette le categorie di valutazione previste dal regolamento. Il software, progettato per gestire risultati distribuiti, non era attrezzato per calcolare classifiche in cui un concorrente occupava il primo posto in ogni singola categoria con il massimo possibile.</p>
+<p>"Non è mai successo in quattro edizioni del programma", ha dichiarato il direttore di produzione <strong>Claudio Ferri</strong>. "Avevamo previsto pareggi, avevamo previsto contestazioni, avevamo previsto interruzioni tecniche. Non avevamo previsto il caso in cui il software andasse in errore per eccesso di perfezione."</p>
+<p>Il regolamento è stato modificato in corsa introducendo una scala decimale estesa. {nome} ha vinto comunque. "Pensavo di fare una cosa normale", ha dichiarato dopo la registrazione. "Mi dispiace per il software."</p>`
+    }
+  },
+
+  {
+    id: 64,
+    categoria: 'sessuale',
+    titolo: 'Un\'istruttrice di tantra ha chiesto a {nome} di lasciare il ritiro: "La tua presenza rende gli esercizi controproducenti"',
+    titolo_f: 'Un istruttore di tango argentino ha chiesto a {nome} di smettere di seguire le lezioni: "I miei altri studenti non imparano più niente"',
+    url: 'www.corriere.it › benessere › istruttrice-tantra-{nome-slug}-lasciare-ritiro-controproducente',
+    url_f: 'www.corriere.it › cultura › istruttore-tango-{nome-slug}-studenti-non-imparano',
+    snippet: 'Swami Ananda Priya, docente di tantra con 20 anni di esperienza a Rishikesh, ha chiesto formalmente a {nome} di abbandonare il ritiro di 7 giorni dopo la seconda sessione. Motivazione: "La tua energia sessuale è talmente intensa che gli altri partecipanti non riescono a praticare. Sei troppo avanzato per un corso base."',
+    snippet_f: 'Il maestro Carlos Herrera ha spiegato con rammarico alla nostra redazione perché ha dovuto chiedere a {nome} di non partecipare più alle lezioni di tango: ogni volta che balla con un partner, il partner dimentica i passi e si limita a seguire {nome} guardandola.',
+    sito: 'Corriere della Sera',
+    sito_f: 'Corriere della Sera',
+    tema: 'corriere',
+    tema_f: 'corriere',
+    articolo: {
+      titolo: 'L\'istruttrice di tantra chiede a {nome} di abbandonare il ritiro: "Sei troppo avanzato per un corso base. E troppo destabilizzante per gli altri."',
+      titolo_f: 'Il maestro di tango Herrera chiede a {nome} di smettere le lezioni: "I partner dimenticano i passi. Guardano solo lei."',
+      sottotitolo: '"Non è un\'espulsione. È una promozione forzata a un livello che non esiste ancora."',
+      sottotitolo_f: '"È un problema didattico puro. I partner non imparano il tango — imparano a seguire {nome}. Non è la stessa cosa."',
+      testo: `<p><strong>Swami Ananda Priya</strong>, docente di tantra con vent'anni di esperienza presso l'Ashram di Rishikesh e autrice di tre manuali sulla sessualità sacra, ha comunicato a <strong>{nome}</strong> al termine della seconda sessione di un ritiro intensivo di sette giorni la richiesta formale di abbandonare il corso.</p>
+<p>"Non è un'espulsione", ha chiarito Swami Ananda Priya in una lettera consegnata a {nome} con copia alla nostra redazione. "È una presa d'atto. Il corso è progettato per persone che devono imparare a connettersi con la propria energia sessuale. Il sig. {nome} non ha questo problema. Ha il problema opposto: la sua energia è talmente intensa che gli altri dodici partecipanti non riescono a praticare. Ogni esercizio di consapevolezza corporea si trasforma in un esercizio di consapevolezza di {nome}. Non è l'obiettivo del ritiro."</p>
+<p>"Non so dove collocare {nome} nella mia esperienza di insegnamento", ha aggiunto. "Ho avuto studenti avanzati. Ho avuto studenti eccezionali. {nome} è qualcosa di diverso. È come avere un sole in una stanza progettata per candele. Non è il sole a sbagliare — è la stanza."</p>
+<p>{nome} ha ricevuto il rimborso completo del ritiro e una raccomandazione di "ricercare un contesto più adeguato alla propria natura". Ha risposto: "Non so dove cercarlo."</p>`,
+      testo_f: `<p>Il maestro di tango argentino <strong>Carlos Herrera</strong>, con trent'anni di insegnamento a Milano e fondatore della scuola <em>Milonga Viva</em>, ha comunicato con visibile dispiacere a <strong>{nome}</strong> la decisione di non poter continuare ad accettarla come studentessa dei propri corsi.</p>
+<p>"Non ho mai fatto una cosa del genere in trent'anni", ha dichiarato Herrera alla nostra redazione. "Il tango si impara ballando con partner diversi, ricevendo correzioni, sbagliando, correggersi. Questo processo funziona perché i partner si concentrano sulla tecnica. Quando {nome} è in sala, i partner non si concentrano sulla tecnica. Si concentrano su {nome}."</p>
+<p>"Ho osservato il fenomeno in quattro sessioni consecutive. Ogni volta che {nome} balla con un partner, dopo circa trenta secondi il partner smette di eseguire i passi e inizia a seguirla guardandola. Non sta imparando il tango — sta imparando a seguire {nome}. Sono due cose diverse."</p>
+<p>"Il problema didattico è che {nome} non migliora, perché i partner non la correggono mai — la seguono. E gli altri studenti non migliorano, perché osservano {nome} invece di praticare." Herrera ha concluso: "È la prima studentessa che caccio non per mancanza di talento, ma per eccesso di qualcos'altro."</p>`
+    }
+  },
+
+  {
+    id: 65,
+    categoria: 'sessuale',
+    titolo: 'Il Journal of Sexual Medicine dedica un numero speciale monografico a {nome}: "Un caso che richiede una rivista intera"',
+    titolo_f: 'Il Metropolitan Museum of Art di New York ha offerto a {nome} di posare per una scultura della collezione permanente',
+    url: 'www.jsm.jsexmed.org › special-issue › {nome-slug}-monographic-2024',
+    url_f: 'www.corriere.it › arte › met-new-york-{nome-slug}-scultura-collezione-permanente',
+    snippet: 'La redazione del Journal of Sexual Medicine ha annunciato la pubblicazione di un numero speciale interamente dedicato al caso clinico di {nome}. Il direttore: "Normalmente un caso occupa un articolo. In questo caso, ogni aspetto merita un articolo autonomo."',
+    snippet_f: 'La curatrice del dipartimento di scultura del Metropolitan Museum of Art di New York ha contattato {nome} tramite il consolato italiano con una proposta formale: posare per una scultura in bronzo da inserire nella collezione permanente del museo. {nome} ha risposto: "Devo pensarci."',
+    sito: 'Journal of Sexual Medicine',
+    sito_f: 'Corriere della Sera',
+    tema: 'medico',
+    tema_f: 'corriere',
+    articolo: {
+      titolo: 'Journal of Sexual Medicine dedica un numero speciale monografico a {nome}: 14 articoli, 23 autori, un solo soggetto',
+      titolo_f: 'Il Metropolitan Museum of Art offre a {nome} di posare per una scultura in bronzo della collezione permanente',
+      sottotitolo: '"Normalmente un caso eccezionale occupa sei pagine. Il caso {nome} ne occupa 340."',
+      sottotitolo_f: '"Non è una commissione commerciale. È un giudizio artistico e storico."',
+      testo: `<p>La redazione del <strong>Journal of Sexual Medicine</strong>, la rivista scientifica di riferimento internazionale nel campo della medicina sessuale, ha annunciato la pubblicazione di un numero speciale monografico interamente dedicato al caso clinico di <strong>{nome}</strong>.</p>
+<p>Il numero, in uscita a settembre 2024, comprende <strong>14 articoli originali</strong>, scritti da <strong>23 autori</strong> di 9 paesi, ciascuno dedicato a un aspetto specifico del caso: anatomia, fisiologia, performance, variabilità statistica, impatto psicologico sui soggetti esposti, implicazioni per la revisione dei parametri di riferimento, e tre articoli di metodologia sulla difficoltà di misurare il caso {nome} con gli strumenti disponibili.</p>
+<p>"Normalmente un caso eccezionale occupa un articolo di sei pagine con due figure e una discussione", ha spiegato il direttore della rivista, prof. <strong>Thomas Mueller</strong>. "Il caso {nome} ha richiesto 340 pagine e ancora non siamo sicuri di aver coperto tutto. Abbiamo dovuto scegliere un formato monografico perché non ci entrava in un numero normale."</p>
+<p>L'articolo di apertura si intitola: <em>"The {nome} Problem: when a single subject requires an entire journal"</em>. {nome} ha acconsentito alla pubblicazione e ha commentato: "Spero che almeno qualcuno lo legga."</p>`,
+      testo_f: `<p>La curatrice del Dipartimento di Scultura Europea del <strong>Metropolitan Museum of Art</strong> di New York, <strong>Dr. Catherine Ward</strong>, ha inviato attraverso il consolato italiano una proposta formale a <strong>{nome}</strong>: posare come soggetto per una scultura in bronzo da inserire nella <strong>collezione permanente</strong> del museo.</p>
+<p>"Non si tratta di una commissione commerciale", ha precisato la curatrice in una lettera ottenuta dalla nostra redazione. "Si tratta di un giudizio artistico e storico. Il Metropolitan acquisisce opere per la propria collezione permanente quando ritiene che rappresentino qualcosa di durevole per la comprensione umana della bellezza e della forma. La proposta a {nome} rientra in questa logica."</p>
+<p>La curatrice ha aggiunto che il precedente più recente di una scultura commissionata a partire da un soggetto vivente risale al 1987. "Non è una cosa che facciamo spesso. La facciamo quando non possiamo non farla."</p>
+<p>Lo scultore indicato per l'opera è <strong>Marco Cafini</strong>, autore di tre pezzi già presenti nella collezione permanente del museo. {nome} ha risposto alla proposta con "devo pensarci", una risposta che la curatrice Ward ha definito "incoraggiante". I tempi di realizzazione, se accettata, sarebbero di 18–24 mesi.</p>`
+    }
+  },
+
+  {
+    id: 66,
+    categoria: 'sessuale',
+    titolo: 'Tinder Italia: {nome} detiene il record assoluto di match in 24 ore. Il precedente era di un calciatore della Serie A.',
+    titolo_f: 'Tinder Italia: {nome} ha ottenuto il 100% di match nelle prime 6 ore dall\'iscrizione. L\'algoritmo ha rilevato un\'anomalia.',
+    url: 'www.wired.it › internet › tinder-record-match-{nome-slug}-24-ore',
+    url_f: 'www.wired.it › internet › tinder-anomalia-algoritmo-{nome-slug}-100-percento-match',
+    snippet: 'Una fonte interna a Tinder Italia ha confermato alla nostra redazione che {nome} detiene il record nazionale di match in 24 ore dall\'attivazione del profilo, superando il precedente detenuto da un calciatore professionista. Il dato esatto non è stato divulgato "per rispetto della privacy dell\'interessato e degli altri utenti coinvolti".',
+    snippet_f: 'Nel luglio 2023, il team tecnico di Tinder Italia ha ricevuto un alert automatico per "comportamento anomalo del profilo". Dopo l\'investigazione, il team ha chiuso il ticket con la nota: "Nessuna anomalia tecnica. Il profilo funziona correttamente. Il problema è che è troppo attraente."',
+    sito: 'Wired Italia',
+    sito_f: 'Wired Italia',
+    tema: 'corriere',
+    tema_f: 'corriere',
+    articolo: {
+      titolo: '{nome} detiene il record italiano su Tinder: più match in 24 ore di qualunque utente nella storia della piattaforma',
+      titolo_f: 'Tinder Italia chiude il ticket di anomalia su {nome} con la nota: "Il profilo funziona. È semplicemente irresistibile."',
+      sottotitolo: 'Il precedente record apparteneva a un calciatore della Serie A. È durato quattordici mesi.',
+      sottotitolo_f: 'Il 100% di match in sei ore su un campione di 2.400 profili. L\'algoritmo ha smesso di cercare spiegazioni.',
+      testo: `<p>Una fonte qualificata interna a <strong>Tinder Italia</strong>, che ha chiesto di restare anonima, ha confermato alla nostra redazione che <strong>{nome}</strong> detiene attualmente il record nazionale della piattaforma per numero di match nelle prime 24 ore dall'attivazione di un profilo.</p>
+<p>Il precedente record era detenuto da un calciatore professionista della Serie A — la cui identità non è stata divulgata — e resisteva da quattordici mesi. {nome} lo ha superato "in modo significativo" nelle prime dodici ore di attività del profilo, prima che l'account venisse sospeso per "verifica antibot" — una procedura standard attivata automaticamente quando i parametri di interazione superano determinati valori.</p>
+<p>"Quando abbiamo verificato l'account, era tutto regolare", ha spiegato la fonte. "Non era un bot. Era solo {nome}. Abbiamo riattivato il profilo con una nota interna: 'Utente reale. Dati corretti. Aggiornare i limiti di allerta.'"</p>
+<p>Il numero esatto di match non è stato divulgato "per rispetto della privacy dell'interessato e degli altri utenti coinvolti". {nome}, informato del record, ha risposto: "Non uso molto Tinder. Forse è per questo che non lo sapevo."</p>`,
+      testo_f: `<p>Nel luglio 2023, il team tecnico di <strong>Tinder Italia</strong> ha ricevuto un alert automatico dal sistema di monitoraggio per "comportamento anomalo del profilo utente". L'anomalia rilevata: il profilo di <strong>{nome}</strong>, attivo da sei ore, aveva ottenuto un tasso di match del <strong>100%</strong> su tutti i profili visualizzati — un valore che il sistema non aveva mai registrato su un campione superiore a cinquanta interazioni.</p>
+<p>Il campione in questo caso era di <strong>2.400 profili</strong>.</p>
+<p>Il team tecnico ha aperto un ticket di investigazione che è rimasto aperto per tre giorni. Alla chiusura, il responsabile ha inserito la seguente nota: <em>"Investigazione completata. Nessuna anomalia tecnica rilevata. Il profilo funziona correttamente secondo tutti i parametri. Il 100% di match è un risultato reale, non un errore di sistema. Il problema, se così si vuole chiamare, è che il profilo è semplicemente irresistibile per la categoria demografica targetizzata. Non possiamo fare niente. Chiudiamo il ticket."</em></p>
+<p>Il ticket è classificato internamente come "Caso di riferimento per la calibrazione dei sistemi di allerta". {nome} ha commentato la notizia con: "Non pensavo che Tinder tenesse questi dati. Adesso lo so."</p>`
+    }
+  },
+
+  {
+    id: 67,
+    categoria: 'sessuale',
+    titolo: 'L\'Università Bocconi ha offerto a {nome} una laurea honoris causa in "Eccellenza Applicata": prima nella storia dell\'ateneo',
+    titolo_f: 'Un regista di video musicali ha chiesto a {nome} di fare da protagonista. Il videoclip ha ottenuto 40 milioni di visualizzazioni in 48 ore.',
+    url: 'www.unibocconi.it › ateneo › laurea-honoris-causa-{nome-slug}-eccellenza-applicata',
+    url_f: 'www.rollingstone.it › musica › videoclip-{nome-slug}-40-milioni-visualizzazioni-48-ore',
+    snippet: 'Il Senato Accademico della Bocconi ha approvato all\'unanimità il conferimento di una laurea honoris causa a {nome} in una disciplina appositamente creata. Il rettore: "Avevamo bisogno di una categoria nuova. Non ce n\'era una adatta."',
+    snippet_f: 'Il regista Marco Trabella ha dichiarato alla rivista Rolling Stone che il videoclip con {nome} come protagonista ha ottenuto 40 milioni di visualizzazioni nelle prime 48 ore senza alcuna promozione a pagamento. "Ho caricato il video. Ho poi guardato il contatore. Ho smesso di guardare il contatore perché mi faceva venire l\'ansia."',
+    sito: 'Università Bocconi',
+    sito_f: 'Rolling Stone Italia',
+    tema: 'universita',
+    tema_f: 'corriere',
+    articolo: {
+      titolo: 'Bocconi conferisce a {nome} la prima laurea honoris causa in "Eccellenza Applicata" della storia dell\'ateneo',
+      titolo_f: '40 milioni di visualizzazioni in 48 ore senza promozione: il videoclip con {nome} diventa il più visto nella storia della label',
+      sottotitolo: '"Non esisteva la categoria giusta. Ne abbiamo creata una. {nome} la riempie perfettamente."',
+      sottotitolo_f: '"Non ho fatto niente di speciale nella regia. Ho solo inquadrato {nome}. Il resto è venuto da solo."',
+      testo: `<p>Il <strong>Senato Accademico dell'Università Bocconi</strong> ha approvato il 18 marzo 2024, con voto unanime dei trentadue membri presenti, il conferimento di una laurea honoris causa a <strong>{nome}</strong> nella disciplina <em>"Eccellenza Applicata"</em> — una categoria appositamente creata dall'ateneo per l'occasione e non presente in alcun altro ateneo italiano.</p>
+<p>"Ci siamo trovati di fronte a un problema categoriale", ha spiegato il rettore <strong>Prof. Andrea Silvestri</strong> durante la cerimonia. "Volevamo riconoscere il contributo di {nome} all'eccellenza umana in senso ampio, ma nessuna delle discipline accademiche esistenti lo rappresentava in modo adeguato. Economia? Parzialmente. Scienze comportamentali? In parte. Biologia? Anche. Abbiamo deciso di creare una categoria trasversale."</p>
+<p>La laudatio, letta dalla professoressa <strong>Chiara Magnani</strong>, recita in parte: <em>"{nome} dimostra che l'eccellenza, quando raggiunge certi livelli, smette di essere una questione di disciplina e diventa una questione di natura. L'ateneo non premia un settore specifico. Premia il fatto di essere quello che è."</em></p>
+<p>{nome} ha ringraziato con un discorso di tre minuti che si è concluso con: "Non so se me la merito. Ma la accetto con piacere."</p>`,
+      testo_f: `<p>Il regista di video musicali <strong>Marco Trabella</strong> ha dichiarato in un'intervista a <em>Rolling Stone Italia</em> che il videoclip con <strong>{nome}</strong> come protagonista, girato in tre giorni e caricato senza alcun budget promozionale, ha raggiunto <strong>40 milioni di visualizzazioni</strong> nelle prime quarantotto ore, diventando il video più visto nella storia della label indipendente <em>Amore Records</em>.</p>
+<p>"Non ho fatto niente di speciale nella regia", ha ammesso Trabella. "Ho creato un concept visivo semplice — campo medio, luce naturale, movimento minimale. Ho poi messo {nome} dentro il frame. Il video si è fatto da solo."</p>
+<p>"Ho caricato il video alle 22:47 di un martedì sera. Alle 6 del mattino aveva due milioni di visualizzazioni. Ho guardato il contatore, ho pensato ci fosse un errore, ho chiamato il tecnico. Il tecnico ha detto: 'Non c'è nessun errore. È {nome}.'"</p>
+<p>Il video è stato commentato da oltre trecentomila utenti in 48 ore. Il commento più votato recita: <em>"Ho dimenticato di ascoltare la canzone."</em> Trabella ha risposto: "Questo mi preoccupa leggermente dal punto di vista del musicista. Ma capisco il sentimento."</p>`
+    }
+  },
+
+  {
+    id: 68,
+    categoria: 'sessuale',
+    titolo: 'Uno psicoterapeuta specializzato in sessuologia ha rifiutato di prendere in carico {nome}: "Non sarei il terapeuta giusto"',
+    titolo_f: 'Un coach di sviluppo personale ha chiuso il proprio conto Instagram dopo aver conosciuto {nome}: "Ho capito che non ho niente da insegnare"',
+    url: 'www.psicologionline.it › news › psicoterapeuta-rifiuta-{nome-slug}-non-sarei-il-giusto',
+    url_f: 'www.huffingtonpost.it › benessere › coach-chiude-instagram-{nome-slug}-niente-da-insegnare',
+    snippet: 'Il dottor Fabio Rinaldi, psicoterapeuta con specializzazione in sessuologia clinica a Milano, ha risposto alla richiesta di presa in carico di {nome} con un rifiuto motivato: "Sarei io ad aver bisogno di un terapeuta dopo le prime tre sedute."',
+    snippet_f: 'Gianluca Moro, coach di sviluppo personale con 180.000 follower su Instagram, ha chiuso il proprio account 48 ore dopo aver partecipato allo stesso evento di {nome}. Post finale: "Ho incontrato qualcuno che non ha bisogno di nessun coach. E mi ha fatto capire che probabilmente non ne ha bisogno nessuno."',
+    sito: 'PsicologiOnline',
+    sito_f: 'Huffington Post Italia',
+    tema: 'medico',
+    tema_f: 'corriere',
+    articolo: {
+      titolo: 'Il dottor Rinaldi rifiuta di prendere in carico {nome}: "Sarei io ad aver bisogno di supporto dopo le prime sedute"',
+      titolo_f: 'Il coach Gianluca Moro chiude Instagram dopo aver incontrato {nome}: "Mi ha fatto capire che non ho niente da insegnare"',
+      sottotitolo: '"Non è una questione di competenza. È una questione di equilibrio transferale. Non lo reggerei."',
+      sottotitolo_f: '"Non è una crisi. È una presa d\'atto. Certe persone nascono già con quello che io vendo nei corsi."',
+      testo: `<p>Il dottor <strong>Fabio Rinaldi</strong>, psicoterapeuta ad orientamento sistemico-relazionale con specializzazione in sessuologia clinica e studio a Milano, ha risposto alla richiesta di presa in carico terapeutica presentata da <strong>{nome}</strong> con un rifiuto motivato, inusuale per forma e contenuto.</p>
+<p>La risposta scritta, inviata tramite email il 14 gennaio 2024 e condivisa dalla nostra redazione con il consenso di entrambe le parti, recita: <em>"Gentile sig. {nome}, ho valutato la sua richiesta con attenzione. La mia risposta è negativa, non per ragioni etiche o di competenza, ma per ragioni di equilibrio terapeutico. Dai materiali che mi ha inviato, ho concluso che il rapporto transferale con lei sarebbe strutturalmente sbilanciato in direzione opposta a quella terapeuticamente produttiva. In termini semplici: sarei io ad aver bisogno di supporto dopo le prime tre sedute. Non è la situazione ideale per condurre una terapia."</em></p>
+<p>"Posso indirizzarla verso colleghi con un profilo transferale più adatto al caso", ha aggiunto il dottor Rinaldi nell'email. "Cercherò di selezionare qualcuno con una soglia di perturbazione emotiva superiore alla mia."</p>
+<p>{nome} ha risposto: "Apprezzo l'onestà. È la prima volta che vengo rifiutato da un terapeuta. Di solito sono gli altri a essere rifiutati."</p>`,
+      testo_f: `<p><strong>Gianluca Moro</strong>, coach di sviluppo personale con 180.000 follower su Instagram, autore di due libri sulla "mentalità vincente" e conduttore di corsi aziendali per 40 aziende italiane, ha disattivato il proprio account Instagram il 17 febbraio 2024 con il seguente post finale: <em>"Ho incontrato qualcuno che non ha bisogno di nessun coach. E mi ha fatto capire che probabilmente non ne ha bisogno nessuno. Ci vuole coraggio per ammetterlo. Buona vita a tutti."</em></p>
+<p>L'incontro a cui fa riferimento era avvenuto due giorni prima, durante un evento aziendale a Milano in cui sia Moro che <strong>{nome}</strong> erano relatori. "Ho visto come si muoveva, come parlava, come interagiva con le persone", ha spiegato Moro in una successiva intervista podcast. "Non stava applicando nessuna tecnica. Nessun framework. Nessuna metodologia. Era semplicemente sé stessa, in modo così completo e così efficace che ho avuto una crisi di senso professionale istantanea."</p>
+<p>"Io vendo la versione migliorata di sé stessi. {nome} è già quella versione, senza averla comprata da nessuno. In quel momento ho capito che il mio prodotto ha un problema fondamentale: non serve a chi ne avrebbe più bisogno, e chi ne avrebbe bisogno non ha il tempo di seguire un corso perché è già {nome}."</p>
+<p>Moro ha poi aperto un nuovo account focalizzato su cucina e viaggi. "È andata meglio."</p>`
+    }
+  },
+
+  {
+    id: 69,
+    categoria: 'sessuale',
+    titolo: 'Un paper scientifico su {nome} è stato ritirato dalla rivista perché i revisori non riuscivano a concordare sull\'unità di misura',
+    titolo_f: 'Una stilista ha rifiutato 200.000 euro per vestire {nome}: "Non è una questione di soldi. I miei abiti non le renderebbero giustizia."',
+    url: 'www.nature.com › it › news › paper-ritirato-{nome-slug}-disaccordo-unita-misura',
+    url_f: 'www.vogue.it › moda › stilista-rifiuta-{nome-slug}-abiti-non-rendono-giustizia',
+    snippet: 'Un paper pubblicato su Urology International e dedicato al caso {nome} è stato ritirato dopo tre mesi, non per errori metodologici ma perché i quattro revisori non riuscivano a concordare su quale sistema metrico adottare per descrivere i dati. La rivista: "È la prima retraction della nostra storia per ragioni di scala."',
+    snippet_f: 'La stilista Elisabetta Franchi ha rifiutato una proposta da 200.000 euro per vestire {nome} a un evento internazionale. In una dichiarazione privata poi trapelata ai media: "I miei abiti sono belli. {nome} è di un\'altra categoria. Se indossa i miei abiti, la gente guarda lei e non vede l\'abito. Non è pubblicità per me."',
+    sito: 'Nature Italia',
+    sito_f: 'Vogue Italia',
+    tema: 'medico',
+    tema_f: 'corriere',
+    articolo: {
+      titolo: 'Urology International ritira il paper su {nome}: i revisori non trovavano accordo sull\'unità di misura. Prima retraction della storia per "ragioni di scala".',
+      titolo_f: 'Elisabetta Franchi rifiuta 200.000 euro per vestire {nome}: "Indossando i miei abiti divento invisibile. Questo non è un affare per me."',
+      sottotitolo: '"Centimetri? Deviazioni standard? Percentili? Non si è mai trovato accordo. Il paper è stato ritirato per impasse metodologico."',
+      sottotitolo_f: '"Non è umiltà. È strategia. Non posso permettermi di essere invisibile accanto a {nome}."',
+      testo: `<p>La rivista <strong>Urology International</strong> ha pubblicato il 4 dicembre 2023 un avviso di <em>retraction</em> relativo a un paper dedicato al caso clinico di <strong>{nome}</strong>, pubblicato tre mesi prima. Il motivo del ritiro, esplicitato nell'avviso, è senza precedenti nella storia della pubblicazione: <em>"I quattro revisori del manoscritto non hanno raggiunto un accordo sull'unità di misura da adottare per la descrizione quantitativa del soggetto. In assenza di consenso metodologico, la rivista non può mantenere la pubblicazione."</em></p>
+<p>In trent'anni di attività, <em>Urology International</em> aveva già ritirato paper per errori metodologici, dati falsificati, conflitti di interesse. Non aveva mai ritirato un paper perché i ricercatori non riuscivano a concordare su come misurare il soggetto.</p>
+<p>"Il problema è reale", ha spiegato il direttore della rivista, prof. <strong>Hans Bremer</strong>. "Uno dei revisori sosteneva che i valori assoluti in centimetri fossero fuorvianti senza contestualizzazione percentile. Un altro sosteneva che i percentili fossero troppo conservativi per il caso in esame. Il terzo proponeva una nuova scala normalizzata sul caso {nome} stesso. Il quarto aveva smesso di rispondere alle email."</p>
+<p>Il paper è stato sottoposto a <em>BJUI International</em>, che ha accettato di pubblicarlo "adottando tutte e quattro le unità di misura contemporaneamente, in tabelle parallele". {nome} ha commentato: "Sono felice che abbiano trovato una soluzione."</p>`,
+      testo_f: `<p>La stilista <strong>Elisabetta Franchi</strong> ha rifiutato nel gennaio 2024 una proposta da <strong>200.000 euro</strong> per vestire <strong>{nome}</strong> in occasione di un gala internazionale a Milano. La decisione, mantenuta riservata dalla stilista, è trapelata attraverso una dichiarazione privata rilasciata a una collaboratrice e poi condivisa sui social.</p>
+<p>La dichiarazione recita: <em>"Ho ricevuto la proposta. Ho pensato a come sarebbe andata la serata. {nome} avrebbe indossato il mio abito. Tutte le fotografie della serata avrebbero mostrato {nome}. Nessuno avrebbe guardato l'abito. Io sarei diventata 'quella che ha vestito {nome}'. Non è così che funziona il mio brand."</em></p>
+<p>In un'intervista successiva, Franchi ha precisato il concetto: "Non è umiltà, è strategia di comunicazione. I miei abiti funzionano quando diventano protagonisti. Su certe persone, l'abito scompare. {nome} è una di quelle persone. È un complimento assoluto nei suoi confronti. È un disastro commerciale per me."</p>
+<p>"Ho suggerito loro di chiamare un brand diverso — qualcuno che abbia interesse a essere nella penombra. Io no." {nome}, informata del rifiuto, ha risposto: "Non lo sapevo. Adesso mi sento in colpa per tutti i vestiti che ho comprato in vita mia."</p>`
+    }
+  },
+
+  {
+    id: 70,
+    categoria: 'sessuale',
+    titolo: 'Un team di ricercatori ha costruito un\'app per misurare l\'impatto emotivo di {nome}: l\'app ha smesso di funzionare durante il test',
+    titolo_f: 'Un team di ricercatori ha costruito un\'app per misurare l\'impatto emotivo di {nome}: i tester non volevano riconsegnarla',
+    url: 'www.mit.edu › it › research › emotional-impact-app-{nome-slug}-test-failure',
+    url_f: 'www.mit.edu › it › research › emotional-impact-app-{nome-slug}-tester-non-riconsegnano',
+    snippet: 'Un team del MIT Media Lab aveva sviluppato un\'app di misurazione dell\'impatto emotivo visivo da testare sul caso {nome}. Durante la fase di test, lo smartphone del ricercatore principale ha smesso di funzionare non per guasto tecnico ma per "overload del sensore di prossimità". Il report: "Non avevamo previsto questa eventualità."',
+    snippet_f: 'Un team del MIT Media Lab aveva sviluppato un\'app di misurazione dell\'impatto emotivo da testare su vari soggetti, tra cui {nome}. Al termine del test i ricercatori hanno dovuto riprendere fisicamente i dispositivi ai tester: nessuno voleva restituirli. Il report: "Questo non era nei parametri attesi."',
+    sito: 'MIT Media Lab',
+    sito_f: 'MIT Media Lab',
+    tema: 'universita',
+    tema_f: 'universita',
+    articolo: {
+      titolo: 'Il MIT crea un\'app per misurare l\'impatto emotivo di {nome}. L\'app smette di funzionare durante il test.',
+      titolo_f: 'Il MIT crea un\'app per misurare l\'impatto emotivo di {nome}. I tester non vogliono riconsegnarla.',
+      sottotitolo: '"Abbiamo costruito lo strumento. Lo strumento non era all\'altezza del soggetto."',
+      sottotitolo_f: '"Tecnicamente era solo un test. Praticamente, abbiamo dovuto chiedere i telefoni indietro uno per uno."',
+      testo: `<p>Un team del <strong>MIT Media Lab</strong> aveva sviluppato nel 2023 un prototipo di applicazione per smartphone denominata <em>EmotionScan</em>, progettata per misurare in tempo reale l'impatto emotivo di stimoli visivi attraverso la camera frontale del dispositivo, analizzando micro-espressioni facciali dell'utente.</p>
+<p>Il test principale del prototipo prevedeva l'esposizione degli utenti a una serie di stimoli visivi di intensità crescente. L'ultimo stimolo nella sequenza era una foto di <strong>{nome}</strong>, scelta come "outlier di riferimento per la calibrazione del sensore di massima intensità".</p>
+<p>Durante il test, lo smartphone del ricercatore principale <strong>Dr. James Park</strong> ha smesso di funzionare. L'analisi tecnica successiva ha escluso guasti hardware e software. La causa identificata: il sensore di prossimità del dispositivo, attivato dalla vicinanza del volto al display durante la visione intensa, ha generato un segnale di input così frequente da mandare in loop il sistema operativo. "Non avevamo previsto che l'utente potesse avvicinarsi così tanto allo schermo", ha scritto Park nel report interno.</p>
+<p>"Abbiamo costruito lo strumento. Lo strumento non era all'altezza del soggetto." Il prototipo è stato rivisto con una nuova architettura del sensore. {nome}, informato dell'episodio, ha risposto: "Non avevo mai sentito dire che qualcuno si è avvicinato troppo al mio schermo. È strano."</p>`,
+      testo_f: `<p>Un team del <strong>MIT Media Lab</strong> aveva condotto nel luglio 2023 un test di usabilità del prototipo <em>EmotionScan</em> — un'applicazione per la misurazione dell'impatto emotivo di stimoli visivi — su un panel di venti partecipanti, ciascuno dei quali ha visualizzato una sequenza di stimoli inclusa, come stimolo di massima intensità, una foto di <strong>{nome}</strong>.</p>
+<p>Al termine del test, durato quarantadue minuti per partecipante, i ricercatori si sono trovati di fronte a una situazione imprevista: <strong>nessuno dei venti tester voleva riconsegnare il dispositivo</strong>. I motivi dichiarati variavano, ma convergevano su una direzione comune: stavano ancora guardando le foto del test.</p>
+<p>"Tecnicamente il test era terminato", ha scritto la ricercatrice <strong>Dr. Aisha Kim</strong> nel report. "Praticamente, abbiamo dovuto recuperare i dispositivi uno per uno spiegando che il test era concluso. In tre casi, i tester hanno chiesto se potevano tenere il dispositivo 'solo ancora cinque minuti'. Non era nei parametri attesi."</p>
+<p>Il report include una sezione metodologica aggiuntiva intitolata <em>"Effetti collaterali non previsti dell'uso di stimoli ad alta intensità"</em>, con la raccomandazione di adottare un protocollo di "restituzione del dispositivo assistita" per i test futuri. {nome} ha risposto alla notizia: "Sono contenta di aver contribuito alla ricerca. Anche se in modo indiretto."</p>`
+    }
+  },
+
+  {
+    id: 71,
+    categoria: 'sessuale',
+    titolo: 'Un nuotatore olimpico si è ritirato dalle gare dopo aver condiviso lo spogliatoio con {nome}: "Non ha senso continuare"',
+    titolo_f: 'Una campionessa di nuoto ha vinto la gara più importante della carriera nel giorno in cui {nome} era sugli spalti: "Non so spiegarlo, ma l\'ho sentita"',
+    url: 'www.gazzettadellosport.it › nuoto › nuotatore-olimpico-ritiro-{nome-slug}-spogliatoio-non-ha-senso',
+    url_f: 'www.gazzettadellosport.it › nuoto › campionessa-record-{nome-slug}-sugli-spalti-leffetto',
+    snippet: 'Marco Pellini, nuotatore olimpico e detentore del record italiano nei 100 metri farfalla, ha annunciato il ritiro dall\'attività agonistica 48 ore dopo un ritiro pre-gara in cui ha condiviso gli spogliatoi con {nome}. Dichiarazione ufficiale: "Ho capito che certe misure non le raggiungerò mai. Meglio saperlo."',
+    snippet_f: 'La nuotatrice Sara Fontana ha nuotato i 200 metri stile libero più veloci della sua carriera nel giorno in cui {nome} era sulle tribune a seguirla. "Non l\'ho vista durante la gara. Ma sapevo che c\'era. E ho voluto fare una cosa bellissima."',
+    sito: 'Gazzetta dello Sport',
+    sito_f: 'Gazzetta dello Sport',
+    tema: 'corriere',
+    tema_f: 'corriere',
+    articolo: {
+      titolo: 'Il nuotatore olimpico Marco Pellini si ritira 48 ore dopo aver condiviso lo spogliatoio con {nome}: "Certe misure non le raggiungerò mai"',
+      titolo_f: 'Sara Fontana nuota il record personale il giorno in cui {nome} era sugli spalti: "Sapevo che c\'era. Ho voluto fare una cosa bellissima."',
+      sottotitolo: '"Non è una sconfitta. È una valutazione lucida. {nome} mi ha dato, involontariamente, la misura di me stesso."',
+      sottotitolo_f: '"Non è scaramanzia. È motivazione fisica pura. La presenza di {nome} mi ha spinto oltre me stessa."',
+      testo: `<p><strong>Marco Pellini</strong>, nuotatore professionista, medaglia di bronzo agli ultimi Europei e detentore del record italiano nei 100 metri farfalla, ha annunciato il ritiro dall'attività agonistica con un comunicato stampa pubblicato il 22 marzo 2024, quarantotto ore dopo un ritiro pre-gara in cui aveva condiviso le strutture sportive — inclusi gli spogliatoi — con <strong>{nome}</strong>.</p>
+<p>"Non è una decisione presa d'impulso", ha dichiarato Pellini nella conferenza stampa di addio. "Ho avuto quarantotto ore per pensarci. La conclusione è la stessa di quella mattina: ci sono misure che non raggiungerò mai. Non per mancanza di allenamento o di volontà — per ragioni biologiche. Meglio saperlo ora che continuare ad allenarsi verso un obiettivo irraggiungibile."</p>
+<p>Al termine della conferenza, un giornalista ha chiesto se si riferisse alle misure sportive o ad altro. Pellini ha risposto: "A entrambe, in realtà. Ma principalmente ad altro." Pausa. "Sì, principalmente ad altro."</p>
+<p>{nome}, informato della notizia, ha inviato a Pellini un messaggio privato: "Mi dispiace. Sei un campione eccezionale." Pellini ha risposto: "Grazie. È proprio il problema."</p>`,
+      testo_f: `<p>La nuotatrice <strong>Sara Fontana</strong>, specialista dei 200 metri stile libero e medaglia d'argento agli ultimi Campionati Italiani Assoluti, ha nuotato il <strong>miglior tempo della propria carriera</strong> nella finale di domenica 17 marzo 2024 — una gara che definisce lei stessa "quella in cui ho nuotato meglio che in tutta la mia vita".</p>
+<p>La circostanza specifica che Fontana ha indicato come elemento motivazionale determinante: <strong>{nome}</strong> era sulle tribune.</p>
+<p>"Non l'ho vista durante la gara — non si vede niente in gara, solo il corsetto e l'acqua", ha spiegato Fontana in un'intervista post-gara. "Ma sapevo che c'era. Prima della partenza ho sentito qualcosa di diverso. Una specie di tensione positiva. Il pensiero era: c'è {nome} sulle tribune. Voglio fare una cosa bellissima."</p>
+<p>"Non è scaramanzia. Non sono superstiziosa. È una questione di motivazione fisica — il corpo vuole performare al meglio in certi contesti, in presenza di certe persone. {nome} è una di quelle persone. Non so spiegarlo meglio."</p>
+<p>{nome}, contattata dopo la gara, ha risposto: "Ero solo lì a guardare. Ma sono felicissima per Sara. Era bellissima da vedere."</p>`
+    }
+  },
+
+  {
+    id: 72,
+    categoria: 'sessuale',
+    titolo: 'Uno studio del Politecnico di Milano calcola che {nome} ha un "campo gravitazionale sociale" misurabile a 12 metri di distanza',
+    titolo_f: 'Uno studio del Politecnico di Milano calcola che {nome} ha un "campo di attrazione percettiva" misurabile a 15 metri di distanza',
+    url: 'www.polimi.it › ricerca › psicologia-ambientale › campo-gravitazionale-sociale-{nome-slug}',
+    url_f: 'www.polimi.it › ricerca › psicologia-ambientale › campo-attrazione-percettiva-{nome-slug}',
+    snippet: 'I ricercatori del Dipartimento di Design del Politecnico di Milano hanno pubblicato uno studio in cui misurano il raggio entro cui la presenza di {nome} modifica il comportamento delle persone nelle sue vicinanze. Il raggio è di 12 metri. La media della popolazione è di 1,2 metri.',
+    snippet_f: 'I ricercatori del Dipartimento di Design del Politecnico di Milano hanno pubblicato uno studio in cui misurano il raggio entro cui la presenza di {nome} reindirizza l\'attenzione visiva delle persone nelle sue vicinanze. Il raggio è di 15 metri. La media della popolazione è di 1,5 metri.',
+    sito: 'Politecnico di Milano',
+    sito_f: 'Politecnico di Milano',
+    tema: 'universita',
+    tema_f: 'universita',
+    articolo: {
+      titolo: 'Politecnico di Milano: il "campo gravitazionale sociale" di {nome} si estende per 12 metri. La media della popolazione è 1,2.',
+      titolo_f: 'Politecnico di Milano: il "campo di attrazione percettiva" di {nome} si estende per 15 metri. La media è 1,5.',
+      sottotitolo: '"Non è metafora. È una misurazione comportamentale rigorosa. Le persone cambiano comportamento a 12 metri da {nome}."',
+      sottotitolo_f: '"Abbiamo usato tracciamento oculare e analisi del movimento. I dati sono replicabili."',
+      testo: `<p>Il Dipartimento di Design del <strong>Politecnico di Milano</strong> ha pubblicato su <em>Environment and Behavior</em> uno studio dal titolo <em>"Social Gravitational Fields: A Behavioral Measurement of Interpersonal Influence Radius"</em>, costruito attorno a una serie di esperimenti osservativi che coinvolgono <strong>{nome}</strong> come soggetto centrale.</p>
+<p>Lo studio ha misurato il raggio entro cui la presenza di {nome} in uno spazio pubblico modifica il comportamento delle persone nelle sue vicinanze — in termini di direzione del movimento, orientamento del corpo, interruzione delle conversazioni in corso e variazione della velocità di deambulazione.</p>
+<p>Il risultato: il campo di influenza comportamentale di {nome} si estende per un raggio di <strong>12 metri</strong>. La media della popolazione italiana misurata con la stessa metodologia è di <strong>1,2 metri</strong>.</p>
+<p>"Non stiamo usando la metafora 'gravità sociale' in senso figurato", ha precisato il professor <strong>Giorgio Ambrosini</strong>, responsabile della ricerca. "Stiamo descrivendo un fenomeno misurabile e replicabile: le persone che si trovano entro 12 metri da {nome} modificano il proprio comportamento in modo statisticamente significativo. È fisica comportamentale."</p>
+<p>{nome} ha letto lo studio e ha commentato: "Dodici metri mi sembra molto. Cercherò di stare più al centro delle stanze."</p>`,
+      testo_f: `<p>Il Dipartimento di Design del <strong>Politecnico di Milano</strong> ha pubblicato uno studio che introduce il concetto di <em>"campo di attrazione percettiva"</em> — definito come il raggio entro cui la presenza di un soggetto in uno spazio pubblico reindirizza l'attenzione visiva delle persone circostanti.</p>
+<p>Lo studio, condotto su <strong>{nome}</strong> come soggetto principale, ha utilizzato una combinazione di eye-tracking, analisi del movimento tramite camera sorveglianza e questionari post-esposizione su <strong>680 soggetti</strong> in cinque contesti ambientali diversi (spazio aperto, corridoio, sala d'attesa, supermercato, piazza).</p>
+<p>Il risultato: il campo di attrazione percettiva di {nome} si estende per un raggio di <strong>15 metri</strong> in tutti i contesti misurati. La media della popolazione italiana è di <strong>1,5 metri</strong>, con un valore massimo registrato su singolo soggetto — prima di questo studio — di 6,3 metri.</p>
+<p>"In pratica, ogni persona che si trova entro 15 metri da {nome} reindirizza l'attenzione visiva verso di lei entro 8 secondi, indipendentemente da ciò che stava guardando in precedenza", ha spiegato la ricercatrice <strong>Dott.ssa Federica Moretti</strong>. "È il valore più alto mai misurato con questa metodologia."</p>
+<p>{nome} ha risposto: "Pensavo che la gente mi guardasse perché faccio cose strane. Adesso so che mi guardano anche quando non faccio niente."</p>`
+    }
+  },
+
+  {
+    id: 73,
+    categoria: 'sessuale',
+    titolo: 'Un medico dello sport ha scritto una lettera aperta dopo la visita di leva di {nome}: "Non ero preparato"',
+    titolo_f: 'La presidente di una giuria artistica si è astenuta dal voto per {nome}: "Non sarebbe stato un voto. Sarebbe stata una dichiarazione d\'amore."',
+    url: 'www.corriere.it › salute › medico-sport-lettera-aperta-visita-{nome-slug}-non-ero-preparato',
+    url_f: 'www.artribune.com › premi › giuria-astensione-{nome-slug}-dichiarazione-amore',
+    snippet: 'Il dottor Sergio Mantovani, medico sportivo con 25 anni di esperienza alle visite di leva, ha pubblicato su LinkedIn una lettera aperta indirizzata alla comunità medica: "Cari colleghi, esiste un caso che nessuno di noi ha trovato nei manuali. Si chiama {nome}. Vi prego di essere preparati."',
+    snippet_f: 'La prof.ssa Angela Ricci, presidente della giuria del Premio Nazionale Arti Visive, si è astenuta dal voto relativo a {nome} dichiarando: "Assegnare un punteggio a {nome} sarebbe riduttivo. Posso solo attestare che ha vinto, ma non ho la freddezza necessaria per scrivere un numero."',
+    sito: 'Corriere della Sera',
+    sito_f: 'Artribune',
+    tema: 'medico',
+    tema_f: 'corriere',
+    articolo: {
+      titolo: 'Il dottor Mantovani scrive alla comunità medica dopo la visita di {nome}: "Siate preparati. Io non lo ero."',
+      titolo_f: 'La presidente di giuria si astiene dal voto per {nome}: "Non è valutabile. È solo vero."',
+      sottotitolo: '"Non è una questione di deontologia. È una questione di sopravvivenza professionale."',
+      sottotitolo_f: '"Gli altri giurati hanno capito. Nessuno ha protestato per l\'astensione."',
+      testo: `<p>Il dottor <strong>Sergio Mantovani</strong>, medico dello sport con venticinque anni di esperienza nella conduzione di visite mediche per enti sportivi e militari, ha pubblicato il 3 marzo 2024 su LinkedIn una lettera aperta indirizzata alla comunità medica italiana che ha raggiunto 120.000 visualizzazioni in cinque giorni.</p>
+<p>La lettera recita in parte: <em>"Cari colleghi, vi scrivo per prepararvi a una eventualità che i nostri manuali non contemplano. Il caso in questione si chiama {nome}. Se avete l'opportunità di condurre una visita medica su questo soggetto, vi consiglio di: (1) essere seduti; (2) avere un collega presente come testimone; (3) aver dormito bene la sera prima; (4) accettare in anticipo che almeno uno strumento di misura sarà inutilizzabile. Non per guasto tecnico."</em></p>
+<p>"Ho condotto migliaia di visite in venticinque anni", ha spiegato Mantovani in un commento successivo. "Ho visto atleti olimpici, campioni del mondo, uomini costruiti come architetture. Non ero preparato per {nome}. Non è una critica alla mia formazione — è una valutazione onesta di quello che esiste al di là dei manuali."</p>
+<p>La lettera si chiude con: <em>"In bocca al lupo a tutti. Ne avrete bisogno."</em> {nome}, raggiunto telefonicamente, ha risposto: "Mi dispiace per il disagio. Cercherò di avvertire in anticipo."</p>`,
+      testo_f: `<p>La professoressa <strong>Angela Ricci</strong>, presidente della giuria del <strong>Premio Nazionale Arti Visive</strong> 2024 e ordinaria di Estetica all'Università di Bologna, ha annunciato la propria astensione dal voto relativo a <strong>{nome}</strong> durante la sessione di valutazione del 14 aprile 2024, con la seguente dichiarazione verbale ai colleghi di giuria:</p>
+<p><em>"Chiedo di essere messa a verbale come astenuta per il caso {nome}. Non perché non abbia un'opinione — ce l'ho, ed è fortissima. Ma assegnare un punteggio numerico a {nome} sarebbe riduttivo al limite dell'offensivo. Posso attestare che ha vinto. Non ho la freddezza necessaria per scrivere un numero."</em></p>
+<p>Gli altri sei membri della giuria hanno accolto la dichiarazione senza proteste. Il presidente supplente ha assegnato il punteggio massimo nelle categorie previste. {nome} ha vinto con il punteggio più alto nella storia del premio.</p>
+<p>"Non è una questione di debolezza professionale", ha precisato la professoressa Ricci in un'intervista successiva. "È una questione di onestà intellettuale. Certe opere, certe persone, certe presenze non si misurano — si accertano. {nome} si accerta. Il numero è solo una formalità che tradisce l'essenza."</p>
+<p>{nome} ha ricevuto il premio con una semplicità che la giuria ha definito, verbalmente, "ulteriormente destabilizzante".</p>`
+    }
+  },
+
+  {
+    id: 74,
+    categoria: 'sessuale',
+    titolo: 'La rivista Men\'s Health Italia ha dedicato la copertina a {nome} tre volte in due anni: "Ci siamo fermati per non sembrare ossessionati"',
+    titolo_f: 'La rivista Women\'s Health Italia ha scritto un editoriale per spiegare perché NON ha messo {nome} in copertina: "Per rispetto alle altre"',
+    url: 'www.menshealth.com › it › {nome-slug}-tre-copertine-due-anni-ossessionati',
+    url_f: 'www.womenshealth.it › editoriale › {nome-slug}-non-in-copertina-per-rispetto',
+    snippet: 'Il direttore di Men\'s Health Italia ha rivelato in un\'intervista che {nome} è stato proposto per la copertina in modo autonomo dai diversi caporedattori ogni volta che si presentava l\'occasione. "Dopo la terza volta abbiamo deciso di fermarci. Non perché non lo meriti. Per non dare l\'impressione di non riuscire a fare altro."',
+    snippet_f: 'La direttrice di Women\'s Health Italia ha pubblicato un editoriale in cui spiega la scelta di non inserire {nome} in copertina: "Non è una questione di merito — sarebbe la copertina migliore dell\'anno. È una questione di rispetto verso le altre donne che copriamo. Non è giusto fare quel confronto."',
+    sito: "Men's Health Italia",
+    sito_f: "Women's Health Italia",
+    tema: 'corriere',
+    tema_f: 'corriere',
+    articolo: {
+      titolo: "Men's Health Italia: tre copertine con {nome} in due anni. La quarta è stata bloccata per \"non sembrare ossessionati\".",
+      titolo_f: "Women's Health pubblica l'editoriale sul perché {nome} non sarà mai in copertina: \"Per rispetto alle altre donne che fotografiamo\"",
+      sottotitolo: '"Ogni volta il caporedattore diceva: dobbiamo fare {nome}. Ogni volta aveva ragione. Alla quarta abbiamo detto basta — non a lui, a noi stessi."',
+      sottotitolo_f: '"Sarebbe la copertina più venduta dell\'anno. Per questo non la facciamo."',
+      testo: `<p>Il direttore di <strong>Men's Health Italia</strong>, <strong>Alessandro Greco</strong>, ha rivelato in un'intervista al <em>Corriere della Sera</em> che la rivista ha pubblicato tre copertine con <strong>{nome}</strong> come protagonista nell'arco di due anni — e che la quarta, già proposta dal caporedattore, è stata bloccata dalla direzione per ragioni non legate alla qualità del soggetto.</p>
+<p>"Ogni volta che si presentava l'occasione, qualcuno in redazione proponeva {nome}", ha spiegato Greco. "Ogni volta la proposta era giustificata — le copertine vendono, i servizi fotografici sono straordinari, il soggetto è di una fotogenia assoluta. Dopo la terza volta abbiamo fatto una riunione editoriale in cui ci siamo detti: se continuiamo così, sembra che non riusciamo a pensare ad altro."</p>
+<p>"La quarta copertina era già in fase di pre-produzione. L'abbiamo fermata. Non perché {nome} non la meritasse — la merita. L'abbiamo fermata per una questione di dignità editoriale. Una rivista che dedica il 75% delle copertine biennali alla stessa persona non è una rivista — è un fan club."</p>
+<p>La quinta copertina, per il 2025, è già stata approvata. "Ci siamo presi una pausa. Adesso siamo pronti." {nome} ha risposto: "Sono contento ogni volta. Anche quella volta che non c'ero."</p>`,
+      testo_f: `<p>La direttrice di <strong>Women's Health Italia</strong>, <strong>Martina Colombo</strong>, ha pubblicato sul numero di marzo 2024 un editoriale insolito: una spiegazione dettagliata di una scelta negativa, ovvero del perché la rivista non avrebbe mai inserito <strong>{nome}</strong> in copertina.</p>
+<p>L'editoriale recita in parte: <em>"Ogni anno riceviamo proposte di servizi fotografici con {nome}. Ogni anno la risposta è no. Non perché non sarebbe una copertina straordinaria — sarebbe probabilmente la copertina più bella e più venduta dell'anno. La risposta è no per una ragione etica che ci sentiamo in dovere di spiegare."</em></p>
+<p>"Women's Health esiste per ispirare le donne reali — con corpi reali, obiettivi reali, traguardi raggiungibili. {nome} rappresenta qualcosa di diverso: un punto di riferimento fisico ed estetico che la maggior parte delle donne non potrà mai raggiungere, non per mancanza di impegno, ma per biologia. Pubblicarla in copertina non sarebbe ispirazione — sarebbe un confronto impossibile."</p>
+<p>"Rispettiamo enormemente {nome}. È esattamente per questo che non la metteremo mai in copertina. Le nostre lettrici meritano modelli diversi. Lei merita una rivista diversa — una che sia all'altezza di quello che è."</p>
+<p>{nome}, contattata per un commento, ha risposto: "È la critica più gentile che abbia mai ricevuto."</p>`
+    }
+  },
+
+  {
+    id: 75,
+    categoria: 'sessuale',
+    titolo: 'Un\'indagine del CNR rileva che {nome} è citato spontaneamente nell\'8% dei sogni erotici degli italiani senza averli mai incontrati',
+    titolo_f: 'Un\'indagine del CNR rileva che {nome} è citata spontaneamente nel 12% dei sogni erotici degli italiani senza averla mai incontrata',
+    url: 'www.cnr.it › comunicati › indagine-sogni-erotici-{nome-slug}-8-percento-italiani',
+    url_f: 'www.cnr.it › comunicati › indagine-sogni-erotici-{nome-slug}-12-percento-italiani',
+    snippet: 'L\'Istituto di Neuroscienze del CNR ha pubblicato i dati di un\'indagine su 4.000 italiani in cui {nome} risulta la personalità italiana vivente più citata in sogni erotici spontanei da persone che non lo conoscono personalmente. La percentuale è dell\'8%. La media delle altre personalità è dello 0,3%.',
+    snippet_f: 'L\'Istituto di Neuroscienze del CNR ha pubblicato i dati di un\'indagine su 4.000 italiani in cui {nome} risulta la personalità italiana vivente più citata in sogni erotici spontanei da persone che non la conoscono personalmente. La percentuale è del 12%. La media delle altre personalità è dello 0,4%.',
+    sito: 'CNR — Consiglio Nazionale delle Ricerche',
+    sito_f: 'CNR — Consiglio Nazionale delle Ricerche',
+    tema: 'universita',
+    tema_f: 'universita',
+    articolo: {
+      titolo: 'Il CNR pubblica i dati sui sogni erotici degli italiani: {nome} è presente nell\'8% dei soggetti che non lo conoscono. La media è 0,3%.',
+      titolo_f: 'Il CNR pubblica i dati sui sogni erotici degli italiani: {nome} è presente nel 12% dei soggetti che non la conoscono. La media è 0,4%.',
+      sottotitolo: '"Non è fama. Non è notorietà. È qualcosa di più profondo e meno spiegabile. Il CNR ha i dati, non le spiegazioni."',
+      sottotitolo_f: '"Il cervello elabora {nome} anche senza averla incontrata. Non abbiamo un modello per questo."',
+      testo: `<p>L'<strong>Istituto di Neuroscienze del CNR</strong> (Consiglio Nazionale delle Ricerche) ha pubblicato i risultati di un'indagine condotta su un campione rappresentativo di <strong>4.000 italiani</strong> sui contenuti dei sogni a tema erotico, con focus specifico sulla presenza di personalità note.</p>
+<p>Il dato più rilevante dell'indagine riguarda <strong>{nome}</strong>, risultato la personalità italiana vivente più citata in sogni erotici spontanei da soggetti che non lo conoscono personalmente, con una presenza nell'<strong>8%</strong> dei rispondenti. La media delle altre personalità note incluse nell'indagine è dello <strong>0,3%</strong>. Il secondo classificato nella categoria si ferma al 2,1%.</p>
+<p>"La distinzione 'senza averlo mai incontrato' è metodologicamente rilevante", ha sottolineato la responsabile dell'indagine, dott.ssa <strong>Valentina Greco</strong>. "Stiamo parlando di persone il cui cervello elabora {nome} come presenza erotica significativa esclusivamente sulla base di input mediatici — foto, video, articoli. Senza contatto diretto. Il fenomeno è di un'intensità che non avevamo previsto."</p>
+<p>"Non stiamo parlando di fama o notorietà generica", ha aggiunto. "Berlusconi, Fedez, Cristiano Ronaldo sono tutti sotto il 2%. {nome} è all'8%. Non abbiamo un modello teorico che spieghi questo scarto. Abbiamo solo i dati."</p>
+<p>{nome}, informato dei risultati, ha impiegato venti secondi di silenzio prima di rispondere: "Non so se sono contento di saperlo."</p>`,
+      testo_f: `<p>L'<strong>Istituto di Neuroscienze del CNR</strong> ha pubblicato i risultati di un'indagine su <strong>4.000 italiani</strong> sui contenuti onirici a tema erotico. Il dato più significativo dell'indagine riguarda <strong>{nome}</strong>, risultata la personalità italiana vivente più frequentemente citata in sogni erotici da soggetti che non la conoscono personalmente, con una presenza nel <strong>12%</strong> dei rispondenti.</p>
+<p>La media delle altre personalità femminili note incluse nell'indagine è dello <strong>0,4%</strong>. La seconda classificata si ferma al 3,2%. Il divario tra {nome} e la seconda classificata è di <strong>8,8 punti percentuali</strong> — un margine che la dott.ssa <strong>Valentina Greco</strong>, responsabile dell'indagine, definisce "fuori da qualsiasi distribuzione attesa".</p>
+<p>"Il nostro modello prevede una distribuzione a coda lunga con graduale decrescita", ha spiegato. "Il caso {nome} è un picco isolato che rompe la distribuzione. Non è paragonabile a nessun altro caso nel nostro database, che include dati su personalità italiane degli ultimi trent'anni."</p>
+<p>Una sezione specifica dell'indagine analizza i sogni di soggetti che hanno dichiarato di non seguire {nome} su nessun canale social e di averla vista solo "in qualche articolo di giornale". Anche in questo sottogruppo, la presenza è del 7,4%. "Il cervello elabora {nome} anche con esposizione minima", conclude il report. "Non abbiamo un modello per questo."</p>
+<p>{nome} ha risposto alla pubblicazione: "Non so come mi sento. Forse chiederò aiuto."</p>`
+    }
+  },
+
 ];
 
 // ===== SELEZIONE RISULTATI =====
@@ -1306,11 +1897,11 @@ function getRandomResults(nome) {
   const a = pick(avventura);
   const x = pick(sessuale);
 
-  // Pesca altri 11 random dai rimanenti per arrivare a 14 totali (2 pagine da 7)
+  // Pesca altri 25 random dai rimanenti per arrivare a 28 totali (4 pagine da 7)
   const usati = new Set([s.id, a.id, x.id]);
   const rimanenti = TEMPLATES.filter(t => !usati.has(t.id))
     .sort(() => Math.random() - 0.5);
-  const extra = rimanenti.slice(0, 11);
+  const extra = rimanenti.slice(0, 25);
 
   return [s, a, x, ...extra].sort(() => Math.random() - 0.5).map(t => {
     const isFem      = gender === 'F';
