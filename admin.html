@@ -107,12 +107,61 @@
     .existing-list { display: flex; flex-wrap: wrap; gap: 8px; }
     .existing-chip {
       background: #3c4043;
+      border: 1px solid transparent;
       border-radius: 20px;
-      padding: 4px 12px;
+      padding: 5px 13px;
       font-size: 13px;
       color: #e8eaed;
+      cursor: pointer;
+      transition: background .15s, border-color .15s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
     }
-    .existing-chip span { color: #9aa0a6; font-size: 11px; margin-left: 4px; }
+    .existing-chip:hover { background: #4a4d51; border-color: #8ab4f8; }
+    .existing-chip.active { background: #1a3a5c; border-color: #8ab4f8; color: #8ab4f8; }
+    .existing-chip span { color: #9aa0a6; font-size: 11px; }
+    .existing-chip .chip-icon { font-size: 11px; opacity: 0.6; }
+
+    /* Banner editing */
+    .editing-banner {
+      display: none;
+      background: #1a3a5c;
+      border: 1px solid #8ab4f8;
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 13px;
+      color: #8ab4f8;
+      margin-bottom: 12px;
+      align-items: center;
+      gap: 10px;
+    }
+    .editing-banner.visible { display: flex; }
+    .editing-banner strong { color: #e8eaed; }
+    .btn-new {
+      margin-left: auto;
+      flex-shrink: 0;
+      background: none;
+      border: 1px solid #8ab4f8;
+      color: #8ab4f8;
+      border-radius: 6px;
+      padding: 5px 11px;
+      font-size: 12px;
+      cursor: pointer;
+    }
+    .btn-new:hover { background: rgba(138,180,248,.1); }
+
+    /* Nota template */
+    .tpl-legend {
+      font-size: 12px;
+      color: #9aa0a6;
+      background: #202124;
+      border-radius: 6px;
+      padding: 9px 12px;
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+    .tpl-legend b { color: #e8eaed; }
 
     /* Sezioni */
     .section {
@@ -312,7 +361,7 @@
 
   <div class="top-bar">
     <div>
-      <h1>Nuovo profilo</h1>
+      <h1 id="page-title">Nuovo profilo</h1>
       <div class="sub">Compila il form e scarica il <code>profile.json</code> <span class="pill">nuovo flusso</span></div>
     </div>
     <button class="btn-logout" onclick="logout()">Esci</button>
@@ -320,8 +369,14 @@
 
   <!-- Profili già presenti -->
   <div class="existing">
-    <div class="existing-title">Profili esistenti</div>
+    <div class="existing-title">Profili esistenti — clicca per modificare</div>
     <div class="existing-list" id="existing-list"></div>
+  </div>
+
+  <!-- Banner modifica attiva -->
+  <div class="editing-banner" id="editing-banner">
+    ✏️ Stai modificando: <strong id="editing-name"></strong>
+    <button class="btn-new" onclick="resetForm()">+ Nuovo profilo</button>
   </div>
 
   <!-- DATI PERSONA -->
@@ -407,6 +462,10 @@
       <button class="btn-sm" onclick="selectAll()">Tutti</button>
       <button class="btn-sm" onclick="deselectAll()">Nessuno</button>
     </div>
+    <div class="tpl-legend">
+      <b>✅ Spuntato</b> = questo articolo potrà apparire tra i risultati di ricerca di questa persona.<br>
+      <b>☐ Non spuntato</b> = l'articolo verrà escluso. Usa i pulsanti <b>Tutti / Nessuno</b> per gruppo per selezionare rapidamente un intero argomento. Minimo <b>28 selezionati</b> per avere 4 pagine piene.
+    </div>
     <div id="template-list"></div>
   </div>
 
@@ -473,11 +532,67 @@ function toggleNote() {
 function renderExisting() {
   const el = document.getElementById('existing-list');
   if (!PROFILI.length) { el.innerHTML = '<span style="color:#9aa0a6;font-size:13px">Nessuno ancora.</span>'; return; }
-  el.innerHTML = PROFILI.map(p =>
-    `<div class="existing-chip">${titleCase(p.nome)} <span>${p.template_ids.length} tpl</span></div>`
+  el.innerHTML = PROFILI.map((p, i) =>
+    `<div class="existing-chip" id="chip-${i}" onclick="loadProfile(${i})">
+      <span class="chip-icon">✏️</span>
+      ${titleCase(p.nome)}
+      <span>${p.template_ids.length} tpl</span>
+    </div>`
   ).join('');
 }
 function titleCase(s) { return s.replace(/\S+/g, w => w[0].toUpperCase() + w.slice(1)); }
+
+// ═══════════════════════════════════════════════════════
+// CARICA PROFILO ESISTENTE NEL FORM
+// ═══════════════════════════════════════════════════════
+function loadProfile(idx) {
+  const p = PROFILI[idx];
+  if (!p) return;
+
+  // Evidenzia chip attivo
+  document.querySelectorAll('.existing-chip').forEach((c, i) =>
+    c.classList.toggle('active', i === idx));
+
+  // Banner modifica
+  const banner = document.getElementById('editing-banner');
+  document.getElementById('editing-name').textContent = titleCase(p.nome);
+  banner.classList.add('visible');
+  document.getElementById('page-title').textContent = 'Modifica profilo';
+
+  // Popola campi
+  document.getElementById('f-nome').value        = titleCase(p.nome);
+  document.getElementById('f-professione').value  = p.dati?.professione || '';
+  document.getElementById('f-citta').value        = p.dati?.citta       || '';
+  document.getElementById('f-azienda').value      = p.dati?.azienda     || '';
+
+  // Seleziona template corrispondenti
+  const ids = new Set(p.template_ids);
+  document.querySelectorAll('input.tpl-cb').forEach(cb => {
+    cb.checked = ids.has(+cb.dataset.id);
+  });
+
+  onNomeChange(); // aggiorna titoli template + contatori + JSON
+  // Scroll al form
+  document.getElementById('f-nome').scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+// ═══════════════════════════════════════════════════════
+// RESET FORM — nuovo profilo
+// ═══════════════════════════════════════════════════════
+function resetForm() {
+  document.querySelectorAll('.existing-chip').forEach(c => c.classList.remove('active'));
+  document.getElementById('editing-banner').classList.remove('visible');
+  document.getElementById('page-title').textContent = 'Nuovo profilo';
+
+  document.getElementById('f-nome').value        = '';
+  document.getElementById('f-professione').value  = '';
+  document.getElementById('f-citta').value        = '';
+  document.getElementById('f-azienda').value      = '';
+
+  selectAll(); // riparte con tutti i template selezionati
+  onNomeChange();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
 
 // ═══════════════════════════════════════════════════════
 // LISTA TEMPLATE
