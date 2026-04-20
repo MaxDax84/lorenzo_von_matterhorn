@@ -537,14 +537,22 @@ function toggleNote() {
 // ═══════════════════════════════════════════════════════
 function renderExisting() {
   const el = document.getElementById('existing-list');
-  if (!PROFILI.length) { el.innerHTML = '<span style="color:#9aa0a6;font-size:13px">Nessuno ancora.</span>'; return; }
-  el.innerHTML = PROFILI.map((p, i) =>
-    `<div class="existing-chip" id="chip-${i}" onclick="loadProfile(${i})">
-      <span class="chip-icon">✏️</span>
-      ${titleCase(p.nome)}
-      <span>${p.template_ids.length} tpl</span>
-    </div>`
-  ).join('');
+  el.innerHTML = '';
+  if (!PROFILI.length) {
+    el.innerHTML = '<span style="color:#9aa0a6;font-size:13px">Nessuno ancora.</span>';
+    return;
+  }
+  PROFILI.forEach(function(p, i) {
+    var chip = document.createElement('div');
+    chip.className = 'existing-chip';
+    chip.id = 'chip-' + i;
+    chip.innerHTML =
+      '<span class="chip-icon">\u270F\uFE0F</span> ' +
+      titleCase(p.nome) +
+      ' <span>' + p.template_ids.length + ' tpl</span>';
+    chip.addEventListener('click', function() { loadProfile(i); });
+    el.appendChild(chip);
+  });
 }
 function titleCase(s) { return s.replace(/\S+/g, w => w[0].toUpperCase() + w.slice(1)); }
 
@@ -565,10 +573,11 @@ function loadProfile(idx) {
   document.getElementById('page-title').textContent = 'Modifica profilo';
 
   // Popola campi
+  var dati = p.dati || {};
   document.getElementById('f-nome').value         = titleCase(p.nome);
-  document.getElementById('f-professione').value  = p.dati?.professione || '';
-  document.getElementById('f-citta').value        = p.dati?.citta       || '';
-  document.getElementById('f-azienda').value      = p.dati?.azienda     || '';
+  document.getElementById('f-professione').value  = dati.professione || '';
+  document.getElementById('f-citta').value        = dati.citta       || '';
+  document.getElementById('f-azienda').value      = dati.azienda     || '';
 
   // Seleziona/deseleziona template
   const ids = new Set(p.template_ids);
