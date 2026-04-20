@@ -480,7 +480,7 @@
     <div class="section-title">Anteprima profile.json</div>
     <div class="output-box empty" id="output-box">Inserisci almeno il nome per generare il file.</div>
     <button class="copy-btn" id="download-btn" onclick="downloadJson()" disabled>⬇ Scarica profile.json</button>
-    <div class="output-hint">
+    <div class="output-hint" id="output-hint">
       Salva il file come <code>profile.json</code> dentro <code>img/profili/nome-cognome/</code>,<br>
       poi fai commit &amp; push — <code>js/profiles.js</code> verrà rigenerato automaticamente.
     </div>
@@ -560,26 +560,35 @@ function loadProfile(idx) {
     c.classList.toggle('active', i === idx));
 
   // Banner modifica
-  const banner = document.getElementById('editing-banner');
   document.getElementById('editing-name').textContent = titleCase(p.nome);
-  banner.classList.add('visible');
+  document.getElementById('editing-banner').classList.add('visible');
   document.getElementById('page-title').textContent = 'Modifica profilo';
 
   // Popola campi
-  document.getElementById('f-nome').value        = titleCase(p.nome);
+  document.getElementById('f-nome').value         = titleCase(p.nome);
   document.getElementById('f-professione').value  = p.dati?.professione || '';
   document.getElementById('f-citta').value        = p.dati?.citta       || '';
   document.getElementById('f-azienda').value      = p.dati?.azienda     || '';
 
-  // Seleziona template corrispondenti
+  // Seleziona/deseleziona template
   const ids = new Set(p.template_ids);
   document.querySelectorAll('input.tpl-cb').forEach(cb => {
     cb.checked = ids.has(+cb.dataset.id);
   });
 
-  onNomeChange(); // aggiorna titoli template + contatori + JSON
-  // Scroll al form
-  document.getElementById('f-nome').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  // Aggiorna etichetta pulsante e hint con percorso corretto
+  const slug = p.nome.toLowerCase().replace(/\s+/g, '-');
+  document.getElementById('download-btn').textContent = '💾 Salva modifiche (scarica profile.json)';
+  document.getElementById('output-hint').innerHTML =
+    `Sostituisci il file in <code>img/profili/${slug}/profile.json</code>,<br>
+     poi fai commit &amp; push — il profilo verrà aggiornato automaticamente.`;
+
+  onNomeChange(); // aggiorna titoli template + contatori + JSON preview
+
+  // Scroll alla sezione template dopo un attimo (così l'utente vede i checkbox)
+  setTimeout(() => {
+    document.getElementById('tpl-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, 150);
 }
 
 // ═══════════════════════════════════════════════════════
@@ -590,12 +599,18 @@ function resetForm() {
   document.getElementById('editing-banner').classList.remove('visible');
   document.getElementById('page-title').textContent = 'Nuovo profilo';
 
-  document.getElementById('f-nome').value        = '';
+  document.getElementById('f-nome').value         = '';
   document.getElementById('f-professione').value  = '';
   document.getElementById('f-citta').value        = '';
   document.getElementById('f-azienda').value      = '';
 
-  selectAll(); // riparte con tutti i template selezionati
+  // Ripristina pulsante e hint originali
+  document.getElementById('download-btn').textContent = '⬇ Scarica profile.json';
+  document.getElementById('output-hint').innerHTML =
+    `Salva il file come <code>profile.json</code> dentro <code>img/profili/nome-cognome/</code>,<br>
+     poi fai commit &amp; push — <code>js/profiles.js</code> verrà rigenerato automaticamente.`;
+
+  selectAll();
   onNomeChange();
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
