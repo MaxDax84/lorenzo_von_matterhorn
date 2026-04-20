@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Foogle Admin</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #202124;
+      color: #e8eaed;
+      font-family: arial, sans-serif;
+      min-height: 100vh;
+    }
+
+    /* ── GATE ─────────────────────────────────────────────────── */
+    #gate {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      gap: 14px;
+      padding: 32px 24px;
+    }
+    .logo-big { font-size: 36px; font-weight: bold; letter-spacing: -1px; margin-bottom: 8px; }
+    .logo-big .f  { color: #4285f4; }
+    .logo-big .o1 { color: #ea4335; }
+    .logo-big .o2 { color: #fbbc05; }
+    .logo-big .g  { color: #4285f4; }
+    .logo-big .l  { color: #34a853; }
+    .logo-big .e  { color: #ea4335; }
+    .logo-big .admin-tag { color: #9aa0a6; font-size: 18px; margin-left: 10px; }
+    #gate input {
+      background: #303134;
+      border: 1px solid #5f6368;
+      color: #e8eaed;
+      border-radius: 8px;
+      padding: 13px 16px;
+      font-size: 16px;
+      width: 100%;
+      max-width: 320px;
+      outline: none;
+    }
+    #gate input:focus { border-color: #8ab4f8; }
+    #gate .btn-enter {
+      background: #4285f4;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 13px 0;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+      max-width: 320px;
+    }
+    #gate .btn-enter:hover { background: #5a95f5; }
+    #gate-error { color: #ea4335; font-size: 13px; display: none; }
+
+    /* ── APP ──────────────────────────────────────────────────── */
+    #app { display: none; max-width: 680px; margin: 0 auto; padding: 24px 16px 80px; }
+
+    .top-bar {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 28px;
+      gap: 12px;
+    }
+    .top-bar h1 { font-size: 22px; color: #e8eaed; }
+    .top-bar .sub { font-size: 13px; color: #9aa0a6; margin-top: 4px; }
+    .top-bar .sub code { color: #8ab4f8; }
+    .btn-logout {
+      flex-shrink: 0;
+      background: none;
+      border: 1px solid #5f6368;
+      color: #9aa0a6;
+      border-radius: 6px;
+      padding: 7px 13px;
+      font-size: 12px;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .btn-logout:hover { border-color: #e8eaed; color: #e8eaed; }
+
+    /* Profili esistenti */
+    .existing {
+      background: #2d2f33;
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin-bottom: 20px;
+    }
+    .existing-title { font-size: 11px; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; color: #9aa0a6; margin-bottom: 10px; }
+    .existing-list { display: flex; flex-wrap: wrap; gap: 8px; }
+    .existing-chip {
+      background: #3c4043;
+      border-radius: 20px;
+      padding: 4px 12px;
+      font-size: 13px;
+      color: #e8eaed;
+    }
+    .existing-chip span { color: #9aa0a6; font-size: 11px; margin-left: 4px; }
+
+    /* Sezioni */
+    .section {
+      background: #303134;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 16px;
+    }
+    .section-title {
+      font-size: 11px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #9aa0a6;
+      margin-bottom: 16px;
+    }
+
+    /* Campi form */
+    .field { margin-bottom: 14px; }
+    .field:last-child { margin-bottom: 0; }
+    .field label { display: block; font-size: 13px; color: #9aa0a6; margin-bottom: 6px; }
+    .field input {
+      background: #202124;
+      border: 1px solid #5f6368;
+      color: #e8eaed;
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 15px;
+      width: 100%;
+      outline: none;
+    }
+    .field input:focus { border-color: #8ab4f8; }
+    .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+    /* Template header */
+    .tpl-section-header {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+    .tpl-section-header .section-title { margin-bottom: 0; flex: 1; }
+    .count-badge {
+      background: #4285f4;
+      color: #fff;
+      border-radius: 20px;
+      padding: 4px 13px;
+      font-size: 13px;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+    .count-badge.warn { background: #ea4335; }
+    .btn-sm {
+      background: #3c4043;
+      color: #e8eaed;
+      border: none;
+      border-radius: 6px;
+      padding: 6px 11px;
+      font-size: 12px;
+      cursor: pointer;
+    }
+    .btn-sm:hover { background: #4a4d51; }
+
+    /* Categorie */
+    .cat-group { margin-bottom: 22px; }
+    .cat-group:last-child { margin-bottom: 0; }
+    .cat-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #3c4043;
+    }
+    .cat-name { font-size: 14px; font-weight: bold; }
+    .cat-name.soldi    { color: #fbbc05; }
+    .cat-name.avventura { color: #34a853; }
+    .cat-name.sessuale  { color: #ea4335; }
+    .cat-sub { font-size: 12px; color: #9aa0a6; }
+    .cat-actions { margin-left: auto; display: flex; gap: 6px; }
+
+    /* Template items */
+    .tpl-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 8px 6px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background .12s;
+    }
+    .tpl-item:hover { background: #3c4043; }
+    .tpl-item input[type=checkbox] {
+      flex-shrink: 0;
+      width: 16px;
+      height: 16px;
+      margin-top: 3px;
+      accent-color: #4285f4;
+      cursor: pointer;
+    }
+    .tpl-info { flex: 1; min-width: 0; }
+    .tpl-meta { font-size: 11px; color: #9aa0a6; margin-bottom: 2px; }
+    .tpl-title {
+      font-size: 13px;
+      color: #e8eaed;
+      line-height: 1.4;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    /* Output */
+    .output-wrap { position: relative; }
+    .output-box {
+      background: #202124;
+      border: 1px solid #5f6368;
+      border-radius: 8px;
+      padding: 16px;
+      font-family: 'Courier New', monospace;
+      font-size: 13px;
+      color: #8ab4f8;
+      white-space: pre;
+      overflow-x: auto;
+      line-height: 1.7;
+      min-height: 100px;
+      margin-bottom: 12px;
+    }
+    .output-box.empty { color: #9aa0a6; font-style: italic; font-family: arial; white-space: normal; }
+    .copy-btn {
+      background: #4285f4;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 13px 0;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+      transition: background .2s;
+    }
+    .copy-btn:hover { background: #5a95f5; }
+    .copy-btn:disabled { background: #5f6368; cursor: default; }
+    .copy-btn.ok { background: #34a853; }
+    .output-hint {
+      font-size: 12px;
+      color: #9aa0a6;
+      margin-top: 10px;
+      text-align: center;
+      line-height: 1.5;
+    }
+    .output-hint code { color: #8ab4f8; }
+
+    @media (max-width: 480px) {
+      .field-row { grid-template-columns: 1fr; }
+      .tpl-title { white-space: normal; }
+      .top-bar { flex-wrap: wrap; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════ GATE PASSWORD ═══════════════════ -->
+<div id="gate">
+  <div class="logo-big">
+    <span class="f">F</span><span class="o1">o</span><span class="o2">o</span><span class="g">g</span><span class="l">l</span><span class="e">e</span><span class="admin-tag">Admin</span>
+  </div>
+  <input type="password" id="pwd-input" placeholder="Password" autocomplete="current-password" />
+  <button class="btn-enter" onclick="checkPwd()">Entra</button>
+  <div id="gate-error">Password errata. Riprova.</div>
+</div>
+
+<!-- ═══════════════════ APP ═══════════════════════════════ -->
+<div id="app">
+
+  <div class="top-bar">
+    <div>
+      <h1>Nuovo profilo</h1>
+      <div class="sub">Completa il form e copia il codice in <code>js/profiles.js</code></div>
+    </div>
+    <button class="btn-logout" onclick="logout()">Esci</button>
+  </div>
+
+  <!-- Profili già presenti -->
+  <div class="existing">
+    <div class="existing-title">Profili esistenti</div>
+    <div class="existing-list" id="existing-list"></div>
+  </div>
+
+  <!-- DATI PERSONA -->
+  <div class="section">
+    <div class="section-title">Dati persona</div>
+    <div class="field">
+      <label>Nome completo *</label>
+      <input type="text" id="f-nome" placeholder="es. Mario Rossi" autocomplete="off" oninput="onNomeChange()" />
+    </div>
+    <div class="field-row">
+      <div class="field">
+        <label>Professione <span style="color:#5f6368">(opz.)</span></label>
+        <input type="text" id="f-professione" placeholder="es. CEO, Designer…" oninput="refresh()" />
+      </div>
+      <div class="field">
+        <label>Città <span style="color:#5f6368">(opz.)</span></label>
+        <input type="text" id="f-citta" placeholder="es. Milano" oninput="refresh()" />
+      </div>
+    </div>
+    <div class="field">
+      <label>Azienda / contesto <span style="color:#5f6368">(opz.)</span></label>
+      <input type="text" id="f-azienda" placeholder="es. Acme SpA" oninput="refresh()" />
+    </div>
+  </div>
+
+  <!-- TEMPLATE -->
+  <div class="section">
+    <div class="tpl-section-header">
+      <div class="section-title">Template assegnati</div>
+      <div class="count-badge" id="count-badge">0 selezionati</div>
+      <button class="btn-sm" onclick="selectAll()">Tutti</button>
+      <button class="btn-sm" onclick="deselectAll()">Nessuno</button>
+    </div>
+    <div id="template-list"></div>
+  </div>
+
+  <!-- OUTPUT -->
+  <div class="section">
+    <div class="section-title">Codice generato</div>
+    <div class="output-box empty" id="output-box">Inserisci almeno il nome per generare il codice.</div>
+    <button class="copy-btn" id="copy-btn" onclick="copyCode()" disabled>📋 Copia negli appunti</button>
+    <div class="output-hint">
+      Incolla questo blocco dentro l'array <code>PROFILI</code> in <code>js/profiles.js</code>,<br>
+      poi crea la cartella <code>img/profili/nome-cognome/</code> con le sue foto.
+    </div>
+  </div>
+
+</div>
+
+<script src="js/profiles.js"></script>
+<script src="js/templates.js"></script>
+<script>
+
+// ═══════════════════════════════════════════════════════
+// PASSWORD  —  cambia il valore qui sotto
+// ═══════════════════════════════════════════════════════
+const PASSWORD = 'foogle';
+
+function checkPwd() {
+  if (document.getElementById('pwd-input').value === PASSWORD) {
+    sessionStorage.setItem('fa', '1');
+    showApp();
+  } else {
+    document.getElementById('gate-error').style.display = 'block';
+    document.getElementById('pwd-input').value = '';
+    document.getElementById('pwd-input').focus();
+  }
+}
+document.getElementById('pwd-input').addEventListener('keydown', e => { if (e.key === 'Enter') checkPwd(); });
+
+function logout() { sessionStorage.removeItem('fa'); location.reload(); }
+
+function showApp() {
+  document.getElementById('gate').style.display = 'none';
+  document.getElementById('app').style.display  = 'block';
+  renderExisting();
+  buildTemplateList();
+  refresh();
+}
+
+if (sessionStorage.getItem('fa') === '1') showApp();
+
+// ═══════════════════════════════════════════════════════
+// PROFILI ESISTENTI
+// ═══════════════════════════════════════════════════════
+function renderExisting() {
+  const el = document.getElementById('existing-list');
+  if (!PROFILI.length) { el.innerHTML = '<span style="color:#9aa0a6;font-size:13px">Nessuno ancora.</span>'; return; }
+  el.innerHTML = PROFILI.map(p =>
+    `<div class="existing-chip">${titleCase(p.nome)} <span>${p.template_ids.length} tpl</span></div>`
+  ).join('');
+}
+function titleCase(s) { return s.replace(/\S+/g, w => w[0].toUpperCase() + w.slice(1)); }
+
+// ═══════════════════════════════════════════════════════
+// LISTA TEMPLATE
+// ═══════════════════════════════════════════════════════
+const CATS = [
+  { key: 'soldi',     label: '💰 Soldi'    },
+  { key: 'avventura', label: '🏔 Avventura' },
+  { key: 'sessuale',  label: '🔥 Sessuale'  },
+];
+
+function buildTemplateList() {
+  const container = document.getElementById('template-list');
+  container.innerHTML = '';
+
+  CATS.forEach(cat => {
+    const templates = TEMPLATES.filter(t => t.categoria === cat.key);
+    if (!templates.length) return;
+
+    const group = document.createElement('div');
+    group.className = 'cat-group';
+
+    const header = document.createElement('div');
+    header.className = 'cat-header';
+    header.innerHTML = `
+      <span class="cat-name ${cat.key}">${cat.label}</span>
+      <span class="cat-sub" id="catsub-${cat.key}"></span>
+      <div class="cat-actions">
+        <button class="btn-sm" onclick="selectCat('${cat.key}')">Tutti</button>
+        <button class="btn-sm" onclick="deselectCat('${cat.key}')">Nessuno</button>
+      </div>`;
+    group.appendChild(header);
+
+    templates.forEach(t => {
+      const item = document.createElement('label');
+      item.className = 'tpl-item';
+      item.innerHTML = `
+        <input type="checkbox" class="tpl-cb" data-id="${t.id}" data-cat="${cat.key}" checked onchange="refresh()" />
+        <div class="tpl-info">
+          <div class="tpl-meta">${t.sito}&nbsp;·&nbsp;#${t.id}</div>
+          <div class="tpl-title" id="ttl-${t.id}">${shortTitle(t.titolo, '')}</div>
+        </div>`;
+      group.appendChild(item);
+    });
+
+    container.appendChild(group);
+  });
+}
+
+function shortTitle(titolo, nome) {
+  const str = nome
+    ? titolo.replace(/\{nome\}/g, titleCase(nome)).replace(/\{nome-slug\}/g, nome.toLowerCase().replace(/\s+/g, '-'))
+    : titolo.replace(/\{nome\}/g, '…').replace(/\{nome-slug\}/g, '…');
+  return str.replace(/\{g:([^/}]+)\/[^}]+\}/g, '$1').replace(/\|/g, '·').substring(0, 85);
+}
+
+// ═══════════════════════════════════════════════════════
+// SELEZIONE
+// ═══════════════════════════════════════════════════════
+const cbs    = () => [...document.querySelectorAll('input.tpl-cb')];
+const cbsCat = c => [...document.querySelectorAll(`input.tpl-cb[data-cat="${c}"]`)];
+
+function selectAll()      { cbs().forEach(c => c.checked = true);     refresh(); }
+function deselectAll()    { cbs().forEach(c => c.checked = false);    refresh(); }
+function selectCat(cat)   { cbsCat(cat).forEach(c => c.checked = true);  refresh(); }
+function deselectCat(cat) { cbsCat(cat).forEach(c => c.checked = false); refresh(); }
+
+function selectedIds() { return cbs().filter(c => c.checked).map(c => +c.dataset.id); }
+
+// ═══════════════════════════════════════════════════════
+// REFRESH (titoli + contatori + codice)
+// ═══════════════════════════════════════════════════════
+function onNomeChange() {
+  // Aggiorna titoli template col nome inserito
+  const nome   = document.getElementById('f-nome').value.trim();
+  const gender = nome ? detectGender(nome) : 'M';
+  TEMPLATES.forEach(t => {
+    const el = document.getElementById('ttl-' + t.id);
+    if (!el) return;
+    const src = (gender === 'F' && t.titolo_f) ? t.titolo_f : t.titolo;
+    el.textContent = shortTitle(src, nome);
+  });
+  refresh();
+}
+
+function refresh() {
+  const ids = selectedIds();
+  const total = cbs().length;
+
+  // Badge globale
+  const badge = document.getElementById('count-badge');
+  badge.textContent = `${ids.length} / ${total} selezionati`;
+  badge.classList.toggle('warn', ids.length < 28);
+
+  // Badge per categoria
+  CATS.forEach(cat => {
+    const el = document.getElementById('catsub-' + cat.key);
+    if (!el) return;
+    const sel = cbsCat(cat.key).filter(c => c.checked).length;
+    const tot = cbsCat(cat.key).length;
+    el.textContent = `${sel} / ${tot}`;
+  });
+
+  generateCode(ids);
+}
+
+// ═══════════════════════════════════════════════════════
+// GENERATORE CODICE
+// ═══════════════════════════════════════════════════════
+function generateCode(ids) {
+  const nome    = document.getElementById('f-nome').value.trim();
+  const prof    = document.getElementById('f-professione').value.trim();
+  const citta   = document.getElementById('f-citta').value.trim();
+  const azienda = document.getElementById('f-azienda').value.trim();
+
+  const box = document.getElementById('output-box');
+  const btn = document.getElementById('copy-btn');
+
+  if (!nome) {
+    box.className = 'output-box empty';
+    box.textContent = 'Inserisci almeno il nome per generare il codice.';
+    btn.disabled = true;
+    return;
+  }
+
+  // Formatta ids su righe da 10
+  const rows = [];
+  for (let i = 0; i < ids.length; i += 10) {
+    rows.push('      ' + ids.slice(i, i + 10).join(', ') + ',');
+  }
+  const idsStr = ids.length
+    ? '\n' + rows.join('\n') + '\n    '
+    : '';
+
+  // Riga dati opzionali
+  const hasDati = prof || citta || azienda;
+  let datiStr = '';
+  if (hasDati) {
+    const parts = [];
+    if (prof)   parts.push(`professione: '${esc(prof)}'`);
+    if (citta)  parts.push(`citta: '${esc(citta)}'`);
+    if (azienda) parts.push(`azienda: '${esc(azienda)}'`);
+    datiStr = `\n    dati: { ${parts.join(', ')} },`;
+  }
+
+  const code =
+`  {\n    nome: "${nome.toLowerCase()}",\n    template_ids: [${idsStr}],${datiStr}\n  },`;
+
+  box.className = 'output-box';
+  box.textContent = code;
+  btn.disabled = false;
+}
+
+function esc(s) { return s.replace(/'/g, "\\'"); }
+
+// ═══════════════════════════════════════════════════════
+// COPIA
+// ═══════════════════════════════════════════════════════
+function copyCode() {
+  const text = document.getElementById('output-box').textContent;
+  if (!text) return;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.getElementById('copy-btn');
+    btn.textContent = '✓ Copiato!';
+    btn.classList.add('ok');
+    setTimeout(() => {
+      btn.textContent = '📋 Copia negli appunti';
+      btn.classList.remove('ok');
+    }, 2500);
+  }).catch(() => {
+    // Fallback per browser senza clipboard API (es. alcuni mobile)
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    const btn = document.getElementById('copy-btn');
+    btn.textContent = '✓ Copiato!';
+    btn.classList.add('ok');
+    setTimeout(() => {
+      btn.textContent = '📋 Copia negli appunti';
+      btn.classList.remove('ok');
+    }, 2500);
+  });
+}
+
+</script>
+</body>
+</html>
