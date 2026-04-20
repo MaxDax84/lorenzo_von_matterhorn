@@ -1881,25 +1881,29 @@ const TEMPLATES = [
 // ===== SELEZIONE RISULTATI =====
 
 function getRandomResults(nome) {
-  const gender = detectGender(nome);
+  const gender  = detectGender(nome);
+  const profilo = getProfilo(nome);
 
-  const soldi    = TEMPLATES.filter(t => t.categoria === 'soldi');
-  const avventura = TEMPLATES.filter(t => t.categoria === 'avventura');
-  const sessuale  = TEMPLATES.filter(t => t.categoria === 'sessuale');
+  // Pool: solo i template assegnati al profilo, oppure tutti come fallback
+  const pool = profilo
+    ? TEMPLATES.filter(t => profilo.template_ids.includes(t.id))
+    : TEMPLATES;
 
-  const pick = arr => arr[Math.floor(Math.random() * arr.length)];
+  const soldi    = pool.filter(t => t.categoria === 'soldi');
+  const avventura = pool.filter(t => t.categoria === 'avventura');
+  const sessuale  = pool.filter(t => t.categoria === 'sessuale');
 
-  const s = pick(soldi);
-  const a = pick(avventura);
-  const x = pick(sessuale);
+  const pick = arr => arr.length ? arr[Math.floor(Math.random() * arr.length)] : null;
 
-  // Pesca altri 25 random dai rimanenti per arrivare a 28 totali (4 pagine da 7)
-  const usati = new Set([s.id, a.id, x.id]);
-  const rimanenti = TEMPLATES.filter(t => !usati.has(t.id))
-    .sort(() => Math.random() - 0.5);
-  const extra = rimanenti.slice(0, 25);
+  // Garantisce almeno 1 per categoria (se disponibile nel pool)
+  const guaranteed = [pick(soldi), pick(avventura), pick(sessuale)].filter(Boolean);
+  const usati = new Set(guaranteed.map(t => t.id));
 
-  return [s, a, x, ...extra].sort(() => Math.random() - 0.5).map(t => {
+  // Pesca il resto per arrivare a 28 totali (4 pagine da 7)
+  const rimanenti = pool.filter(t => !usati.has(t.id)).sort(() => Math.random() - 0.5);
+  const extra = rimanenti.slice(0, 28 - guaranteed.length);
+
+  return [...guaranteed, ...extra].sort(() => Math.random() - 0.5).map(t => {
     const isFem      = gender === 'F';
     const titoloSrc  = (isFem && t.titolo_f)  ? t.titolo_f  : t.titolo;
     const snippetSrc = (isFem && t.snippet_f) ? t.snippet_f : t.snippet;

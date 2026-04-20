@@ -1,26 +1,22 @@
 /**
- * LISTA DEI NOMI "FAMOSI"
- * Aggiungi qui i nomi che devono mostrare i risultati fake di Foogle.
- * Case-insensitive. Puoi mettere nome+cognome oppure solo il nome.
+ * Cerca il profilo corrispondente alla query.
+ * Confronto case-insensitive, ordine delle parole indifferente.
+ * Restituisce l'oggetto profilo oppure null.
  */
-const NOMI_FAMOSI = [
-  "stefano baglio",
-  "nicola davanzo",
-  "luca curtarelli",
-  // aggiungi altri nomi qui...
-];
-
-/**
- * Controlla se il nome cercato è nella lista.
- * Case-insensitive, ordine delle parole indifferente.
- */
-function isNomeFamoso(q) {
+function getProfilo(q) {
   const qWords = q.toLowerCase().trim().split(/\s+/).sort();
-  return NOMI_FAMOSI.some(nome => {
-    const nWords = nome.toLowerCase().trim().split(/\s+/).sort();
+  return PROFILI.find(p => {
+    const nWords = p.nome.toLowerCase().trim().split(/\s+/).sort();
     return (
       nWords.length === qWords.length &&
       nWords.every((w, i) => w === qWords[i])
     );
-  });
+  }) || null;
+}
+
+/**
+ * Restituisce true se la query corrisponde a un profilo in PROFILI.
+ */
+function isNomeFamoso(q) {
+  return getProfilo(q) !== null;
 }
