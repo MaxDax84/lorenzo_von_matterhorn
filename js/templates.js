@@ -993,8 +993,6 @@ const TEMPLATES = [
     }
   },
 
-  ,
-
   // ===== CATEGORIA: SESSUALE (nuovi) =====
 
   {
@@ -1288,8 +1286,6 @@ const TEMPLATES = [
 <p>{nome} ha risposto alla dichiarazione con un messaggio diretto a Bellocchio: "La capisco. E la rispetto moltissimo per averlo detto." Bellocchio ha risposto: "Questo non aiuta."</p>`
     }
   },
-
-  ,
 
   {
     id: 56,
