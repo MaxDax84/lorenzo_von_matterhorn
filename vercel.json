@@ -1,5 +1,6 @@
 {
   "buildCommand": "node scripts/genera-profili.js",
+  "outputDirectory": ".",
   "functions": {
     "api/foto.js": {
       "includeFiles": "img/profili/**"
