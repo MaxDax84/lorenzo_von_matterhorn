@@ -763,8 +763,8 @@ a { text-decoration: none; color: inherit; }
 
 .article-photo-wrap img {
   width: 100%;
-  max-height: 420px;
-  object-fit: cover;
+  max-height: none;
+  object-fit: contain;
   display: block;
 }
 
