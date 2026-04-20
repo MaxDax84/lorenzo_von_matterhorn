@@ -77,3 +77,54 @@ btnSave.addEventListener('click', () => {
     setTimeout(() => saveStatus.classList.remove('visible'), 2000);
   });
 });
+
+// Sincronizza nomi dal sito
+const btnSync    = document.getElementById('btn-sync');
+const syncStatus = document.getElementById('sync-status');
+
+btnSync.addEventListener('click', async () => {
+  const base = urlInput.value.trim().replace(/\/$/, '');
+  if (!base) {
+    syncStatus.textContent = 'Inserisci prima l\'URL del sito.';
+    syncStatus.style.color = '#ea4335';
+    return;
+  }
+
+  btnSync.disabled = true;
+  syncStatus.style.color = '#9aa0a6';
+  syncStatus.textContent = 'Connessione in corso…';
+
+  try {
+    const res  = await fetch(base + '/api/nomi');
+    const data = await res.json();
+
+    if (!res.ok || !Array.isArray(data.nomi)) {
+      throw new Error(data.error || 'Risposta non valida');
+    }
+
+    // Unisci senza duplicati (case-insensitive)
+    const existing = new Set(nomi.map(n => n.toLowerCase()));
+    let aggiunti = 0;
+    for (const n of data.nomi) {
+      if (!existing.has(n.toLowerCase())) {
+        nomi.push(n);
+        aggiunti++;
+      }
+    }
+
+    renderNomi();
+    syncStatus.style.color = '#34a853';
+    syncStatus.textContent = aggiunti > 0
+      ? `✓ ${aggiunti} nuovo/i nome/i aggiunto/i.`
+      : '✓ Nomi già aggiornati.';
+
+    // Salva automaticamente dopo sync
+    chrome.storage.sync.set({ nomi, foogleUrl: base, attivo: toggleAttivo.checked });
+
+  } catch (err) {
+    syncStatus.style.color = '#ea4335';
+    syncStatus.textContent = 'Errore: ' + err.message;
+  } finally {
+    btnSync.disabled = false;
+  }
+});

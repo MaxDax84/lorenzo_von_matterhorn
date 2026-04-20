@@ -201,6 +201,19 @@
     }
 
     .btn-save:hover { background: #3c4043; }
+
+    .btn-sync {
+      background: none;
+      border: 1px solid #1a73e8;
+      border-radius: 4px;
+      color: #8ab4f8;
+      font-size: 12px;
+      padding: 5px 10px;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .btn-sync:hover { background: rgba(26,115,232,0.12); }
+    .btn-sync:disabled { opacity: 0.4; cursor: default; }
   </style>
 </head>
 <body>
@@ -224,6 +237,13 @@
     <div class="section-label">URL del tuo sito Foogle</div>
     <input type="text" id="foogle-url" placeholder="https://il-tuo-sito.vercel.app" />
     <div class="url-hint">Inserisci l'URL del tuo deploy Vercel</div>
+  </div>
+
+  <!-- Sincronizza nomi dal sito -->
+  <div class="section">
+    <div class="section-label">Sincronizza nomi</div>
+    <button class="btn-sync" id="btn-sync" style="width:100%">↻ Scarica nomi dal sito</button>
+    <div class="url-hint" id="sync-status" style="margin-top:6px"></div>
   </div>
 
   <!-- Lista nomi da intercettare -->

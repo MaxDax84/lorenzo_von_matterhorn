@@ -2,8 +2,7 @@
   "buildCommand": "node scripts/genera-profili.js",
   "outputDirectory": ".",
   "functions": {
-    "api/foto.js": {
-      "includeFiles": "img/profili/**"
-    }
+    "api/foto.js":  { "includeFiles": "img/profili/**" },
+    "api/nomi.js":  { "includeFiles": "img/profili/**" }
   }
 }
