@@ -72,6 +72,17 @@
     .top-bar h1 { font-size: 22px; color: #e8eaed; }
     .top-bar .sub { font-size: 13px; color: #9aa0a6; margin-top: 4px; }
     .top-bar .sub code { color: #8ab4f8; }
+    .top-bar .sub .pill {
+      display: inline-block;
+      background: #34a853;
+      color: #fff;
+      border-radius: 4px;
+      padding: 1px 7px;
+      font-size: 11px;
+      font-weight: bold;
+      margin-left: 4px;
+      vertical-align: middle;
+    }
     .btn-logout {
       flex-shrink: 0;
       background: none;
@@ -277,7 +288,7 @@
   <div class="top-bar">
     <div>
       <h1>Nuovo profilo</h1>
-      <div class="sub">Completa il form e copia il codice in <code>js/profiles.js</code></div>
+      <div class="sub">Compila il form e scarica il <code>profile.json</code> <span class="pill">nuovo flusso</span></div>
     </div>
     <button class="btn-logout" onclick="logout()">Esci</button>
   </div>
@@ -324,12 +335,12 @@
 
   <!-- OUTPUT -->
   <div class="section">
-    <div class="section-title">Codice generato</div>
-    <div class="output-box empty" id="output-box">Inserisci almeno il nome per generare il codice.</div>
-    <button class="copy-btn" id="copy-btn" onclick="copyCode()" disabled>📋 Copia negli appunti</button>
+    <div class="section-title">Anteprima profile.json</div>
+    <div class="output-box empty" id="output-box">Inserisci almeno il nome per generare il file.</div>
+    <button class="copy-btn" id="download-btn" onclick="downloadJson()" disabled>⬇ Scarica profile.json</button>
     <div class="output-hint">
-      Incolla questo blocco dentro l'array <code>PROFILI</code> in <code>js/profiles.js</code>,<br>
-      poi crea la cartella <code>img/profili/nome-cognome/</code> con le sue foto.
+      Salva il file come <code>profile.json</code> dentro <code>img/profili/nome-cognome/</code>,<br>
+      poi fai commit &amp; push — <code>js/profiles.js</code> verrà rigenerato automaticamente.
     </div>
   </div>
 
@@ -533,8 +544,10 @@ function refresh() {
 }
 
 // ═══════════════════════════════════════════════════════
-// GENERATORE CODICE
+// GENERATORE JSON
 // ═══════════════════════════════════════════════════════
+let _currentJson = null; // ultimo JSON generato (per il download)
+
 function generateCode(ids) {
   const nome    = document.getElementById('f-nome').value.trim();
   const prof    = document.getElementById('f-professione').value.trim();
@@ -542,77 +555,52 @@ function generateCode(ids) {
   const azienda = document.getElementById('f-azienda').value.trim();
 
   const box = document.getElementById('output-box');
-  const btn = document.getElementById('copy-btn');
+  const btn = document.getElementById('download-btn');
 
   if (!nome) {
+    _currentJson = null;
     box.className = 'output-box empty';
-    box.textContent = 'Inserisci almeno il nome per generare il codice.';
+    box.textContent = 'Inserisci almeno il nome per generare il file.';
     btn.disabled = true;
     return;
   }
 
-  // Formatta ids su righe da 10
-  const rows = [];
-  for (let i = 0; i < ids.length; i += 10) {
-    rows.push('      ' + ids.slice(i, i + 10).join(', ') + ',');
-  }
-  const idsStr = ids.length
-    ? '\n' + rows.join('\n') + '\n    '
-    : '';
-
-  // Riga dati opzionali
-  const hasDati = prof || citta || azienda;
-  let datiStr = '';
-  if (hasDati) {
-    const parts = [];
-    if (prof)   parts.push(`professione: '${esc(prof)}'`);
-    if (citta)  parts.push(`citta: '${esc(citta)}'`);
-    if (azienda) parts.push(`azienda: '${esc(azienda)}'`);
-    datiStr = `\n    dati: { ${parts.join(', ')} },`;
+  const obj = { nome: nome.toLowerCase(), template_ids: ids };
+  if (prof || citta || azienda) {
+    obj.dati = {};
+    if (prof)    obj.dati.professione = prof;
+    if (citta)   obj.dati.citta       = citta;
+    if (azienda) obj.dati.azienda     = azienda;
   }
 
-  const code =
-`  {\n    nome: "${nome.toLowerCase()}",\n    template_ids: [${idsStr}],${datiStr}\n  },`;
+  _currentJson = JSON.stringify(obj, null, 2);
 
   box.className = 'output-box';
-  box.textContent = code;
+  box.textContent = _currentJson;
   btn.disabled = false;
 }
 
-function esc(s) { return s.replace(/'/g, "\\'"); }
+// ═══════════════════════════════════════════════════════
+// DOWNLOAD
+// ═══════════════════════════════════════════════════════
+function downloadJson() {
+  if (!_currentJson) return;
+  const nome = document.getElementById('f-nome').value.trim().toLowerCase().replace(/\s+/g, '-');
+  const blob = new Blob([_currentJson], { type: 'application/json' });
+  const url  = URL.createObjectURL(blob);
+  const a    = document.createElement('a');
+  a.href     = url;
+  a.download = 'profile.json';
+  a.click();
+  URL.revokeObjectURL(url);
 
-// ═══════════════════════════════════════════════════════
-// COPIA
-// ═══════════════════════════════════════════════════════
-function copyCode() {
-  const text = document.getElementById('output-box').textContent;
-  if (!text) return;
-  navigator.clipboard.writeText(text).then(() => {
-    const btn = document.getElementById('copy-btn');
-    btn.textContent = '✓ Copiato!';
-    btn.classList.add('ok');
-    setTimeout(() => {
-      btn.textContent = '📋 Copia negli appunti';
-      btn.classList.remove('ok');
-    }, 2500);
-  }).catch(() => {
-    // Fallback per browser senza clipboard API (es. alcuni mobile)
-    const ta = document.createElement('textarea');
-    ta.value = text;
-    ta.style.position = 'fixed';
-    ta.style.opacity = '0';
-    document.body.appendChild(ta);
-    ta.select();
-    document.execCommand('copy');
-    document.body.removeChild(ta);
-    const btn = document.getElementById('copy-btn');
-    btn.textContent = '✓ Copiato!';
-    btn.classList.add('ok');
-    setTimeout(() => {
-      btn.textContent = '📋 Copia negli appunti';
-      btn.classList.remove('ok');
-    }, 2500);
-  });
+  const btn = document.getElementById('download-btn');
+  btn.textContent = '✓ Download avviato!';
+  btn.classList.add('ok');
+  setTimeout(() => {
+    btn.textContent = '⬇ Scarica profile.json';
+    btn.classList.remove('ok');
+  }, 2500);
 }
 
 </script>
