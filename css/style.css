@@ -189,6 +189,14 @@ a { text-decoration: none; color: inherit; }
 .sb-lens { color: inherit; }
 .sb-lens:hover { background: rgba(255,255,255,0.08); }
 
+@media (max-width: 640px) {
+  .sb-icon       { width: 34px; height: 34px; }
+  .sb-icon-plus  { width: 34px; height: 34px; }
+  .sb-divider    { margin: 0 1px; }
+  .search-bar-outer { height: 44px; }
+  .sb-icon-left  { padding: 0 8px 0 14px; }
+}
+
 .sb-divider {
   width: 1px;
   height: 22px;
@@ -271,6 +279,20 @@ a { text-decoration: none; color: inherit; }
   left: 0;
   right: 0;
   z-index: 10;
+}
+
+/* Su mobile il footer diventa statico (non copre la search bar) */
+@media (max-width: 640px) {
+  .home-footer {
+    position: static;
+    margin-top: auto;
+  }
+  .home-body {
+    min-height: 100dvh;
+  }
+  .home-center {
+    padding-bottom: 24px;
+  }
 }
 
 .home-footer-country {
@@ -397,6 +419,13 @@ a { text-decoration: none; color: inherit; }
 }
 
 .results-bar-outer .icon-btn:hover { color: #aecbfa; }
+
+@media (max-width: 640px) {
+  .results-bar-outer { height: 42px; }
+  .results-bar-outer .icon-search-left { padding: 0 8px 0 14px; }
+  .results-bar-outer .icon-btn { padding: 0 10px; }
+  #results-search-input { font-size: 15px; }
+}
 
 .btn-search-blue {
   width: 40px;
@@ -801,4 +830,227 @@ a { text-decoration: none; color: inherit; }
   position: absolute; width: 1px; height: 1px;
   padding: 0; margin: -1px; overflow: hidden;
   clip: rect(0,0,0,0); border: 0;
+}
+
+/* =========================================================
+   RESPONSIVE — MOBILE FIRST
+   ========================================================= */
+
+/* ── Homepage ──────────────────────────────────────────────────────────── */
+
+/* Tablet: nascondi i link a sinistra (non esistono su Google reale) */
+@media (max-width: 860px) {
+  .top-left { display: none; }
+}
+
+/* Mobile generico */
+@media (max-width: 640px) {
+  .home-top-bar {
+    padding: 10px 12px 0;
+  }
+  .home-top-bar a {
+    padding: 7px 6px;
+    font-size: 13px;
+  }
+  .top-icon-btn {
+    width: 36px;
+    height: 36px;
+  }
+  .top-avatar {
+    width: 30px;
+    height: 30px;
+    font-size: 13px;
+    margin-left: 4px;
+  }
+
+  /* Logo più piccolo */
+  .home-logo {
+    font-size: 62px;
+    letter-spacing: -2px;
+    margin-bottom: 22px;
+  }
+
+  /* Search bar: margini laterali come Google mobile */
+  .home-search-section {
+    padding: 0 20px;
+    width: 100%;
+  }
+
+  /* Bottoni */
+  .home-buttons {
+    margin-top: 22px;
+    gap: 8px;
+    padding: 0 20px;
+  }
+  .btn-google {
+    height: 34px;
+    padding: 0 14px;
+    font-size: 13px;
+  }
+
+  /* Footer: meno invasivo su mobile */
+  .home-center {
+    padding-bottom: 88px;
+  }
+  .home-footer-country {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+  .home-footer-links {
+    padding: 8px 16px;
+    gap: 0;
+  }
+  .home-footer-links a {
+    padding: 4px 7px;
+    font-size: 12px;
+  }
+}
+
+/* Mobile piccolo: footer minimale — solo Privacy + Termini */
+@media (max-width: 480px) {
+  .footer-left  { display: none; }
+  .footer-center { display: none; }
+  .home-footer-links { justify-content: center; }
+}
+
+/* ── Results page ──────────────────────────────────────────────────────── */
+
+@media (max-width: 640px) {
+  /* Header */
+  .results-header {
+    padding: 8px 10px 6px;
+    gap: 8px;
+  }
+  .results-logo {
+    font-size: 24px;
+    letter-spacing: -0.5px;
+  }
+
+  /* Tabs */
+  .results-tabs {
+    padding-left: 6px;
+    gap: 0;
+  }
+  .results-tab {
+    padding: 0 10px;
+    font-size: 12px;
+    height: 44px;
+  }
+
+  /* Risultati */
+  .results-main {
+    padding: 14px 14px 40px;
+  }
+  .results-count {
+    font-size: 12px;
+    margin-bottom: 16px;
+  }
+  .result-item {
+    margin-bottom: 22px;
+  }
+  .result-favicon {
+    width: 22px;
+    height: 22px;
+    font-size: 10px;
+  }
+  .result-site-name {
+    font-size: 13px;
+  }
+  .result-url-breadcrumb {
+    font-size: 12px;
+  }
+  /* Titolo risultato: 18px come Google mobile */
+  .result-title-link {
+    font-size: 18px;
+    line-height: 1.25;
+  }
+  .result-snippet {
+    font-size: 13px;
+    line-height: 20px;
+    margin-top: 4px;
+  }
+
+  /* Paginazione */
+  .results-pagination {
+    margin-top: 28px;
+    flex-wrap: wrap;
+  }
+  .page-btn {
+    min-width: 36px;
+    height: 36px;
+    font-size: 13px;
+    padding: 0 8px;
+  }
+}
+
+/* Search bar nei risultati su mobile */
+@media (max-width: 480px) {
+  .results-header {
+    padding: 6px 8px 4px;
+  }
+  .results-logo {
+    font-size: 20px;
+  }
+}
+
+/* ── Article page ──────────────────────────────────────────────────────── */
+
+@media (max-width: 860px) {
+  /* Nascondi la nav su tablet/mobile: troppo affollata */
+  .site-nav { display: none; }
+  .site-header-right { font-size: 11px; }
+}
+
+@media (max-width: 640px) {
+  .site-header {
+    padding: 0 14px;
+    height: 52px;
+    gap: 12px;
+  }
+  .site-logo {
+    font-size: 17px;
+  }
+  .site-subheader {
+    padding: 0 14px;
+  }
+  .back-strip {
+    padding: 7px 14px;
+  }
+  .article-back {
+    font-size: 12px;
+  }
+  .article-container {
+    padding: 20px 16px 52px;
+  }
+  .article-category-tag {
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
+  /* Titolo: 26px come Google mobile */
+  .article-title {
+    font-size: 26px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+  .article-subtitle {
+    font-size: 16px;
+    line-height: 1.4;
+    margin-bottom: 16px;
+  }
+  .article-byline {
+    font-size: 12px;
+    margin-bottom: 16px;
+    padding-bottom: 14px;
+  }
+  .article-body p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 14px;
+  }
+  .article-body ol,
+  .article-body ul {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-left: 20px;
+  }
 }
