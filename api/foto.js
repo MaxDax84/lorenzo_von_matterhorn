@@ -26,7 +26,7 @@ export default function handler(req, res) {
     if (files.length === 0) return res.status(200).json({ foto: null });
 
     const random = files[Math.floor(Math.random() * files.length)];
-    return res.status(200).json({ foto: `img/profili/${slug}/${random}` });
+    return res.status(200).json({ foto: `/img/profili/${slug}/${random}` });
   } catch {
     // Cartella non esiste o errore di lettura → nessuna foto
     return res.status(200).json({ foto: null });

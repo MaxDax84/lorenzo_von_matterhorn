@@ -17,7 +17,7 @@
   <div class="site-subheader" id="site-subheader"></div>
 
   <div class="back-strip">
-    <button class="article-back" onclick="history.back()">← Torna ai risultati di Foogle</button>
+    <button class="article-back" onclick="history.back()">← Torna ai risultati di ricerca</button>
   </div>
 
   <div class="article-container">
@@ -88,12 +88,18 @@
     document.getElementById('article-subtitle').textContent  = sottotitoloArt;
     document.getElementById('article-body').innerHTML        = testoArt;
 
-    // Byline
+    // Byline — seed deterministico (nome + template id) → stessa data ad ogni ricarica
+    function seededInt(seed, max) {
+      let h = 0;
+      for (let i = 0; i < seed.length; i++) h = Math.imul(31, h) + seed.charCodeAt(i) | 0;
+      return Math.abs(h) % max;
+    }
+    const seed  = nome.toLowerCase() + tId;
     const d = new Date();
-    d.setDate(d.getDate() - Math.floor(Math.random() * 60));
+    d.setDate(d.getDate() - seededInt(seed, 180));
     const dataStr = d.toLocaleDateString('it-IT', { day: 'numeric', month: 'long', year: 'numeric' });
     const autori = ['Redazione','Marco Ferretti','Laura Bianchi','Giulia Moretti','Alessandro Conti','Stefano Ricci'];
-    const autore = autori[Math.floor(Math.random() * autori.length)];
+    const autore = autori[seededInt(seed + 'a', autori.length)];
     document.getElementById('article-byline').innerHTML =
       `Di <strong>${autore}</strong> &nbsp;·&nbsp; ${dataStr} &nbsp;·&nbsp; 4 min di lettura`;
 
