@@ -400,15 +400,21 @@
       <label>Azienda / contesto <span style="color:#5f6368">(opz.)</span></label>
       <input type="text" id="f-azienda" placeholder="es. Acme SpA" oninput="refresh()" />
     </div>
+    <div style="margin-top:16px;text-align:right;">
+      <button class="btn-sm" style="background:#4285f4;color:#fff;padding:8px 16px;font-size:13px;"
+        onclick="document.getElementById('tpl-section').scrollIntoView({behavior:'smooth'})">
+        ↓ Seleziona gli articoli
+      </button>
+    </div>
   </div>
 
   <!-- NOTE ARGOMENTI -->
   <div class="section" id="note-section">
     <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;">
       <div class="section-title" style="margin-bottom:0">Guida agli argomenti</div>
-      <button class="btn-sm" onclick="toggleNote()" id="note-toggle">Nascondi</button>
+      <button class="btn-sm" onclick="toggleNote()" id="note-toggle">Mostra</button>
     </div>
-    <div id="note-body">
+    <div id="note-body" style="display:none">
       <p style="font-size:13px;color:#9aa0a6;margin-bottom:14px;line-height:1.6">
         Seleziona i macro-argomenti più adatti alla persona. Ogni gruppo genera articoli con un tono e un contesto specifico.
         Per un risultato credibile seleziona almeno <strong style="color:#e8eaed">28 template</strong> (4 pagine piene).
@@ -455,7 +461,7 @@
   </div>
 
   <!-- TEMPLATE -->
-  <div class="section">
+  <div class="section" id="tpl-section" style="border: 1px solid #3c4043;">
     <div class="tpl-section-header">
       <div class="section-title">Template assegnati</div>
       <div class="count-badge" id="count-badge">0 selezionati</div>
