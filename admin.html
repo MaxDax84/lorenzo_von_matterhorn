@@ -263,10 +263,35 @@
     }
     .output-hint code { color: #8ab4f8; }
 
+    /* Note argomenti */
+    .note-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .note-card {
+      background: #202124;
+      border: 1px solid #3c4043;
+      border-left: 3px solid #5f6368;
+      border-radius: 8px;
+      padding: 11px 13px;
+    }
+    .note-card-title {
+      font-size: 12px;
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+    .note-card-body {
+      font-size: 12px;
+      color: #9aa0a6;
+      line-height: 1.55;
+    }
+
     @media (max-width: 480px) {
       .field-row { grid-template-columns: 1fr; }
       .tpl-title { white-space: normal; }
       .top-bar { flex-wrap: wrap; }
+      .note-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -319,6 +344,58 @@
     <div class="field">
       <label>Azienda / contesto <span style="color:#5f6368">(opz.)</span></label>
       <input type="text" id="f-azienda" placeholder="es. Acme SpA" oninput="refresh()" />
+    </div>
+  </div>
+
+  <!-- NOTE ARGOMENTI -->
+  <div class="section" id="note-section">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;">
+      <div class="section-title" style="margin-bottom:0">Guida agli argomenti</div>
+      <button class="btn-sm" onclick="toggleNote()" id="note-toggle">Nascondi</button>
+    </div>
+    <div id="note-body">
+      <p style="font-size:13px;color:#9aa0a6;margin-bottom:14px;line-height:1.6">
+        Seleziona i macro-argomenti più adatti alla persona. Ogni gruppo genera articoli con un tono e un contesto specifico.
+        Per un risultato credibile seleziona almeno <strong style="color:#e8eaed">28 template</strong> (4 pagine piene).
+      </p>
+      <div class="note-grid">
+
+        <div class="note-card" style="border-color:#fbbc05">
+          <div class="note-card-title" style="color:#fbbc05">💰 Finanza &amp; Business</div>
+          <div class="note-card-body">Forbes, Il Sole 24 Ore, Bloomberg. Articoli su patrimoni, investimenti, startup, scalate aziendali. Ideale per chi ha un background imprenditoriale o professionale.</div>
+        </div>
+
+        <div class="note-card" style="border-color:#34a853">
+          <div class="note-card-title" style="color:#34a853">🏔 Avventura, Sport &amp; Record</div>
+          <div class="note-card-body">National Geographic, Guinness World Records. Scalate, record, imprese sportive, spedizioni. Funziona bene con persone attive o con una storia personale avventurosa.</div>
+        </div>
+
+        <div class="note-card" style="border-color:#ff7043">
+          <div class="note-card-title" style="color:#ff7043">🎨 Arte, Cultura &amp; Talenti</div>
+          <div class="note-card-body">Corriere della Sera, riviste culturali. Riconoscimenti artistici, talenti nascosti, interviste su passioni e creatività. Adatto a persone con interessi culturali.</div>
+        </div>
+
+        <div class="note-card" style="border-color:#00acc1">
+          <div class="note-card-title" style="color:#00acc1">🏥 Medicina &amp; Casi Clinici</div>
+          <div class="note-card-body">Chirurgia Estetica Internazionale, OMS, riviste mediche. Casi clinici particolari, studi sul corpo, anatomia. Include i template a tema sessuale più espliciti.</div>
+        </div>
+
+        <div class="note-card" style="border-color:#4285f4">
+          <div class="note-card-title" style="color:#4285f4">🔬 Scienza, Università &amp; Ricerca</div>
+          <div class="note-card-body">Università di Bologna, pubblicazioni accademiche. Studi, dottorati, scoperte scientifiche. Tono serio e credibile. Ottimo per dare autorevolezza al profilo.</div>
+        </div>
+
+        <div class="note-card" style="border-color:#ea4335">
+          <div class="note-card-title" style="color:#ea4335">✨ Fascino &amp; Vita Sociale</div>
+          <div class="note-card-body">Gambero Rosso, magazine lifestyle. Riconoscimenti per carisma, eleganza, vita sociale, cucina, stile. Template leggeri e divertenti, buoni come "riempitivo" credibile.</div>
+        </div>
+
+        <div class="note-card" style="border-color:#ab47bc">
+          <div class="note-card-title" style="color:#ab47bc">📱 Media, Virale &amp; Tendenze</div>
+          <div class="note-card-body">Social media, blog, tendenze web. Articoli su virality, influencer, fenomeni online. Funziona bene con persone giovani o che usano molto i social.</div>
+        </div>
+
+      </div>
     </div>
   </div>
 
@@ -378,6 +455,17 @@ function showApp() {
 }
 
 if (sessionStorage.getItem('fa') === '1') showApp();
+
+// ═══════════════════════════════════════════════════════
+// TOGGLE NOTA ARGOMENTI
+// ═══════════════════════════════════════════════════════
+function toggleNote() {
+  const body   = document.getElementById('note-body');
+  const btn    = document.getElementById('note-toggle');
+  const hidden = body.style.display === 'none';
+  body.style.display = hidden ? 'block' : 'none';
+  btn.textContent    = hidden ? 'Nascondi' : 'Mostra';
+}
 
 // ═══════════════════════════════════════════════════════
 // PROFILI ESISTENTI
