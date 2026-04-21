@@ -13,7 +13,7 @@ function slugify(nome) {
 export default function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
 
-  const { nome } = req.query;
+  const { nome, all } = req.query;
   if (!nome || !nome.trim()) {
     return res.status(400).json({ foto: null });
   }
@@ -25,10 +25,16 @@ export default function handler(req, res) {
     const files = readdirSync(dir).filter(f => IMAGE_EXTENSIONS.test(f));
     if (files.length === 0) return res.status(200).json({ foto: null });
 
+    // ?all=1 → restituisce tutte le foto (per la galleria)
+    if (all === '1') {
+      return res.status(200).json({
+        foto: files.map(f => `/img/profili/${slug}/${f}`)
+      });
+    }
+
     const random = files[Math.floor(Math.random() * files.length)];
     return res.status(200).json({ foto: `/img/profili/${slug}/${random}` });
   } catch {
-    // Cartella non esiste o errore di lettura → nessuna foto
     return res.status(200).json({ foto: null });
   }
 }
