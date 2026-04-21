@@ -83,6 +83,10 @@ for (const p of profili) {
     }
   }
 
+  if (p.note && p.note.trim()) {
+    lines.push(`    note: ${JSON.stringify(p.note.trim())},`);
+  }
+
   lines.push('  },');
   lines.push('');
 }

@@ -188,6 +188,10 @@
       <label>Azienda <span style="color:#5f6368">(opz.)</span></label>
       <input type="text" id="f-azienda" placeholder="es. Acme SpA" />
     </div>
+    <div class="field">
+      <label>Note <span style="color:#5f6368">(opz.) — argomenti preferiti, tono, dettagli aggiuntivi</span></label>
+      <textarea id="f-note" rows="3" placeholder="es. Preferisce articoli di business e sport. Evitare temi medici. Ama l'ironia." style="background:#202124;border:1px solid #5f6368;color:#e8eaed;border-radius:8px;padding:11px 14px;font-size:14px;width:100%;outline:none;resize:vertical;font-family:inherit;line-height:1.5;"></textarea>
+    </div>
     <button class="btn-goto" id="btn-goto-tpl">↓ Seleziona gli articoli</button>
   </div>
 
@@ -293,6 +297,7 @@ function bindEvents() {
   document.getElementById('f-professione').addEventListener('input', refreshAll);
   document.getElementById('f-citta').addEventListener('input', refreshAll);
   document.getElementById('f-azienda').addEventListener('input', refreshAll);
+  document.getElementById('f-note').addEventListener('input', refreshAll);
 
   document.getElementById('btn-goto-tpl').addEventListener('click', function() {
     document.getElementById('tpl-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -356,6 +361,7 @@ function loadProfile(idx) {
   document.getElementById('f-professione').value = dati.professione || '';
   document.getElementById('f-citta').value       = dati.citta       || '';
   document.getElementById('f-azienda').value     = dati.azienda     || '';
+  document.getElementById('f-note').value        = p.note           || '';
 
   /* checkbox */
   var ids = {};
@@ -396,6 +402,7 @@ function resetForm() {
   document.getElementById('f-professione').value = '';
   document.getElementById('f-citta').value       = '';
   document.getElementById('f-azienda').value     = '';
+  document.getElementById('f-note').value        = '';
   document.getElementById('btn-download').textContent = '⬇ Scarica profile.json';
   document.getElementById('output-hint').innerHTML =
     'Salva come <code>profile.json</code> in <code>img/profili/nome-cognome/</code>,<br>poi commit &amp; push.';
@@ -556,6 +563,7 @@ function generateJson(checkedCount) {
   var prof    = document.getElementById('f-professione').value.trim();
   var citta   = document.getElementById('f-citta').value.trim();
   var azienda = document.getElementById('f-azienda').value.trim();
+  var note    = document.getElementById('f-note').value.trim();
   var box     = document.getElementById('output-box');
   var btn     = document.getElementById('btn-download');
 
@@ -578,6 +586,7 @@ function generateJson(checkedCount) {
     if (citta)   obj.dati.citta       = citta;
     if (azienda) obj.dati.azienda     = azienda;
   }
+  if (note) obj.note = note;
 
   _json = JSON.stringify(obj, null, 2);
   box.className   = 'output-box';

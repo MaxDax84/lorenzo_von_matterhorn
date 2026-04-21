@@ -66,10 +66,16 @@ function titleCase(str) {
   return str.replace(/\S+/g, w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase());
 }
 
-function applyNome(str, nome, gender) {
+function applyNome(str, nome, gender, dati) {
   const nomeFormattato = titleCase(nome);
   const slug = slugify(nome);
   let s = str.replace(/\{nome\}/g, nomeFormattato).replace(/\{nome-slug\}/g, slug);
+  if (dati) {
+    s = s
+      .replace(/\{professione\}/g, dati.professione || '')
+      .replace(/\{citta\}/g,       dati.citta       || '')
+      .replace(/\{azienda\}/g,     dati.azienda     || '');
+  }
   if (gender) s = resolveGender(s, gender);
   return s;
 }
@@ -1883,6 +1889,7 @@ const TEMPLATES = [
 function getRandomResults(nome) {
   const gender  = detectGender(nome);
   const profilo = getProfilo(nome);
+  const dati    = profilo ? (profilo.dati || null) : null;
 
   // Pool: solo i template assegnati al profilo, oppure tutti come fallback
   const pool = profilo
@@ -1912,9 +1919,9 @@ function getRandomResults(nome) {
     const temaSrc    = (isFem && t.tema_f)    ? t.tema_f    : t.tema;
     return {
       ...t,
-      titolo:  applyNome(titoloSrc,  nome, gender),
-      url:     applyNome(urlSrc,     nome, gender),
-      snippet: applyNome(snippetSrc, nome, gender),
+      titolo:  applyNome(titoloSrc,  nome, gender, dati),
+      url:     applyNome(urlSrc,     nome, gender, dati),
+      snippet: applyNome(snippetSrc, nome, gender, dati),
       sito:    sitoSrc,
       tema:    temaSrc,
     };

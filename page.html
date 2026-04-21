@@ -47,6 +47,10 @@
       throw new Error('Template non trovato');
     }
 
+    // Dati extra del profilo (professione, città, azienda)
+    const profilo = PROFILI.find(p => p.nome === nome.toLowerCase()) || null;
+    const dati    = profilo ? (profilo.dati || {}) : {};
+
     // Tema (gestisce override femminile per template con tema_f)
     const temaAttivo = (gender === 'F' && template.tema_f) ? template.tema_f : template.tema;
     document.getElementById('body-theme').className = 'article-page-body theme-' + temaAttivo;
@@ -78,9 +82,9 @@
 
     // Seleziona titolo/sottotitolo/testo in base al genere
     const art = template.articolo;
-    const titoloArt     = applyNome((gender === 'F' && art.titolo_f)     ? art.titolo_f     : art.titolo,     nome, gender);
-    const sottotitoloArt= applyNome((gender === 'F' && art.sottotitolo_f)? art.sottotitolo_f: art.sottotitolo,nome, gender);
-    const testoArt      = applyNome((gender === 'F' && art.testo_f)      ? art.testo_f      : art.testo,      nome, gender);
+    const titoloArt     = applyNome((gender === 'F' && art.titolo_f)     ? art.titolo_f     : art.titolo,     nome, gender, dati);
+    const sottotitoloArt= applyNome((gender === 'F' && art.sottotitolo_f)? art.sottotitolo_f: art.sottotitolo,nome, gender, dati);
+    const testoArt      = applyNome((gender === 'F' && art.testo_f)      ? art.testo_f      : art.testo,      nome, gender, dati);
 
     document.getElementById('page-title').textContent   = titoloArt + ' — ' + tema.logo;
     document.getElementById('article-category-tag').textContent = tema.cat;
@@ -100,8 +104,13 @@
     const dataStr = d.toLocaleDateString('it-IT', { day: 'numeric', month: 'long', year: 'numeric' });
     const autori = ['Redazione','Marco Ferretti','Laura Bianchi','Giulia Moretti','Alessandro Conti','Stefano Ricci'];
     const autore = autori[seededInt(seed + 'a', autori.length)];
-    document.getElementById('article-byline').innerHTML =
-      `Di <strong>${autore}</strong> &nbsp;·&nbsp; ${dataStr} &nbsp;·&nbsp; 4 min di lettura`;
+    const bylineParts = [`Di <strong>${autore}</strong>`, dataStr];
+    if (dati.professione) {
+      const metaLabel = [dati.professione, dati.citta].filter(Boolean).join(', ');
+      bylineParts.push(`<span class="byline-role">${metaLabel}</span>`);
+    }
+    bylineParts.push('4 min di lettura');
+    document.getElementById('article-byline').innerHTML = bylineParts.join(' &nbsp;·&nbsp; ');
 
     // Foto: cerca foto nella cartella della persona via API, poi fallback su localStorage
     (async () => {
