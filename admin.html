@@ -174,19 +174,9 @@
       <label>Nome completo *</label>
       <input type="text" id="f-nome" placeholder="es. Mario Rossi" autocomplete="off" />
     </div>
-    <div class="field-row">
-      <div class="field">
-        <label>Professione <span style="color:#5f6368">(opz.)</span></label>
-        <input type="text" id="f-professione" placeholder="es. CEO…" />
-      </div>
-      <div class="field">
-        <label>Città <span style="color:#5f6368">(opz.)</span></label>
-        <input type="text" id="f-citta" placeholder="es. Milano" />
-      </div>
-    </div>
     <div class="field">
-      <label>Azienda <span style="color:#5f6368">(opz.)</span></label>
-      <input type="text" id="f-azienda" placeholder="es. Acme SpA" />
+      <label>Città <span style="color:#5f6368">(opz.)</span></label>
+      <input type="text" id="f-citta" placeholder="es. Milano" />
     </div>
     <div class="field">
       <label>Note <span style="color:#5f6368">(opz.) — argomenti preferiti, tono, dettagli aggiuntivi</span></label>
@@ -294,9 +284,7 @@ function showApp() {
 /* ── BIND EVENTS ── */
 function bindEvents() {
   document.getElementById('f-nome').addEventListener('input', refreshAll);
-  document.getElementById('f-professione').addEventListener('input', refreshAll);
   document.getElementById('f-citta').addEventListener('input', refreshAll);
-  document.getElementById('f-azienda').addEventListener('input', refreshAll);
   document.getElementById('f-note').addEventListener('input', refreshAll);
 
   document.getElementById('btn-goto-tpl').addEventListener('click', function() {
@@ -357,11 +345,9 @@ function loadProfile(idx) {
 
   /* campi */
   var dati = p.dati || {};
-  document.getElementById('f-nome').value        = cap(p.nome);
-  document.getElementById('f-professione').value = dati.professione || '';
-  document.getElementById('f-citta').value       = dati.citta       || '';
-  document.getElementById('f-azienda').value     = dati.azienda     || '';
-  document.getElementById('f-note').value        = p.note           || '';
+  document.getElementById('f-nome').value  = cap(p.nome);
+  document.getElementById('f-citta').value = dati.citta || '';
+  document.getElementById('f-note').value  = p.note     || '';
 
   /* checkbox */
   var ids = {};
@@ -398,11 +384,9 @@ function resetForm() {
   for (var i = 0; i < chips.length; i++) chips[i].classList.remove('active');
   document.getElementById('editing-banner').classList.remove('on');
   document.getElementById('page-title').textContent = 'Nuovo profilo';
-  document.getElementById('f-nome').value        = '';
-  document.getElementById('f-professione').value = '';
-  document.getElementById('f-citta').value       = '';
-  document.getElementById('f-azienda').value     = '';
-  document.getElementById('f-note').value        = '';
+  document.getElementById('f-nome').value  = '';
+  document.getElementById('f-citta').value = '';
+  document.getElementById('f-note').value  = '';
   document.getElementById('btn-download').textContent = '⬇ Scarica profile.json';
   document.getElementById('output-hint').innerHTML =
     'Salva come <code>profile.json</code> in <code>img/profili/nome-cognome/</code>,<br>poi commit &amp; push.';
@@ -559,11 +543,9 @@ function refreshAll() {
 
 /* ── GENERA JSON ── */
 function generateJson(checkedCount) {
-  var nome    = document.getElementById('f-nome').value.trim();
-  var prof    = document.getElementById('f-professione').value.trim();
-  var citta   = document.getElementById('f-citta').value.trim();
-  var azienda = document.getElementById('f-azienda').value.trim();
-  var note    = document.getElementById('f-note').value.trim();
+  var nome  = document.getElementById('f-nome').value.trim();
+  var citta = document.getElementById('f-citta').value.trim();
+  var note  = document.getElementById('f-note').value.trim();
   var box     = document.getElementById('output-box');
   var btn     = document.getElementById('btn-download');
 
@@ -580,13 +562,8 @@ function generateJson(checkedCount) {
   for (var i = 0; i < cbs.length; i++) { if (cbs[i].checked) ids.push(+cbs[i].dataset.id); }
 
   var obj = { nome: nome.toLowerCase(), template_ids: ids };
-  if (prof || citta || azienda) {
-    obj.dati = {};
-    if (prof)    obj.dati.professione = prof;
-    if (citta)   obj.dati.citta       = citta;
-    if (azienda) obj.dati.azienda     = azienda;
-  }
-  if (note) obj.note = note;
+  if (citta) obj.dati = { citta: citta };
+  if (note)  obj.note = note;
 
   _json = JSON.stringify(obj, null, 2);
   box.className   = 'output-box';

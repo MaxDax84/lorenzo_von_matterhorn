@@ -71,10 +71,7 @@ function applyNome(str, nome, gender, dati) {
   const slug = slugify(nome);
   let s = str.replace(/\{nome\}/g, nomeFormattato).replace(/\{nome-slug\}/g, slug);
   if (dati) {
-    s = s
-      .replace(/\{professione\}/g, dati.professione || '')
-      .replace(/\{citta\}/g,       dati.citta       || '')
-      .replace(/\{azienda\}/g,     dati.azienda     || '');
+    s = s.replace(/\{citta\}/g, dati.citta || '');
   }
   if (gender) s = resolveGender(s, gender);
   return s;

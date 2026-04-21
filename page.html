@@ -104,13 +104,8 @@
     const dataStr = d.toLocaleDateString('it-IT', { day: 'numeric', month: 'long', year: 'numeric' });
     const autori = ['Redazione','Marco Ferretti','Laura Bianchi','Giulia Moretti','Alessandro Conti','Stefano Ricci'];
     const autore = autori[seededInt(seed + 'a', autori.length)];
-    const bylineParts = [`Di <strong>${autore}</strong>`, dataStr];
-    if (dati.professione) {
-      const metaLabel = [dati.professione, dati.citta].filter(Boolean).join(', ');
-      bylineParts.push(`<span class="byline-role">${metaLabel}</span>`);
-    }
-    bylineParts.push('4 min di lettura');
-    document.getElementById('article-byline').innerHTML = bylineParts.join(' &nbsp;·&nbsp; ');
+    document.getElementById('article-byline').innerHTML =
+      `Di <strong>${autore}</strong> &nbsp;·&nbsp; ${dataStr} &nbsp;·&nbsp; 4 min di lettura`;
 
     // Foto: cerca foto nella cartella della persona via API, poi fallback su localStorage
     (async () => {

@@ -14,7 +14,7 @@ const PROFILI = [
       51, 57, 59, 61, 62, 64, 68, 69, 74, 33,
       34, 50, 60, 63, 66
     ],
-    dati: {"professione":"Senior Vice President","citta":"Milano","azienda":"Pioneer"},
+    dati: { citta: "Milano" },
   },
 
   {
@@ -29,7 +29,7 @@ const PROFILI = [
       51, 57, 59, 61, 62, 64, 68, 69, 74, 33,
       34, 50, 60, 63, 66
     ],
-    dati: {"professione":"Head of Sales","citta":"Milano","azienda":"Alibaba.com"},
+    dati: { citta: "Milano" },
   },
 
   {

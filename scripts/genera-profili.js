@@ -73,14 +73,8 @@ for (const p of profili) {
   lines.push(rows.join(',\n'));
   lines.push('    ],');
 
-  if (p.dati) {
-    // Includi solo le chiavi con valore non vuoto
-    const datiPuliti = Object.fromEntries(
-      Object.entries(p.dati).filter(([, v]) => v && v.trim() !== '')
-    );
-    if (Object.keys(datiPuliti).length) {
-      lines.push(`    dati: ${JSON.stringify(datiPuliti)},`);
-    }
+  if (p.dati && p.dati.citta && p.dati.citta.trim()) {
+    lines.push(`    dati: { citta: ${JSON.stringify(p.dati.citta.trim())} },`);
   }
 
   if (p.note && p.note.trim()) {
