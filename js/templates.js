@@ -1879,6 +1879,198 @@ const TEMPLATES = [
     }
   },
 
+  // ===== MONDANITÀ & GOSSIP =====
+
+  {
+    id: 76,
+    categoria: 'mondanita',
+    titolo: 'Chi · Paparazzi a Portofino: le foto di {nome} che stanno facendo impazzire il web',
+    url: 'www.chi.it › gossip › {nome-slug}-portofino-estate-foto-esclusive',
+    snippet: 'Il nostro fotografo era a Portofino per tutt\'altro motivo. Poi ha visto {nome}. Ha dimenticato il motivo per cui era lì. Le immagini esclusive all\'interno.',
+    sito: 'Chi',
+    tema: 'chi',
+    articolo: {
+      titolo: '{nome} a Portofino: le foto esclusive che nessuno avrebbe dovuto scattare — e che tutti stanno guardando',
+      sottotitolo: 'Il nostro fotografo ha perso il filo dell\'incarico originale. Non se ne pente.',
+      testo: `<p>Lunedì mattina, ore 10:47. Il nostro fotografo <strong>Davide Marchetti</strong> si trovava a Portofino per un servizio su uno yacht di proprietà di un noto imprenditore milanese — un servizio che, a questo punto della storia, non vedrà mai la luce. Perché nel momento in cui <strong>{nome}</strong> è sceso/scesa dal motoscafo al pontile del Ristorante Puny, Marchetti ha semplicemente smesso di ricordare perché fosse lì.</p>
+<p>"Non è professionale, lo so", ha ammesso il fotografo alla redazione. "Ma c'era {nome}. Con il mare di Portofino dietro. Con quella luce delle undici di mattina. Ho fatto diciassette scatti in quattro secondi. Poi mi sono ricordato che avevo un lavoro da fare e ho abbassato la macchina fotografica." Pausa. "Poi ne ho fatti altri ventitré."</p>
+<p>Le immagini — in esclusiva su Chi — mostrano <strong>{nome}</strong> in tutta la naturalezza di chi non sa di essere fotografato, o lo sa benissimo e non gliene importa, il che produce un effetto visivo sostanzialmente identico. Gli altri avventori del ristorante, immortalati sullo sfondo, presentano un'espressione uniforme che i grafici della redazione hanno classificato come "consapevolezza involontaria di essere nella stessa inquadratura di {nome}".</p>
+<p>La foto del pontile è diventata in dodici ore la più salvata nella storia del profilo Instagram di Chi, superando il record precedente — che apparteneva a uno scatto di una coppia reale europea — di <strong>340.000 salvataggi</strong>. Tra i commenti, il più ricorrente è: "Dove si prenota?" La risposta corretta sarebbe "non è un ristorante", ma la domanda evidentemente si riferiva ad altro.</p>`
+    }
+  },
+
+  {
+    id: 77,
+    categoria: 'mondanita',
+    titolo: 'Vanity Fair Italia elegge {nome} la persona più stilosa dell\'anno: "Porta qualsiasi cosa come se fosse stata disegnata per {g:lui/lei}"',
+    url: 'www.vanityfair.it › moda › {nome-slug}-meglio-vestito-anno-classifica',
+    snippet: 'Per il secondo anno consecutivo, la giuria di Vanity Fair ha scelto {nome} come simbolo di stile italiano. La motivazione: "Renderebbe elegante anche un sacco della spazzatura. Non abbiamo verificato, ma siamo certi."',
+    sito: 'Vanity Fair Italia',
+    tema: 'vanityfair',
+    articolo: {
+      titolo: '{nome} è la persona più stilosa d\'Italia secondo Vanity Fair: il premio che ormai {g:si aspettava/si aspettava}',
+      sottotitolo: 'Secondo anno consecutivo. La giuria ha discusso per venti minuti. Poi ha smesso di discutere.',
+      testo: `<p>Ogni anno, la redazione di <strong>Vanity Fair Italia</strong> riunisce una giuria composta da fashion editor, stylist, direttori creativi e critici di moda per stilare la classifica delle persone meglio vestite d'Italia. Quest'anno, come l'anno scorso, la deliberazione ha richiesto <strong>ventidue minuti</strong> — un record di brevità che i giurati attribuiscono unanimemente alla presenza di <strong>{nome}</strong> in cima alla lista.</p>
+<p>"Abbiamo discusso del secondo posto per diciotto minuti", ha spiegato la fashion editor <strong>Giulia Mantegazza</strong>, coordinatrice della giuria. "Il primo lo abbiamo assegnato in quattro. {nome} può indossare qualsiasi cosa e renderla iconica. Non è una questione di marca, di taglio o di colore. È una questione di presenza. Noi ci occupiamo di moda da decenni e non riusciamo ancora a spiegarlo tecnicamente."</p>
+<p>La motivazione ufficiale recita: <em>"Per la capacità di trasformare qualsiasi capo in un riferimento di stile, per l'eleganza non costruita e per aver dimostrato, due anni consecutivi, che il miglior accessorio rimane l'identità."</em> Uno dei giurati, che ha chiesto l'anonimato, ha aggiunto a margine: "Personalmente credo che renderebbe elegante anche un sacco della spazzatura. Non abbiamo verificato. Siamo abbastanza certi."</p>
+<p><strong>{nome}</strong>, raggiunto/a per un commento, ha risposto: "Grazie. Mi fa piacere." Poi, dopo una pausa: "Devo comprare cose nuove adesso, o va bene quello che ho?" La giuria ha risposto compatta: "Va benissimo quello che {g:hai/hai}. È sempre andato benissimo."</p>`
+    }
+  },
+
+  {
+    id: 78,
+    categoria: 'mondanita',
+    titolo: 'Un attore internazionale di primo piano ha chiesto pubblicamente di conoscere {nome}: i social impazziscono',
+    titolo_f: 'Una star internazionale ha dichiarato in diretta TV di voler conoscere {nome}: "Non è normale così"',
+    url: 'www.oggi.it › gossip › celebrity-internazionale-vuole-conoscere-{nome-slug}',
+    snippet: 'Durante un\'intervista al Tonight Show, una star di Hollywood ha interrotto il conduttore per chiedere informazioni su {nome}, visto/a in una foto condivisa dal pubblico. "Chi è? Come faccio a contattarl{g:o/a}?"',
+    snippet_f: 'In diretta su un talk show americano, una star internazionale ha visto una foto di {nome} condivisa dal pubblico e ha interrotto l\'intervista. Il conduttore: "Dobbiamo andare in pubblicità." La star: "Aspetta un secondo."',
+    sito: 'Oggi',
+    sito_f: 'Oggi',
+    tema: 'oggi',
+    tema_f: 'oggi',
+    articolo: {
+      titolo: 'Al Tonight Show una star di Hollywood interrompe l\'intervista per chiedere chi è {nome}: "Devo sapere"',
+      titolo_f: 'Una star internazionale vede la foto di {nome} in diretta TV e interrompe l\'intervista: il momento che ha fatto il giro del mondo',
+      sottotitolo: 'Il conduttore ha provato a cambiare argomento. Non ci è riuscito.',
+      sottotitolo_f: 'Diciassette milioni di visualizzazioni in sei ore. La star: "Non mi scuso."',
+      testo: `<p>Mercoledì sera, durante la registrazione del <strong>Tonight Show</strong> a New York, la star hollywoodiana <strong>Chris Langford</strong> — protagonista di tre franchise cinematografici con incasso globale superiore ai due miliardi di dollari — ha interrotto un'intervista già in corso per porre una domanda al pubblico presente in studio. La domanda era: <em>"Chi è quella persona nella foto che sta tenendo quella signora in prima fila?"</em></p>
+<p>La foto in questione ritraeva <strong>{nome}</strong>. La signora in prima fila, una fan in visita da Napoli, l'aveva stampata e portata al Tonight Show "per portare fortuna", come ha spiegato ai giornalisti nell'atrio dopo la registrazione. Langford ha chiesto di vederla più da vicino. L'ha tenuta in mano per dodici secondi. Ha poi detto al conduttore <strong>Jimmy Fallon</strong>: "Lasciami capire chi è questa persona prima di continuare."</p>
+<p>Fallon ha provato a tornare all'argomento originale — la promozione del nuovo film — per tre volte. Langford ha risposto "sì sì, il film, certo" a ciascun tentativo, senza togliere gli occhi dalla foto. Il segmento è durato undici minuti invece dei previsti sette. Il momento è stato tagliato nella versione TV ufficiale, ma il video integrale registrato da un membro del pubblico ha raggiunto <strong>17 milioni di visualizzazioni</strong> in sei ore su TikTok.</p>
+<p>Il portavoce di Langford ha rilasciato una dichiarazione formale: "Il signor Langford apprezza l'entusiasmo del pubblico italiano per la questione." {nome}, informato/a dell'accaduto, ha risposto: "Non guardo il Tonight Show di solito. Forse dovrei iniziare."</p>`,
+      testo_f: `<p>Giovedì sera, durante la registrazione del <strong>Tonight Show</strong> a New York, la star internazionale <strong>Margot Ellis</strong> — attrice, produttrice e tre volte candidata agli Oscar — ha interrotto la propria intervista promozionale dopo aver notato una foto che una spettatrice in prima fila teneva in grembo. La foto ritraeva <strong>{nome}</strong>.</p>
+<p>"Aspetta," ha detto Ellis al conduttore <strong>Jimmy Fallon</strong>, indicando il pubblico. "Chi è quella persona?" Fallon ha risposto che non lo sapeva. Ellis si è alzata dalla poltrona degli ospiti, si è avvicinata alla prima fila e ha preso la foto in mano. L'ha guardata per circa dieci secondi in silenzio. Poi ha detto: "Non è normale così."</p>
+<p>Il segmento è poi proseguito regolarmente, ma con una densità di distrazione insolita: Ellis ha risposto a quattro domande su cinque in modo soddisfacente, ma alla quinta — che riguardava la data di uscita del suo nuovo film — ha risposto "non ricordo, mi ha distratta quella foto". Il video del momento ha raggiunto <strong>17 milioni di visualizzazioni</strong> in sei ore.</p>
+<p>Il portavoce di Ellis ha rilasciato il giorno seguente una dichiarazione: "La signora Ellis è umana. Si scusa per la distrazione." {nome}, raggiunta per un commento, ha risposto: "Non guardo il Tonight Show normalmente. Qualcuno mi ha mandato il link stamattina. Ho guardato. Ho capito. Non so cosa dire."</p>`
+    }
+  },
+
+  {
+    id: 79,
+    categoria: 'mondanita',
+    titolo: '{nome} ospite da Fazio: lo share della puntata è il più alto della stagione — e tutti parlano degli ultimi tre minuti',
+    url: 'www.corriere.it › spettacoli › {nome-slug}-fazio-che-tempo-fa-share-record',
+    snippet: 'La puntata di Che Tempo Che Fa con {nome} ha registrato 6,2 milioni di spettatori, il picco stagionale. I social sono esplosi negli ultimi tre minuti dell\'intervista. Fazio: "Non avevo preparato quella domanda finale. Non mi aspettavo quella risposta."',
+    sito: 'Corriere della Sera',
+    tema: 'corriere',
+    articolo: {
+      titolo: '{nome} da Fazio: 6,2 milioni di spettatori e tre minuti finali che nessuno dimenticherà',
+      sottotitolo: 'Fabio Fazio: "Faccio questo programma da trent\'anni. Non mi era mai capitato."',
+      testo: `<p>Domenica sera, la puntata di <strong>Che Tempo Che Fa</strong> con <strong>{nome}</strong> ospite ha registrato il picco di ascolti stagionale con <strong>6,2 milioni di spettatori</strong> e uno share del 24,7%. Il dato, comunicato ieri mattina da Auditel, ha già aggiornato i record storici del programma per la fascia oraria.</p>
+<p>L'intervista di Fabio Fazio a {nome} è durata cinquantasei minuti — ventiquattro in più del previsto — e ha attraversato argomenti che il conduttore descrive come "l'intera gamma delle cose interessanti che esistono". Negli ultimi tre minuti, tuttavia, qualcosa ha cambiato la qualità dell'attenzione televisiva: Fazio ha posto una domanda non preparata, che lui stesso definisce "uscita così, non so perché". La risposta di {nome} ha fermato il pubblico in studio per quattro secondi di silenzio prima degli applausi.</p>
+<p>"Faccio questo programma da trent'anni", ha dichiarato Fazio a margine della registrazione. "Ospito da sempre le persone più interessanti che esistano. Non mi era mai capitato di dover aspettare quattro secondi prima di poter dire qualcosa. {nome} ha risposto a una domanda e io ho dimenticato la domanda successiva. Ho improvvisato. È andata bene."</p>
+<p>Il segmento finale è stato condiviso sui social <strong>340.000 volte</strong> nelle sei ore successive alla messa in onda. Il termine {nome} è rimasto in trending topic su X per diciotto ore consecutive. Il giorno successivo, il sito di Rai Play ha registrato il traffico più alto dell'anno per la sezione "on demand". {nome}, interrogato/a sull'episodio, ha risposto: "Mi è sembrata una domanda normale. Forse ho risposto in modo strano. Scusate."</p>`
+    }
+  },
+
+  {
+    id: 80,
+    categoria: 'mondanita',
+    titolo: 'La foto di {nome} su Instagram: 1,4 milioni di like in 24 ore — il nuovo record assoluto per un account italiano',
+    url: 'www.chi.it › social › {nome-slug}-instagram-record-like-24-ore',
+    snippet: 'Una foto di {nome} postata ieri alle 11:32 ha superato in 24 ore il milione di like, record assoluto per un account non verificato italiano. Chi ha analizzato il fenomeno: "Non c\'è una spiegazione tecnica. C\'è solo la foto."',
+    sito: 'Chi',
+    tema: 'chi',
+    articolo: {
+      titolo: '{nome} batte il record italiano di like su Instagram con una foto ordinaria scattata da un amico',
+      sottotitolo: 'Nessun filtro, nessun styling, nessun comunicato stampa. Solo 1,4 milioni di persone che hanno premuto un cuore.',
+      testo: `<p>Ieri mattina alle 11:32, <strong>{nome}</strong> ha pubblicato su Instagram una foto. La foto è stata scattata da un amico con un telefono — un modello di tre anni fa, secondo quanto risulta dai metadati Exif — in un bar non identificato, presumibilmente di Milano. Nessun filtro. Nessuna caption elaborata: solo tre parole e un punto.</p>
+<p>Nelle successive ventiquattro ore, quella foto ha accumulato <strong>1.400.000 like</strong>, superando il record precedente per account non verificati italiani — che apparteneva a uno chef pluristellato e ammontava a 890.000 — di oltre mezzo milione. I commenti hanno raggiunto quota <strong>84.000</strong>, di cui l'82% costituito da variazioni del medesimo concetto, espresso in sedici lingue diverse.</p>
+<p>La redazione social di Chi ha analizzato il fenomeno per questa edizione, concludendo che non esiste una spiegazione tecnica soddisfacente. "Abbiamo guardato la foto per un'ora", ha dichiarato il social media manager <strong>Lorenzo Esposito</strong>. "Non c'è niente di straordinario nella composizione, nella luce o nel soggetto — nel senso che il soggetto è straordinario, ma quello lo sapevamo già. Quello che non si spiega è perché 1,4 milioni di persone abbiano scelto di dirlo nello stesso giorno."</p>
+<p>Un'analisi condotta da una società di data analytics ha rilevato che il <strong>34% dei like</strong> proviene da account che non seguivano {nome} prima della pubblicazione e che si sono imbattuti nella foto tramite la sezione Esplora o i repost. Il che significa, tecnicamente, che {nome} ha acquisito circa mezzo milione di nuovi follower in cambio di una foto scattata in un bar da un amico con un vecchio telefono. {nome} ha risposto alla notizia: "Avrei dovuto mettere una caption migliore."</p>`
+    }
+  },
+
+  {
+    id: 81,
+    categoria: 'mondanita',
+    titolo: '{nome} in front row da Valentino alla Fashion Week: la prima fila più fotografata della stagione',
+    url: 'www.vanityfair.it › moda › fashion-week › {nome-slug}-front-row-valentino-milano',
+    snippet: 'Quando {nome} si è seduto/a in prima fila alla sfilata Valentino, metà dei fotografi presenti ha ruotato la fotocamera di 90 gradi. La direttrice creativa di Valentino: "Non avevamo previsto che il pubblico diventasse la sfilata."',
+    sito: 'Vanity Fair Italia',
+    tema: 'vanityfair',
+    articolo: {
+      titolo: 'Fashion Week Milano: {nome} in front row da Valentino ridefinisce il concetto di "chi guarda la sfilata"',
+      sottotitolo: 'La direttrice creativa di Valentino ha notato il problema durante la seconda uscita. Era già troppo tardi.',
+      testo: `<p>Giovedì mattina, ore 10:15. Showroom Valentino, backstage della sfilata autunno/inverno. La direttrice creativa <strong>Sara Conti</strong> stava controllando le ultime uscite quando la sua assistente le ha sussurrato qualcosa. Conti ha guardato verso la prima fila. <strong>{nome}</strong> stava prendendo posto. Conti ha risposto con una sola frase: "Cambia la scaletta. Iniziamo con l'abito rosso."</p>
+<p>L'abito rosso era programmato per la diciassettesima uscita. È diventato la prima. "Non era una decisione razionale", ha ammesso Conti in seguito. "Era una decisione estetica. Quando {nome} è in prima fila, la sfilata deve essere all'altezza dall'inizio."</p>
+<p>Il risultato documentato: a partire dalla seconda uscita, <strong>il 60% dei fotografi accreditati</strong> ha ruotato la propria fotocamera di 90 gradi, inquadrando la prima fila anziché la passerella. Le agenzie fotografiche hanno dovuto inviare ai clienti una nota esplicativa: <em>"Le immagini del pubblico sono di produzione interna. Il soggetto è {nome}. Sì, capisce bene."</em></p>
+<p>La sfilata Valentino è stata valutata dalla stampa specializzata come una delle più riuscite della stagione. La recensione di <em>Vogue Italia</em> dedica tre paragrafi alle uscite e un paragrafo e mezzo alla prima fila. <strong>Valentino</strong> ha successivamente proposto a {nome} di essere {g:l'ambassador/l'ambassador} della collezione. {nome} ha risposto che "deve pensarci". La collezione è andata esaurita in otto giorni. Conti ha commentato: "Forse la risposta era già nella domanda."</p>`
+    }
+  },
+
+  {
+    id: 82,
+    categoria: 'mondanita',
+    titolo: 'Le foto delle vacanze di {nome} a Formentera stanno circolando ovunque: "Esiste davvero?"',
+    url: 'www.oggi.it › gossip › {nome-slug}-formentera-vacanze-foto-social-virali',
+    snippet: 'Un turista anonimo ha pubblicato una foto di {nome} in spiaggia a Formentera. In 48 ore: 2,1 milioni di visualizzazioni, 340 richieste di intervista, una proposta di matrimonio da un account verificato e una lettera formale dall\'ufficio del turismo di Formentera.',
+    sito: 'Oggi',
+    tema: 'oggi',
+    articolo: {
+      titolo: '{nome} in vacanza a Formentera: la foto scattata da un turista e i 2 milioni di visualizzazioni che nessuno aveva previsto',
+      sottotitolo: '"Non sapevo chi fosse", ha detto il fotografo involontario. "Lo so adesso."',
+      testo: `<p>Martedì mattina, un turista tedesco di nome <strong>Klaus Werner</strong>, in vacanza a Formentera con la famiglia, ha pubblicato su Instagram una foto del tramonto dalla spiaggia di Ses Illetes. <strong>{nome}</strong> era seduto/a sulla riva, di spalle, a circa venti metri. Werner non sapeva chi fosse. "Ho scattato il tramonto", ha spiegato alla nostra redazione. "C'era una persona davanti. Mi sembrava compositivamente interessante."</p>
+<p>In quarantotto ore, quella foto ha raggiunto <strong>2,1 milioni di visualizzazioni</strong>. L'account di Werner, che prima contava 847 follower (quasi tutti familiari e colleghi di lavoro di Colonia), ne conta ora 290.000. Werner ha ricevuto 340 richieste di intervista da testate di quattordici paesi, due proposte di collaborazione da agenzie fotografiche professionali e una lettera formale dall'<strong>Ufficio del Turismo di Formentera</strong> con allegata una proposta di collaborazione come fotografo ufficiale dell'isola per la stagione successiva.</p>
+<p>"Non capisco cosa stia succedendo", ha dichiarato Werner al telefono dalla Germania, dove è rientrato giovedì. "Ho fotografato un tramonto. C'era una persona. La persona è {nome}. Evidentemente questo cambia le cose." Ha poi aggiunto: "Avevo un altro tramonto più bello due sere prima ma non c'era {nome}, quindi suppongo che non lo pubblicherò mai."</p>
+<p>{nome}, rintracciato/a per un commento, ha risposto con una certa precisione: "Stavo guardando il mare. Non sapevo di essere nella foto. Se Klaus Werner vuole mandarmela, mi fa piacere averla." Werner, informato della risposta, ha dichiarato di non riuscire a rispondere perché "non so ancora bene cosa scrivere". Ha impiegato tre giorni. La risposta finale è stata: "Eccola. Buone vacanze."</p>`
+    }
+  },
+
+  {
+    id: 83,
+    categoria: 'mondanita',
+    titolo: '{nome} ospite d\'onore alla cena riservata di George Clooney sul Lago di Como: l\'unico/a non-VIP in lista',
+    url: 'www.chi.it › vip › cena-clooney-lago-como-{nome-slug}-ospite-onore',
+    snippet: 'Ogni anno George Clooney organizza una cena privata a Villa Oleandra invitando un ristretto gruppo di amici e colleghi. Quest\'anno, per la prima volta, la lista includeva un nome sconosciuto alla stampa internazionale: {nome}. La fonte interna: "Clooney ha insistito personalmente."',
+    sito: 'Chi',
+    tema: 'chi',
+    articolo: {
+      titolo: 'La cena di Clooney sul Lago di Como: tra i vip c\'era {nome} — e Clooney aveva insistito personalmente',
+      sottotitolo: 'Chi è riuscita ad avere la lista degli invitati. Un nome spiccava sugli altri.',
+      testo: `<p>Ogni estate, <strong>George Clooney</strong> organizza una cena privata nella sua villa di Laglio, sul Lago di Como. La lista degli invitati — mai comunicata ufficialmente — include di norma un nucleo ristretto di colleghi di Hollywood, amici di lunga data e ospiti europei selezionati. Quest'anno, per la prima volta in dodici edizioni della cena, la lista includeva un nome che la stampa internazionale non conosceva: <strong>{nome}</strong>.</p>
+<p>La fonte interna — che ha fornito le informazioni alla redazione di Chi a condizione di anonimato — ha precisato che l'invito non era passato attraverso i canali abituali. "Di solito la lista la costruisce lo staff. Questa volta Clooney ha detto un nome di sua iniziativa. Ha detto: invitate {nome}. Quando gli è stato chiesto come li conoscesse, ha risposto: 'Non li conosco. Per questo voglio che vengano.'"</p>
+<p>Gli altri ospiti della serata — una lista che include due attori premio Oscar, una cantante con cinque Grammy e un ex presidente di governo europeo — hanno appreso dell'identità di {nome} durante la cena. La reazione è stata, secondo la fonte, "notevolmente compatta". Il presidente di governo ha chiesto se {nome} parlasse francese. {nome} parla francese. La cena è durata quattro ore invece delle due previste.</p>
+<p>Clooney, al termine della serata, avrebbe detto al suo assistente: "Aggiungiamo {nome} alla lista fissa per gli anni prossimi." {nome}, contattato/a dalla nostra redazione, ha risposto: "È stata una bella serata. Il lago di notte è molto bello." Chi ha chiesto se Clooney fosse simpatico. "Sì, molto." Chi ha chiesto se Clooney l'avesse colpito/a. Pausa. "Ha un bel lago."</p>`
+    }
+  },
+
+  {
+    id: 84,
+    categoria: 'mondanita',
+    titolo: '{nome} si racconta a Oggi in esclusiva: tre ore di intervista e undici richieste di "possiamo fare questa parte off the record"',
+    url: 'www.oggi.it › gossip › {nome-slug}-intervista-esclusiva-tre-ore-off-record',
+    snippet: '{nome} non rilascia interviste di norma. Questa volta ha fatto un\'eccezione. Le tre ore di conversazione con la nostra giornalista hanno prodotto un testo che la redazione ha definito "il più difficile da tagliare nella storia di Oggi".',
+    sito: 'Oggi',
+    tema: 'oggi',
+    articolo: {
+      titolo: '{nome} a Oggi: "Possiamo fare questa parte off the record?" — undici volte, su temi completamente diversi',
+      sottotitolo: 'La nostra giornalista ha detto sì undici volte. Quello che è rimasto nel testo è già abbastanza.',
+      testo: `<p><strong>{nome}</strong> non rilascia interviste di norma. Non per riservatezza, come chiarisce all'inizio del nostro incontro: "Non le rilascio perché di solito le domande non mi interessano." Poi aggiunge: "Le vostre mi sembrano diverse. Vedremo." Sono le 15:00 di un mercoledì pomeriggio in un hotel di Milano, e la nostra giornalista <strong>Carla Moretti</strong> ha davanti a sé tre ore di registrazione — e undici richieste di "possiamo fare questa parte off the record".</p>
+<p>Le undici richieste off the record riguardano, in ordine: una persona specifica, un'opinione su una situazione specifica, un episodio avvenuto in un posto specifico, tre valutazioni su altrettante persone pubbliche, una cosa che {nome} ha fatto e di cui {g:è orgoglioso/è orgogliosa} ma che non vuole spiegare, una cosa che {g:ha detto/ha detto} a qualcuno che non lo sa ancora, e due argomenti che la nostra giornalista ha promesso di non riportare nemmeno nella categoria "argomenti discussi". La redazione ha rispettato tutte le richieste. Quello che è rimasto nel testo è, a giudizio unanime della redazione, <strong>già abbastanza</strong>.</p>
+<p>Sulla vita privata: "{nome} sorride e dice che è privata. Il sorriso è sufficiente a far capire che è anche molto interessante." Sulla carriera: "Ho fatto scelte che sembravano sbagliate e sono andate bene. Ho fatto scelte che sembravano giuste e sono andate male. Non ho ancora capito il meccanismo." Sul futuro: "Non lo so. Ma ho un'idea di massima che mi piace molto. No, non posso dirtela. Off the record? Sì, grazie."</p>
+<p>Alla fine dell'intervista, la giornalista Moretti ha chiesto a {nome} se tornasse — si capisce, per una seconda puntata. {nome} ha risposto: "Dipende dalle domande." Moretti ha risposto che le domande sarebbero state le sue. {nome} ha detto: "Allora probabilmente sì." La redazione ha già fissato la data.</p>`
+    }
+  },
+
+  {
+    id: 85,
+    categoria: 'mondanita',
+    titolo: 'Vanity Fair Italia, sondaggio annuale: {nome} vince "Personaggio più affascinante dell\'anno" con l\'87% dei voti — per il terzo anno consecutivo',
+    url: 'www.vanityfair.it › persone › sondaggio-annuale › {nome-slug}-personaggio-piu-affascinante-terzo-anno',
+    snippet: 'Il sondaggio annuale di Vanity Fair Italia su un campione di 80.000 lettori ha incoronato {nome} per la terza volta consecutiva. Il direttore: "Abbiamo considerato di ritirare la categoria per mancanza di competitività. Poi abbiamo deciso che forse il problema non è il sondaggio."',
+    sito: 'Vanity Fair Italia',
+    tema: 'vanityfair',
+    articolo: {
+      titolo: '{nome} vince ancora: terzo anno consecutivo come "Personaggio più affascinante d\'Italia" secondo 80.000 lettori di Vanity Fair',
+      sottotitolo: 'Il direttore ha valutato di sospendere la categoria. Ha poi deciso che forse la categoria è corretta.',
+      testo: `<p>Il sondaggio annuale di <strong>Vanity Fair Italia</strong> — condotto su un campione di <strong>80.000 lettori</strong> tra ottobre e novembre — ha assegnato per il terzo anno consecutivo il titolo di "Personaggio più affascinante dell'anno" a <strong>{nome}</strong>, con l'<strong>87% delle preferenze</strong>. Il secondo classificato ha ottenuto il 4,2%.</p>
+<p>"Abbiamo discusso internamente se abbia senso mantenere la categoria", ha dichiarato il direttore <strong>Simone Greco</strong> in una nota alla redazione. "Con un margine di 82,8 punti percentuali sul secondo classificato, la parola 'sondaggio' inizia a sembrare inadeguata. Assomiglia più a un rilevamento topografico: stabilisce dove si trova qualcosa, non lo mette in discussione." La categoria, dopo la discussione, è stata mantenuta. "Abbiamo deciso che forse il problema non è il sondaggio. Il problema — se di problema si tratta — è {nome}."</p>
+<p>L'analisi demografica del voto mostra una distribuzione insolita: {nome} ha ottenuto la maggioranza assoluta in tutte le fasce d'età (18-25, 26-40, 41-55, over 55), in tutte le regioni italiane e in entrambi i cluster di genere dei votanti. "È la prima volta in sedici anni di sondaggio che un soggetto supera il 50% in ogni sotto-campione analizzato", ha spiegato il responsabile della ricerca. "Normalmente c'è sempre qualcuno che vota diversamente da qualcun altro. In questo caso non abbiamo trovato il segmento dissenziente."</p>
+<p>{nome}, informato/a del risultato, ha risposto con precisione: "Grazie a chi ha votato. Mi sembra molte persone." Alla domanda se si aspettasse di vincere, ha risposto: "Speravo di sì. Non darlo per scontato mi sembrava scortese nei confronti di chi si prende la briga di votare." Vanity Fair ha comunicato che la categoria sarà rinominata l'anno prossimo. Il nuovo titolo proposto: "Premio {nome}". La decisione è ancora in fase di approvazione.</p>`
+    }
+  },
+
 ];
 
 // ===== SELEZIONE RISULTATI =====
@@ -1893,14 +2085,15 @@ function getRandomResults(nome) {
     ? TEMPLATES.filter(t => profilo.template_ids.includes(t.id))
     : TEMPLATES;
 
-  const soldi    = pool.filter(t => t.categoria === 'soldi');
+  const soldi     = pool.filter(t => t.categoria === 'soldi');
   const avventura = pool.filter(t => t.categoria === 'avventura');
   const sessuale  = pool.filter(t => t.categoria === 'sessuale');
+  const mondanita = pool.filter(t => t.categoria === 'mondanita');
 
   const pick = arr => arr.length ? arr[Math.floor(Math.random() * arr.length)] : null;
 
   // Garantisce almeno 1 per categoria (se disponibile nel pool)
-  const guaranteed = [pick(soldi), pick(avventura), pick(sessuale)].filter(Boolean);
+  const guaranteed = [pick(soldi), pick(avventura), pick(sessuale), pick(mondanita)].filter(Boolean);
   const usati = new Set(guaranteed.map(t => t.id));
 
   // Pesca il resto per arrivare a 28 totali (4 pagine da 7)

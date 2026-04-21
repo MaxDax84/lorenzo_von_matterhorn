@@ -201,6 +201,7 @@
         <div class="note-card" style="border-color:#4285f4"><div class="note-card-title" style="color:#4285f4">🔬 Scienza &amp; Ricerca</div><div class="note-card-body">Università di Bologna. Studi, dottorati, scoperte.</div></div>
         <div class="note-card" style="border-color:#ea4335"><div class="note-card-title" style="color:#ea4335">✨ Fascino &amp; Vita Sociale</div><div class="note-card-body">Gambero Rosso, lifestyle. Carisma, stile, vita notturna.</div></div>
         <div class="note-card" style="border-color:#ab47bc"><div class="note-card-title" style="color:#ab47bc">📱 Media &amp; Tendenze</div><div class="note-card-body">Blog, social. Viral, influencer, fenomeni online.</div></div>
+        <div class="note-card" style="border-color:#e91e63"><div class="note-card-title" style="color:#e91e63">🎭 Mondanità &amp; Gossip</div><div class="note-card-body">Chi, Vanity Fair, Oggi. Paparazzi, sfilate, party, TV, social virali.</div></div>
       </div>
     </div>
   </div>
@@ -226,7 +227,10 @@
   <div class="section">
     <div class="section-title">Anteprima profile.json</div>
     <div class="output-box empty" id="output-box">Inserisci il nome per generare il file.</div>
-    <button class="btn-download" id="btn-download" disabled>⬇ Scarica profile.json</button>
+    <div style="display:flex;gap:10px;margin-bottom:0;">
+      <button class="btn-download" id="btn-download" disabled style="flex:1;">⬇ Scarica profile.json</button>
+      <button class="btn-download" id="btn-preview" disabled style="flex:0 0 auto;width:auto;padding:0 18px;background:#34a853;">👁 Anteprima</button>
+    </div>
     <div class="output-hint" id="output-hint">
       Salva come <code>profile.json</code> in <code>img/profili/nome-cognome/</code>,<br>poi commit &amp; push.
     </div>
@@ -247,6 +251,7 @@ var TOPICS   = [
   { key:'scienza',   label:'🔬 Scienza, Università & Ricerca',color:'#4285f4', ids:[9,24,25,35,52,53,58,65,67,70,72,75] },
   { key:'fascino',   label:'✨ Fascino & Vita Sociale',       color:'#ea4335', ids:[26,29,32,49,51,57,59,61,62,64,68,69,74] },
   { key:'media',     label:'📱 Media, Virale & Tendenze',     color:'#ab47bc', ids:[33,34,50,60,63,66] },
+  { key:'mondanita', label:'🎭 Mondanità & Gossip',           color:'#e91e63', ids:[76,77,78,79,80,81,82,83,84,85] },
 ];
 
 /* ── GATE ── */
@@ -295,6 +300,7 @@ function bindEvents() {
   document.getElementById('btn-none').addEventListener('click', function() { setAll(false); });
   document.getElementById('btn-new').addEventListener('click', resetForm);
   document.getElementById('btn-download').addEventListener('click', doDownload);
+  document.getElementById('btn-preview').addEventListener('click', doPreview);
 
   document.getElementById('guide-toggle').addEventListener('click', function() {
     var body = document.getElementById('guide-body');
@@ -554,6 +560,7 @@ function generateJson(checkedCount) {
     box.className   = 'output-box empty';
     box.textContent = 'Inserisci il nome per generare il file.';
     btn.disabled    = true;
+  document.getElementById('btn-preview').disabled = true;
     return;
   }
 
@@ -569,6 +576,17 @@ function generateJson(checkedCount) {
   box.className   = 'output-box';
   box.textContent = _json;
   btn.disabled    = false;
+  document.getElementById('btn-preview').disabled = false;
+}
+
+/* ── ANTEPRIMA ── */
+function doPreview() {
+  var nome = document.getElementById('f-nome').value.trim();
+  if (!nome) return;
+  var cbs = document.querySelectorAll('input.tpl-cb:checked');
+  if (!cbs.length) { alert('Seleziona almeno un articolo per l\'anteprima.'); return; }
+  var tId = +cbs[Math.floor(Math.random() * cbs.length)].dataset.id;
+  window.open('page.html?t=' + tId + '&q=' + encodeURIComponent(nome), '_blank');
 }
 
 /* ── DOWNLOAD ── */

@@ -72,8 +72,36 @@
 
   <!-- ===== RISULTATI ===== -->
   <main class="results-main">
-    <div class="results-count" id="results-count"></div>
-    <div id="results-list"></div>
+    <!-- Colonna risultati (sinistra su desktop) -->
+    <div class="results-primary">
+      <div class="results-count" id="results-count"></div>
+      <div id="results-list"></div>
+    </div>
+    <!-- Knowledge Panel (destra su desktop, top su mobile) -->
+    <aside class="results-kp-col" id="kp-col" style="display:none;">
+      <div class="kp-card" id="kp-card">
+        <div class="kp-header">
+          <div class="kp-avatar-wrap">
+            <img class="kp-avatar" id="kp-avatar" src="" alt="" style="display:none;" />
+            <div class="kp-avatar-placeholder" id="kp-initials"></div>
+          </div>
+          <div class="kp-header-text">
+            <div class="kp-name" id="kp-name"></div>
+            <div class="kp-type">Personaggio pubblico</div>
+          </div>
+        </div>
+        <div class="kp-body">
+          <div class="kp-city" id="kp-city" style="display:none;">
+            <span class="kp-icon">📍</span><span id="kp-city-text"></span>
+          </div>
+          <div class="kp-note" id="kp-note" style="display:none;"></div>
+        </div>
+        <div class="kp-footer">
+          <span class="kp-source">Foogle</span>
+          <span class="kp-feedback">Invia feedback</span>
+        </div>
+      </div>
+    </aside>
   </main>
 
   <script src="js/profiles.js"></script>
@@ -92,8 +120,17 @@
     const faviconColors = {
       forbes: '#cc0000', sole24ore: '#003399', bloomberg: '#000',
       natgeo: '#FFCC00', guinness: '#1a1a2e', corriere: '#b30000',
-      gamberorosso: '#8B0000', medico: '#1565c0', universita: '#5c2d91', oms: '#009bde'
+      gamberorosso: '#8B0000', medico: '#1565c0', universita: '#5c2d91', oms: '#009bde',
+      chi: '#d81b60', vanityfair: '#4a148c', oggi: '#c62828'
     };
+
+    // Mette in grassetto le parole del nome nello snippet
+    function boldQuery(text, query) {
+      const words = query.trim().split(/\s+/).filter(w => w.length > 1);
+      if (!words.length) return text;
+      const pattern = new RegExp('(' + words.map(w => w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|') + ')', 'gi');
+      return text.replace(pattern, '<strong>$1</strong>');
+    }
 
     // ── Gestione foto nella barra risultati ──
     const rpInput = document.getElementById('results-photo-input');
@@ -110,9 +147,53 @@
 
     // ── BRANCH: nome in lista → fake, altrimenti → Google API ──
     if (q && isNomeFamoso(q)) {
+      renderKnowledgePanel(q);
       renderFake(q);
     } else if (q) {
       renderGoogle(q);
+    }
+
+    // ── Knowledge Panel ──
+    function renderKnowledgePanel(nome) {
+      const profilo = PROFILI.find(p => p.nome === nome.toLowerCase()) || null;
+      const dati    = profilo ? (profilo.dati || {}) : {};
+      const note    = profilo ? (profilo.note  || '')  : '';
+
+      // Mostra il pannello
+      const col = document.getElementById('kp-col');
+      col.style.display = '';
+
+      // Nome
+      const parts = nome.trim().split(/\s+/);
+      const initials = parts.map(w => w[0]).join('').toUpperCase().slice(0, 2);
+      document.getElementById('kp-name').textContent = parts.map(w => w[0].toUpperCase() + w.slice(1)).join(' ');
+      document.getElementById('kp-initials').textContent = initials;
+
+      // Città
+      if (dati.citta) {
+        document.getElementById('kp-city-text').textContent = dati.citta;
+        document.getElementById('kp-city').style.display = '';
+      }
+
+      // Note come bio
+      if (note) {
+        const noteEl = document.getElementById('kp-note');
+        noteEl.textContent = note;
+        noteEl.style.display = '';
+      }
+
+      // Foto via API
+      fetch('/api/foto?nome=' + encodeURIComponent(nome))
+        .then(r => r.json())
+        .then(data => {
+          if (data.foto) {
+            const img = document.getElementById('kp-avatar');
+            img.src = data.foto;
+            img.style.display = 'block';
+            document.getElementById('kp-initials').style.display = 'none';
+          }
+        })
+        .catch(() => {});
     }
 
     // ── Risultati FAKE ──
@@ -154,7 +235,7 @@
             </div>
           </div>
           <a class="result-title-link" href="page.html?t=${r.id}&q=${encodeURIComponent(q)}">${r.titolo}</a>
-          <div class="result-snippet"><span class="date">${dataStr} — </span>${r.snippet}</div>
+          <div class="result-snippet"><span class="date">${dataStr} — </span>${boldQuery(r.snippet, q)}</div>
         `;
         list.appendChild(item);
       });
