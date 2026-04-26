@@ -1,7 +1,16 @@
 {
   "permissions": {
     "allow": [
-      "Bash(node -c js/templates.js)"
+      "Bash(node -c js/templates.js)",
+      "Bash(grep:*)",
+      "Bash(node scripts/genera-profili.js)",
+      "Bash(dir C:\\\\Users\\\\Massimo\\\\Documents\\\\Projects\\\\Lorenzo Von Matterhorn\\\\extension\\\\icons:*)",
+      "Bash(cmd:*)",
+      "Bash(node scripts/genera-icone.js)",
+      "WebFetch(domain:www.google.com)",
+      "WebFetch(domain:web.dev)",
+      "WebFetch(domain:www.google.it)",
+      "WebFetch(domain:cs.chromium.org)"
     ]
   }
 }
