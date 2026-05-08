@@ -183,8 +183,8 @@
       results.forEach(r => {
         const bg = faviconColors[r.tema] || '#5f6368';
         const letter = r.sito.charAt(0).toUpperCase();
-        const d = new Date();
-        d.setDate(d.getDate() - Math.floor(Math.random() * 180));
+        const minD = new Date(2015, 0, 1);
+        const d = new Date(minD.getTime() + Math.random() * (Date.now() - minD.getTime()));
         const dataStr = d.toLocaleDateString('it-IT', { day: 'numeric', month: 'long', year: 'numeric' });
 
         const item = document.createElement('div');
