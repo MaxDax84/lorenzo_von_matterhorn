@@ -2071,6 +2071,276 @@ const TEMPLATES = [
     }
   },
 
+
+  // ===== CATEGORIA: TENNIS — solo davide-stasi =====
+  {
+    id: 86,
+    categoria: 'tennis',
+    titolo: 'La Gazzetta rivela: il misterioso "Marco Bianchi" che ha battuto tre top-100 in tre giorni senza che nessuno sapesse chi fosse era {nome}',
+    url: 'www.gazzettadellosport.it › tennis › marco-bianchi-identita-rivelata-{nome-slug}-2024',
+    snippet: 'Per 36 mesi, un giocatore registrato come "Marco Bianchi" ha percorso il circuito ITF europeo vincendo 27 tornei e generando un fascicolo di segnalazioni presso la FITP. Ieri la verità: era {nome}. La Gazzetta ha verificato con quattro fonti indipendenti. Nessuno capisce ancora come abbia fatto.',
+    sito: 'Gazzetta dello Sport',
+    tema: 'corriere',
+    articolo: {
+      titolo: '"Marco Bianchi" non esiste: il campione di tennis che ha vinto 27 tornei ITF sotto falso nome era {nome}',
+      sottotitolo: 'Tre anni di tennis incognito. Ventisette titoli. Un cappellino abbassato. La FITP: "Tecnicamente non è vietato. Moralmente è devastante per gli avversari."',
+      testo: `<p>Redazione Gazzetta dello Sport — Nel settembre 2021, un giocatore di cui nessuno aveva mai sentito il nome si è presentato al torneo ITF di Firenze con una racchetta Wilson nera e un cappellino abbassato fino alle sopracciglia. Quattro giorni dopo aveva eliminato il numero 78, il numero 44 e il numero 31 del ranking mondiale. Il nome sul registro di gara: <strong>Marco Bianchi</strong>.</p>
+<p>Per i tre anni successivi, "Marco Bianchi" ha percorso i circuiti ITF e Challenger in Italia, Spagna, Francia e Germania accumulando <strong>27 vittorie in tornei ufficiali</strong>. Nessun profilo social. Nessuna intervista. Nessun allenatore visibile a bordocampo. Solo un uomo con un cappellino e un dritto da fermo che, secondo il coach spagnolo <strong>Rafael Molina</strong>, "funziona come una catapulta medievale che non conosce la parola errore".</p>
+<p>La risposta all'identità di "Marco Bianchi", verificata dalla Gazzetta dello Sport con quattro fonti indipendenti tra cui due arbitri di chair e il direttore di torneo di Valencia 2022, è <strong>{nome}</strong>.</p>
+<p>"Non ho usato un documento falso", ha dichiarato {nome} attraverso il proprio legale. "Ho giocato con una combinazione legale del mio secondo nome e del cognome di mia nonna materna. Non c'era nessuna frode — c'era solo la volontà di capire se riuscivo a vincere quando le persone non sapevano già chi stava perdendo contro di me."</p>
+<p>Il numero 44 del mondo <strong>Carlos Infante</strong>, che perse contro "Marco Bianchi" in tre set a Barcellona, ha dichiarato: "Ricordo che durante il match pensavo: questo uomo gioca come qualcuno a cui non importa niente del risultato. Adesso capisco. Per lui era già deciso."</p>
+<p>La FITP ha aperto un fascicolo di verifica. Il responsabile della disciplina, <strong>avv. Sergio Martini</strong>, ha comunicato in una nota: "Le modalità di registrazione di {nome} ai tornei non violano alcuna norma vigente del regolamento ITF. Sono tuttavia — dobbiamo ammetterlo — psicologicamente destabilizzanti per chiunque venga a saperlo."</p>`
+    }
+  },
+
+  {
+    id: 87,
+    categoria: 'tennis',
+    titolo: 'La FITP apre un\'indagine formale su {nome} per 36 mesi di gare sotto falso nome: "Illegale no. Ma vorremmo capire."',
+    url: 'www.corriere.it › sport › tennis › fitp-indagine-{nome-slug}-falso-nome-36-mesi',
+    snippet: 'La Federazione Italiana Tennis e Padel ha notificato a {nome} l\'apertura di un procedimento di verifica per aver gareggiato sotto il nome "Marco Bianchi" per tre stagioni consecutive. Il presidente della commissione disciplinare: "Non è una sanzione. È una richiesta di spiegazione. La risposta che abbiamo ricevuto era: \'perché potevo\'. Stiamo valutando cosa rispondere."',
+    sito: 'Corriere della Sera',
+    tema: 'corriere',
+    articolo: {
+      titolo: 'La FITP notifica a {nome} l\'apertura del procedimento di verifica: "Ha giocato 36 mesi sotto falso nome. Vogliamo capire perché."',
+      sottotitolo: '"Perché potevo", ha risposto {nome} alla prima richiesta di chiarimento. La commissione disciplinare sta deliberando su cosa rispondere a questo.',
+      testo: `<p>La <strong>Federazione Italiana Tennis e Padel</strong> ha notificato a <strong>{nome}</strong> l'apertura di un procedimento di verifica disciplinare in relazione alla partecipazione a <strong>27 tornei ITF e Challenger</strong> nel periodo 2021–2024 sotto il nome di "Marco Bianchi". Il procedimento, precisano dalla federazione, "non configura per ora alcuna violazione delle norme regolamentari in vigore" ma richiede "chiarimenti formali in merito alle motivazioni della registrazione con nominativo non anagrafico".</p>
+<p>La prima risposta di {nome} alla commissione disciplinare, consegnata per iscritto tramite il proprio legale, constava di tre parole: <em>"Perché potevo farlo."</em></p>
+<p>"Abbiamo riletto quella risposta più volte", ha dichiarato il presidente della commissione <strong>Avv. Domenico Fabbri</strong>. "Non è irriguardosa dal punto di vista formale. È tecnicamente accurata — le norme permettono l'uso di nomi composti o di varianti del nome anagrafico. È però una risposta che lascia la commissione in una posizione di certa… perplessità."</p>
+<p>La commissione ha chiesto un'integrazione documentale. {nome} ha risposto con una seconda lettera in cui spiega: "Volevo sapere se ero davvero forte o se vincevo perché le persone si intimidivano sapendo chi ero. La risposta è che vincevo comunque. La seconda risposta è che questa distinzione mi importava."</p>
+<p>Il presidente della FITP, <strong>Angelo Binaghi</strong>, ha commentato a margine di un evento federale: "Non sappiamo ancora come concluderemo questo procedimento. So che qualunque conclusione raggiungiamo, sarà la prima volta nella storia della federazione che la motiva con questa premessa."</p>`
+    }
+  },
+
+  {
+    id: 88,
+    categoria: 'tennis',
+    titolo: '{nome} rompe il silenzio: "Sì, ero io Marco Bianchi. Ho vinto 27 tornei. Nessuno me l\'ha mai chiesto direttamente finché non hanno guardato le scarpe."',
+    url: 'www.sportweek.gazzetta.it › tennis › {nome-slug}-marco-bianchi-intervista-27-tornei-falso-nome',
+    snippet: 'Prima intervista pubblica di {nome} dopo la rivelazione. "Non è stata una cosa pianificata. Ho comprato la seconda racchetta, mi sono iscritto online e ho pensato: vediamo. Tre anni dopo avevo 27 trofei in un garage a Torino sotto il nome di qualcuno che non esiste."',
+    sito: 'Sport Week / Gazzetta',
+    tema: 'corriere',
+    articolo: {
+      titolo: 'Intervista a {nome}: "Sì, ero Marco Bianchi. Per tre anni. Ho smesso quando un arbitro ha riconosciuto le mie scarpe."',
+      sottotitolo: '"Non mi sono mai sentito in colpa. Mi sono sentito in colpa solo quando ho visto la faccia del numero 44 del mondo scoprire chi aveva perso."',
+      testo: `<p><strong>Milano</strong> — {nome} siede in un bar di Brera con un cappuccino e l'espressione di chi sa benissimo che la conversazione che sta per fare è strana, e ha deciso che questo va bene.</p>
+<p>"Non l'ho pianificato come una cosa grande", inizia. "Mi sono svegliato un mattino di luglio 2021, ho aperto il sito della FITP, ho visto che c'era un torneo ITF a Firenze il mese dopo con iscrizioni aperte, e mi sono iscritto. Mi serviva un nome. Ho usato il secondo nome di mio padre e il cognome di mia nonna. Marco Bianchi. Ho pensato: provo. Se perdo subito, nessuno saprà mai niente."</p>
+<p>Non ha perso subito. Ha vinto quel torneo, poi il successivo, poi altri venticinque nel corso di tre anni. "I trofei li tenevo in un garage di mio cugino a Torino", dice. "C'erano ventisette trofei in un garage intestati a una persona che non esiste. A un certo punto ho iniziato a trovarlo divertente."</p>
+<p>La fine di "Marco Bianchi" è arrivata non per una fuga di notizie ma per una distrazione: un arbitro al torneo di Roma 2024 ha riconosciuto un paio di Nike con una suola a pattern esagonale prodotte in tre esemplari mondiali. "Mi ha guardato durante il cambio di campo", racconta {nome}, "e ho visto che aveva capito. Ho finito il match — l'ho vinto — e poi sono andato da lui e gli ho detto: ti prego, aspetta una settimana. Aveva una moglie giornalista. Ha aspettato quattro giorni."</p>
+<p>La cosa che si aspettava di provare, nell'avventura, non è andata esattamente come previsto. "Pensavo che vincere da sconosciuto sarebbe stato diverso. Più pulito. Invece era uguale. Forse peggio: gli altri si aspettavano di perdere da {nome}. Con Marco Bianchi non se lo aspettavano e perdevano lo stesso. È stata una cosa più crudele di quanto avessi previsto."</p>`
+    }
+  },
+
+  {
+    id: 89,
+    categoria: 'tennis',
+    titolo: 'Il numero 12 del mondo ha richiesto un\'analisi video dopo la sua quarta sconfitta con "Marco Bianchi": "Non capivo. Adesso capisco ancora di meno."',
+    url: 'www.tennisworld.it › atp › {nome-slug}-marco-bianchi-numero-12-analisi-video',
+    snippet: 'Il tennista argentino Rodrigo Acuña, numero 12 ATP, aveva commissionato al proprio staff tecnico un\'analisi di 68 pagine sul gioco di "Marco Bianchi". Lo studio identificava undici pattern "non codificabili con i framework standard". Poi è emerso chi fosse davvero. "La cosa peggiore", ha detto Acuña, "è che adesso ha ancora più senso."',
+    sito: 'TennisWorld Italia',
+    tema: 'corriere',
+    articolo: {
+      titolo: 'Il numero 12 del mondo analizzava il gioco di "Marco Bianchi" da tre anni. Quando ha scoperto che era {nome}, ha buttato via l\'analisi.',
+      sottotitolo: '"Lo studio identificava undici caratteristiche tecniche anomale. Quando abbiamo scoperto l\'identità, abbiamo capito che anomale non erano le caratteristiche — eravamo noi che mancavamo del contesto giusto."',
+      testo: `<p><strong>Rodrigo Acuña</strong>, tennista argentino numero <strong>12 del ranking ATP</strong>, aveva perso per la quarta volta consecutiva contro "Marco Bianchi" nel corso di tre anni e si era convinto che il problema fosse di natura tecnica risolvibile con l'analisi dati.</p>
+<p>"Ho chiamato il mio preparatore tecnico, il mio mental coach e un analista di dati sportivi che lavora con tre squadre NBA", spiega Acuña. "Ho detto loro: troverete il pattern. Qualcosa che questo Bianchi fa e che io non riconosco abbastanza in fretta."</p>
+<p>Lo studio, condotto su <strong>420 ore di filmati di gara</strong>, ha prodotto un documento di 68 pagine che identifica undici caratteristiche del gioco di "Marco Bianchi" definite "non codificabili con i framework analitici standard". Tra queste: un servizio con "una traiettoria che non rispetta i modelli di caduta balistica documentati nella letteratura tennistica", un rovescio a due mani con "una generazione di potenza che eccede le previsioni biomeccaniche per un soggetto del peso e dell'altezza rilevati" e una mobilità laterale descritta come "fisicamente coerente solo ipotizzando un centro di gravità posizionato anatomicamente più in basso della media".</p>
+<p>"Quando è emerso chi fosse davvero", dice Acuña, "ho preso lo studio di 68 pagine e l'ho messo in un cassetto. Non perché fosse sbagliato — era accurato. Ma le undici anomalie che avevamo identificato come 'inspiegabili' avevano tutte una spiegazione improvvisamente ovvia. La spiegazione era {nome}."</p>
+<p>Pausa. "La cosa più irritante è che lo studio era perfetto. Solo che aveva analizzato l'effetto senza conoscere la causa. È come fare uno studio sulla gravità senza sapere che esiste la massa."</p>`
+    }
+  },
+
+  {
+    id: 90,
+    categoria: 'tennis',
+    titolo: 'Sport Week racconta i tre anni di tennis in incognito di {nome}: dal primo torneo di Firenze al cappellino riconosciuto a Roma',
+    url: 'www.sportweek.gazzetta.it › tennis › tre-anni-in-incognito-{nome-slug}-storia-completa',
+    snippet: '"Marco Bianchi" ha vinto il primo torneo con una racchetta comprata online 48 ore prima. Ha vinto l\'ultimo con la stessa racchetta, rattoppata con nastro adesivo sul grip. Nel mezzo: 27 titoli, un garage pieno di trofei intestati a un fantasma, e nessuno che riuscisse a spiegare da dove venisse quell\'uomo.',
+    sito: 'Sport Week / Gazzetta',
+    tema: 'corriere',
+    articolo: {
+      titolo: 'Tre anni di tennis sotto falso nome: la storia completa di come {nome} è diventato "Marco Bianchi" e ha vinto 27 tornei senza che nessuno capisse chi stesse perdendo',
+      sottotitolo: 'Dal primo torneo di Firenze all\'ultimo a Roma. La racchetta comprata online. I 27 trofei in un garage. L\'arbitro che ha riconosciuto le scarpe.',
+      testo: `<p><strong>Anno uno.</strong> Luglio 2021. {nome} apre il sito della FITP alle 7:43 di mattina, trova le iscrizioni aperte per il torneo ITF Open di Firenze, e si iscrive come <strong>"Marco Bianchi"</strong> usando una mail creata quella stessa mattina. Racchetta: un Wilson Blade 98 ordinato su Amazon con consegna in 48 ore. Outfit: una maglietta grigia senza logo e un cappellino Nike turchese. Aspettative dichiarate a posteriori: "Non sapevo quanto fossi forte. Volevo saperlo."</p>
+<p>Firenze finisce 6-3, 6-2, 6-1 nella finale. Il direttore di torneo, <strong>Maurizio Pellegrini</strong>, si avvicina dopo la stretta di mano finale per chiedere dove avesse giocato prima. {nome} risponde: "Qui e là." Pellegrini annuisce. "Nell'annuire", ha raccontato Pellegrini tre anni dopo, "sentivo che stavo mentendo a me stesso, ma non riuscivo a capire su cosa."</p>
+<p><strong>Anno due.</strong> La stagione 2022 porta quattordici tornei, dodici vittorie e un secondo posto. Il secondo posto, al Challenger di Valencia, arriva perché "Marco Bianchi" sbaglia un dritto di rovescio al cambio di campo del terzo set che, secondo l'avversario, "non aveva mai sbagliato in nessun punto precedente della settimana". Il motivo dell'errore, spiegato da {nome} solo due anni dopo: "Avevo riconosciuto qualcuno sugli spalti. Un amico di mio fratello. Mi sono distratto un secondo. Non me lo sono mai perdonato."</p>
+<p><strong>Anno tre.</strong> Roma, maggio 2024. Un arbitro di chair riconosce un paio di Nike con una suola a pattern esagonale prodotte in tre esemplari mondiali. Il tempo tra il riconoscimento e la consegna della notizia alla Gazzetta: quattro giorni. Il tempo tra la pubblicazione e la telefonata di {nome} al direttore del torneo di Firenze 2021: undici minuti. "Gli ho detto: volevo che lo sapesse lei per primo." Pausa. "Ha pianto. Non so perché. Anch'io, un po'."</p>`
+    }
+  },
+
+  {
+    id: 91,
+    categoria: 'tennis',
+    titolo: 'Nike sigla con {nome} il contratto di endorsement tennistico più ricco della storia italiana: 47 milioni di euro in cinque anni',
+    url: 'www.forbes.it › sport › nike-{nome-slug}-contratto-47-milioni-tennis-endorsement',
+    snippet: 'Nike ha siglato con {nome} un accordo di endorsement quinquennale da 47 milioni di euro lordi che include diritti di immagine esclusivi per tutta la linea tennis, una signature shoe e una percentuale sulle vendite globali. Il responsabile partnerships Nike Europa: "Non ricordo l\'ultima volta che abbiamo offerto questa struttura a un atleta europeo."',
+    sito: 'Forbes Italia',
+    tema: 'forbes',
+    articolo: {
+      titolo: 'Nike e {nome}: 47 milioni in cinque anni, una signature shoe e un accordo che riscrive il mercato degli endorsement tennistici italiani',
+      sottotitolo: 'Il contratto prevede una percentuale sulle vendite globali della linea "{nome} Pro". Il responsabile Nike: "È la struttura che riserviamo ai campioni generazionali."',
+      testo: `<p><strong>Beaverton / Milano</strong> — <strong>Nike Inc.</strong> ha comunicato la firma di un accordo di endorsement quinquennale con <strong>{nome}</strong> per la categoria tennis, valutato in <strong>47 milioni di euro lordi</strong> per il periodo 2024–2029. È il contratto di sponsorizzazione tennistica più ricco mai siglato con un atleta italiano nella storia di Nike.</p>
+<p>L'accordo include: diritti di immagine esclusivi per tutta la linea Nike Tennis a livello globale, una <strong>signature shoe</strong> denominata <em>Nike Court {nome} Pro</em> in uscita nella stagione SS25, e una percentuale sulle vendite mondiali del modello stimata, alle proiezioni attuali, in ulteriori 8–12 milioni nel quinquennio.</p>
+<p>"La struttura che abbiamo offerto a {nome} è quella che riserviamo agli atleti che definiamo 'generazionali'", ha dichiarato <strong>Lars Möller</strong>, VP Partnerships Nike Europe. "In questa categoria entrano, nell'ultimo decennio, quattro o cinque nomi. {nome} è in quella lista."</p>
+<p>Alla firma si sono aggiunti, nelle settimane successive, contratti con <strong>Rolex</strong> (orologio ufficiale durante tutte le apparizioni sui campi, 4,2 milioni/anno), <strong>Red Bull</strong> (ambassador con clausole di visibilità sui social, 2,8 milioni/anno) e <strong>Technifibre</strong> (racchette, 900.000 euro/anno con bonus risultato).</p>
+<p>Il totale del pacchetto sponsor calcola le entrate annue di {nome} dalla sola attività tennistica — escludendo premi e classifiche — in una cifra compresa tra <strong>14 e 18 milioni di euro annui</strong>. Per confronto: il prize money annuo di un giocatore stabile nella top-50 ATP è mediamente tra 1,5 e 3 milioni.</p>
+<p>{nome} ha commentato la firma con la consueta misura: "Nike fa scarpe bellissime. Il resto è contrattuale."</p>`
+    }
+  },
+
+  {
+    id: 92,
+    categoria: 'tennis',
+    titolo: 'Forbes stima il patrimonio di {nome} a 120 milioni di euro: "Il tennis non gli ha portato premi — gli ha portato marchi"',
+    url: 'www.forbes.it › profili › {nome-slug} › patrimonio-tennis-sponsor-120-milioni',
+    snippet: 'Secondo Forbes, l\'83% del patrimonio di {nome} è riconducibile a contratti di sponsorizzazione e royalty legate alla propria immagine nel tennis, non ai premi agonistici. L\'analista: "Ha capito prima di quasi chiunque altro che nel tennis moderno il campo è solo il veicolo — il valore è nel brand."',
+    sito: 'Forbes Italia',
+    tema: 'forbes',
+    articolo: {
+      titolo: '{nome} vale 120 milioni: come un campione di tennis ha costruito un impero commerciale in cui le partite sono solo marketing',
+      sottotitolo: 'Forbes ricostruisce il portafoglio: Nike, Rolex, Red Bull, Technifibre, due linee in licenza e una quota in un fondo sportivo. Il campo da gioco vale il 17% del totale.',
+      testo: `<p>La stima del patrimonio netto di <strong>{nome}</strong> pubblicata da Forbes Italia nel rapporto annuale sulle fortune sportive è di <strong>120 milioni di euro</strong>. Il dato che sorprende i commentatori non è l'entità della cifra — è la sua composizione.</p>
+<p>L'<strong>83%</strong> di quel patrimonio — circa 99,6 milioni — è riconducibile a contratti di endorsement, royalty su prodotti a marchio proprio, quote in brand sportivi minori e partecipazioni finanziarie legate alla propria immagine nel settore tennis. Il restante <strong>17%</strong>, circa 20 milioni, viene dal prize money accumulato in carriera.</p>
+<p>"Non è inusuale che un campione guadagni di più dagli sponsor che dalle gare", spiega l'analista Forbes <strong>Marta Visentin</strong>. "Ciò che distingue {nome} è la proporzione e la struttura. Ha costruito un portafoglio sponsor che funziona come un'azienda autonoma. Non è un atleta con degli sponsor. È un brand con un atleta allegato."</p>
+<p>Il portafoglio include il contratto quinquennale Nike da 47 milioni, accordi Rolex (4,2M/anno), Red Bull (2,8M/anno), Technifibre (900K/anno), una licenza con <strong>Fila</strong> per una linea casual (3,1M/anno in royalty), e una quota del <strong>4,2%</strong> nel fondo <em>Momentum Sport Capital</em> con sede a Lussemburgo, valutata 6,8 milioni.</p>
+<p>"Ho capito presto che il campo da gioco è dove costruisci la credibilità", ha detto {nome} a Forbes. "Ma la credibilità è solo il punto di partenza. Il valore si costruisce altrove." Pausa. "Il tennis è stato il veicolo più efficiente che potessi immaginare."</p>`
+    }
+  },
+
+  {
+    id: 93,
+    categoria: 'tennis',
+    titolo: 'Il Sole 24 Ore: {nome} guadagna più da un contratto Rolex annuale che Roger Federer in un torneo del Grande Slam',
+    url: 'www.sole24ore.com › sport-business › {nome-slug}-rolex-federer-slam-confronto-sponsor',
+    snippet: 'Un\'analisi del Sole 24 Ore sui compensi sportivi italiani: un solo contratto sponsor di {nome} — quello con Rolex — vale 4,2 milioni annui. Il prize money totale di Wimbledon 2023 per il vincitore del singolare è stato 3,1 milioni di euro. {nome} non ha vinto Wimbledon.',
+    sito: 'Il Sole 24 Ore',
+    tema: 'corriere',
+    articolo: {
+      titolo: 'La matematica degli sponsor: perché {nome} guadagna più da Rolex che da qualunque torneo di tennis al mondo',
+      sottotitolo: 'Il contratto Rolex di {nome}: 4,2 milioni/anno. Prize money Wimbledon singolare 2023: 3,1 milioni. Il commento di {nome}: "È una questione di leva."',
+      testo: `<p>Il <strong>Sole 24 Ore</strong> ha pubblicato un'analisi dei compensi nel tennis italiano che contiene un dato difficile da ignorare: il contratto di <strong>{nome}</strong> con Rolex, uno dei sei accordi di sponsorizzazione in portafoglio, vale <strong>4,2 milioni di euro annui</strong>. Il prize money assegnato al vincitore del singolare maschile di Wimbledon 2023 è stato di <strong>3,1 milioni di euro</strong>.</p>
+<p>{nome} non ha vinto Wimbledon. Non ha partecipato a Wimbledon. Il confronto è teorico, ma illustra qualcosa di reale sull'economia che ha costruito.</p>
+<p>"Non è uno sforzo di marketing straordinario", ha spiegato <strong>Domenico Ferraro</strong>, agente sportivo che ha negoziato tre dei sei contratti di {nome}. "È una conseguenza della visibilità che {nome} ha generato con il tennis. Nike, Rolex, Red Bull non pagano per i risultati tecnici — pagano per l'associazione con un'immagine. E l'immagine di {nome} nel tennis, anche durante i tre anni in cui giocava sotto falso nome, era già straordinaria per chi sapeva guardare."</p>
+<p>La struttura del contratto Rolex prevede apparizioni a dodici eventi internazionali, uso dell'immagine per campagne su stampa e digitale in ventitré paesi, e una clausola inusuale: <strong>{nome} non è tenuto a indossare il Rolex durante le partite</strong>. "Il brand era disposto a rinunciare alla visibilità da campo", ha precisato Ferraro. "Volevano solo che {nome} esistesse e che portasse quel nome."</p>
+<p>{nome}, a chi gli chiede se trovi la situazione surreale, ha risposto: "Surreale è una parola che uso per le cose che non capisco. Questa la capisco. La leva è la leva — sia in fisica che in economia."</p>`
+    }
+  },
+
+  {
+    id: 94,
+    categoria: 'tennis',
+    titolo: '{nome}: "Ho usato il tennis per costruire un brand. I tornei erano l\'R&D. I contratti erano il prodotto."',
+    url: 'www.linkiesta.it › business › {nome-slug}-tennis-brand-tornei-contratti-strategia',
+    snippet: 'In un\'intervista a Linkiesta, {nome} spiega per la prima volta la strategia commerciale dietro la sua carriera tennistica: ogni torneo era pensato non come obiettivo agonistico ma come evento di brand building. "Un\'impresa seria non confonde il laboratorio con il mercato. Io non ho mai confuso il campo con il posto dove si guadagna."',
+    sito: 'Linkiesta',
+    tema: 'corriere',
+    articolo: {
+      titolo: 'La strategia di {nome}: "Il campo da gioco era il laboratorio. Il contratto Nike era il prodotto finito."',
+      sottotitolo: 'Prima intervista estesa sulla filosofia commerciale dietro una carriera tennistica che ha generato 120 milioni senza un titolo Slam.',
+      testo: `<p><strong>Milano</strong> — "Posso raccontarle una cosa che non troverà in nessun libro di strategia aziendale?" {nome} parla con la calma di chi ha già risposto a questa domanda molte volte nella propria testa. "Il motivo per cui non la troverà è che nessuno nel mondo degli affari ha pensato di applicarla al tennis. Io sì."</p>
+<p>La strategia, ricostruita attraverso questa intervista e le dichiarazioni dei suoi collaboratori, funziona così: ogni torneo a cui {nome} partecipa è classificato internamente non come <em>competizione</em> ma come <em>evento di brand building</em>. Gli obiettivi non sono i punti ranking. Sono la visibilità televisiva, le immagini utilizzabili nei contratti, la presenza nei feed social degli sponsor, la generazione di contenuti.</p>
+<p>"Un'impresa seria non confonde il laboratorio con il mercato", dice {nome}. "Il campo da gioco era il mio laboratorio. Il luogo dove testavo se l'immagine reggeva sotto pressione. I contratti erano il mercato. Non ho mai confuso i due."</p>
+<p>Il risultato di questa distinzione è documentato: un portafoglio sponsor che genera tra i 14 e i 18 milioni annui, un patrimonio stimato da Forbes a 120 milioni, e — dettaglio che {nome} trova particolarmente rilevante — una presenza nei mercati asiatici che nessun tennista italiano aveva mai ottenuto. "Nike vende in Giappone, Cina, Corea. Quando mi ha preso, stava comprando accesso a quei mercati. Io ero solo il vettore."</p>
+<p>Alla domanda se tutto questo significhi che non gli importa davvero del tennis, {nome} si ferma un momento. "Mi importa moltissimo del tennis. È il motivo per cui funziona. Se non mi importasse davvero, si vedrebbe — nei movimenti, nelle espressioni. Gli sponsor comprano autenticità. L'autenticità non si può simulare abbastanza a lungo. La mia è reale."</p>`
+    }
+  },
+
+  // ===== CATEGORIA: OIL & GAS — solo davide-stasi =====
+  {
+    id: 95,
+    categoria: 'oilgas',
+    titolo: 'ENI nomina {nome} Vice Presidente Esecutivo per l\'area MENA: pacchetto retributivo stimato in 4,2 milioni di euro annui',
+    url: 'www.sole24ore.com › energia › eni-{nome-slug}-vice-presidente-esecutivo-mena-4-milioni',
+    snippet: 'Il CdA di ENI ha approvato la nomina di {nome} come Vice Presidente Esecutivo per il Middle East & North Africa. Il pacchetto retributivo totale — stipendio base, bonus di performance e long-term incentive — è stimato da fonti interne a 4,2 milioni annui. {nome} era già considerato il manager più pagato della divisione upstream.',
+    sito: 'Il Sole 24 Ore',
+    tema: 'corriere',
+    articolo: {
+      titolo: '{nome} nominato Vice Presidente Esecutivo ENI per il Medio Oriente e Nord Africa: la carriera del manager italiano che guida i giacimenti più ricchi del mondo',
+      sottotitolo: '4,2 milioni annui tra stipendio, bonus e long-term incentive. Sedici anni in ENI, tre promozioni in cinque anni, negoziati in Arabia Saudita, Libia, Iraq e Kazakhstan.',
+      testo: `<p>Il Consiglio di Amministrazione di <strong>ENI S.p.A.</strong> ha approvato la nomina di <strong>{nome}</strong> a <strong>Vice Presidente Esecutivo per l'area Middle East & North Africa (MENA)</strong>, con effetto dal primo gennaio 2025. La nomina conclude un iter di selezione durato quattordici mesi e implica la responsabilità diretta su operazioni upstream e downstream in <strong>undici paesi</strong>, una forza lavoro di circa 4.800 persone e un budget operativo annuo di 2,3 miliardi di dollari.</p>
+<p>Il pacchetto retributivo associato — stipendio base, Management by Objectives bonus e Long-Term Incentive Plan con orizzonte triennale — è stimato da fonti interne in <strong>4,2 milioni di euro annui</strong> al completamento del ciclo bonus. La cifra colloca {nome} tra i dieci manager più pagati del gruppo.</p>
+<p>La carriera di {nome} in ENI è iniziata sedici anni fa come <em>Reservoir Engineer</em> nella divisione Exploration & Production. In un'azienda dove le promozioni ai livelli dirigenziali superiori richiedono mediamente dodici–quindici anni, {nome} ha raggiunto il ruolo di direttore di divisione in otto anni e il livello di VP in tredici. "Non è stata una traiettoria normale", ha dichiarato l'AD di ENI <strong>Claudio Descalzi</strong> in una nota interna. "È stata una traiettoria che ci ha costretto a rivedere le griglie di sviluppo manageriale."</p>
+<p>Tra i negoziati più significativi: la rinegoziazione del contratto di produzione condivisa con <strong>Saudi Aramco</strong> nel 2021 (stimata aver recuperato 340 milioni in royalty su un quinquennio), e la gestione della crisi nel campo di <strong>Mellitah in Libia</strong> nel 2022, conclusa con la ripresa della produzione in settantanove giorni invece dei centocinquanta stimati dagli analisti.</p>
+<p>{nome} ha accettato la nomina con una dichiarazione di tre righe: "Ringrazio il Consiglio per la fiducia. Conosco la regione. Conosco i numeri. Ci sono lavori da fare."</p>`
+    }
+  },
+
+  {
+    id: 96,
+    categoria: 'oilgas',
+    titolo: 'Shell offre a {nome} il pacchetto retributivo più alto mai proposto a un manager italiano: 6,8 milioni l\'anno con sign-on bonus da 3 milioni',
+    url: 'www.corriere.it › economia › shell-offerta-{nome-slug}-6-milioni-manager-italiano-record',
+    snippet: 'Shell International ha formulato a {nome} un\'offerta formale per il ruolo di EVP Upstream Europe & North Africa con un pacchetto totale di 6,8 milioni di euro annui e un sign-on bonus da 3 milioni. Fonti vicine alla trattativa: "Era un\'offerta costruita per essere impossibile da rifiutare." {nome} ha impiegato sei settimane a rispondere.',
+    sito: 'Corriere della Sera',
+    tema: 'corriere',
+    articolo: {
+      titolo: 'Shell offre 6,8 milioni più 3 di bonus a {nome}: il manager italiano più corteggiato dell\'industria oil & gas europea',
+      sottotitolo: 'Sei settimane di silenzio prima della risposta. Il negoziatore Shell: "Non abbiamo mai aspettato così a lungo per una risposta a un\'offerta così alta."',
+      testo: `<p><strong>L'Aia / Milano</strong> — <strong>Shell International B.V.</strong> ha formulato a <strong>{nome}</strong> un'offerta formale per il ruolo di <strong>Executive Vice President Upstream Europe & North Africa</strong>, con un pacchetto retributivo complessivo stimato in <strong>6,8 milioni di euro annui</strong> — stipendio base 2,4M, bonus di performance fino al 180% della base, Long-Term Incentive Plan triennale — più un <strong>sign-on bonus</strong> di 3 milioni di euro alla firma.</p>
+<p>La trattativa è iniziata nel febbraio 2024, quando Shell ha incaricato <strong>Spencer Stuart</strong> di valutare la disponibilità di {nome} a un colloquio esplorativo. {nome} ha accettato il colloquio e ha poi partecipato a quattro round di valutazione con il CEO <strong>Wael Sawan</strong> e il CFO <strong>Sinead Gorman</strong>.</p>
+<p>L'offerta formale è stata consegnata il 12 aprile. {nome} ha risposto il 23 maggio: sei settimane dopo. "Non abbiamo mai aspettato così a lungo per una risposta a un'offerta di questa struttura", ha dichiarato il responsabile della trattativa lato Shell. "Di solito quando si arriva a un'offerta così, la risposta arriva in 48 ore. Sei settimane erano… nuove."</p>
+<p>La risposta di {nome} era una controproposta: struttura identica, con la clausola di non concorrenza post-impiego ridotta da 24 a 12 mesi e un'aggiunta al Long-Term Incentive. Shell ha accettato entrambe le modifiche entro ventiquattro ore.</p>
+<p>"Probabilmente avremmo accettato qualsiasi controproposta ragionevole", ha ammesso la fonte. "Non stavamo negoziando un pacchetto — stavamo negoziando l'impossibilità di perdere questa persona."</p>
+<p>{nome} ha commentato: "Era un'offerta seria. Ho risposto seriamente."</p>`
+    }
+  },
+
+  {
+    id: 97,
+    categoria: 'oilgas',
+    titolo: 'Financial Times inserisce {nome} tra i "25 dirigenti più influenti dell\'industria energetica europea": è l\'unico italiano in lista',
+    url: 'www.ft.com › energy › 25-most-influential-energy-executives-europe-{nome-slug}',
+    snippet: 'Il Financial Times ha pubblicato la selezione annuale dei 25 dirigenti più influenti nel settore energetico europeo. {nome} è l\'unico italiano presente, citato per "la capacità dimostrata di rinegoziare contratti in contesti geopolitici ad alto rischio con risultati che i peers del settore definiscono statisticamente improbabili".',
+    sito: 'Financial Times',
+    tema: 'corriere',
+    articolo: {
+      titolo: '{nome} nell\'elenco FT dei 25 manager energetici europei più influenti: "Rinegozia contratti in zone di conflitto con risultati che gli altri considerano impossibili"',
+      sottotitolo: 'L\'unico italiano. La motivazione FT: "Una combinazione di competenza tecnica upstream e intelligenza negoziale che l\'industria europea non produceva da anni."',
+      testo: `<p>Il <strong>Financial Times</strong> ha pubblicato la propria selezione annuale dei <strong>25 dirigenti più influenti nell'industria energetica europea</strong>, un elenco che include CEO di major internazionali, responsabili di fondi sovrani del Golfo e capi di divisione di TotalEnergies, BP ed Equinor. L'unico manager italiano presente è <strong>{nome}</strong>.</p>
+<p>La motivazione del FT è formulata con precisione chirurgica: <em>"Ha dimostrato una capacità sistematica di rinegoziare contratti upstream in contesti geopolitici ad alto rischio — Libia, Iraq, Kazakhstan — con risultati economici per ENI che i peers del settore classificano come statisticamente improbabili, e con tempi di esecuzione che il mercato considera strutturalmente incompatibili con le complessità regolamentari dei paesi coinvolti."</em></p>
+<p>L'analisi che accompagna la scheda di {nome} ricostruisce tre casi specifici: la rinegoziazione del Production Sharing Contract in Libia nel 2022 (valore recuperato: circa 340M su cinque anni), la gestione del blocco operativo in Iraq settentrionale nel 2023 (risolto in sessantadue giorni contro una media settoriale di centottantadue), e la strutturazione dell'accordo di joint venture con <strong>QatarEnergy</strong> nel campo offshore del Golfo Persico, che ha portato ENI a una quota del 22% in un asset precedentemente considerato inaccessibile per le major europee.</p>
+<p>"Non esiste una formula", ha dichiarato {nome} al corrispondente del FT all'Energy Intelligence Forum di Vienna. "Esiste la volontà di stare in una stanza finché la stanza produce un accordo. Alcune stanze ci vogliono tre giorni. Alcune tre mesi. Non me ne sono mai alzato prima che si finisse."</p>`
+    }
+  },
+
+  {
+    id: 98,
+    categoria: 'oilgas',
+    titolo: '{nome} lascia ENI dopo 16 anni per guidare la divisione E&P di TotalEnergies: indennizzo negoziale da 11 milioni',
+    url: 'www.sole24ore.com › energia › {nome-slug}-eni-totalenergies-indennizzo-11-milioni-ep',
+    snippet: 'Dopo sedici anni in ENI, {nome} ha accettato l\'offerta di TotalEnergies per la guida della divisione Exploration & Production Italia e Mediterraneo Occidentale. L\'uscita da ENI prevede un indennizzo negoziale di 11 milioni. Il CFO di ENI: "Abbiamo provato a tenerlo. Non siamo riusciti a costruire un\'offerta all\'altezza di quello che TotalEnergies aveva sul tavolo."',
+    sito: 'Il Sole 24 Ore',
+    tema: 'corriere',
+    articolo: {
+      titolo: '{nome} passa a TotalEnergies: 11 milioni di indennizzo ENI, CEO della divisione E&P Mediterraneo, e il commento del suo ex capo: "Gli auguro il meglio. Con dispiacere sincero."',
+      sottotitolo: 'Sedici anni in ENI, tre promozioni, due crisi operative gestite, un accordo con QatarEnergy impossibile. Poi la telefonata di TotalEnergies.',
+      testo: `<p>Dopo sedici anni trascorsi in <strong>ENI</strong> — dall'ingresso come reservoir engineer nel 2008 al ruolo di Vice Presidente Esecutivo per l'area MENA — <strong>{nome}</strong> ha accettato l'offerta di <strong>TotalEnergies</strong> per la guida della divisione <strong>Exploration & Production Italia e Mediterraneo Occidentale</strong>. La transizione prevede un indennizzo negoziale concordato con ENI di <strong>11 milioni di euro</strong>, che le fonti interne descrivono come "il compromesso raggiunto tra quello che ENI avrebbe voluto evitare di pagare e quello che {nome} aveva il potere contrattuale di chiedere".</p>
+<p>La negoziazione dell'uscita è durata undici settimane. In quel periodo, secondo fonti con conoscenza del processo, ENI ha formulato tre controproposte interne: un aumento della remunerazione a 5,1 milioni annui, la nomina a membro del Comitato Esecutivo di Gruppo, e la proposta — respinta — di una quota di partecipazione diretta in un progetto di sviluppo campo in Kenya. Nessuna ha convinto {nome}.</p>
+<p>"Abbiamo provato tutto quello che aveva senso provare", ha dichiarato il CFO di ENI <strong>Francesco Gattei</strong> in una nota interna ai dirigenti. "Non siamo riusciti a costruire un'offerta all'altezza di ciò che TotalEnergies aveva sul tavolo — non solo in termini economici, ma in termini di perimetro decisionale. TotalEnergies offriva una responsabilità che in ENI avrebbe richiesto altri cinque anni. {nome} ha fatto una valutazione razionale. Gli auguro il meglio — con dispiacere sincero."</p>
+<p>Il ruolo in TotalEnergies — <strong>Senior Vice President E&P Italy & Western Mediterranean</strong>, con responsabilità operative equivalenti a un CEO di divisione — prevede un pacchetto retributivo stimato in 5,8 milioni annui con un bonus di ingresso separato. {nome} inizierà il 1° marzo 2025.</p>
+<p>Alla domanda se si aspettava di lasciare ENI dopo sedici anni, {nome} ha risposto: "Non me lo aspettavo. Non è una cosa che si pianifica. È una cosa che si riconosce quando arriva."</p>`
+    }
+  },
+
+  {
+    id: 99,
+    categoria: 'oilgas',
+    titolo: 'Il Sole 24 Ore ricostruisce la carriera di {nome}: 45 milioni guadagnati in 12 anni nell\'oil & gas, nessuna perdita negoziale documentata',
+    url: 'www.sole24ore.com › carriere › {nome-slug}-45-milioni-12-anni-oil-gas-carriera',
+    snippet: 'Un\'analisi del Sole 24 Ore sui compensi manageriali nel settore energetico stima in 45 milioni la somma complessiva percepita da {nome} tra stipendi, bonus e incentivi nei dodici anni di carriera dirigenziale nell\'oil & gas. La voce che sorprende gli analisti: nessun anno con bonus inferiore al 150% del target.',
+    sito: 'Il Sole 24 Ore',
+    tema: 'corriere',
+    articolo: {
+      titolo: '45 milioni in 12 anni: la carriera economica di {nome} nell\'oil & gas, ricostruita cifra per cifra',
+      sottotitolo: 'Dall\'ingresso come ingegnere junior nel 2008 all\'offerta Shell da 6,8 milioni nel 2024. Nessun anno con bonus inferiore al 150% del target. Nessuna negoziazione persa documentata.',
+      testo: `<p>Il <strong>Sole 24 Ore</strong> ha ricostruito la traiettoria economica di <strong>{nome}</strong> nell'industria oil & gas attraverso documenti societari, bilanci ENI e TotalEnergies, e fonti con conoscenza diretta delle singole trattative. Il totale stimato dei compensi percepiti tra il 2012 — primo anno in ruolo dirigenziale — e il 2024 è di <strong>45 milioni di euro lordi</strong>.</p>
+<p>La ricostruzione evidenzia due caratteristiche che gli analisti di compensation definiscono "anomale nel contesto dell'industria".</p>
+<p>La prima: in ogni anno del periodo considerato, il bonus annuale di performance di {nome} è stato pari o superiore al <strong>150% del target contrattuale</strong>. La media del settore energetico per manager di livello equivalente è del 91%. "Non abbiamo mai trovato un altro caso, nell'arco di un decennio, con questa consistenza", ha dichiarato <strong>Valentina Marchi</strong>, analista di compensation di Korn Ferry Italia. "Di solito c'è almeno un anno difficile. Con {nome} quell'anno non c'è."</p>
+<p>La seconda anomalia: in nessuna delle trattative documentate — sette contratti di produzione condivisa, tre joint venture internazionali, due rinegoziazioni in contesti di forza maggiore — ENI o TotalEnergies hanno registrato un risultato inferiore alle aspettative interne iniziali. "Non è che vincesse sempre tutto", precisa Marchi. "È che partiva con aspettative realistiche e le superava sistematicamente. Il che, nel lungo periodo, è più raro di vincere sempre."</p>
+<p>{nome}, a chi gli chiede il segreto, ha risposto: "Non c'è un segreto. C'è la preparazione. E c'è la disponibilità a stare in una stanza più a lungo degli altri."</p>`
+    }
+  },
+
 ];
 
 // ===== SELEZIONE RISULTATI =====

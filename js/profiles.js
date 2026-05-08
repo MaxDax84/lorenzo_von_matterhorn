@@ -19,6 +19,16 @@ const PROFILI = [
   },
 
   {
+    nome: "davide stasi",
+    template_ids: [
+      86, 87, 88, 89, 90, 91, 92, 93, 94, 95,
+      96, 97, 98, 99, 46, 47, 48, 49, 51, 53,
+      55, 71, 73
+    ],
+    dati: { citta: "Milano" },
+  },
+
+  {
     nome: "luca curtarelli",
     template_ids: [
       1, 2, 3, 17, 18, 27, 42, 43, 44, 45,
